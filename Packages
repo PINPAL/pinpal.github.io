@@ -26,3 +26,17 @@ Description: Hand crafted in "mspaint.exe" by PINPAL!
 Author: PINPAL
 Name: True Art Theme
 
+Package: com.pinpal.nofoldericon
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: PINPAL <josh.hayes614@gmail.com>
+Filename: /NoFolder.deb
+Size: 9326
+MD5sum: da4ae0fc2786565aed362138537841bc
+SHA1: 80ef1e688b139c5fe027958dbb1a2355434dd794
+SHA256: f560e269eb8fa5fe743e68369c2c6f3d5260b538565b5e8234e737b35bce7a38
+Section: Themes
+Description: Removes background from folder icons
+Author: PINPAL
+Name: No Folder Icons
+
