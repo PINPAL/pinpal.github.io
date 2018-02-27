@@ -40,3 +40,17 @@ Description: Removes background from folder icons
 Author: PINPAL
 Name: No Folder Icons
 
+Package: com.julioverne.ext3nder-installer
+Version: 016
+Architecture: iphoneos-arm
+Maintainer: Julio
+Filename: /Ext3nderInstallerSquared.deb
+Size: 771452
+MD5sum: ccf03038a1288478389d520954b1cf57
+SHA1: c99c1b36e2a556a27b553ddb5854696521930e49
+SHA256: fda2be92a3ecc37c0aa948b69430408cf608b4d988ea547e835a4a5dd8ea1551
+Section: Utilities
+Description: Cydia Extender Installer With Extra Features
+Author: julioverne
+Name: Home Gesture
+
