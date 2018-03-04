@@ -12,20 +12,6 @@ Description: Enable iPhone X home gesture on other devices.
 Author: VitaTaf
 Name: Home Gesture
 
-Package: com.pinpal.trueart
-Version: 1.3
-Architecture: iphoneos-arm
-Maintainer: PINPAL <josh.hayes614@gmail.com>
-Filename: /TrueArt.deb
-Size: 2267554
-MD5sum: 02bb09722642a1073f003c358a5d1fe7
-SHA1: b7f5fe453d4b537eef9fe0de2a950c99ab44c099
-SHA256: 0946f1ab63eda03ef5d47cefba97dbf78f4af037a8e8215111c12748a04368b6
-Section: Themes
-Description: Hand crafted in "mspaint.exe" by PINPAL!
-Author: PINPAL
-Name: True Art Theme
-
 Package: com.pinpal.nofoldericon
 Version: 1.0
 Architecture: iphoneos-arm
