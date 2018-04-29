@@ -22,17 +22,19 @@ Section: Themes
 Description: Removes background from folder icons
 Author: PINPAL
 Name: No Folder Icons
+Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/NoFolder/index.html
 
 Package: com.pinpal.bleed
-Version: 0.0.3
+Version: 0.0.7
 Architecture: iphoneos-arm
 Maintainer: PINPAL <josh.hayes614@gmail.com>
 Filename: package/Bleed/Bleed.deb
-Size: 8216346
-MD5sum: 9437631fc513654e7bee98d0bdb200a0
+Size: 8216278
+MD5sum: 22c7b84bf09d3ad87a4a0190fd1f0257
 Section: Themes
 Description: Bold Titles with App Previews.
 Author: PINPAL
 Name: Bleed Theme
+Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/Bleed/index.html
