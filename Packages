@@ -30,8 +30,8 @@ Version: 0.1.4
 Architecture: iphoneos-arm
 Maintainer: PINPAL <josh.hayes614@gmail.com>
 Filename: package/Bleed/Bleed.deb
-Size: 24267303
-MD5sum: 9f06d759d5a15c22218e19c0e48f538f
+Size: 17553680
+MD5sum: 193d8d9d1222e522fb8ff76d7f5662ee
 Section: Themes
 Description: Bold Titles with App Previews.
 Author: PINPAL
