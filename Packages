@@ -26,12 +26,12 @@ Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/NoFolder/index.html
 
 Package: com.pinpal.bleed
-Version: 0.1.8
+Version: 0.1.9
 Architecture: iphoneos-arm
 Maintainer: PINPAL <josh.hayes614@gmail.com>
 Filename: package/Bleed/Bleed.deb
-Size: 25474536
-MD5sum: ed4ceb1f9e3fa49f8a9c3465cc90456e
+Size: 31179198 
+MD5sum: d5e4b23c7edda45dd7214ac33cac45e9
 Section: Themes
 Description: Bold Titles with App Previews.
 Author: PINPAL
