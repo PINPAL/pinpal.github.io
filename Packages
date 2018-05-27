@@ -40,12 +40,12 @@ Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/Bleed/index.html
 
 Package: com.pinpal.darkmode
-Version: 0.0.2
+Version: 0.0.3
 Architecture: iphoneos-arm
 Maintainer: PINPAL <josh.hayes614@gmail.com>
 Filename: package/DarkMode/DarkMode.deb
-Size: 1196 
-MD5sum: fd4268f8d761dd1e489f911bcccf89dd
+Size: 1340 
+MD5sum: cac04ba7185eaad241527702db1dbbc8
 Section: Themes
 Description: Dark Mode via Anemone
 Author: PINPAL
