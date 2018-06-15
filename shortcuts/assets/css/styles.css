@@ -1,0 +1,94 @@
+html, body, div, span, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, abbr,
+address, cite, code, del, dfn, em, img,
+ins, kbd, q, samp, small, strong, sub, sup, var, b,
+i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th,
+td, article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary, time,
+mark, audio, video {
+
+@font-face {
+  font-family:'SF Pro Text';
+  font-style:normal;
+  font-weight:500;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-text_medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:600;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-display_semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:500;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-display_medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:700;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-display_bold.woff2") format("woff2")
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:400;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-display_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Text';
+  font-style:normal;
+  font-weight:800;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-text_heavy.html") format("woff2");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:900;
+  src:local('☺︎'), url("../fonts/sf-pro-display_black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Text';
+  font-style:normal;
+  font-weight:800;
+  src:local('☺︎'), url("../fonts/sf-pro-text_heavy.html") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Display';
+  font-style:normal;
+  font-weight:800;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-display_heavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Text';
+  font-style:normal;
+  font-weight:600;
+  src:local('â˜ºï¸Ž'), url("../fonts/sf-pro-text_semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family:'SF Pro Text';
+  font-style:normal;
+  font-weight:400;
+  src:local('☺︎'), url("../fonts/sf-pro-text_regular.woff2") format("woff2");
+}
+
+.box {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 20px;
+}
