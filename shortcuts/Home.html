@@ -8,9 +8,6 @@
        <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css" class="next-head" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-    box-sizing: border-box;
-}
 
 body {background-color: #232323;
 }
@@ -19,48 +16,17 @@ body {background-color: #232323;
 .column {
     float: left;
     width: 25%;
-    padding: 10px;
+    padding: 0px;
 }
 
 /* Clear floats after the columns */
 .row:after {
+    padding: 4%;
     content: "";
     display: table;
     clear: both;
 }
 
-/*Big bold title at the top of the page*/
-.logotext {
-    margin-left: 0%;
-    color: white;
-    font-family: "SF Pro Display";
-    font-size: 25px;
-    font-weight: bold
-}
-
-/*Subtitles above boxes*/
-.subtitle {
-    margin-top: 7%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    color: white;
-    font-family: "SF Pro Display";
-    font-size: 30px;
-    font-weight: 600
-}
-
-/*Box that stores shortcuts*/
-.listbox {
-  width: 90%;
-  background: #303030;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  border-radius: 25px;
-  padding-left: 9%;
-  padding-top: 7%;
-  padding-bottom: 5%;
-  margin-left: 5%;
-}
 
 /*Searchbox*/
 input[type=text] {
@@ -72,13 +38,14 @@ input[type=text] {
     background: #444444;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
     color: white;
+    margin-top: 3%
 }
 
-/*Search submit button*/
+/*Search button*/
 input[type=submit] {
     margin-left: 5%;
     border: none;
@@ -91,168 +58,569 @@ input[type=submit] {
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 3%;
-    padding-right: 3%;
+    padding-right: 5%;
     color: grey;
+    margin-top: 7%
 }
 
-/*Search submit button hover effect*/
+/*Search button hover effect*/
 input[type=submit]:hover {
     background: #414141;
     color: white;
 }
 
-/*Search Image button*/
-button[type=image] {
-    margin-left: 5%;
-    border: none;
+/*Navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
     font-family: "SF Pro Display";
-    font-size: 20px;
-    text-align: left;
-    background: #333333;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
-    color: grey;
+    vertical-align: middle;
 }
-
-/*Search image button hover effect*/
-button[type=image]:hover {
-    background: #414141;
+li {
+    float: left;
+}
+li a {
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
 }
 
+/*PINPAL Logo*/
 .logo {
-   margin-left: -10%;
-   align: left; 
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 37px;
+    margin-top: 6px;    
+    margin-left: 15px;
+}
+
+/*Bold Page Title in Navbar*/
+.logotext {
+    margin-left: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 25px;
+    font-weight: bold
+}
+
+/*Subtitles above boxes*/
+.subtitle { 
+    margin-left: -15%;
+    margin-top: 6%;
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*Box that stores shortcuts*/
+.listbox {
+  width: 75%;
+  background: #303030;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  border-radius: 25px;
+  padding-left: 6%;
+  padding-top: 5%;
+  padding-right: 8%;
+  margin-top: 2%;
+}
+
+/* Box Columns*/
+.columnbox {
+    float: left;
+    width: 50%;
+}
+.lefticons {
+  width: 20%;
+}
+.rightwords {
+  width: 80%;
+}
+
+/*App Icons*/
+.appicon {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    height: 80%;   
+}
+
+/*App Icons Hover*/
+.appicon:hover { 
+    opacity: 0.5;
+}
+
+/*App Names*/
+.appname { 
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 100%;
+}
+
+/*App URL*/
+.appurl { ;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "SF Pro Display";
+    font-size: 80%; 
 }
 
 </style>
 </head>
 <body>
-    
-    <div>
-        <table align="left">
-            <tr>
-                <th>
-                    <div class="logotext">
-                        <img src="pinpal.png" alt="PINPAL" style="width:30%">
-                    </div>     
-                </th>
-                <th>
-                    <div class="logotext">
-                        PINPAL's Homepage
-                    </div>
-                </th>
-                <form method="get" action="http://www.google.com/search">
-                <th>    
-                    <input type="text" name="q" size="25%"/>
-                </th> 
-                <th>
-                    <input type="submit" value="Google Search"/>
-                </th>
-                </form>
-                <th>
-                    <form action="https://images.google.com/">
-                        <input type="submit" value="Image Search" />
-                    </form>
-                </th>
-            </tr>
-        </table>
-    </div> 
-    
+
+    <ul>
+        <li><img class="logo" src="pinpal.png"></li>
+        <li><div class="logotext">PINPAL's Homepage</div></li>
+        <form method="get" action="http://www.google.com/search">
+        <li><input type="text" name="q" size="25%"/></li>
+        <li><input type="submit" value="Google Search"/></li>
+        </form>
+        <form action="https://images.google.com/">
+        <li><input type="submit" value="Image Search"/></li>
+        </form>
+      </ul>
+   
     <div class="row">
-    <div class="column">
+        <div class="column">
 
             <div class="subtitle">
-                    Social
+                Social
             </div>
-            
-            <div class="listbox">
-                    <a href="https://www.reddit.com"><img src="icons/reddit.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://steamcommunity.com"><img src="icons/steam.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://www.instagram.com/"><img src="icons/instagram.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://inbox.google.com/u/0/?pli=1"><img src="icons/inbox.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://discordapp.com/channels/@me"><img src="icons/discord.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://imgur.com/"><img src="icons/imgur.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://twitter.com/?lang=en-gb"><img src="icons/twitter.png" alt="Icon" style="width:110%"></a>
-                </div>
 
-                <div class="subtitle">
-                        Utilities
-                </div>
-            
-                <div class="listbox">
-                        <a href="http://www.speedtest.net/"><img src="icons/speedtest.png" alt="Icon" style="width:110%"></a>
-                        <a href="https://www.filemail.com/"><img src="icons/filemail.png" alt="Icon" style="width:110%"></a>
-                        <a href="https://goo.gl/"><img src="icons/googleshort.png" alt="Icon" style="width:110%"></a>
-                        <a href="https://temp-mail.org/"><img src="icons/tempmail.png" alt="Icon" style="width:110%"></a>
+            <div class="listbox">
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.reddit.com/"><img class="appicon" src="icons/reddit.png"></a>
                     </div>
-    </div>
-    <div class="column">
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            Reddit
+                        </div>
+                        <div class="appurl">
+                            reddit.com
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://steamcommunity.com/id/pinpal/"><img class="appicon" src="icons/steam.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Steam
+                            </div>
+                            <div class="appurl">
+                                steamcommunity.com
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.instagram.com/"><img class="appicon" src="icons/instagram.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Instagram
+                            </div>
+                            <div class="appurl">
+                                instagram.com
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://inbox.google.com/u/0/?pli=1"><img class="appicon" src="icons/inbox.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Inbox
+                            </div>
+                            <div class="appurl">
+                                inbox.google.com
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://discordapp.com/channels/@me"><img class="appicon" src="icons/discord.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Discord
+                            </div>
+                            <div class="appurl">
+                                discordapp.com
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://imgur.com/"><img class="appicon" src="icons/imgur.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Imgur
+                            </div>
+                            <div class="appurl">
+                                imgur.com
+                            </div>
+                        </div>
+                </div>  
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://twitter.com/?lang=en-gb"><img class="appicon" src="icons/twitter.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Twitter
+                            </div>
+                            <div class="appurl">
+                                twitter.com
+                            </div>
+                        </div>
+                </div>                
+            </div> 
+            
+            <div class="subtitle">
+                Utilities
+            </div>
+
+            <div class="listbox">
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="http://www.speedtest.net/"><img class="appicon" src="icons/speedtest.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            Speedtest
+                        </div>
+                        <div class="appurl">
+                            speedtest.net
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.filemail.com/"><img class="appicon" src="icons/filemail.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            FileMail
+                        </div>
+                        <div class="appurl">
+                            filemail.com
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.goo.gl"><img class="appicon" src="icons/googleshort.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            Goo.gl
+                        </div>
+                        <div class="appurl">
+                            goo.gl
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://temp-mail.org/"><img class="appicon" src="icons/tempmail.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            TempMail
+                        </div>
+                        <div class="appurl">
+                            temp-mail.org/
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
 
             <div class="subtitle">
-                    Videos
+                Videos
             </div>
-            
-            <div class="listbox">
-                    <a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://www.twitch.tv/"><img src="icons/twitch.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://www.netflix.com/browse"><img src="icons/netflix.png" alt="Icon" style="width:110%"></a>
-                    <a href="http://www.channel4.com/my4/history"><img src="icons/channel4.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://www.bbc.co.uk/iplayer"><img src="icons/iplayer.png" alt="Icon" style="width:110%"></a>
-                </div>
 
-                <div class="subtitle">
-                    iOS
-            </div>
-            
             <div class="listbox">
-                    <a href="https://offcornerdev.com/bundleid.html"><img src="icons/bundleid.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://github.com/joeblau/apple-bundle-identifiers"><img src="icons/appleid.png" alt="Icon" style="width:110%"></a>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.youtube.com/"><img class="appicon" src="icons/youtube.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            YouTube
+                        </div>
+                        <div class="appurl">
+                            youtube.com
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.twitch.tv"><img class="appicon" src="icons/twitch.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Twitch
+                            </div>
+                            <div class="appurl">
+                                twitch.tv
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.netflix.com/browse"><img class="appicon" src="icons/netflix.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Netflix
+                            </div>
+                            <div class="appurl">
+                                netflix.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="http://www.channel4.com/my4/history"><img class="appicon" src="icons/channel4.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Channel4
+                            </div>
+                            <div class="appurl">
+                                channel4.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.bbc.co.uk/iplayer"><img class="appicon" src="icons/iplayer.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                BBC iPlayer
+                            </div>
+                            <div class="appurl">
+                                bbc.co.uk
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="subtitle">
+                iOS
+            </div>
+
+            <div class="listbox">
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://offcornerdev.com/bundleid.html"><img class="appicon" src="icons/bundleid.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            BundleID
+                        </div>
+                        <div class="appurl">
+                            offcornerdev.com
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://github.com/joeblau/apple-bundle-identifiers"><img class="appicon" src="icons/appleid.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Apple Identifiers
+                            </div>
+                            <div class="appurl">
+                                offcornerdev.com
+                            </div>
+                            </div>
+                        </div>
                 </div>
 
                 <div class="subtitle">
                     Cloud
-            </div>
-            
-            <div class="listbox">
-                    <a href="https://www.icloud.com/#photos"><img src="icons/icloud.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://www.mediafire.com/#myfiles"><img src="icons/mediafire.png" alt="Icon" style="width:110%"></a>
+                </div>
+    
+                <div class="listbox">
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.icloud.com/#photos"><img class="appicon" src="icons/icloud.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                iCloud
+                            </div>
+                            <div class="appurl">
+                                icloud.com
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="columnbox lefticons">
+                                <a href="https://www.mediafire.com/#myfiles"><img class="appicon" src="icons/mediafire.png"></a>
+                            </div>
+                            <div class="columnbox rightwords">
+                                <div class="appname">
+                                    MediaFire
+                                </div>
+                                <div class="appurl">
+                                    mediafire.com
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
-
-    </div>
-    <div class="column">
+        </div>
+        <div class="column">
 
             <div class="subtitle">
                 Shopping
-        </div>
-
-        <div class="listbox">
-                <a href="https://www.ebay.co.uk/"><img src="icons/ebay.png" alt="Icon" style="width:110%"></a>
-                <a href="https://www.amazon.co.uk/"><img src="icons/amazon.png" alt="Icon" style="width:110%"></a>
-                <a href="https://www.paypal.com/myaccount/home"><img src="icons/paypal.png" alt="Icon" style="width:110%"></a>
-                <a href="https://www.lloydsbank.com/"><img src="icons/llyods.png" alt="Icon" style="width:110%"></a>
-                <a href="https://uk.pcpartpicker.com/list/"><img src="icons/partpicker.png" alt="Icon" style="width:110%"></a>
-                <a href="https://www.ikea.com/gb/en/"><img src="icons/ikea.png" alt="Icon" style="width:110%"></a>
             </div>
 
-    </div>
-    <div class="column">
-
-            <div class="subtitle">
-                    CS:GO
-            </div>
-            
             <div class="listbox">
-                    <a href="https://www.pvpro.com/pvpro/csgo-eu/home"><img src="icons/pvpro.png" alt="Icon" style="width:110%"></a>
-                    <a href="https://derank.me/"><img src="icons/derank.png" alt="Icon" style="width:110%"></a>
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.ebay.co.uk/"><img class="appicon" src="icons/ebay.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            eBay
+                        </div>
+                        <div class="appurl">
+                            ebay.co.uk
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.amazon.co.uk/"><img class="appicon" src="icons/amazon.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Amazon
+                            </div>
+                            <div class="appurl">
+                                amazon.co.uk
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.paypal.com/myaccount/home"><img class="appicon" src="icons/paypal.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                PayPal
+                            </div>
+                            <div class="appurl">
+                                paypal.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.lloydsbank.com"><img class="appicon" src="icons/llyods.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Llyods Bank
+                            </div>
+                            <div class="appurl">
+                                lloydsbank.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://uk.pcpartpicker.com/list/"><img class="appicon" src="icons/partpicker.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                PCPartPicker
+                            </div>
+                            <div class="appurl">
+                                pcpartpicker.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://www.ikea.com/gb/en/"><img class="appicon" src="icons/ikea.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Ikea
+                            </div>
+                            <div class="appurl">
+                                ikea.com
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+        </div>
+        <div class="column">
+
+            <div class="subtitle">
+                CS:GO
+            </div>
+
+            <div class="listbox">
+                <div class="row">
+                    <div class="columnbox lefticons">
+                        <a href="https://www.pvpro.com/pvpro/csgo-eu/home"><img class="appicon" src="icons/pvpro.png"></a>
+                    </div>
+                    <div class="columnbox rightwords">
+                        <div class="appname">
+                            PvPRO
+                        </div>
+                        <div class="appurl">
+                            pvpro.com
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="columnbox lefticons">
+                            <a href="https://derank.me/"><img class="appicon" src="icons/derank.png"></a>
+                        </div>
+                        <div class="columnbox rightwords">
+                            <div class="appname">
+                                Derank
+                            </div>
+                            <div class="appurl">
+                                derank.me
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        
+        </div>
     </div>
-    </div>
+
+
 </body>
 </html>
