@@ -30,19 +30,12 @@ body {background-color: #232323;
 }
 
 /*Big bold title at the top of the page*/
-.header {
-    margin-top: 2%;
-    margin-left: 2%;
+.logotext {
+    margin-left: 0%;
     color: white;
     font-family: "SF Pro Display";
-    font-size: 47px;
+    font-size: 25px;
     font-weight: bold
-}
-
-/*Wrapper - Fix scaling on wide displays*/
-.wrapper {
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
 /*Subtitles above boxes*/
@@ -69,15 +62,107 @@ body {background-color: #232323;
   margin-left: 5%;
 }
 
+/*Searchbox*/
+input[type=text] {
+    margin-left: 5%;
+    border: none;
+    font-family: "SF Pro Display";
+    font-size: 20px;
+    text-align: left;
+    background: #444444;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    color: white;
+}
+
+/*Search submit button*/
+input[type=submit] {
+    margin-left: 5%;
+    border: none;
+    font-family: "SF Pro Display";
+    font-size: 20px;
+    text-align: left;
+    background: #333333;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: grey;
+}
+
+/*Search submit button hover effect*/
+input[type=submit]:hover {
+    background: #414141;
+    color: white;
+}
+
+/*Search Image button*/
+button[type=image] {
+    margin-left: 5%;
+    border: none;
+    font-family: "SF Pro Display";
+    font-size: 20px;
+    text-align: left;
+    background: #333333;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: grey;
+}
+
+/*Search image button hover effect*/
+button[type=image]:hover {
+    background: #414141;
+    color: white;
+}
+
+.logo {
+   margin-left: -10%;
+   align: left; 
+}
 
 </style>
 </head>
 <body>
-
-    <div class="header">
-        PINPAL's Homepage
-    </div>
-          
+    
+    <div>
+        <table align="left">
+            <tr>
+                <th>
+                    <div class="logotext">
+                        <img src="pinpal.png" alt="PINPAL" style="width:30%">
+                    </div>     
+                </th>
+                <th>
+                    <div class="logotext">
+                        PINPAL's Homepage
+                    </div>
+                </th>
+                <form method="get" action="http://www.google.com/search">
+                <th>    
+                    <input type="text" name="q" size="25%"/>
+                </th> 
+                <th>
+                    <input type="submit" value="Google Search"/>
+                </th>
+                </form>
+                <th>
+                    <form action="https://images.google.com/">
+                        <input type="submit" value="Image Search" />
+                    </form>
+                </th>
+            </tr>
+        </table>
+    </div> 
+    
     <div class="row">
     <div class="column">
 
