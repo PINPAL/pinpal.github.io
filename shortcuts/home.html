@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-body {background-color: #232323;
+body {background-color: #1d1d1d;
 }
 
 @font-face { font-family: "SF Pro Display"; src: url("SF-Pro-Display-Regular.otf"); } 
@@ -31,7 +31,6 @@ body {background-color: #232323;
 
 /*Searchbox*/
 input[type=text] {
-    margin-top: 7%;
     border: none;
     font-family: "SF Pro Display";
     font-size: 20px;
@@ -47,7 +46,6 @@ input[type=text] {
 
 /*Search button*/
 input[type=submit] {
-    margin-top: 13%;
     border: none;
     font-family: "SF Pro Display";
     font-size: 20px;
@@ -68,52 +66,27 @@ input[type=submit]:hover {
     color: white;
 }
 
-/*Navbar*/
-ul {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: black;
-    font-family: "SF Pro Display";
-    vertical-align: middle;
-}
-li {
-    float: left;
-    margin-left: 1.3%;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #111;
-}
-
 /*PINPAL Logo*/
 .logo {
     display: inline-block;
     vertical-align: top;
     width: 28px;
     height: 37px;
-    margin-top: 6px;    
+    vertical-align:bottom;   
 }
 
 /*Logo Text*/
 .logotext {
-    margin-left: 5%;
-    margin-top: 4%;
-    margin-bottom: 4%;
     color: white;
     font-family: "SF Pro Display";
     font-size: 150%;
-    font-weight: bold
+    font-weight: bold;
+    vertical-align:bottom;
 }
 
 /*Subtitles above boxes*/
 .subtitle { 
     margin-left: -15%;
-    margin-top: 6%;
     color: white;
     font-family: "SF Pro Display";
     font-size: 150%;
@@ -132,6 +105,7 @@ li a:hover {
   padding-top: 5%;
   padding-right: 8%;
   margin-top: 2%;
+  margin-bottom: 6%;
 }
 
 /* Box Columns*/
@@ -167,10 +141,16 @@ li a:hover {
 }
 
 /*App URL*/
-.appurl { ;
+.appurl { 
     color: rgba(255, 255, 255, 0.4);
     font-family: "SF Pro Display";
     font-size: 80%; 
+}
+
+table, th, td {
+    margin-top: -1%;
+    margin-left: -0.5%;
+    margin-bottom: 1%;
 }
 
 </style>
@@ -178,18 +158,23 @@ li a:hover {
 <body>
 
     <div>
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <ul>
-            <li><img class="logo" src="pinpal.png"></li>
-            <li><p style=color:white><font size="5%"><b>PINPAL's Homepage</b></font></p>></li>
-            <form method="get" action="http://www.google.com/search">
-            <li><input type="text" name="q" size="25%"/></li>
-            <li><input type="submit" value="Google Search"/></li>
-            </form>
-            <form action="https://images.google.com/">
-            <li><input type="submit" value="Image Search"/></li>
-            </form>
-        </ul>
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css "/>
+
+        <table style="width:100%" bgcolor="#000000">
+            <tr>
+                <th><p><font color="black" font size="5%" face="SF Pro Display"><b>P</b></font></p></th>
+                <th><img class="logo" src="pinpal.png"></th>
+                <th><p><font color="white" font size="5%" face="SF Pro Display"><b>PINPAL's Homepage</b></font></p></th> 
+                <form method="get" action="http://www.google.com/search">
+                    <th><input type="text" name="q" size="25%"/></th>
+                    <th><input type="submit" value="Google Search"/></th>
+                </form>  
+                <form action="https://images.google.com/">
+                    <th><input type="submit" value="Image Search"/></th>
+                </form> 
+                <th><p><font color="black" font size="5%" face="SF Pro Display"><b>PINPAL bad html</b></font></p></th>
+            </tr>
+        </table>
     
         <div class="row">
             <div class="column">
