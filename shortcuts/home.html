@@ -64,6 +64,7 @@ input[type=submit] {
     float: left;
     margin-left: 10px;
     margin-top: 0px;
+    position: relative;
 }
 
 /*Search button hover effect*/
@@ -175,32 +176,44 @@ input[type=submit]:hover {
         width: 50%;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .column {
         width: 100%;
     }
 }
 
 /*Responsive Layout - increase top area space on mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     .wrapper {
-        top: 15%;
+        top: 100px;
     }
     .logo {
         margin-left: 10px;
     }
-    input[type=submit] {
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-    input[type=text] {
-        margin-top: 20px;
-        margin-left: 20px;
-    }
 }
-@media screen and (max-width: 337px) {
+
+/*Hide "Google search" button below this resolution*/
+@media screen and (max-width: 829px) {
     input[type=submit] {
         display: none;
+    }
+}
+
+/*Reduce searchbar width */
+@media screen and (max-width: 547px) {
+    input[type=text] {
+        width: 90%;
+        position: absolute;
+        left: 5px;
+        top: 50px;
+    }
+}
+
+/*Reduce logotext */
+@media screen and (max-width: 286px) {
+    .logotext {
+        margin-top: 4px;
+        font-size: 22px;
     }
 }
 
