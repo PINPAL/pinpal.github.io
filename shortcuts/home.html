@@ -44,6 +44,7 @@ input[type=text] {
     color: white;
     float: left;
     margin-left: 10px;
+    margin-top: 0px;
 }
 
 /*Search button*/
@@ -62,6 +63,7 @@ input[type=submit] {
     color: grey;
     float: left;
     margin-left: 10px;
+    margin-top: 0px;
 }
 
 /*Search button hover effect*/
@@ -78,7 +80,7 @@ input[type=submit]:hover {
     height: 33px;
     vertical-align:bottom;   
     float:left;
-    margin-left: 10px;
+    margin-left: 30%;
 }
 
 /*Logo Text*/
@@ -158,10 +160,64 @@ input[type=submit]:hover {
 /*Wrapper*/
 .wrapper {
     position: absolute;
-    left: 20px;
+    left: 15%;
     top: 8%;
 }
 
+/* Responsive layout - reduced columns based on resolution */
+@media screen and (max-width: 1023px) {
+    .column {
+        width: 33.33%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/*Responsive Layout - increase top area space on mobile */
+@media screen and (max-width: 700px) {
+    .wrapper {
+        top: 15%;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+    input[type=submit] {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    input[type=text] {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 337px) {
+    input[type=submit] {
+        display: none;
+    }
+}
+
+/*Repsonsive layout - Centers content on widescreen resolutions*/
+@media screen and (max-width: 1440px) {
+    .wrapper {
+        left: 80px;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        left: 20px;
+    }
+}
 
 </style>
 </head>
