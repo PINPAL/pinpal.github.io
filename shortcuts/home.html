@@ -81,7 +81,6 @@ input[type=submit]:hover {
     height: 33px;
     vertical-align:bottom;   
     float:left;
-    margin-left: 30%;
 }
 
 /*Logo Text*/
@@ -160,12 +159,26 @@ input[type=submit]:hover {
 
 /*Wrapper*/
 .wrapper {
+    width: 1500px;
     position: absolute;
-    left: 15%;
-    top: 8%;
+    top: 70px;
+    margin-left: auto;  
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
-/* Responsive layout - reduced columns based on resolution */
+/*Navbar*/
+.navbar {
+    width: 1000px;
+    position: absolute;
+    margin-left: auto;  
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/* Responsive layout - reduce columns based on resolution */
 @media screen and (max-width: 1023px) {
     .column {
         width: 33.33%;
@@ -182,13 +195,10 @@ input[type=submit]:hover {
     }
 }
 
-/*Responsive Layout - increase top area space on mobile */
+/*Responsive Layout - decrease gap between rows */
 @media screen and (max-width: 750px) {
-    .wrapper {
-        top: 100px;
-    }
-    .logo {
-        margin-left: 10px;
+    .row:after {
+        padding: 3%;
     }
 }
 
@@ -197,15 +207,8 @@ input[type=submit]:hover {
     input[type=submit] {
         display: none;
     }
-}
-
-/*Reduce searchbar width */
-@media screen and (max-width: 547px) {
     input[type=text] {
-        width: 87%;
-        position: absolute;
-        left: 5px;
-        top: 50px;
+        display: none;
     }
 }
 
@@ -217,18 +220,17 @@ input[type=submit]:hover {
     }
 }
 
-/*Repsonsive layout - Centers content on widescreen resolutions*/
-@media screen and (max-width: 1440px) {
+/*Disable sidespace at resolution width's below 1500px*/
+@media screen and (max-width: 1500px) {
     .wrapper {
-        left: 80px;
-    }
-    .logo {
-        margin-left: 10px;
+    width: 97%;
     }
 }
-@media screen and (max-width: 1200px) {
-    .wrapper {
-        left: 20px;
+
+/*Enable Logo margin at low resolution*/
+@media screen and (max-width: 1023px) {
+    .logo {
+    margin-left: 10px;
     }
 }
 
@@ -236,15 +238,17 @@ input[type=submit]:hover {
 </head>
 <body>
 
-    <img class="logo" src="pinpal.png">
-    <div class="logotext">PINPAL's Homepage</div> 
-    <form method="get" action="http://www.google.com/search">
-        <input type="text" name="q" size="25%"/>
-        <input type="submit" value="Google Search"/>
-    </form>
-    <form action="https://images.google.com/">
-        <input type="submit" value="Image Search"/>
-    </form>
+    <div class="navbar">
+        <img class="logo" src="pinpal.png">
+        <div class="logotext">PINPAL's Homepage</div> 
+        <form method="get" action="http://www.google.com/search">
+            <input type="text" name="q" size="25%"/>
+            <input type="submit" value="Google Search"/>
+        </form>
+        <form action="https://images.google.com/">
+            <input type="submit" value="Image Search"/>
+        </form>
+    </div>
 
 <div class="wrapper">
 <div class="row">
