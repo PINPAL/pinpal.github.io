@@ -1,16 +1,3 @@
-Package: com.VitaTaf.HomeGesture
-Version: 0.0.3
-Architecture: iphoneos-arm
-Maintainer: PINPAL <josh.hayes614@gmail.com>
-Filename: package/HomeGesture/HomeGesture.deb
-Size: 4320
-MD5sum: 09db089221b1354902b8bdf444678cc6
-Section: Tweaks
-Description: Enable iPhone X home gesture on older devices.
-Author: VitaTaf
-Name: Home Gesture
-Depiction: https://pinpal.github.io/package/HomeGesture/index.html
-
 Package: com.pinpal.nofoldericon
 Version: 1.0
 Architecture: iphoneos-arm
