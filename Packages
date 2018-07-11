@@ -42,11 +42,11 @@ Depiction: https://pinpal.github.io/package/DarkMode/index.html
 
 Package: com.ilewiscx.clones
 Name: Zeppelin: Star Wars: Clones
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Filename: package/ZeppelinLogo/ZeppelinLogo.deb
-Size: 46222
-MD5sum: 53704e3b145d71aaec5f6b9b10f57283
+Size: 70998
+MD5sum: de17fb3fa187a0d4677d2831707eb432
 Description: Star Wars Clones for Zeppelin
 Author: iLewisCx
 Maintainer: PINPAL (josh.hayes614@gmail.com)
