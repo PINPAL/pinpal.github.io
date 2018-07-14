@@ -1,25 +1,28 @@
 <!DOCTYPE html><html><head>
         <style type="text/css">
-    
-            .button_example{
-            border:0px solid #259663; -webkit-border-radius: 50px; -moz-border-radius: 50px;border-radius: 50px;font-size:14px;font-family:SF Pro Display, SF Pro Display, SF Pro Display; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;font-weight:bold; color: #FFFFFF;
-             background-color: #30C381; background-image: -webkit-gradient(linear, left top, left bottom, from(#30C381), to(#839E08));
-             background-image: -webkit-linear-gradient(top, #30C381, #839E08);
-             background-image: -moz-linear-gradient(top, #30C381, #839E08);
-             background-image: -ms-linear-gradient(top, #30C381, #839E08);
-             background-image: -o-linear-gradient(top, #30C381, #839E08);
-             background-image: linear-gradient(to bottom, #30C381, #839E08);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#30C381, endColorstr=#839E08);
-            }
-            
-            .button_example:hover{
-             border:0px solid #1c714b;
-             background-color: #269a66; background-image: -webkit-gradient(linear, left top, left bottom, from(#269a66), to(#5b6d06));
-             background-image: -webkit-linear-gradient(top, #269a66, #5b6d06);
-             background-image: -moz-linear-gradient(top, #269a66, #5b6d06);
-             background-image: -ms-linear-gradient(top, #269a66, #5b6d06);
-             background-image: -o-linear-gradient(top, #269a66, #5b6d06);
-             background-image: linear-gradient(to bottom, #269a66, #5b6d06);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#269a66, endColorstr=#5b6d06);
-            }
+
+            /*TOP BUTTONS*/
+            input[type=submit] {
+              border:0px solid #3FD0A4; -webkit-border-radius: 50px; -moz-border-radius: 50px;border-radius: 50px;font-size:14px;font-family:SF Pro Display, SF Pro Display, SF Pro Display; padding: 10px 10px 10px 10px; text-decoration:none;font-weight:bold; color: #FFFFFF;
+               background-color: #3FD0A4; background-image: -webkit-gradient(linear, left top, left bottom, from(#3FD0A4), to(#839E08));
+               background-image: -webkit-linear-gradient(top, #3FD0A4, #839E08);
+               background-image: -moz-linear-gradient(top, #3FD0A4, #839E08);
+               background-image: -ms-linear-gradient(top, #3FD0A4, #839E08);
+               background-image: -o-linear-gradient(top, #3FD0A4, #839E08);
+               background-image: linear-gradient(to bottom, #3FD0A4, #839E08);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3FD0A4, endColorstr=#839E08);
+              }
+
+            /*TOP BUTTONS HOVER*/
+            input[type=submit]:hover {
+              border:0px solid #1c714b;
+              background-color: #269a66; background-image: -webkit-gradient(linear, left top, left bottom, from(#269a66), to(#5b6d06));
+              background-image: -webkit-linear-gradient(top, #269a66, #5b6d06);
+              background-image: -moz-linear-gradient(top, #269a66, #5b6d06);
+              background-image: -ms-linear-gradient(top, #269a66, #5b6d06);
+              background-image: -o-linear-gradient(top, #269a66, #5b6d06);
+              background-image: linear-gradient(to bottom, #269a66, #5b6d06);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#269a66, endColorstr=#5b6d06);
+             }
+
             </style></head>
 
     <meta charSet="utf-8" class="next-head" />
@@ -94,8 +97,23 @@
 </head>
 
 <body>
-    <a class="button_example" href="https://www.paypal.me/thepinpal/1">Donate (PayPal)</a>
-    <a class="button_example" href="https://docs.google.com/forms/d/e/1FAIpQLSei-lR2iodN0m56vNq6CEy7nHqaO2FY-irksUV51LQEcUKb-Q/viewform">Sumbit Icon Requests</a>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <td>
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="XNA6PLRL7A6PQ">
+          <input type="submit" value="Donate (PayPal)">
+        </td>
+      </form>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSei-lR2iodN0m56vNq6CEy7nHqaO2FY-irksUV51LQEcUKb-Q/viewform">
+        <td>
+          <input type="submit" value="Submit Icon Requests">
+        </td>
+      </form>
+    </tr>
+  </table>
 
     <div>
         <div id="__next">
