@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iOS 11 BundleID</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" class="next-head" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fa-regular.min.css" class="next-head" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fa-solid.min.css" class="next-head" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css" class="next-head" />
+    <link rel="icon" href="favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {background-color: #292C30;
+}
+
+@font-face { font-family: "SF Pro Display"; src: url("SF-Pro-Display-Regular.otf"); }
+
+
+/*Subtitles above boxes*/
+.subtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  width: 35%;
+}
+
+/*Box*/
+.bigbox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 35%;
+  line-height: 1.6;
+}
+
+/*Bold Title at top of boxes*/
+.boxheading {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Big Title at the top*/
+.bigtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 50px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+/* Logo Columns*/
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Responsive layout*/
+@media screen and (max-width: 1083px) {
+  .bigtitle {
+    width: 75%
+  }
+  .bigbox {
+    width: 75%
+  }
+  .subtitle {
+    width: 75%
+  }
+}
+
+
+/* unvisited link */
+a:link {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* Button */
+.button {
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding: 10px;
+  color:white;
+  font-size: 20px;
+}
+.buttoninverted {
+  background: linear-gradient(to right, #2B7DCA , #55B49D);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding: 10px;
+  color:white;
+  font-size: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center
+}
+table {
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    cellpadding="10";
+    border-radius:25px;
+    -moz-border-radius:25px;
+}
+table tr:nth-child(even) {
+    background-color: #101621;
+}
+table tr:nth-child(odd) {
+   background-color: #1a1f28;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bigtitle">Stock iOS identifers</div>
+
+<div class="subtitle">iOS 11 Bundle Identifiers</div>
+
+<div class="bigbox">
+
+<table>
+  <tr>
+    <th>Icon<th>
+    <th>Name<th>
+    <th>BundleID<th>
+  </tr><tr>
+    <th><img src=icons/appstore.png style=width:50px;><th>
+    <th>App Store<th>
+    <th>com.apple.AppStore<th>
+  </tr>
+  </tr><tr>
+    <th><img src=icons/applestore.png style=width:50px;><th>
+    <th>Apple Store<th>
+    <th>com.apple.store.Jolly<th>
+  </tr><tr>
+    <th><img src=icons/support.png style=width:50px;><th>
+    <th>Apple Support<th>
+    <th>com.apple.supportapp<th>
+  </tr><tr>
+    <th><img src=icons/watch.png style=width:50px;><th>
+    <th>Apple Watch<th>
+    <th>com.apple.Bridge<th>
+  </tr><tr>
+    <th><img src=icons/calc.png style=width:50px;><th>
+    <th>Calculator<th>
+    <th>com.apple.calculator<th>
+  </tr><tr>
+    <th><img src=icons/calendar.png style=width:50px;><th>
+    <th>Calendar<th>
+    <th>com.apple.mobilecal<th>
+  </tr><tr>
+    <th><img src=icons/camera.png style=width:50px;><th>
+    <th>Camera<th>
+    <th>com.apple.camera<th>
+  </tr><tr>
+    <th><img src=icons/classroom.png style=width:50px;><th>
+    <th>Classroom<th>
+    <th>com.apple.classroom<th>
+  </tr><tr>
+    <th><img src=icons/clips.png style=width:50px;><th>
+    <th>Clips<th>
+    <th>com.apple.clips<th>
+  </tr><tr>
+    <th><img src=icons/clock.png style=width:50px;><th>
+    <th>Clock<th>
+    <th>com.apple.mobiletimer<th>
+  </tr><tr>
+    <th><img src=icons/compass.png style=width:50px;><th>
+    <th>Compass<th>
+    <th>com.apple.compass<th>
+  </tr><tr>
+    <th><img src=icons/contacts.png style=width:50px;><th>
+    <th>Contacts<th>
+    <th>com.apple.MobileAddressBook<th>
+  </tr><tr>
+    <th><img src=icons/facetime.png style=width:50px;><th>
+    <th>FaceTime<th>
+    <th>com.apple.facetime<th>
+  </tr><tr>
+    <th><img src=icons/fmf.png style=width:50px;><th>
+    <th>Find Friendst<th>
+    <th>com.apple.mobileme.fmf1<th>
+  </tr><tr>
+    <th><img src=icons/fmyi.png style=width:50px;><th>
+    <th>Find iPhone<th>
+    <th>com.apple.mobileme.fmip1<th>
+  </tr><tr>
+    <th><img src=icons/files.png style=width:50px;><th>
+    <th>Files<th>
+    <th>	com.apple.DocumentsApp<th>
+  </tr><tr>
+    <th><img src=icons/game.png style=width:50px;><th>
+    <th>Game Center<th>
+    <th>	com.apple.gamecenter<th>
+  </tr><tr>
+    <th><img src=icons/garage.png style=width:50px;><th>
+    <th>GarageBand<th>
+    <th>com.apple.mobilegarageband<th>
+  </tr><tr>
+    <th><img src=icons/health.png style=width:50px;><th>
+    <th>Health<th>
+    <th>com.apple.Health<th>
+  </tr><tr>
+    <th><img src=icons/heart.png style=width:50px;><th>
+    <th>Heart Study<th>
+    <th>com.apple.Antimony<th>
+  </tr><tr>
+    <th><img src=icons/home.png style=width:50px;><th>
+    <th>Home<th>
+    <th>com.apple.Home<th>
+  </tr><tr>
+    <th><img src=icons/ibooks.png style=width:50px;><th>
+    <th>iBooks<th>
+    <th>com.apple.iBooks<th>
+  </tr><tr>
+    <th><img src=icons/drive.png style=width:50px;><th>
+    <th>iCloud Drive<th>
+    <th>	com.apple.iCloudDriveApp<th>
+  </tr><tr>
+    <th><img src=icons/imovie.png style=width:50px;><th>
+    <th>iMovie<th>
+    <th>com.apple.iMovie<th>
+  </tr><tr>
+    <th><img src=icons/connect.png style=width:50px;><th>
+    <th>iTunes Connect<th>
+    <th>	com.apple.itunesconnect.mobile<th>
+  </tr><tr>
+    <th><img src=icons/tvremote.png style=width:50px;><th>
+    <th>iTunes Remote<th>
+    <th>com.apple.TVRemote<th>
+  </tr><tr>
+    <th><img src=icons/itunes.png style=width:50px;><th>
+    <th>iTunes Store<th>
+    <th>com.apple.MobileStore<th>
+  </tr><tr>
+    <th><img src=icons/itunesu.png style=width:50px;><th>
+    <th>iTunes U<th>
+    <th>com.apple.itunesu<th>
+  </tr><tr>
+    <th><img src=icons/keynote.png style=width:50px;><th>
+    <th>Keynote<th>
+    <th>com.apple.Keynote<th>
+  </tr><tr>
+    <th><img src=icons/logic_remote.png style=width:50px;><th>
+    <th>Logic Remote<th>
+    <th>com.apple.musicapps.remote<th>
+  </tr><tr>
+    <th><img src=icons/mail.png style=width:50px;><th>
+    <th>Mail<th>
+    <th>com.apple.mobilemail<th>
+  </tr><tr>
+    <th><img src=icons/maps.png style=width:50px;><th>
+    <th>Maps<th>
+    <th>com.apple.Maps<th>
+  </tr><tr>
+    <th><img src=icons/sms.png style=width:50px;><th>
+    <th>Messages><th>
+    <th>com.apple.MobileSMS<th>
+  </tr><tr>
+    <th><img src=icons/music.png style=width:50px;><th>
+    <th>Music<th>
+    <th>com.apple.Music<th>
+  </tr><tr>
+    <th><img src=icons/news.png style=width:50px;><th>
+    <th>News<th>
+    <th>com.apple.news<th>
+  </tr><tr>
+    <th><img src=icons/notes.png style=width:50px;><th>
+    <th>Notes<th>
+    <th>com.apple.mobilenotes<th>
+  </tr><tr>
+    <th><img src=icons/numbers.png style=width:50px;><th>
+    <th>Numbers<th>
+    <th>com.apple.Numbers<th>
+  </tr><tr>
+    <th><img src=icons/pages.png style=width:50px;><th>
+    <th>Pages<th>
+    <th>com.apple.Pages<th>
+  </tr><tr>
+    <th><img src=icons/phone.png style=width:50px;><th>
+    <th>Phone<th>
+    <th>com.apple.mobilephone<th>
+  </tr><tr>
+    <th><img src=icons/photobooth.png style=width:50px;><th>
+    <th>Photo Booth<th>
+    <th>com.apple.Photo-Booth<th>
+  </tr><tr>
+    <th><img src=icons/photos.png style=width:50px;><th>
+    <th>Photos<th>
+    <th>com.apple.mobileslideshow<th>
+  </tr><tr>
+    <th><img src=icons/playgrounds.png style=width:50px;><th>
+    <th>Playgrounds<th>
+    <th>com.apple.Playgrounds<th>
+  </tr><tr>
+    <th><img src=icons/podcasts.png style=width:50px;><th>
+    <th>Podcats<th>
+    <th>com.apple.podcasts<th>
+  </tr><tr>
+    <th><img src=icons/reminders.png style=width:50px;><th>
+    <th>Reminders<th>
+    <th>com.apple.reminders<th>
+  </tr><tr>
+    <th><img src=icons/remote.png style=width:50px;><th>
+    <th>Remote<th>
+    <th>com.apple.Remote<th>
+  </tr><tr>
+    <th><img src=icons/safari.png style=width:50px;><th>
+    <th>Safari<th>
+    <th>	com.apple.mobilesafari<th>
+  </tr><tr>
+    <th><img src=icons/settings.png style=width:50px;><th>
+    <th>Settings<th>
+    <th>com.apple.Preferences<th>
+  </tr><tr>
+    <th><img src=icons/stocks.png style=width:50px;><th>
+    <th>Stocks<th>
+    <th>com.apple.stocks<th>
+  </tr><tr>
+    <th><img src=icons/tips.png style=width:50px;><th>
+    <th>Tips<th>
+    <th>com.apple.tips<th>
+  </tr><tr>
+    <th><img src=icons/trailers.png style=width:50px;><th>
+    <th>Trailers<th>
+    <th>com.apple.movietrailers<th>
+  </tr><tr>
+    <th><img src=icons/tv.png style=width:50px;><th>
+    <th>TV<th>
+    <th>com.apple.tv<th>
+  </tr><tr>
+    <th><img src=icons/videos.png style=width:50px;><th>
+    <th>Videos<th>
+    <th>com.apple.videos<th>
+  </tr><tr>
+    <th><img src=icons/voicememos.png style=width:50px;><th>
+    <th>Voice Memos<th>
+    <th>com.apple.VoiceMemos<th>
+  </tr><tr>
+    <th><img src=icons/wallet.png style=width:50px;><th>
+    <th>Wallet<th>
+    <th>	com.apple.Passbook<th>
+  </tr><tr>
+    <th><img src=icons/weather.png style=width:50px;><th>
+    <th>Weather<th>
+    <th>com.apple.weather<th>
+  </tr><tr>
+    <th><img src=icons/wwdc.png style=width:50px;><th>
+    <th>WWDC<th>
+    <th>com.apple.wwdc<th>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>
