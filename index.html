@@ -1,99 +1,333 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charSet="utf-8" class="next-head" />
-    <meta charset="UTF-8" class="next-head" />
-    <title class="next-head">PINPAL's Repo</title>
-    <meta name="description" content="PINPAL's Repo" class="next-head" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" class="next-head" />
-    <link rel="icon" sizes="192x192" href="static/touch-icon.html" class="next-head" />
-    <link rel="apple-touch-icon" href="static/touch-icon.html" class="next-head" />
-    <link rel="mask-icon" href="static/favicon-mask.html" color="#49B882" class="next-head" />
-    <link rel="icon" href="static/favicon.ico" class="next-head" />
-    <meta property="og:url" content="http://repo.auxiliumdev.com/" class="next-head" />
-    <meta property="og:title" content="PINPAL's Repo" class="next-head" />
-    <meta property="og:description" content="Super secret packages and stuff!" class="next-head" />
-    <meta name="twitter:site" content="http://repo.auxiliumdev.com/" class="next-head" />
-    <meta name="twitter:card" content="summary_large_image" class="next-head" />
-    <meta name="twitter:image" content="" class="next-head" />
-    <meta property="og:image" content="" class="next-head" />
-    <meta property="og:image:width" content="1200" class="next-head" />
-    <meta property="og:image:height" content="630" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="assets/css/fa-regular.min.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="assets/css/fa-solid.min.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css" class="next-head" />
+  <title>PINPAL's Website</title>
+  <link rel="icon" href="favicon.ico" class="next-head" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+@font-face { font-family: "SF Pro Display"; src: url("SF-Pro-Display-Regular.otf"); }
+
+* {
+    box-sizing: border-box;
+}
+
+/*Background Color*/
+body {
+  background-color: #292C30;
+}
+
+/* unvisited link */
+a:link {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+    text-decoration: none;
+}
+
+
+/* Navbar Columns */
+.columnnav {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Columns */
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Responsive layout - Single Column on Mobile */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Big Title in the Navbarp*/
+.bigtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Button */
+.button {
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding: 10px;
+  color:white;
+  font-size: 20px;
+}
+.buttoninverted {
+  background: linear-gradient(to right, #2B7DCA , #55B49D);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding: 10px;
+  color:white;
+  font-size: 20px;
+}
+
+/*Navbar*/
+.navbar {
+  background: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  width: 35%;
+}
+
+/*Box*/
+.box {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Responsive layout BOX */
+@media screen and (max-width: 1600px) {
+    .box {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .box {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .box {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .box {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .box {
+        width: 100%;
+    }
+}
+
+/* Responsive layout NAVBAR */
+@media screen and (max-width: 1600px) {
+    .navbar {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .navbar {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .navbar {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .navbar {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 840px) {
+    .navbar {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 711px) {
+    .navbar {
+        width: 95%;
+    }
+    .bigtitle {
+      font-size: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar {
+        padding-bottom: 45px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+    .bigtitle {
+      font-size: 22px;
+      margin-top: 3px;
+    }
+    .button{
+      font-size: 16px;
+      padding: 8px;
+    }
+    .box {
+      margin-bottom: 15px;
+    }
+    .columnnav {
+        padding-left: 0px;
+        padding-right: 0px;
+  }
+}
+
+/*Subtitles above boxes*/
+.subtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+</style>
 </head>
-
 <body>
-    <div>
-        <div id="__next">
-            <div data-reactroot="">
-                <div>
-                    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-                    <div class="packages-container">
-                        <h1>PINPAL's Repo</h1>
-                        <h2>Packages</h2><br><br>
-                        <panel class="modern">
-                            <panel-body className="green-gradient" style="background:linear-gradient(90deg,#30c381, #089e46) !important;width:80px;margin:auto;padding-top:7px;padding-bottom:7px;;font-size:14px;font-weight:600;letter-spacing:0.5px"><a style="padding-top:0px" class="reviews-more" target="_blank" href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/"><label style="color:white !important">Add Repo</label></a></panel-body>
-                        </panel><br/>
-                        <div class="package-container">
-                            <panel>
-                                <a href="package/HomeGesture/index.html" as="package/HomeGesture/index.html">
-                                    <panel-body>
-                                        <h3 style="margin-top:-4px">HomeGesture</h3>
-                                        <h5><span style="float:left">iPhone X Gestures for older devices</span><span style="float:left;color:#777;font-size:smaller;padding-top:3px">Now hosted on Packix Repo</span></h5>
-                                    </panel-body>
-                                </a>
-                            </panel>
-                                <panel>
-                                    <a href="package/NoFolder/index.html" as="package/NoFolder/index.html">
-                                        <panel-body>
-                                            <h3 style="margin-top:-4px">NoFolderIcons</h3>
-                                            <h5><span style="float:left">Remove Background From Folders</span><span style="float:right;color:#777;font-size:smaller;padding-top:3px">1.0</span></h5>
-                                        </panel-body>
-                                    </a>
-                                </panel>
-                                <panel>
-                                    <a href="package/Bleed/index.html" as="package/Bleed/index.html">
-                                        <panel-body>
-                                            <h3 style="margin-top:-4px">Bleed Theme</h3>
-                                            <h5><span style="float:left">Bold Titles with App Previews.</span><span style="float:right;color:#777;font-size:smaller;padding-top:3px">0.2.5</span></h5>
-                                        </panel-body>
-                                    </a>
-                                </panel>
-                                <panel>
-                                    <a href="http://cydia.saurik.com/package/com.pinpal.trueart/" as="http://cydia.saurik.com/package/com.pinpal.trueart/">
-                                        <panel-body>
-                                            <h3 style="margin-top:-4px">True Art Theme</h3>
-                                            <h5><span style="float:left">Hand Crafted In "mspaint.exe" </span><span style="float:left;color:#777;font-size:smaller;padding-top:3px">Now hosted on BigBoss Repo</span></h5>
-                                        </panel-body>
-                                    </a>
-                                </panel>
-                                <panel>
-                                    <a href="package/DarkMode/index.html" as="package/DarkMode/index.html">
-                                        <panel-body>
-                                            <h3 style="margin-top:-4px">Dark Mode</h3>
-                                            <h5><span style="float:left">Dark Mode via Anemone </span><span style="float:right;color:#777;font-size:smaller;padding-top:3px">0.0.3</span></h5>
-                                        </panel-body>
-                                    </a>
-                                </panel>
-                                <panel>
-                                    <a href="package/ZeppelinLogo/index.html" as="package/ZeppelinLogo/index.html">
-                                        <panel-body>
-                                            <h3 style="margin-top:-4px">Star Wars: Clones/Ships</h3>
-                                            <h5><span style="float:left">Star Wars Logos for Zeppelin</span><span style="float:right;color:#777;font-size:smaller;padding-top:3px">1.2</span></h5>
-                                        </panel-body>
-                                    </a>
-                                </panel>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="navbar"
+  <div class="row">
+    <div class="columnnav">
+      <div class="bigtitle">PINPAL's Repo</div>
     </div>
-</body>
+    <div class="columnnav">
+      <a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
+        <div class="button">
+            Add Repo to Cydia
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 
+<div class="row">
+  <div class="column">
+
+    <div class="subtitle">Pages</div>
+
+    <a href="https://pinpal.github.io/theme-guide/home.html">
+      <div class="box" style="background: linear-gradient(to right, #d3325f , #FA3D72);">
+        <img src="page-icons/anemone.png" style=float:right;width:95px;>
+        <h1>Anemone Theme Creation Guide</h1>
+        <p>A beginners guide on how to create a theme using Anemone.
+      </div></a>
+
+      <a href="https://pinpal.github.io/stock-identifiers/home.html">
+        <div class="box" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7);">
+          <img src="page-icons/bundleID.png" style=float:right;width:95px;>
+          <h1>iOS Bundle Identifiers</h1>
+          <p>A complete list of the stock BundleIDs in iOS 11.
+        </div></a>
+
+        <a href="https://pinpal.github.io/shortcuts/home.html">
+          <div class="box" style="background: linear-gradient(to right, #510491 , #5f027a);">
+            <img src="page-icons/home.png" style=float:right;width:95px;>
+            <h1>Shortcuts Homepage</h1>
+            <p>Dark and clean browser homepage full of shortcuts.
+          </div></a>
+
+  </div>
+  <div class="column">
+
+    <div class="subtitle">Packages</div>
+
+    <a href="https://repo.packix.com/package/com.vitataf.homegesture/">
+      <div class="box" style="background: linear-gradient(to right, #3BB7B4 , #42E299);">
+        <img src="package/HomeGesture/icon.png" style=float:right;width:95px;>
+        <h1>HomeGesture</h1>
+        <p>Enable iPhone X gestures on older devices
+        <br><span style="float:left; color:rgba(255,255,255,0.75)">Now Hosted on the Packix Repo</span></p>
+      </div></a>
+
+      <a href="package/DarkMode/index.html">
+        <div class="box" style="background: linear-gradient(to right, #052c30 , #030735);">
+          <img src="package/DarkMode/Icon.png" style=float:right;width:95px;>
+          <h1>Dark Mode via Anemone</h1>
+          <p>Anemone Theme: Proof of concept: Dark Mode using Anemone!
+          <br><span style="float:left; color:rgba(255,255,255,0.75)">Version 0.0.3</span></p>
+        </div></a>
+
+      <div class="subtitle">Themes</div>
+
+      <a href="package/Bleed/index.html">
+        <div class="box" style="background: linear-gradient(to right, #b70900 , #a31d28);">
+          <img src="package/Bleed/Icon.png" style=float:right;width:95px;>
+          <h1>Bleed Theme</h1>
+          <p>Anemone Theme: Bold Titles with App Previews.
+          <br><span style="float:left; color:rgba(255,255,255,0.75)">Version 0.2.5</span></p>
+        </div></a>
+
+        <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+          <div class="box" style="background: linear-gradient(to right, #5f93bf , #98bede);">
+            <img src="package/TrueArt/Icon.png" style=float:right;width:95px;>
+            <h1>TrueArt Theme</h1>
+            <p>Anemone Theme: Hand Crafted In "mspaint.exe"
+            <br><span style="float:left; color:rgba(255,255,255,0.75)">Now Hosted on the BigBoss Repo</span></p>
+          </div></a>
+
+          <a href="package/Bleed/index.html">
+            <div class="box" style="background: linear-gradient(to right, #ff650c , #ff380c);">
+              <img src="package/NoFolder/Icon.png" style=float:right;width:95px;>
+              <h1>No Folder Icons Theme</h1>
+              <p>Remove Background From Folders Icons
+              <br><span style="float:left; color:rgba(255,255,255,0.75)">Version 1.0</span></p>
+            </div></a>
+
+  </div>
+</div>
+</body>
 </html>
