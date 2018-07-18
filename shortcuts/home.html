@@ -104,14 +104,15 @@ input[type=text] {
   padding-right: 15px;
   color:white;
   font-size: 20px;
-  -webkit-transition: padding 0.5s ease; /*For Safari*/
-  transition: padding 0.25s ease;
-  transition: 0.25s;
   border: none;
   margin-right: 5px;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.05);
   border-width: 2px;
+}
+/*Searchbox Hoever Effect*/
+input[type=text]:hover {
+  background: linear-gradient(to right, rgba(149,136,213,0.4) , rgba(171,89,147,0.4));
 }
 
 /*Search button*/
@@ -352,7 +353,7 @@ a:active {
         <th><h1>PINPAL's Homepage</h1></th>
         <th>
           <form method="get" action="http://www.google.com/search">
-              <input type="text" name="q" size="25%">
+              <input type="text" name="q" size="25%" placeholder="Search" >
               <input type="submit" value="Google Search">
           </form>
         </th>
