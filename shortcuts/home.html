@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-body {background-color: #1d1d1d;
+body {background-color: #292C30;
 }
 
 @font-face { font-family: "SF Pro Display"; src: url("SF-Pro-Display-Regular.otf"); }
@@ -93,67 +93,122 @@ body {background-color: #1d1d1d;
 
 /*Searchbox*/
 input[type=text] {
-    border: none;
-    font-family: "SF Pro Display";
-    font-size: 20px;
-    text-align: left;
-    background: #444444;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 6px;
-    color: white;
-    float: left;
-    margin-left: 10px;
-    margin-top: 0px;
+  background: rgba(200, 200, 255, 0.2) ;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease; /*For Safari*/
+  transition: padding 0.25s ease;
+  transition: 0.25s;
+  border: none;
+  margin-right: 5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-width: 2px;
 }
 
 /*Search button*/
 input[type=submit] {
-    border: none;
-    font-family: "SF Pro Display";
-    font-size: 20px;
-    text-align: left;
-    background: #333333;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
-    color: grey;
-    float: left;
-    margin-left: 10px;
-    margin-top: 0px;
-    position: relative;
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease; /*For Safari*/
+  transition: padding 0.25s ease;
+  transition: 0.25s;
+  border: none;
 }
-
 /*Search button hover effect*/
 input[type=submit]:hover {
-    background: #414141;
-    color: white;
+  filter: hue-rotate(90deg);
+  font-size: 22px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
-/*PINPAL Logo*/
-.logo {
-    display: inline-block;
-    vertical-align: top;
-    width: 24px;
-    height: 33px;
-    vertical-align:bottom;
-    float:left;
+/*Hide search buttons at resolution below 900 pixels wide*/
+@media screen and (max-width: 1000px) {
+    input[type=text] {
+        display: none;
+    }
+    input[type=submit] {
+        display: none;
+    }
+    .button {
+      display: none;
+    }
+}
+
+/* Button */
+.button {
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease; /*For Safari*/
+  transition: padding 0.25s ease;
+  transition: 0.25s;
+}
+.button:hover {
+  filter: hue-rotate(90deg);
+  font-size: 22px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+/*Navbar*/
+.navbar {
+  background: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  margin-bottom: 25px;
+}
+/*Fullscreen at resolutions below 900 pixels wide*/
+@media screen and (max-width: 1000px) {
+  .navbar {
+    width: 93%;
+  }
 }
 
 /*Logo Text*/
-.logotext {
+h1 {
     color: white;
     font-family: "SF Pro Display";
     font-size: 26px;
     font-weight: bold;
-    vertical-align:bottom;
     float:left;
-    margin-left: 10px;
 }
 
 /*Subtitles above boxes*/
@@ -169,8 +224,8 @@ input[type=submit]:hover {
 /*Box that stores shortcuts*/
 .listbox {
   width: 75%;
-  background: #303030;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
   border-radius: 25px;
   padding-left: 6%;
@@ -178,6 +233,9 @@ input[type=submit]:hover {
   padding-right: 8%;
   margin-top: 2%;
   margin-bottom: 5%;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-width: 2px;
 }
 
 /* Box Columns*/
@@ -191,97 +249,118 @@ input[type=submit]:hover {
 .rightwords {
   width: 80%;
 }
+@media screen and (max-width: 1600px) {
+  .lefticons {
+    width: 30%;
+  }
+  .rightwords {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .lefticons {
+    width: 20%;
+  }
+  .rightwords {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .lefticons {
+    width: 25%;
+  }
+  .rightwords {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .lefticons {
+    width: 20%;
+  }
+  .rightwords {
+    width: 80%;
+  }
+}
 
 /*Wrapper*/
 .wrapper {
     width: 1500px;
-    position: absolute;
-    top: 8%;
     margin-left: auto;
     margin-right: auto;
-    left: 2%;
-    right: 0;
-}
-
-/*Navbar*/
-.navbar {
-    width: 1000px;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 4px;
-    left: 0;
-    right: 0;
 }
 
 /* Responsive layout - reduce columns based on resolution */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .column {
         width: 50%;
-    }
-    .wrapper {
-        left: 4%;
     }
 }
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
-    .wrapper {
-        left: 6%;
-    }
-}
-
-/*Responsive Layout - decrease gap between rows */
-@media screen and (max-width: 750px) {
-    .row:after {
-        padding: 3%;
-    }
-}
-
-/*Hide Search button below this resolution*/
-@media screen and (max-width: 1000px) {
-    .navbar {
-        width: 95%;
-    }
-    input[type=submit] {
-        display: none;
-    }
-    input[type=text] {
-        display: none;
-    }
-}
-
-/*Reduce logotext size*/
-@media screen and (max-width: 286px) {
-    .logotext {
-        margin-top: 4px;
-        font-size: 22px;
-    }
 }
 
 /*Disable sidespace at resolution width's below 1500px*/
 @media screen and (max-width: 1500px) {
     .wrapper {
-    width: 97%;
+    width: 100%;
+    margin-left: 15px;
     }
+}
+
+/* Navbar Columns */
+.columnnav {
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
 }
 
 </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <img class="logo" src="pinpal.png">
-        <div class="logotext">PINPAL's Homepage</div>
-        <form method="get" action="http://www.google.com/search">
-            <input type="text" name="q" size="25%"/>
-            <input type="submit" value="Google Search"/>
-        </form>
-        <form action="https://images.google.com/">
-            <input type="submit" value="Image Search"/>
-        </form>
-    </div>
+  <div class="navbar">
+    <table style="width:100%">
+      <tr>
+        <th><img src="pinpal.png" width=35px style="margin-right: 10px;">
+        <th><h1>PINPAL's Homepage</h1></th>
+        <th>
+          <form method="get" action="http://www.google.com/search">
+              <input type="text" name="q" size="25%">
+              <input type="submit" value="Google Search">
+          </form>
+        </th>
+        <th><a href="https://images.google.com/"<div class="button">Image Search</div></a>
+      </tr>
+      <tr>
+    </table>
+  </div>
 
 <div class="wrapper">
 <div class="row">
