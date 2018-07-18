@@ -108,16 +108,13 @@ mark {
   text-align: left;
   color: black;
   font-family: "SF Pro Display";
+  line-height: 1.6;
   border-radius: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
-}
-
-code {
-  white-space: pre-line;
-  font-family: "SF Pro Display";
-  line-height: 1.6;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 /* unvisited link */
@@ -154,6 +151,10 @@ a:active {
   padding: 10px;
   color:white;
   font-size: 20px;
+}
+
+pre {
+  font-family: "SF Pro Display";
 }
 
 </style>
@@ -244,18 +245,17 @@ a:active {
   I highly recommend <a href="https://atom.io/">Atom Editor by Github</a> or <a href="https://code.visualstudio.com/download">Microsoft VS Code</a> however most text editors will work. You can even use XCode!
   <br>Your going to need to change the <mark>ThemeName</mark> to the name of your theme.
 
-  <div class="codebox"><code>
-    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-    &lt;plist version="1.0"&gt;
-    &lt;dict&gt;
-    	&lt;key>PackageName&lt;/key&gt;
-    	&lt;string><span style="background-color: #ff8300">ThemeName</span>&lt;/string&gt;
-    	&lt;key>ThemeType&lt;/key&gt;
-    	&lt;string>Icons&lt;/string&gt;
-    &lt;/dict&gt;
-    &lt;/plist&gt;
-  </code></div>
+  <div class="codebox">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+  &lt;key>PackageName&lt;/key&gt;
+  &lt;string><span style="background-color: #ff8300">ThemeName</span>&lt;/string&gt;
+  &lt;key>ThemeType&lt;/key&gt;
+  &lt;string>Icons&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</pre></div>
 
   <p>In the future you can add more complex stuff to your <mark>Info.plist</mark> but for now this is enough.
   <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.
@@ -408,17 +408,17 @@ a:active {
     Using a text-editor that supports UNIX line endings is extremely important at this step! The ones I recommended earlier for <mark>Info.plist</mark> should work if you are unsure.
     <br>Inside the <mark>control</mark> you will need to add the following code and fill out all the orange text.</p>
 
-    <div class="codebox"><code>
-      Package: com.<span style="background-color: #ff8300">yourname</span>.<span style="background-color: #ff8300">themename</span>
-      Name: <span style="background-color: #ff8300">Theme Name</span>
-      Version: <span style="background-color: #ff8300">1.0</span>
-      Architecture: iphoneos-arm
-      Description: <span style="background-color: #ff8300">A theme with beautiful icons!</span>
-      Author: <span style="background-color: #ff8300">Your Name</span>
-      Maintainer: <span style="background-color: #ff8300">Your Name</span>
-      Section: Themes
-      Depends: com.anemonetheming.anemone
-    </code></div>
+    <div class="codebox">
+<pre>Package: com.<span style="background-color: #ff8300">yourname</span>.<span style="background-color: #ff8300">themename</span>
+Name: <span style="background-color: #ff8300">Theme Name</span>
+Version: <span style="background-color: #ff8300">1.0</span>
+Architecture: iphoneos-arm
+Description: <span style="background-color: #ff8300">A theme with beautiful icons!</span>
+Author: <span style="background-color: #ff8300">Your Name</span>
+Maintainer: <span style="background-color: #ff8300">Your Name</span>
+Section: Themes
+Depends: com.anemonetheming.anemone
+</pre></div>
 
     <div class="boxheading"><p>Important notes about the control file:</div>
 
@@ -542,9 +542,9 @@ a:active {
     <br>Connect to your iOS device using SSH and open the SSH terminal.
     <br>Run the following command:</p>
 
-    <div class="codebox"><code>
+    <div class="codebox">
       dpkg -b /var/mobile/Documents/ThemeNameForCydia
-    </code></div>
+    </div>
 
     <p>Once the command is completed you will see a new file: <mark>ThemeNameForCydia.deb</mark>
     <br>That's it you are all done! Feel free to move the <mark>.deb</mark> to your computer and delete it and the <mark>ThemeNameForCydia</mark> folder from your iOS device!
