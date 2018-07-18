@@ -19,10 +19,76 @@ body {background-color: #1d1d1d;
 
 /* Clear floats after the columns */
 .row:after {
-    padding: 4%;
-    content: "";
-    display: table;
-    clear: both;
+  padding: 4%;
+  content: "";
+  display: table;
+  clear: both;
+}
+/*Fancy Animation for rows of apps*/
+.rowitem {
+  -webkit-transition: padding 0.15s ease; /*For Safari*/
+  transition: margin 0.15s ease;
+  transition-delay: 0.05s;
+}
+/* Clear floats after the columns */
+.rowitem:after {
+  padding: 4%;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*App Icons*/
+.appicon {
+    display: inline-block;
+    vertical-align: top;
+    width: 45px;
+    height: 45px;
+    -webkit-transition: width 0.15s ease, height 0.15s ease; /* For Safari 3.1 to 6.0 */
+    transition: width 0.2s, height 0.2s;
+    transition-delay: 0.05s;
+}
+/*App Names*/
+.appname {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    margin-top: 10px;
+    -webkit-transition: font-size 0.2s ease, margin 0.2s ease;
+    transition: font-size 0.2s ease, margin 0.2s ease;
+    transition-delay: 0.05s;
+}
+/*App URL*/
+.appurl {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "SF Pro Display";
+    font-size: 0px;
+    -webkit-transition: font-size 0.2s ease, margin 0.2s ease;
+    transition: font-size 0.2s ease, margin 0.2s ease;
+    transition-delay: 0.05s;
+}
+/*App Icons Hover*/
+.appicon:hover {
+    width: 100%;
+    height: 100%;
+}
+/*Fancy Animation for rows of apps*/
+.rowitem:hover {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.rowitem:hover .appicon {
+    width: 100%;
+    height: 100%;
+}
+.rowitem:hover .appname {
+    font-size: 25px;
+    margin-left: 14px;
+    margin-top: 0px;
+}
+.rowitem:hover .appurl {
+    font-size: 18px;
+    margin-left: 14px
 }
 
 /*Searchbox*/
@@ -126,33 +192,6 @@ input[type=submit]:hover {
   width: 80%;
 }
 
-/*App Icons*/
-.appicon {
-    display: inline-block;
-    vertical-align: top;
-    width: 80%;
-    height: 80%;
-}
-
-/*App Icons Hover*/
-.appicon:hover {
-    opacity: 0.5;
-}
-
-/*App Names*/
-.appname {
-    color: white;
-    font-family: "SF Pro Display";
-    font-size: 100%;
-}
-
-/*App URL*/
-.appurl {
-    color: rgba(255, 255, 255, 0.4);
-    font-family: "SF Pro Display";
-    font-size: 80%;
-}
-
 /*Wrapper*/
 .wrapper {
     width: 1500px;
@@ -252,10 +291,11 @@ input[type=submit]:hover {
             Social
         </div>
 
+
         <div class="listbox">
-            <div class="row">
+            <a href="https://www.reddit.com/"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://www.reddit.com/"><img class="appicon" src="icons/reddit.png"></a>
+                    <img class="appicon" src="icons/reddit.png">
                 </div>
                 <div class="columnbox rightwords">
                     <div class="appname">
@@ -265,10 +305,10 @@ input[type=submit]:hover {
                         reddit.com
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </div></a>
+            <a href="https://steamcommunity.com/id/pinpal/"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://steamcommunity.com/id/pinpal/"><img class="appicon" src="icons/steam.png"></a>
+                    <img class="appicon" src="icons/steam.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -278,10 +318,10 @@ input[type=submit]:hover {
                             steamcommunity.com
                         </div>
                     </div>
-                </div>
-            <div class="row">
+                </div></a>
+            <a href="https://www.instagram.com/"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://www.instagram.com/"><img class="appicon" src="icons/instagram.png"></a>
+                    <img class="appicon" src="icons/instagram.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -291,10 +331,10 @@ input[type=submit]:hover {
                             instagram.com
                         </div>
                     </div>
-            </div>
-            <div class="row">
+            </div></a>
+            <a href="https://inbox.google.com/u/0/?pli=1"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://inbox.google.com/u/0/?pli=1"><img class="appicon" src="icons/inbox.png"></a>
+                    <img class="appicon" src="icons/inbox.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -304,10 +344,10 @@ input[type=submit]:hover {
                             inbox.google.com
                         </div>
                     </div>
-            </div>
-            <div class="row">
+            </div></a>
+            <a href="https://discordapp.com/channels/@me"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://discordapp.com/channels/@me"><img class="appicon" src="icons/discord.png"></a>
+                    <img class="appicon" src="icons/discord.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -317,10 +357,10 @@ input[type=submit]:hover {
                             discordapp.com
                         </div>
                     </div>
-            </div>
-            <div class="row">
+            </div></a>
+            <a href="https://imgur.com/"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://imgur.com/"><img class="appicon" src="icons/imgur.png"></a>
+                    <img class="appicon" src="icons/imgur.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -330,10 +370,10 @@ input[type=submit]:hover {
                             imgur.com
                         </div>
                     </div>
-            </div>
-            <div class="row">
+            </div></a>
+            <a href="https://twitter.com/?lang=en-gb"><div class="rowitem">
                 <div class="columnbox lefticons">
-                    <a href="https://twitter.com/?lang=en-gb"><img class="appicon" src="icons/twitter.png"></a>
+                    <img class="appicon" src="icons/twitter.png">
                     </div>
                     <div class="columnbox rightwords">
                         <div class="appname">
@@ -344,14 +384,14 @@ input[type=submit]:hover {
                         </div>
                     </div>
             </div>
-        </div>
+        </div></a>
 
         <div class="subtitle">
             Updates
         </div>
 
         <div class="listbox">
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="https://rust.facepunch.com/blog/"><img class="appicon" src="icons/rust.png"></a>
                 </div>
@@ -364,7 +404,7 @@ input[type=submit]:hover {
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="https://www.playbattlegrounds.com/news.pu"><img class="appicon" src="icons/pubg.png"></a>
                 </div>
@@ -377,7 +417,7 @@ input[type=submit]:hover {
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="http://blog.counter-strike.net/index.php/category/updates/"><img class="appicon" src="icons/csgo.png"></a>
                 </div>
@@ -400,7 +440,7 @@ input[type=submit]:hover {
         </div>
 
         <div class="listbox">
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="https://www.youtube.com/"><img class="appicon" src="icons/youtube.png"></a>
                 </div>
@@ -413,7 +453,7 @@ input[type=submit]:hover {
                     </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.twitch.tv"><img class="appicon" src="icons/twitch.png"></a>
                     </div>
@@ -426,7 +466,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.netflix.com/browse"><img class="appicon" src="icons/netflix.png"></a>
                     </div>
@@ -439,7 +479,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="http://www.channel4.com/my4/history"><img class="appicon" src="icons/channel4.png"></a>
                     </div>
@@ -452,7 +492,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.bbc.co.uk/iplayer"><img class="appicon" src="icons/iplayer.png"></a>
                     </div>
@@ -472,7 +512,7 @@ input[type=submit]:hover {
         </div>
 
         <div class="listbox">
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="https://offcornerdev.com/bundleid.html"><img class="appicon" src="icons/bundleid.png"></a>
                 </div>
@@ -485,7 +525,7 @@ input[type=submit]:hover {
                     </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://github.com/joeblau/apple-bundle-identifiers"><img class="appicon" src="icons/appleid.png"></a>
                     </div>
@@ -505,7 +545,7 @@ input[type=submit]:hover {
             </div>
 
             <div class="listbox">
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.icloud.com/#photos"><img class="appicon" src="icons/icloud.png"></a>
                     </div>
@@ -518,7 +558,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://www.mediafire.com/#myfiles"><img class="appicon" src="icons/mediafire.png"></a>
                         </div>
@@ -541,7 +581,7 @@ input[type=submit]:hover {
             </div>
 
             <div class="listbox">
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="http://www.speedtest.net/"><img class="appicon" src="icons/speedtest.png"></a>
                     </div>
@@ -554,7 +594,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.filemail.com/"><img class="appicon" src="icons/filemail.png"></a>
                     </div>
@@ -567,7 +607,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.goo.gl"><img class="appicon" src="icons/googleshort.png"></a>
                     </div>
@@ -580,7 +620,7 @@ input[type=submit]:hover {
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://temp-mail.org/"><img class="appicon" src="icons/tempmail.png"></a>
                     </div>
@@ -600,7 +640,7 @@ input[type=submit]:hover {
             </div>
 
             <div class="listbox">
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://www.ebay.co.uk/"><img class="appicon" src="icons/ebay.png"></a>
                     </div>
@@ -613,7 +653,7 @@ input[type=submit]:hover {
                         </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://www.amazon.co.uk/"><img class="appicon" src="icons/amazon.png"></a>
                         </div>
@@ -626,7 +666,7 @@ input[type=submit]:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://www.paypal.com/myaccount/home"><img class="appicon" src="icons/paypal.png"></a>
                         </div>
@@ -639,7 +679,7 @@ input[type=submit]:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://www.lloydsbank.com"><img class="appicon" src="icons/llyods.png"></a>
                         </div>
@@ -652,7 +692,7 @@ input[type=submit]:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://uk.pcpartpicker.com/list/"><img class="appicon" src="icons/partpicker.png"></a>
                         </div>
@@ -665,7 +705,7 @@ input[type=submit]:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="rowitem">
                         <div class="columnbox lefticons">
                             <a href="https://www.ikea.com/gb/en/"><img class="appicon" src="icons/ikea.png"></a>
                         </div>
@@ -688,7 +728,7 @@ input[type=submit]:hover {
         </div>
 
         <div class="listbox">
-            <div class="row">
+            <div class="rowitem">
                 <div class="columnbox lefticons">
                     <a href="https://www.pvpro.com/pvpro/csgo-eu/home"><img class="appicon" src="icons/pvpro.png"></a>
                 </div>
@@ -701,7 +741,7 @@ input[type=submit]:hover {
                     </div>
                 </div>
             </div>
-                <div class="row">
+                <div class="rowitem">
                     <div class="columnbox lefticons">
                         <a href="https://derank.me/"><img class="appicon" src="icons/derank.png"></a>
                     </div>
