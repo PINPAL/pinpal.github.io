@@ -283,26 +283,6 @@ h1 {
     margin-right: auto;
 }
 
-/* Responsive layout - reduce columns based on resolution */
-@media screen and (max-width: 1000px) {
-    .column {
-        width: 50%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-}
-
-/*Disable sidespace at resolution width's below 1500px*/
-@media screen and (max-width: 1500px) {
-    .wrapper {
-    width: 100%;
-    margin-left: 15px;
-    }
-}
-
 /* Navbar Columns */
 .columnnav {
     float: left;
@@ -384,11 +364,38 @@ a:active {
         opacity: 1.0;
     }
 }
-/*Fullscreen at resolutions below 900 pixels wide*/
-@media screen and (max-width: 1000px) {
-  .navbar {
-    width: 93%;
+/*Disable Side Whitespace at lower resolutions*/
+@media screen and (max-width: 1500px) {
+  .wrapper {
+  width: 100%;
+  margin-left: 15px;
   }
+}
+
+/* Two Columns below 1000px wide*/
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 50%;
+    }
+    .rowitem::after {
+      padding: 2%;
+    }
+    .appicon {
+      width: 60%;
+      height: 60%;
+    }
+    .navbar {
+      width: 93%;
+    }
+    .logo {
+      margin-left: -5px;
+    }
+}
+/* One Column below 600px wide (mobile)*/
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }
 
 </style>
