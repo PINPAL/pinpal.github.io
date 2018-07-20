@@ -12,20 +12,6 @@ Name: No Folder Icons
 Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/NoFolder/index.html
 
-Package: com.pinpal.bleed
-Version: 0.2.5
-Architecture: iphoneos-arm
-Maintainer: PINPAL <josh.hayes614@gmail.com>
-Filename: package/Bleed/Bleed.deb
-Size: 44415764
-MD5sum: 55b6052fd6c44762cada5e5a74cceec9
-Section: Themes
-Description: Bold Titles with App Previews.
-Author: PINPAL
-Name: Bleed Theme
-Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/package/Bleed/index.html
-
 Package: com.pinpal.darkmode
 Version: 0.0.3
 Architecture: iphoneos-arm
