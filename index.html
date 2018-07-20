@@ -52,9 +52,15 @@ a:active {
 /* Columns */
 .column {
     float: left;
-    width: 50%;
+    width: 33.333%;
     padding-left: 10px;
     padding-right: 10px;
+}
+/* Responsive layout - Dual Column on Low Res */
+@media screen and (max-width: 1300px) {
+    .column {
+        width: 50%;
+    }
 }
 /* Responsive layout - Single Column on Mobile */
 @media screen and (max-width: 900px) {
@@ -130,7 +136,7 @@ a:active {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 100%;
 
   -webkit-transition: padding 0.2s ease; /*For Safari*/
   transition: padding 0.2s ease;
@@ -141,32 +147,6 @@ a:active {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 25px;
-}
-/* Responsive layout BOX */
-@media screen and (max-width: 1600px) {
-    .box {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 1500px) {
-    .box {
-        width: 85%;
-    }
-}
-@media screen and (max-width: 1400px) {
-    .box {
-        width: 90%;
-    }
-}
-@media screen and (max-width: 1300px) {
-    .box {
-        width: 95%;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .box {
-        width: 100%;
-    }
 }
 
 /* Responsive layout NAVBAR */
@@ -308,6 +288,17 @@ h1 {
           <p>Anemone Theme: Proof of concept: Dark Mode using Anemone!
           <br><span style="float:left; color:rgba(255,255,255,0.75)">Version 0.0.3</span></p>
         </div></a>
+
+        <a href="package/ZeppelinLogo/index.html">
+          <div class="box" style="background: linear-gradient(to right, #008c2e , #07c144);">
+            <img src="package/ZeppelinLogo/Icon.png" style=float:right;width:95px;>
+            <h1>Star Wars: Zeppelin Logos</h1>
+            <p>Star Wars Clones, Commanders and Ships for Zeppelin
+            <br><span style="float:left; color:rgba(255,255,255,0.75)">Version 1.2 by iLewisCx</span></p>
+          </div></a>
+
+    </div>
+    <div class="column">
 
       <div class="subtitle">Themes</div>
 
