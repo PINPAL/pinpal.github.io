@@ -1,7 +1,7 @@
 Package: com.pinpal.nofoldericon
 Version: 1.0
 Architecture: iphoneos-arm
-Maintainer: PINPAL <josh.hayes614@gmail.com>
+Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/NoFolder/NoFolder.deb
 Size: 9326
 MD5sum: da4ae0fc2786565aed362138537841bc
@@ -15,7 +15,7 @@ Depiction: https://pinpal.github.io/package/NoFolder/index.html
 Package: com.pinpal.darkmode
 Version: 0.0.3
 Architecture: iphoneos-arm
-Maintainer: PINPAL <josh.hayes614@gmail.com>
+Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/DarkMode/DarkMode.deb
 Size: 1340
 MD5sum: cac04ba7185eaad241527702db1dbbc8
@@ -35,7 +35,21 @@ Size: 71018
 MD5sum: 39724ac926fc0d58676a6a6728ac2773
 Description: Star Wars Clones for Zeppelin
 Author: iLewisCx
-Maintainer: PINPAL (josh.hayes614@gmail.com)
+Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
 Depiction: https://pinpal.github.io/package/ZeppelinLogo/index.html
+
+Package: com.pinpal.seven4eleven
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: PINPAL <pinpal.official@gmail.com>
+Filename: package/Seven4Eleven/Seven4Eleven.deb
+Size: 1824072
+MD5sum: edbdfc281372da7986404b4ae5935536
+Section: Themes
+Description: iOS 7 Style for iOS 11
+Author: PINPAL
+Name: Seven4Eleven Theme
+Depends: com.anemonetheming.anemone
+Depiction: https://pinpal.github.io/package/Seven4Eleven/index.html
