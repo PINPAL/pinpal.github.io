@@ -41,12 +41,12 @@ Depends: com.alexzielenski.zeppelin
 Depiction: https://pinpal.github.io/package/ZeppelinLogo/index.html
 
 Package: com.pinpal.seven4eleven
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/Seven4Eleven/Seven4Eleven.deb
-Size: 1824072
-MD5sum: edbdfc281372da7986404b4ae5935536
+Size: 1824120
+MD5sum: 77f54dbc311a6a65ab1f655d5184a390
 Section: Themes
 Description: iOS 7 Style for iOS 11
 Author: PINPAL
