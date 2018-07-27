@@ -346,14 +346,33 @@ pre {
   A mask allows you to create your icons themselves in a square then you could, for example, make them all circle.
   The main advantage to using icon masks is that the user can toggle them on or off or use any mask shape they want.</p>
 
-  <p>Icon masks are optional and if the <mark>Info.plist</mark> is left default then Anemone will use the stock icon mask (the classic rounded rectangle).
-
   <div class="boxheading">But I want all my icons to have different masks?</div>
 
-  <p>If you would like to have all different shape icons, that's also possible. Just save the icon with a transparent background directly to IconBundles.
-  From here you can use a completely blank icon mask which will allow any shape icon. More detail on how to do this can be found in the guide below.</p>
+  <p>If you would like to have all different shape icons, that's also possible. Just save the icon with a transparent background directly to IconBundles.</p>
 
-  <div class="boxheading">Alright let's make some!</div>
+  <div class="boxheading">Help! My Icons are all square!</div>
+
+  <p>Icon masks are optional and if the <mark>Info.plist</mark> is left like the one above at the very start of the guide then Anemone <b>NOT</b> use a mask.
+  If you would like to enable the default iOS stock icon mask (the classic rounded rectangle) then simply add the orange section to your <mark>Info.plist</mark>:</p>
+
+  <div class="codebox">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+<span style="background-color: #ff8300">  &lt;key&gt;IB-MaskIcons&lt;/key&gt;
+  &lt;true/&gt;</span>
+  &lt;key>PackageName&lt;/key&gt;
+  &lt;string>ThemeName&lt;/string&gt;
+  &lt;key>ThemeType&lt;/key&gt;
+  &lt;string>Icons&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</pre>
+  </div>
+
+  <p>And that's all you need to do to enable Icon Masks. If you would like to use a custom icon mask shape then read below...
+
+  <div class="boxheading">Making Custom Icon Masks</div>
 
   <p>Icon mask tutorial coming soon...</p>
 
