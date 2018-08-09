@@ -1,34 +1,232 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charSet="utf-8" class="next-head" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" class="next-head" />
-	<title>PINPAL - 404</title>
-</head>
+    <title>404</title>
+    <link rel="icon" href="assets/favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
-<body>
-    <div>
-        <div id="__next">
-            <div data-reactroot="">
-                <div style="color:#000;background:#fff;font-family:-apple-system, BlinkMacSystemFont, Roboto, &quot;Segoe UI&quot;, &quot;Fira Sans&quot;, Avenir, &quot;Helvetica Neue&quot;, &quot;Lucida Grande&quot;, sans-serif;height:100vh;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
-                    <div>
-                        <style>
-                            body {
-                                margin: 0
-                            }
-                        </style>
-                        <h1 style="display:inline-block;border-right:1px solid rgba(0, 0, 0,.3);margin:0;margin-right:20px;padding:10px 23px 10px 0;font-size:24px;font-weight:500;vertical-align:top">404</h1>
-                        <div style="display:inline-block;text-align:left;line-height:49px;height:49px;vertical-align:middle">
-                            <h2 style="font-size:14px;font-weight:normal;line-height:inherit;margin:0;padding:0">The page you are looking for can't be found.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="__next-error"></div>
-    </div>
-    
+body {
+  background-color: #292C30;
+}
+
+@font-face { font-family: "SF Pro Display"; src: url("../../assets/SF-Pro-Display-Regular.otf"); }
+
+/* Columns */
+.column {
+    float: left;
+    width: 50%;
+}
+/* Responsive layout - Single Column on Mobile */
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Wrapper*/
+.wrapper {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+/*Disable Side Whitespace at lower resolutions*/
+@media screen and (max-width: 800px) {
+  .wrapper {
+  width: 100%;
+  margin-top: 0px;
+  }
+}
+
+/*Subtitles above boxes*/
+.subtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 300px;
+}
+
+h1 {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.0;
+}
+h2 {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.0;
+}
+
+/*Box*/
+.bigbox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 300px;
+  line-height: 1.5;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+}
+
+hr {
+  opacity: 0.25
+}
+
+
+/* Button */
+.button {
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding: 10px;
+  color:white;
+  font-size: 20px;
+  -webkit-transition: padding 0.5s ease; /*For Safari*/
+  transition: padding 0.25s ease;
+  transition: 0.25s;
+}
+.button:hover {
+  filter: hue-rotate(90deg);
+  font-size: 23px;
+  padding: 9px;
+}
+
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.twitter {
+  width: 70px;
+  margin-right: 20px;
+}
+
+
+</style> <body>
+
+  <div class="wrapper">
+  <div class="column">
+
+  <div class="subtitle">404!</div>
+  <div class="bigbox">
+
+    <h1>Page not found!</h1>
+    <h2>The page you are looking for has been moved or deleted!</h2>
+    <p>You can return to my homepage and find the page there or contact me if you cannot find it.</p>
+
+    <a href=index.html><div class="button">Return to Homepage</div></a>
+
+  </div>
+
+</div><div class="column">
+
+  <div class="subtitle">Contact Me</div>
+
+  <div class="bigbox">
+
+    <a href="https://twitter.com/TPinpal">
+    <table style="margin-bottom: 10px;">
+      <tr>
+        <th><img class="twitter" src="assets/404/twitter.png"></th>
+        <th>
+          <table>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(255,255,255,1)">Twitter</span></th>
+              </tr>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)">@TPINPAL</span><th>
+              </tr>
+            </table>
+          </th>
+      </tr>
+    </table></a>
+
+    <a href="https://discordapp.com/channels/@me">
+    <table style="margin-bottom: 10px;">
+      <tr>
+        <th><img class="twitter" src="assets/404/discord.png"></th>
+        <th>
+          <table>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(255,255,255,1)">Discord</span></th>
+              </tr>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)">PINPAL#8606</span><th>
+              </tr>
+            </table>
+          </th>
+      </tr>
+    </table></a>
+
+    <a href="https://www.reddit.com/user/THE_PINPAL614">
+    <table style="margin-bottom: -15px;">
+      <tr>
+        <th><img class="twitter" src="assets/404/reddit.png"></th>
+        <th>
+          <table>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(255,255,255,1)">Reddit</span></th>
+              </tr>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)">u/THE_PINPAL614</span><th>
+              </tr>
+            </table>
+          </th>
+      </tr>
+    </table></a>
+
+  </div></div></div>
+
 </body>
-
-</html>

@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charSet="utf-8" class="next-head" />
-    <meta charset="UTF-8" class="next-head" />
-    <title class="next-head">Changes</title>
-    <meta name="description" content="An Awesome Mobile Substrate Tweak" class="next-head" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" class="next-head" />
-    <link rel="icon" sizes="192x192" href="../../static/touch-icon.html" class="next-head" />
-    <link rel="apple-touch-icon" href="../../static/touch-icon.html" class="next-head" />
-    <link rel="mask-icon" href="../../static/favicon-mask.html" color="#49B882" class="next-head" />
-    <link rel="icon" href="../../static/favicon.ico" class="next-head" />
-    <meta property="og:url" content="" class="next-head" />
-    <meta property="og:title" content="Changes" class="next-head" />
-    <meta property="og:description" content="An Awesome Mobile Substrate Tweak" class="next-head" />
-    <meta name="twitter:site" content="" class="next-head" />
-    <meta name="twitter:card" content="summary_large_image" class="next-head" />
-    <meta name="twitter:image" content="" class="next-head" />
-    <meta property="og:image" content="" class="next-head" />
-    <meta property="og:image:width" content="1200" class="next-head" />
-    <meta property="og:image:height" content="630" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/styles.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/fa-regular.min.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/fa-solid.min.css" class="next-head" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/fontawesome.min.css" class="next-head" />
-    <style id="__jsx-3269109252">
-        body{-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-user-select:text;-webkit-tap-highlight-color:rgba(0,0,0,0);margin:9px auto;width:device-width;max-width:414px !important;background-color:#f4f4f4;min-font-size:13px;text-align:center;font-family:"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;font-weight:500;font-size:15px;}
-        .changes-header{font-family:"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;font-weight:700;font-size:15px;float:none;line-height:1.1;color:#111;text-align:left;color:#888;color:#111;margin-top:0px;margin-bottom:6px;font-size:18px;}
-        .change-content{font-size:13px;font-weight:500;}
-        body panel>panel-body>table>tbody>tr>td{margin:8px 2px;font-size:13px;}
-        body panel>panel-body>table>tbody>tr>td:nth-child(2){font-size:12px;padding-top:0.5px;padding-bottom:0.5px;}
-        .information{margin-bottom:-5px;}
-    </style>
-</head>
+    <title>Changes</title>
+    <link rel="icon" href="../../assets/favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
-<body>
-    <div>
-        <div id="__next">
-            <div data-reactroot="">
-                <div class="jsx-3269109252">
-                    <panel class="jsx-3269109252 modern">
-                        <panel-header className="jsx-3269109252"><label class="jsx-3269109252">1.0</label></panel-header>
-                        <panel-body className="jsx-3269109252">
-                            <h4 class="jsx-3269109252 changes-header">Changes</h4>
-                            <ul style="margin-left:2px;margin-right:2px" class="jsx-3269109252">
-                                <li class="jsx-3269109252"><span class="jsx-3269109252 change-content">Fixed Issues on Plus Devices</span></li>
-                            </ul>
-                            <div style="height:0.5px;border-bottom:0px solid #cacaca;margin-bottom:11px;margin-top:5px" class="jsx-3269109252"></div>
-                            <table cols="2" border="0" class="jsx-3269109252 information">
-                                <tbody class="jsx-3269109252">
-                                    <tr class="jsx-3269109252">
-                                        <td class="jsx-3269109252">Updated</td>
-                                        <td class="jsx-3269109252">1st February 2018</td>
-                                </tbody>
-                            </table>
-                    </panel>
-					
-                    <panel class="jsx-3269109252 modern">
-                        <panel-header className="jsx-3269109252"><label class="jsx-3269109252">0.0.1</label></panel-header>
-                        <panel-body className="jsx-3269109252">
-                            <h4 class="jsx-3269109252 changes-header">Release</h4><span class="jsx-3269109252 change-content">Initial release.</span>
-                            <div style="height:0.5px;border-bottom:0px solid #cacaca;margin-bottom:11px;margin-top:5px"
-                                class="jsx-3269109252"></div>
-                            <table cols="2" border="0" class="jsx-3269109252 information">
-                                <tbody class="jsx-3269109252">
-                                    <tr class="jsx-3269109252">
-                                        <td class="jsx-3269109252">Released</td>
-                                        <td class="jsx-3269109252">29th January 2018</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </panel-body>
-                    </panel>
-                </div>
-            </div>
-        </div>
-        <div id="__next-error"></div>
-    </div>
+body {
+  background-color: #292C30;
+}
+
+@font-face { font-family: "SF Pro Display"; src: url("../../assets/SF-Pro-Display-Regular.otf"); }
+
+/* Columns */
+.column {
+    float: left;
+    width: 100%;
+}
+/* Responsive layout - Single Column on Mobile */
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Wrapper*/
+.wrapper {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Disable Side Whitespace at lower resolutions*/
+@media screen and (max-width: 800px) {
+  .wrapper {
+  width: 100%;
+  }
+}
+
+/*Subtitles above boxes*/
+.subtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  width: 300px;
+}
+
+/*Box*/
+.bigbox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 300px;
+  line-height: 1.5;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 10px;
+}
+
+</style> <body>
+
+  <div class="wrapper">
+
+  <div class=column>
+  <div class="subtitle">1.0</div>
+  <div class="bigbox">
+
+    <p style="line-height:1.8;">• Fixed scaling on Plus devices</p>
+
+  </div>
+  <div class="subtitle">0.0.1</div>
+  <div class="bigbox">
+
+    <p style="line-height:1.8;">Initial Release</p>
+
+  </div>
+</div>
+
 </body>
-</html>
