@@ -12,6 +12,22 @@ body {
 
 @font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
 
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+    background: #48484f;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #646569;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.25);;
+}
 
 /*Subtitles above boxes*/
 .subtitle {
@@ -43,6 +59,9 @@ body {
   margin-bottom: 30px;
   width: 35%;
   line-height: 1.6;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
 }
 
 /*Bold Title at top of boxes*/
@@ -150,9 +169,15 @@ a:active {
   padding: 10px;
   color:white;
   font-size: 20px;
+  -webkit-transition: padding 0.5s ease; /*For Safari*/
+  transition: padding 0.25s ease;
+  transition: 0.25s;
 }
+/* Button Hover Effetcs */
 .button:hover {
   filter: hue-rotate(90deg);
+  font-size: 23px;
+  padding: 8px;
 }
 
 pre {
@@ -330,7 +355,7 @@ pre {
 
   <p>I wrote a page here where you find out the BundleID's for the stock apps:</p>
 
-  <a href="https://pinpal.github.io/stock-identifiers/home.html"><div class="button">Stock iOS BundleID's</div></a>
+  <a href="stock-identifiers.html"><div class="button">Stock iOS BundleID's</div></a>
 
   <p>As for finding those for third party/app store apps you can use this site:</p>
 
