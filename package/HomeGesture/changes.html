@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changes</title>
+    <link rel="icon" href="../../assets/favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  background-color: #292C30;
+}
+
+@font-face { font-family: "SF Pro Display"; src: url("../../assets/SF-Pro-Display-Regular.otf"); }
+
+/* Columns */
+.column {
+    float: left;
+    width: 50%;
+}
+/* Responsive layout - Single Column on Mobile */
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Wrapper*/
+.wrapper {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Disable Side Whitespace at lower resolutions*/
+@media screen and (max-width: 800px) {
+  .wrapper {
+  width: 100%;
+  }
+}
+
+/*Subtitles above boxes*/
+.subtitle {
+  color: white;
+  font-family: "SF Pro Display";
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  width: 300px;
+}
+
+/*Box*/
+.bigbox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  font-family: "SF Pro Display";
+  border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 300px;
+  line-height: 1.5;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 10px;
+}
+
+</style> <body>
+
+  <div class="wrapper">
+
+  <div class="subtitle">2.0 <font size="2.5"></b>(1.9-Beta)</font></div>
+  <div class="bigbox">
+
+    <p style="line-height:1.8;">• Redesigned Preferences
+			<br> • Fixed iPhone X Status Bar
+			<br> • Added Status Bar in CC Toggle
+			<br> • Added Quick Setup
+			<br> • Reduced Memory Use
+			<br> • Fixed CC Pocket Padding
+			<br> • Improved Stability of Swipe
+			<br> • Repaired Screenshot Remap
+			<br> • Fixed CC Hint Toggle
+			<br> • Migrated to libCSPrefs/libCSColorPicker
+			<br> • Added Backup/Restore to Preferences
+    </p>
+
+  </div>
+</div>
+
+</body>

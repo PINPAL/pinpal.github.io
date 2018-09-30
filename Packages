@@ -53,3 +53,16 @@ Author: PINPAL
 Name: Seven4Eleven Theme
 Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/Seven4Eleven/index.html
+
+Package: com.vitataf.homegesture
+Version: 1.9.0-beta
+Architecture: iphoneos-arm
+Maintainer: PINPAL <pinpal.official@gmail.com>
+Filename: package/HomeGesture/HomeGesture.deb
+Size: 2138694
+MD5sum: d7a46a29ea36e5dd8648c22d03998433
+Section: Tweaks
+Description: iPhone X Gestures on Older Devices
+Author: PINPAL
+Name: HomeGesture
+Depiction: https://pinpal.github.io/package/HomeGesture/index.html
