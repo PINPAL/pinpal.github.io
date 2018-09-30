@@ -60,7 +60,7 @@ Pre-Depends: com.spark.libsparkapplist
 Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader, com.creaturecoding.libcspreferences, com.creaturesurvive.libcscolorpicker, org.thebigboss.libcolorpicker
 Version: 1.9.0-beta
 Architecture: iphoneos-arm
-Description: Enable iPhone X home gesture on other devices.
+Description: Enable iPhone X home gesture on Older Devices.
 Maintainer: MidnightChips/PINPAL
 Author: MidnightChips/PINPAL
 Section: Tweaks
@@ -68,3 +68,5 @@ Icon:https://cdn.discordapp.com/attachments/366628660939194378/49590512797509228
 Size: 2138694
 MD5sum: d7a46a29ea36e5dd8648c22d03998433
 Section: Tweaks
+Depiction: https://pinpal.github.io/package/HomeGesture/index.html
+Filename: package/HomeGesture/HomeGesture.deb
