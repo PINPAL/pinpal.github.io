@@ -57,16 +57,17 @@ Depiction: https://pinpal.github.io/package/Seven4Eleven/index.html
 Package: com.pinpal.homegesture.beta
 Name: HomeGesture BETA
 Pre-Depends: com.spark.libsparkapplist
+Conflicts: com.vitataf.homegesture
 Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader, com.creaturecoding.libcspreferences, com.creaturesurvive.libcscolorpicker, org.thebigboss.libcolorpicker
-Version: 2.0.0
+Version: 2.0.1
 Architecture: iphoneos-arm
-Description: THIS IS A BETA RELEASE
+Description: Enable iPhone X Gestures on Older Devices
 Maintainer: MidnightChips/PINPAL
 Author: MidnightChips/PINPAL
 Section: Tweaks
-Icon: https://cdn.discordapp.com/attachments/418170831592488972/465268776091254815/icon.png
-Size: 2138112
-MD5sum:be418e7bea1a722cc3f1f2b596b7fd26
+Icon: /Library/PreferenceBundles/HomeGesture.bundle/icon@3x.png
+Size: 2142208
+MD5sum: 69baae79eb924e279cd5a8b9595761f5
 Section: Tweaks
 Depiction: https://pinpal.github.io/package/HomeGesture/index.html
 Filename: package/HomeGesture/HomeGesture.deb
