@@ -68,6 +68,33 @@ Section: Tweaks
 Icon: /Library/PreferenceBundles/HomeGesture.bundle/icon@3x.png
 Size: 2138708
 MD5sum: 69baae79eb924e279cd5a8b9595761f5
-Section: Tweaks
 Depiction: https://pinpal.github.io/package/HomeGesture/index.html
 Filename: package/HomeGesture/HomeGesture.deb
+
+Package: com.pinpal.sentialpatch
+Name: Sential - Extra Icons
+Version: 1.0
+Depends: me.aesign.sential
+Architecture: iphoneos-arm
+Author: PINPAL
+Depiction:https://pinpal.github.io/package/SentialPatch/index.html
+Section: Themes
+Description: Additional Icons for "Sential" Theme
+Maintainer: PINPAL
+Size: 84758 
+MD5sum: b60cb26a5c15141dfe9e5f8eb505ed13
+Filename: package/SentialPatch/SentialPatch.deb
+
+Package: com.pinpal.luxpatch
+Name: Lux - Extra Icons
+Version: 1.0
+Depends: com.colbyroark.lux
+Architecture: iphoneos-arm
+Author: PINPAL
+Depiction:https://pinpal.github.io/package/LuxPatch/index.html
+Section: Themes
+Description: Additional Icons for "Lux" Theme
+Maintainer: PINPAL
+Size: 273026
+MD5sum: be40f03da92e4defa7df447352bf4da4
+Filename: package/LuxPatch/LuxPatch.deb
