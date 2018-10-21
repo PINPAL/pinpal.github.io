@@ -54,23 +54,6 @@ Name: Seven4Eleven Theme
 Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/package/Seven4Eleven/index.html
 
-Package: com.pinpal.homegesture.beta
-Name: HomeGesture BETA
-Pre-Depends: com.spark.libsparkapplist
-Conflicts: com.vitataf.homegesture
-Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader, com.creaturecoding.libcspreferences, com.creaturesurvive.libcscolorpicker, org.thebigboss.libcolorpicker
-Version: 2.0.1
-Architecture: iphoneos-arm
-Description: Enable iPhone X Gestures on Older Devices
-Maintainer: MidnightChips/PINPAL
-Author: MidnightChips/PINPAL
-Section: Tweaks
-Icon: /Library/PreferenceBundles/HomeGesture.bundle/icon@3x.png
-Size: 2138708
-MD5sum: 69baae79eb924e279cd5a8b9595761f5
-Depiction: https://pinpal.github.io/package/HomeGesture/index.html
-Filename: package/HomeGesture/HomeGesture.deb
-
 Package: com.pinpal.sentialpatch
 Name: Sential - Extra Icons
 Version: 1.0
