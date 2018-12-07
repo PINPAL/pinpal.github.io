@@ -8,8 +8,20 @@
 
 @font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
 
-* {
-    box-sizing: border-box;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+   background: rgba(255,255,255,0.20);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+   background: rgba(255,255,255,0.25);;
 }
 
 /*Background Color*/
@@ -41,48 +53,39 @@ a:active {
     text-decoration: none;
 }
 
-
-/* Navbar Columns */
-.columnnav {
-    float: left;
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-/* Columns */
-.column {
-    float: left;
-    width: 33.333%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-/* Responsive layout - Dual Column on Low Res */
-@media screen and (max-width: 1350px) {
-    .column {
-        width: 50%;
-    }
-}
-/* Responsive layout - Single Column on Mobile */
-@media screen and (max-width: 1050px) {
-    .column {
-        width: 100%;
-    }
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/*Big Title in the Navbar*/
-.bigtitle {
+/*Navbar*/
+.navbar {
+  background: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   color: white;
   font-family: "SF Pro Display";
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  max-width: 900px;
+  margin-bottom: 25px;
+}
+
+/*Navbar logo*/
+.logo {
+  width: 35px;
+  margin-right: 10px;
+}
+
+/*Navbar Text*/
+#title {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 26px;
+    font-weight: bold;
+    float:left;
+}
+@media screen and (max-width: 900px) {
+  #title {
+    font-size: 0px;
+  }
 }
 
 /* Button */
@@ -92,322 +95,1083 @@ a:active {
   text-align: center;
   font-family: "SF Pro Display";
   border-radius: 25px;
-  padding: 10px;
+  padding: 12px;
   color:white;
   font-size: 20px;
-  -webkit-transition: padding 0.5s ease; /*For Safari*/
-  transition: padding 0.25s ease;
-  transition: 0.25s;
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 25px;
+  min-height: 25px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
 .button:hover {
+  padding-top: 9px;
+  padding-bottom: 15px;
   filter: hue-rotate(90deg);
-  font-size: 23px;
-  padding: 9px;
+  font-size: 24px;
 }
 
-/*Navbar*/
-.navbar {
-  background: black;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 55px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 35px;
-  width: 35%;
+#subtitle {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1.0;
 }
-
-/*Box*/
-.box {
-  background: #2F3439;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 25px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  -webkit-transition: padding 0.2s ease; /*For Safari*/
-  transition: padding 0.2s ease;
-  transition-delay: 0.05s;
-}
-.box:hover {
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 25px;
+#subsubtitle {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 19px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1.0;
+    margin-top: -8px;
+    opacity: .6;
 }
 
 .packageicon {
-  width: 85px;
-  height: 85px;
-  margin-top: 8px;
-  float: right;
+  width: 55px;
+  height: 55px;
+  align: left;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
-@media screen and (max-width: 1350px) {
-  .packageicon {
-    margin-top: 0px;
-  }
-}
-
-p2 {
-  float:left;
-  color:rgba(255,255,255,0.50);
-  line-height: 0;
-  margin-top: -2px;
+.bigBox:hover .packageicon {
+  width: 80px;
+  height: 80px;
 }
 
-/*Subtitles above boxes*/
-.subtitle {
+.packageIconHolder {
+  width: 55px;
+  height: 55px;
+  align: left;
+  padding: 10px;
+  border-radius: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 0;
+}
+.bigBox:hover .packageIconHolder {
+  padding: 55px;
+  left: -40px;
+  top: -40px;
+  width: 500px;
+  height: 300px;
+}
+
+.packageContentHolder {
+  position: absolute;
+  left: 110px;
+  top: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.bigBox:hover .packageContentHolder {
+  top: 9px;
+}
+
+.bigBox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
   color: white;
+  border-radius: 25px;
+  padding: 15px;
+  line-height: 1.6;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+  color: white;
+  width: 380px;
   font-family: "SF Pro Display";
-  font-size: 30px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  margin-left: 15px;
+  min-height: 78px;
+  max-height: 78px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.packageTitle {
+  font-family: "SF Pro Display";
   font-weight: bold;
-  text-align: center;
-  padding-bottom: 20px;
+  font-size: 18px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.bigBox:hover .packageTitle {
+  font-size: 24px;
 }
 
-@media screen and (max-width: 1050px) {
-    .box {
-      padding-top: 10px;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-bottom: 3px;
-      margin-bottom: 20px;
-    }
-    .box:hover {
-      padding-top: 20px;
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 10px;
-    }
-    p2 {
-      display: none;
-    }
-    .packageicon {
-      width: 65px;
-      height: 65px;
-      margin-top: -1px;
-    }
-    .subtitle {
-      padding-bottom: 10px;
-    }
-}
-
-/* Responsive layout NAVBAR */
-@media screen and (max-width: 1600px) {
-    .navbar {
-        width: 45%;
-    }
-}
-@media screen and (max-width: 1400px) {
-    .navbar {
-        width: 50%;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .navbar {
-        width: 60%;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .navbar {
-        width: 70%;
-    }
-}
-@media screen and (max-width: 840px) {
-    .navbar {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 711px) {
-    .navbar {
-        width: 95%;
-    }
-    .bigtitle {
-      font-size: 30px;
-    }
-}
-@media screen and (max-width: 400px) {
-    .navbar {
-        padding-bottom: 45px;
-        padding-top: 10px;
-        margin-bottom: 10px;
-    }
-    .bigtitle {
-      font-size: 22px;
-      margin-top: 3px;
-    }
-    .button{
-      font-size: 16px;
-      padding: 8px;
-    }
-    .box {
-      margin-bottom: 15px;
-    }
-    .columnnav {
-        padding-left: 0px;
-        padding-right: 0px;
-  }
-}
-
-h1 {
-  color: white;
+.packageDescription {
   font-family: "SF Pro Display";
-  font-size: 22px;
-  font-weight: bolder;
+  font-weight: normal;
+  font-size: 16px;
 }
-h2 {
-  color: white;
+
+.packageGreyDescription {
   font-family: "SF Pro Display";
-  font-size: 22px;
-  font-weight: bolder;
-  display: none;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255,255,255,.6)
 }
-@media screen and (max-width: 1450px) {
-  h1 {
-    display: none;
-  }
-  h2 {
-    display: inline;
+
+.scroller {
+  height: 140px;
+  width: 10000px;
+  overflow-x:hidden;
+}
+
+#scroller-page {
+  animation: animatePages 9s linear infinite; /*3 seconds per BigBox*/
+}
+
+@keyframes animatePages {
+  100% {
+    transform: translateX(-1295px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
   }
 }
+
+#scroller-repo {
+  animation: animateRepo 18s linear infinite; /*3 seconds per BigBox*/
+}
+
+@keyframes animateRepo {
+  100% {
+    transform: translateX(-2570px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
+  }
+}
+
+#scroller-packages {
+  animation: animatePackages 9s linear infinite; /*3 seconds per BigBox*/
+}
+
+@keyframes animatePackages {
+  100% {
+    transform: translateX(-1295px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
+  }
+}
+
+#scroller-projects {
+  animation: animateProjects 45s linear infinite; /*3 seconds per BigBox*/
+}
+
+@keyframes animateProjects {
+  100% {
+    transform: translateX(-6395px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
+  }
+}
+
+.subsection {
+  background-color: rgba(255,255,255,0);
+  padding-top: 10px;
+  border-radius: 25px;
+}
+.subsection:hover {
+  background-color: rgba(255,255,255,0.05)
+}
+.subsection:hover .scroller {
+  animation-play-state: paused !important;
+}
+
+.cydiaIcon {
+  width:35px;
+  height:35px;
+  margin-top:-5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.button:hover .cydiaIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 2160px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/*
+also stfu hardcoded html links are the best, go away
+atleast i fixed my depictions
+they used to all be hardcoded too
+*/
 
 </style>
 </head>
 <body>
 
-<div class="navbar"
-  <div class="row">
-    <div class="columnnav">
-      <div class="bigtitle">PINPAL's Repo</div>
-    </div>
-    <div class="columnnav">
-      <a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
-        <div class="button">
-            Add Repo to Cydia
-        </div>
-      </a>
-    </div>
+  <div class="navbar">
+    <table style="width:100%">
+        <th><a href="https://pinpal.github.io/"><img width="35px" src="assets/pinpal.png"></a></th>
+        <th><a href="https://pinpal.github.io/"><h1 id="title">PINPAL's Homepage</h1></a></th>
+
+    <th><a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
+      <div class="button" style="float:right">
+        <img src="assets/cydia.png" class="cydiaIcon" align="left">Add Repo
+      </div>
+    </a></th>
+    </table>
   </div>
-</div>
 
-<div class="row">
-  <div class="column">
+  <div class="wrapper">
 
-    <div class="subtitle">Pages</div>
+  <div class="subsection">
+  <h2 id="subtitle">Pages</h2>
+  <h2 id="subsubtitle">Webpages or Guides on this Site.</h2>
 
+  <div class="scroller" id="scroller-page">
+
+  <table>
+
+  <th>
+    <a href="stock-identifiers.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+        <img src="assets/page-icons/bundleID.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Bundle Identifiers</span>
+        <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+      </div>
+    </div></a>
+  </th>
+
+  <th>
     <a href="theme-guide.html">
-      <div class="box" style="background: linear-gradient(to right, #d3325f , #FA3D72);">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
         <img src="assets/page-icons/anemone.png" class="packageicon";>
-        <h1>Anemone Theme Creation Guide</h1>
-        <h2>Theme Creation Guide</h2>
-        <p>A beginners guide to create a theme using Anemone.</p>
-        <p2>pinpal.github.io</p2>
-      </div></a>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Theme Guide</span>
+        <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
+      </div>
+    </div></a>
+  </th>
 
-      <a href="stock-identifiers.html">
-        <div class="box" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7);">
-          <img src="assets/page-icons/bundleID.png" class="packageicon";>
-          <h1>iOS Bundle Identifiers</h1>
-          <h2>iOS BundleID's</h2>
-          <p>A complete list of the stock BundleIDs in iOS 11.</p>
-          <p2>pinpal.github.io</p2>
-        </div></a>
+  <th>
+    <a href="shortcuts.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
+        <img src="assets/page-icons/home.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Shortcuts Homepage</span>
+        <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
+      </div>
+    </div></a>
+  </th>
 
-        <a href="shortcuts.html">
-          <div class="box" style="background: linear-gradient(to right, #510491 , #5f027a);">
-            <img src="assets/page-icons/home.png" class="packageicon";>
-            <h1>Shortcuts Homepage</h1>
-            <h2>Shortcuts Homepage</h2>
-            <p>Dark and clean browser homepage full of shortcuts.</p>
-            <p2>pinpal.github.io</p2>
-          </div></a>
+  <th>
+    <a href="stock-identifiers.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+        <img src="assets/page-icons/bundleID.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Bundle Identifiers</span>
+        <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+      </div>
+    </div></a>
+  </th>
 
-  </div>
-  <div class="column">
+  <th>
+    <a href="theme-guide.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
+        <img src="assets/page-icons/anemone.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Theme Guide</span>
+        <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
+      </div>
+    </div></a>
+  </th>
 
-    <div class="subtitle">Packages</div>
+  <th>
+    <a href="shortcuts.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
+        <img src="assets/page-icons/home.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Shortcuts Homepage</span>
+        <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
+      </div>
+    </div></a>
+  </th>
 
-    <a href="package/HomeGesture/index.html">
-      <div class="box" style="background: linear-gradient(to right, #3BB7B4 , #42E299);">
-        <img src="assets/page-icons/homegesture.png" class="packageicon";>
-        <h1>HomeGesture</h1>
-        <h2>HomeGesture</h2>
-        <p>Enable iPhone X gestures on Older Devices</p>
-        <p2>Now Hosted on the Packix Repo</p2>
-      </div></a>
+  <th>
+    <a href="stock-identifiers.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+        <img src="assets/page-icons/bundleID.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Bundle Identifiers</span>
+        <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+      </div>
+    </div></a>
+  </th>
 
-      <a href="package/DarkMode/index.html">
-        <div class="box" style="background: linear-gradient(to right, #004759 , #030735);">
+  <th>
+    <a href="theme-guide.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
+        <img src="assets/page-icons/anemone.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">iOS Theme Guide</span>
+        <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
+      </div>
+    </div></a>
+  </th>
+
+  <th>
+    <a href="shortcuts.html">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
+        <img src="assets/page-icons/home.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Shortcuts Homepage</span>
+        <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
+      </div>
+    </div></a>
+  </th>
+
+</table></div></div>
+
+<div class="subsection">
+<h2 id="subtitle">Repository</h2>
+<h2 id="subsubtitle">Tweaks and Themes on this Repo.</h2>
+
+<div class="scroller" id="scroller-repo">
+
+  <table>
+
+    <th>
+      <a href="depiction.html?DarkMode">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #573866 , #413a77)">
           <img src="assets/page-icons/dark-mode.png" class="packageicon";>
-          <h1>Dark Mode</h1>
-          <h2>Dark Mode</h2>
-          <p>Proof of concept: Dark Mode using Anemone!</p>
-          <p2>Version 0.0.3</p2>
-        </div></a>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Dark Mode</span>
+          <br><span class="packageDescription"> Proof of Concept that Utilizies Anemones UIKit Support for Dark Mode!</span>
+        </div>
+      </div></a>
+    </th>
 
-      <a href="package/ZeppelinLogo/index.html">
-        <div class="box" style="background: linear-gradient(to right, #008c2e , #07c144);">
+    <th>
+      <a href="depiction.html?Seven4Eleven">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #1790F0, #DE5F79)">
+          <img src="assets/page-icons/seven4eleven.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Seven4Eleven</span>
+          <br><span class="packageDescription">Bring back the classic iOS 7 Style for iOS 11 as per a /r/Jailbreak Reddit Request</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?NoFolder">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #ff650c , #ff380c)">
+          <img src="assets/page-icons/no-folder.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">No Folder Icons</span>
+          <br><span class="packageDescription">Remove the Background from Folder Icons for a Clean Homescreen Appearance.</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?ZeppelinLogo">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
           <img src="assets/page-icons/zeppelin.png" class="packageicon";>
-          <h1>Star Wars: Zeppelin Logos</h1>
-          <h2>Star Wars: Zeppelin</h2>
-          <p>Star Wars Clones, Commanders and Ships for Zeppelin</p>
-          <p2>Version 1.2 by iLewisCx</p2>
-        </div></a>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+          <br><span class="packageDescription">Star Wars Clones, Commanders and Ships for Zeppelin by iLewisCx</span>
+        </div>
+      </div></a>
+    </th>
 
-    </div>
-    <div class="column">
+    <th>
+      <a href="depiction.html?SentialPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #4595b7 , #7353FC)">
+          <img src="assets/page-icons/sentialPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Sential Patch</span>
+          <br><span class="packageDescription">A Small Collection of additional icons for the theme Sential by Aesign</span>
+        </div>
+      </div></a>
+    </th>
 
-      <div class="subtitle">Themes</div>
+    <th>
+      <a href="depiction.html?LuxPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #274049 , #2a4c4b)">
+          <img src="assets/page-icons/luxPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Lux Patch</span>
+          <br><span class="packageDescription">A Large Collection of additional icons for the theme Lux by ColbyRoark</span>
+        </div>
+      </div></a>
+    </th>
 
+    <th>
+      <a href="depiction.html?DarkMode">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #573866 , #413a77)">
+          <img src="assets/page-icons/dark-mode.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Dark Mode</span>
+          <br><span class="packageDescription"> Proof of Concept that Utilizies Anemones UIKit Support for Dark Mode!</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?Seven4Eleven">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #1790F0, #DE5F79)">
+          <img src="assets/page-icons/seven4eleven.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Seven4Eleven</span>
+          <br><span class="packageDescription">Bring back the classic iOS 7 Style for iOS 11 as per a /r/Jailbreak Reddit Request</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?NoFolder">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #ff650c , #ff380c)">
+          <img src="assets/page-icons/no-folder.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">No Folder Icons</span>
+          <br><span class="packageDescription">Remove the Background from Folder Icons for a Clean Homescreen Appearance.</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?ZeppelinLogo">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+          <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+          <br><span class="packageDescription">Star Wars Clones, Commanders and Ships for Zeppelin by iLewisCx</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?SentialPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #4595b7 , #7353FC)">
+          <img src="assets/page-icons/sentialPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Sential Patch</span>
+          <br><span class="packageDescription">A Small Collection of additional icons for the theme Sential by Aesign</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="depiction.html?LuxPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #274049 , #2a4c4b)">
+          <img src="assets/page-icons/luxPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Lux Patch</span>
+          <br><span class="packageDescription">A Large Collection of additional icons for the theme Lux by ColbyRoark</span>
+        </div>
+      </div></a>
+    </th>
+
+  </table></div></div>
+
+<div class="subsection">
+<h2 id="subtitle">Packages</h2>
+<h2 id="subsubtitle">Things I created that aren't on this Repo.</h2>
+
+<div class="scroller" id="scroller-packages">
+  <table>
+
+    <th>
+      <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #3BB7B4 , #42E299)">
+          <img src="assets/page-icons/homegesture.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">HomeGesture</span>
+          <br><span class="packageDescription">iPhone X gestures on Older Devices</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Dynastic Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
       <a href="https://repo.packix.com/package/com.pinpal.bleed/">
-        <div class="box" style="background: linear-gradient(to right, #b70900 , #a31d28);">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #b70900 , #a31d28)">
           <img src="assets/page-icons/bleed.png" class="packageicon";>
-          <h1>Bleed Theme</h1>
-          <h2>Bleed Theme</h2>
-          <p>Anemone Theme: Bold Titles with App Previews.</p>
-          <p2>Now Hosted on the Packix Repo</p2>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Bleed Theme</span>
+          <br><span class="packageDescription">Bold Titles with App Previews</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Packix Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #6C0AFA , #27BBFB)">
+          <img src="assets/page-icons/true-art.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">True Art Theme</span>
+          <br><span class="packageDescription">Joke Theme: Hand Crafted In MSPaint</span>
+          <br><span class="packageGreyDescription">Now Hosted on the BigBoss Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #3BB7B4 , #42E299)">
+          <img src="assets/page-icons/homegesture.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">HomeGesture</span>
+          <br><span class="packageDescription">iPhone X gestures on Older Devices</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Dynastic Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="https://repo.packix.com/package/com.pinpal.bleed/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #b70900 , #a31d28)">
+          <img src="assets/page-icons/bleed.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Bleed Theme</span>
+          <br><span class="packageDescription">Bold Titles with App Previews</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Packix Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #6C0AFA , #27BBFB)">
+          <img src="assets/page-icons/true-art.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">True Art Theme</span>
+          <br><span class="packageDescription">Joke Theme: Hand Crafted In MSPaint</span>
+          <br><span class="packageGreyDescription">Now Hosted on the BigBoss Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #3BB7B4 , #42E299)">
+          <img src="assets/page-icons/homegesture.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">HomeGesture</span>
+          <br><span class="packageDescription">iPhone X gestures on Older Devices</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Dynastic Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="https://repo.packix.com/package/com.pinpal.bleed/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #b70900 , #a31d28)">
+          <img src="assets/page-icons/bleed.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Bleed Theme</span>
+          <br><span class="packageDescription">Bold Titles with App Previews</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Packix Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+    <th>
+      <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #6C0AFA , #27BBFB)">
+          <img src="assets/page-icons/true-art.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">True Art Theme</span>
+          <br><span class="packageDescription">Joke Theme: Hand Crafted In MSPaint</span>
+          <br><span class="packageGreyDescription">Now Hosted on the BigBoss Repo</span>
+        </div>
+      </div></a>
+    </th>
+
+  </table></div></div>
+
+  <div class="subsection">
+  <h2 id="subtitle">Projects</h2>
+  <h2 id="subsubtitle">Other Stuff I've helped with.</h2>
+
+  <div class="scroller" id="scroller-projects">
+
+    <table>
+
+      <th>
+        <a href="depiction.html?ZeppelinLogo">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+            <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+            <br><span class="packageDescription">Star Wars Clones, Commanders and Ships by iLewisCx - It's Hosted on this repo!</span>
+          </div>
         </div></a>
+      </th>
 
-        <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
-          <div class="box" style="background: linear-gradient(to right, #6C0AFA , #27BBFB);">
-            <img src="assets/page-icons/true-art.png" class="packageicon";>
-            <h1>TrueArt Theme</h1>
-            <h2>TrueArt Theme</h2>
-            <p>Anemone Joke Theme: Hand Crafted In "mspaint.exe"</p>
-            <p2>Now Hosted on the BigBoss Repo</p2>
-          </div></a>
+      <th>
+        <a href="https://github.com/midnightchip/Asteroid">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #5749D4 , #5749D4)">
+            <img src="assets/page-icons/asteroid.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Asteroid</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
 
-        <a href="package/Seven4Eleven/index.html">
-          <div class="box" style="background: linear-gradient(to right, #1790F0, #DE5F79);">
-            <img src="assets/page-icons/seven4eleven.png" class="packageicon";>
-            <h1>Seven4Eleven</h1>
-            <h2>Seven4Eleven</h2>
-            <p>Bring back the classic iOS 7 Style for iOS 11</p>
-            <p2>Version 1.1</p2>
-          </div></a>
+      <th>
+        <a href="https://repo.dynastic.co/package/com.midnightchips.bettersettings">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #29AB4C , #47875C)">
+            <img src="assets/page-icons/bettersettings.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">BetterSettings</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
 
-          <a href="package/NoFolder/index.html">
-            <div class="box" style="background: linear-gradient(to right, #ff650c , #ff380c);">
-              <img src="assets/page-icons/no-folder.png" class="packageicon";>
-              <h1>No Folder Icons</h1>
-              <h2>No Folder Icons</h2>
-              <p>Remove Background From Folders Icons</p>
-              <p2>Version 1.0</p2>
-            </div></a>
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #4C5EA6 , #3C5DE1)">
+            <img src="assets/page-icons/autoblue.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">AutoBlue</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
 
-  </div>
-</div>
+      <th>
+        <a href="https://repo.chariz.io/package/com.muirey03.zenith/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #E73F24 , #FF6704)">
+            <img src="assets/page-icons/Zenith.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Zenith</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cabelloDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #3F93B8 , #595CC6)">
+            <img src="assets/page-icons/cabello.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Cabello</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+
+      <th>
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=colormydockDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #18D2E5 , #70A8FF)">
+            <img src="assets/page-icons/colormydock.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">ColorMyDock</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.ezbatteries/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #00D66F , #038756)">
+            <img src="assets/page-icons/ezbatteries.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">EzBatteries</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.dynastic.co/package/com.wizage.gif2ani2">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #BC2D6D , #D82543)">
+            <img src="assets/page-icons/gif2ani.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Gif2Ani</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #0DAEE4 , #1BC774)">
+            <img src="assets/page-icons/invicydia.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">InviCydia</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.midnightchips.localhostssh/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #59DE61 , #59DE61)">
+            <img src="assets/page-icons/localssh.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LocalSSH</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.octodev.nebula/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #462C75 , #462C75)">
+            <img src="assets/page-icons/nebula.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Nebula</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #D1408F , #0E52C1)">
+            <img src="assets/page-icons/lockpage.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LockPage</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2F7FEC , #56CCF2)">
+            <img src="assets/page-icons/powerguard.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">PowerGuard</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.muirey03.smallsiri/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2BC7EA , #1EBCC2)">
+            <img src="assets/page-icons/smallsiri.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">SmallSiri</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="depiction.html?ZeppelinLogo">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+            <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+            <br><span class="packageDescription">Star Wars Clones, Commanders and Ships by iLewisCx - It's Hosted on this repo!</span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://github.com/midnightchip/Asteroid">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #5749D4 , #5749D4)">
+            <img src="assets/page-icons/asteroid.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Asteroid</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.dynastic.co/package/com.midnightchips.bettersettings">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #29AB4C , #47875C)">
+            <img src="assets/page-icons/bettersettings.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">BetterSettings</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #4C5EA6 , #3C5DE1)">
+            <img src="assets/page-icons/autoblue.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">AutoBlue</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.chariz.io/package/com.muirey03.zenith/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #E73F24 , #FF6704)">
+            <img src="assets/page-icons/Zenith.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Zenith</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cabelloDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #3F93B8 , #595CC6)">
+            <img src="assets/page-icons/cabello.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Cabello</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+
+      <th>
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=colormydockDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #18D2E5 , #70A8FF)">
+            <img src="assets/page-icons/colormydock.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">ColorMyDock</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.ezbatteries/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #00D66F , #038756)">
+            <img src="assets/page-icons/ezbatteries.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">EzBatteries</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.dynastic.co/package/com.wizage.gif2ani2">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #BC2D6D , #D82543)">
+            <img src="assets/page-icons/gif2ani.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Gif2Ani</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #0DAEE4 , #1BC774)">
+            <img src="assets/page-icons/invicydia.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">InviCydia</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.midnightchips.localhostssh/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #59DE61 , #59DE61)">
+            <img src="assets/page-icons/localssh.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LocalSSH</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.octodev.nebula/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #462C75 , #462C75)">
+            <img src="assets/page-icons/nebula.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Nebula</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #D1408F , #0E52C1)">
+            <img src="assets/page-icons/lockpage.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LockPage</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2F7FEC , #56CCF2)">
+            <img src="assets/page-icons/powerguard.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">PowerGuard</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+      <th>
+        <a href="https://repo.packix.com/package/com.muirey03.smallsiri/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2BC7EA , #1EBCC2)">
+            <img src="assets/page-icons/smallsiri.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">SmallSiri</span>
+            <br><span class="packageDescription"></span>
+          </div>
+        </div></a>
+      </th>
+
+    </table></div></div></div>
+
 </body>
 </html>

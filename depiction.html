@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="tweakName"></title>
+    <link rel="icon" href="assets/favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/depiction/stylesheet.css">
+<head>
+<body>
+
+  <div class="wrapper">
+
+  <div class=column>
+  <div class="subtitle">Description</div>
+  <div class="bigbox">
+
+    <h1 id="tweakName"></h1>
+    <h2 id="tweakShortDescription"></h2>
+    <p id="tweakDescription"></p>
+
+    <div class="screenshots" id="tweakScreenshots"></div>
+
+    <a href="assets/depiction/screenshots.html" id="screenshotButton"><div class="button">View all Screenshots</div></a>
+
+  </div></div><div class=column>
+  <div class="subtitle">What's New</div>
+  <div class="bigbox">
+
+    <p style="line-height:1.8;" id="tweakChangelog"></p>
+
+    <a href="assets/depiction/changes.html"><div class="button">View all Changes</div></a>
+
+  </div></div><div class=column>
+  <div class="subtitle">Developer</div>
+  <div class="bigbox">
+
+    <a id="tweakDevTwitterURL" href="#">
+    <table style="margin-bottom: -15px;">
+      <tr>
+        <th><img id="tweakDevTwitterPic" class="twitter"></th>
+        <th>
+          <table>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(255,255,255,1)" id="tweakDeveloper"></span></th>
+              </tr>
+              <tr>
+                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)" id="tweakDevTwitter"></span><th>
+              </tr>
+            </table>
+          </th>
+      </tr>
+    </table></a>
+
+  </div></div><div class=column>
+  <div class="subtitle">Information</div>
+  <div class="bigbox">
+
+    <table width=100% style="border-collapse:collapse">
+            <tr>
+                <td class="info_table_row_b">Size</td>
+                <td class="info_table_row" id="tweakSize"></td>
+            </tr>
+            <tr>
+                <td class="info_table_row_b">Category</td>
+                <td class="info_table_row" id="tweakCategory"></td>
+            </tr>
+            <tr>
+                <td class="info_table_row_b">Compatibility</td>
+                <td class="info_table_row" id="tweakCompatibility"></td>
+            </tr>
+            <tr>
+                <td class="info_table_row_b">Version</td>
+                <td class="info_table_row" id="tweakVersion"></td>
+            </tr>
+            <tr>
+                <td class="info_table_row_b">Updated</td>
+                <td class="info_table_row" id="tweakUpdateDate"></td>
+            </tr>
+    </table>
+  </div></div>
+</body>
+
+<script>
+
+  //Function to read XML Files
+  function loadXMLDoc(filename) {
+   if (window.XMLHttpRequest)
+     {
+     xhttp=new XMLHttpRequest();
+     }
+   else
+     {
+     xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+     }
+   xhttp.open("GET",filename,false);
+   xhttp.send();
+   return xhttp.responseText;
+  }
+
+  //Redirect to 404 page if package not specified in URL
+    if (window.location.search.substring(1)) {
+  } else {
+    location.replace("https://pinpal.github.io/404")
+  }
+
+  var text = loadXMLDoc("/package/" + window.location.search.substring(1) + "/Info.xml"); //Specify the name of the XML config to load
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(text,"text/xml"); //Load the XML config
+
+  //Array of ID's to change based on the package
+  var toChange = ["tweakName", "tweakDescription", "tweakShortDescription", "tweakSize", "tweakCategory",
+                  "tweakCompatibility", "tweakVersion", "tweakUpdateDate", "tweakDeveloper", "tweakDevTwitter"];
+
+  //Loop algorithm to swap all the ID's listed above based on package
+  for(var i = 0; i < toChange.length; i++) {
+      var elements = document.querySelectorAll('[id="' + toChange[i] + '"]');
+      for(var j = 0; j < elements.length; j++) {
+        elements[j].innerHTML = xmlDoc.getElementsByTagName(toChange[i])[0].childNodes[0].nodeValue;
+      }
+  }
+
+  //Replace Twitter Profile picture based off package developer
+  document.getElementById("tweakDevTwitterPic").src =
+  xmlDoc.getElementsByTagName("tweakDevTwitterPic")[0].childNodes[0].nodeValue;
+
+  //Replace Twitter URL based off package developer
+  document.getElementById("tweakDevTwitterURL").href =
+  xmlDoc.getElementsByTagName("tweakDevTwitterURL")[0].childNodes[0].nodeValue;
+
+  //Replace Screenshot button URL based off package name
+  document.getElementById("screenshotButton").href =
+  "assets/depiction/screenshots.html?" + window.location.search.substring(1);
+
+  //Make each bullet point of changelog on new line
+  changeLog = xmlDoc.getElementsByTagName("tweakChangelog")[0].childNodes[0].nodeValue;
+  changeLog = changeLog.replace(/\•/g, "<br>•") //Add line break to bullet points
+  changeLog = changeLog.replace("<br>", "") //Remove first line break
+  document.getElementById("tweakChangelog").innerHTML = changeLog //Apply changelog to webpage
+
+  //Only display specified number of screenshots
+  var numOfScreenshots = xmlDoc.getElementsByTagName("numOfScreenshots")[0].childNodes[0].nodeValue;
+  var screenshotList = "";
+  for (i = 0; i < numOfScreenshots; i++) {
+      screenshotList = screenshotList.concat('<img class="screenshot" src="/package/'
+      + window.location.search.substring(1) + "/"+ (i + 1) + '.png">')
+  }
+  document.getElementById("tweakScreenshots").innerHTML = screenshotList;
+
+</script>
