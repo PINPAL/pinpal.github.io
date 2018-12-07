@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    background-color: black;
+  }
+  /*Subtitles above boxes*/
+  .subtitle {
+    color: white;
+    font-family: "SF Pro Display";
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 300px;
+  }
+  /*Box*/
+  .bigbox {
+    background: #2F3439;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    color: white;
+    font-family: "SF Pro Display";
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 300px;
+    line-height: 1.5;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.03);
+    border-width: 2px;
+  }
+</style>
+<body>
+  <p id = "test" style="color: white;font-size: 30px;"></p>
+</body>
+
+<script>
+
+  //Function to read XML Files
+  function loadXMLDoc(filename) {
+   if (window.XMLHttpRequest)
+     {
+     xhttp=new XMLHttpRequest();
+     }
+   else
+     {
+     xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+     }
+   xhttp.open("GET",filename,false);
+   xhttp.send();
+   return xhttp.responseText;
+  }
+
+  var text = loadXMLDoc("changelog.xml"); //Specify the name of the XML config to load
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(text,"text/xml"); //Load the XML config
+
+  changeLog = xmlDoc.getElementsByTagName("changes")[0].childNodes[0].nodeValue;
+
+/*VERSION 1
+  changeLog = changeLog.replace(/\•/g, "<br>•") //Add line break to bullet points
+  changeLog = changeLog.replace(/\#/g, '</div><div class="subtitle">') //Add subtitle to version numbers
+  changeLog = changeLog.replace(/\~/g, '</div><div class="bigbox">') //Add box to versions
+*/
+
+/*GET START TO END OF VERSION NUM
+  var startOfVerNum = changeLog.search("#");
+  var endOfVerNum = changeLog.search("•");
+  changeLog = changeLog.slice(startOfVerNum,(endOfVerNum-startOfVerNum))
+*/
+
+  var versionNumbers = [] //Define array of version numbers
+/*
+  for(var i = 0; i < 5; i++) {
+    var startOfVerNum = changeLog.search("#");
+    var endOfVerNum = changeLog.search("•");
+    versionNumbers[i] = changeLog.slice(startOfVerNum,(endOfVerNum-startOfVerNum)); //Add version numbers to array
+    currentVersion = versionNumbers[i] //Define current version in each iteration of loop
+    versionNumbers[i] = currentVersion.replace(/(\r\n\t|\n|\r\t)/gm,""); //Remove newline from version number
+  }
+*/
+
+  versionNumbers = changeLog.split(["#([\S\s]*?)\n"])
+  console.log(changeLog)
+  console.log(versionNumbers)
+  //changeLog = changeLog.replace("<br>", "") //Remove first line break
+  document.getElementById("test").innerHTML = changeLog //Apply changelog to webpage
+
+</script>
