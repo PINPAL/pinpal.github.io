@@ -28,7 +28,7 @@
 
     <p style="line-height:1.8;" id="tweakChangelog"></p>
 
-    <a href="assets/depiction/changes.html"><div class="button">View all Changes</div></a>
+    <a href="assets/depiction/changelog.html"><div class="button">View all Changes</div></a>
 
   </div></div><div class=column>
   <div class="subtitle">Developer</div>
@@ -108,7 +108,7 @@
   var xmlDoc = parser.parseFromString(text,"text/xml"); //Load the XML config
 
   //Array of ID's to change based on the package
-  var toChange = ["tweakName", "tweakDescription", "tweakShortDescription", "tweakSize", "tweakCategory",
+  var toChange = ["tweakName", "tweakShortDescription", "tweakSize", "tweakCategory",
                   "tweakCompatibility", "tweakVersion", "tweakUpdateDate", "tweakDeveloper", "tweakDevTwitter"];
 
   //Loop algorithm to swap all the ID's listed above based on package
@@ -130,6 +130,12 @@
   //Replace Screenshot button URL based off package name
   document.getElementById("screenshotButton").href =
   "assets/depiction/screenshots.html?" + window.location.search.substring(1);
+
+    //Allow new line in tweak description
+    tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
+    tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to bullet points
+    tweakDescription = tweakDescription.replace("<br>", "") //Remove first line break
+    document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply changelog to webpage
 
   //Make each bullet point of changelog on new line
   changeLog = xmlDoc.getElementsByTagName("tweakChangelog")[0].childNodes[0].nodeValue;

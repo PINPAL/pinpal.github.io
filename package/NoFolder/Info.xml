@@ -1,36 +1,36 @@
 <tweak>
 
 <tweakName>
-Tweak Name
+No Folder Icons
 </tweakName>
 <tweakShortDescription>
-Package Short Description
+Remove Background from Folder Icons
 </tweakShortDescription>
 <tweakDescription>
-Main description and some extra information about the package can go in this long description in here.
+Simple theme to remove the background from folder icons.
 </tweakDescription>
 
 <tweakSize>
-1 MB
+10 KB
 </tweakSize>
 <tweakCategory>
-Tweaks
+Themes
 </tweakCategory>
 <tweakCompatibility>
-iOS 11
+iOS 7 to 11
 </tweakCompatibility>
 <tweakVersion>
 1.0
 </tweakVersion>
 <tweakUpdateDate>
-20/11/18
+01/02/18
 </tweakUpdateDate>
 
 <tweakDeveloper>
-Developer Name
+PINPAL
 </tweakDeveloper>
 <tweakDevTwitter>
-@DevName
+@TPINPAL
 </tweakDevTwitter>
 <tweakDevTwitterPic>
 https://pbs.twimg.com/profile_images/1015718760668426245/qIugpEtH_400x400.jpg
@@ -40,14 +40,11 @@ https://twitter.com/TPinpal
 </tweakDevTwitterURL>
 
 <tweakChangelog>
-• Changed thing number one
-• Important bug fix that didn't do anything
-• Changed item number three
-• Something else that changed.
+• Fixed scaling on Plus devices
 </tweakChangelog>
 
 <numOfScreenshots>
-6
+2
 </numOfScreenshots>
 
 </tweak>
