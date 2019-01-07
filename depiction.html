@@ -133,9 +133,8 @@
 
     //Allow new line in tweak description
     tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
-    tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to bullet points
-    tweakDescription = tweakDescription.replace("<br>", "") //Remove first line break
-    document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply changelog to webpage
+    tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to "\n"
+    document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply description to webpage
 
   //Make each bullet point of changelog on new line
   changeLog = xmlDoc.getElementsByTagName("tweakChangelog")[0].childNodes[0].nodeValue;
