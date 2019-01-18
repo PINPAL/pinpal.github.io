@@ -1,0 +1,197 @@
+  <li>
+    <a href="depiction.html?ZeppelinLogo">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+        <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+        <br><span class="packageDescription">Star Wars Clones, Commanders and Ships by iLewisCx - It's Hosted on this repo!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://github.com/midnightchip/Asteroid">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #5749D4 , #5749D4)">
+        <img src="assets/page-icons/asteroid.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Asteroid</span>
+        <br><span class="packageDescription">System Wide Weather Tweak.</span>
+        <br><span class="packageGreyDescription">Currently Unreleased!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.dynastic.co/package/com.midnightchips.bettersettings">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #29AB4C , #47875C)">
+        <img src="assets/page-icons/bettersettings.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">BetterSettings</span>
+        <br><span class="packageDescription">Complete customization of the settings app includes custom color, cells, text and more.</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #4C5EA6 , #3C5DE1)">
+        <img src="assets/page-icons/autoblue.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">AutoBlue</span>
+        <br><span class="packageDescription">Bluetooth and WiFi under your control. Disable them with ease!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.chariz.io/package/com.muirey03.zenith/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #E73F24 , #FF6704)">
+        <img src="assets/page-icons/Zenith.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Zenith</span>
+        <br><span class="packageDescription">Apex for iOS 11. Zenith lets your create "stacks" of icons on your homescreen.</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cabelloDp">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #3F93B8 , #595CC6)">
+        <img src="assets/page-icons/cabello.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Cabello</span>
+        <br><span class="packageDescription">Customise your buttons with Haptic Feedback and Custom Sounds.</span>
+      </div>
+    </div></a>
+  </li>
+
+
+  <li>
+    <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=colormydockDp">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #18D2E5 , #70A8FF)">
+        <img src="assets/page-icons/colormydock.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">ColorMyDock</span>
+        <br><span class="packageDescription">ColorMyDock lets you change the color of your iOS 11 dock as you like!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.ezbatteries/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #00D66F , #038756)">
+        <img src="assets/page-icons/ezbatteries.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">EzBatteries</span>
+        <br><span class="packageDescription">Displays battery percentage of any device by double tapping the status bar.</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.dynastic.co/package/com.wizage.gif2ani2">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #BC2D6D , #D82543)">
+        <img src="assets/page-icons/gif2ani.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Gif2Ani</span>
+        <br><span class="packageDescription">iOS Respring animations from any GIF you want!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #0DAEE4 , #1BC774)">
+        <img src="assets/page-icons/invicydia.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">InviCydia</span>
+        <br><span class="packageDescription">Complete Cydia Customisation.</span>
+        <br><span class="packageGreyDescription">Currently Unreleased!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.packix.com/package/com.midnightchips.localhostssh/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #59DE61 , #59DE61)">
+        <img src="assets/page-icons/localssh.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">LocalSSH</span>
+        <br><span class="packageDescription">Allows local SSH access using localhost or 127.0.0.1</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.packix.com/package/com.octodev.nebula/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #462C75 , #462C75)">
+        <img src="assets/page-icons/nebula.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Nebula</span>
+        <br><span class="packageDescription">Dark Mode and Color Customisation for Webpages.</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.lockpage/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #D1408F , #0E52C1)">
+        <img src="assets/page-icons/lockpage.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">LockPage</span>
+        <br><span class="packageDescription">Lock apps in the app switcher! Configure in settings, or use a long-hold gesture!</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #2F7FEC , #56CCF2)">
+        <img src="assets/page-icons/powerguard.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">PowerGuard</span>
+        <br><span class="packageDescription">Prevent someone from turning off the device with Touch ID.</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.packix.com/package/com.muirey03.smallsiri/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #2BC7EA , #1EBCC2)">
+        <img src="assets/page-icons/smallsiri.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">SmallSiri</span>
+        <br><span class="packageDescription">Compact Siri Interface. Allows for using Siri without hogging your whole screen!</span>
+      </div>
+    </div></a>
+  </li>
