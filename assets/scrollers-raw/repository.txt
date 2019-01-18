@@ -1,0 +1,81 @@
+
+
+
+
+    <li>
+      <a href="depiction.html?DarkMode">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #573866 , #413a77)">
+          <img src="assets/page-icons/dark-mode.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Dark Mode</span>
+          <br><span class="packageDescription"> Proof of Concept that Utilizies Anemones UIKit Support for Dark Mode!</span>
+        </div>
+      </div></a>
+    </li>
+
+    <li>
+      <a href="depiction.html?Seven4Eleven">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #1790F0, #DE5F79)">
+          <img src="assets/page-icons/seven4eleven.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Seven4Eleven</span>
+          <br><span class="packageDescription">Bring back the classic iOS 7 Style for iOS 11 as per a /r/Jailbreak Reddit Request</span>
+        </div>
+      </div></a>
+    </li>
+
+    <li>
+      <a href="depiction.html?NoFolder">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #ff650c , #ff380c)">
+          <img src="assets/page-icons/no-folder.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">No Folder Icons</span>
+          <br><span class="packageDescription">Remove the Background from Folder Icons for a Clean Homescreen Appearance.</span>
+        </div>
+      </div></a>
+    </li>
+
+    <li>
+      <a href="depiction.html?ZeppelinLogo">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+          <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+          <br><span class="packageDescription">Star Wars Clones, Commanders and Ships for Zeppelin by iLewisCx</span>
+        </div>
+      </div></a>
+    </li>
+
+    <li>
+      <a href="depiction.html?SentialPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #4595b7 , #7353FC)">
+          <img src="assets/page-icons/sentialPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Sential Patch</span>
+          <br><span class="packageDescription">A Small Collection of additional icons for the theme Sential by Aesign</span>
+        </div>
+      </div></a>
+    </li>
+
+    <li>
+      <a href="depiction.html?LuxPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #274049 , #2a4c4b)">
+          <img src="assets/page-icons/luxPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Lux Patch</span>
+          <br><span class="packageDescription">A Large Collection of additional icons for the theme Lux by ColbyRoark</span>
+        </div>
+      </div></a>
+    </li>

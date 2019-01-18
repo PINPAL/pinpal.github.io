@@ -1,0 +1,38 @@
+<li>
+  <a href="stock-identifiers.html">
+  <div class="bigBox">
+    <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+      <img src="assets/page-icons/bundleID.png" class="packageicon";>
+    </div>
+    <div class="packageContentHolder">
+      <span class="packageTitle">iOS Bundle Identifiers</span>
+      <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+    </div>
+  </div></a>
+</li>
+
+<li>
+  <a href="theme-guide.html">
+  <div class="bigBox">
+    <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
+      <img src="assets/page-icons/anemone.png" class="packageicon";>
+    </div>
+    <div class="packageContentHolder">
+      <span class="packageTitle">iOS Theme Guide</span>
+      <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
+    </div>
+  </div></a>
+</li>
+
+<li>
+  <a href="shortcuts.html">
+  <div class="bigBox">
+    <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
+      <img src="assets/page-icons/home.png" class="packageicon";>
+    </div>
+    <div class="packageContentHolder">
+      <span class="packageTitle">Shortcuts Homepage</span>
+      <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
+    </div>
+  </div></a>
+</li>
