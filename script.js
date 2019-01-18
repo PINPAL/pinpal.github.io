@@ -23,6 +23,7 @@ function LoadTxt(){
    getData(pathArr[i]) + getData(pathArr[i]) + getData(pathArr[i]) + "</ul>";}
    document.getElementsByClassName('scroller')[3].innerHTML = "<ul>" +
     getData(pathArr[3]) + "</ul>";
+  console.log("Chazzox.github.io is a better site just syain");
 }
 
 function changeDisplay(x){
