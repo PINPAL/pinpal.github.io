@@ -1,0 +1,43 @@
+
+
+  <li>
+    <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #3BB7B4 , #42E299)">
+        <img src="assets/page-icons/homegesture.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">HomeGesture</span>
+        <br><span class="packageDescription">iPhone X gestures on Older Devices</span>
+        <br><span class="packageGreyDescription">Now Hosted on the Dynastic Repo</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="https://repo.packix.com/package/com.pinpal.bleed/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #b70900 , #a31d28)">
+        <img src="assets/page-icons/bleed.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">Bleed Theme</span>
+        <br><span class="packageDescription">Bold Titles with App Previews</span>
+        <br><span class="packageGreyDescription">Now Hosted on the Packix Repo</span>
+      </div>
+    </div></a>
+  </li>
+
+  <li>
+    <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+    <div class="bigBox">
+      <div class="packageIconHolder" style="background: linear-gradient(to right, #6C0AFA , #27BBFB)">
+        <img src="assets/page-icons/true-art.png" class="packageicon";>
+      </div>
+      <div class="packageContentHolder">
+        <span class="packageTitle">True Art Theme</span>
+        <br><span class="packageDescription">Joke Theme: Hand Crafted In MSPaint</span>
+        <br><span class="packageGreyDescription">Now Hosted on the BigBoss Repo</span>
+      </div>
+    </div></a>
+  </li>
