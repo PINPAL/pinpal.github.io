@@ -1,47 +1,17 @@
-/*Main site*/
-@font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
-
-/*Expand/Collapse buttons*/
-button[type = "button"] {
+/*Collapse buttons*/
+input[type = "button"] {
   float: right;
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  background: linear-gradient(to right, #55B49D, #2B7DCA);
   text-align: center;
   border-radius: 25px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 9px;
   color: white !important;
-  font-size: 0px;
+  font-size: 20px;
   border: none;
   margin-right: 5px;
-  outline: none;
-  min-height: 40px;
-  min-width: 40px;
-  max-height: 40px;
-  max-width: 40px;
-  vertical-align: middle;
-  position: absolute;
-  top: 30px;
-  right: 5px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition-delay: 0.5s;
 }
-button[type = "button"]:hover {
-  font-size: 20px;
-  padding-left: 40px;
-  max-width: 350px;
+input[type = "button"]:hover {
   filter: hue-rotate(90deg);
-  transition-delay: 0s;
-}
-
-.expandIcon {
-  position: absolute;
-  top: 10px;
-  left: 8px;
-  width: 25px;
-  height: 25px;
 }
 
 /*Toggled css*/
@@ -53,12 +23,16 @@ button[type = "button"]:hover {
 ul{
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
+  padding-bottom: 10px;
   overflow: hidden;
 }
 li {
   float: left;
 }
+
+/*Main site*/
+@font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -211,14 +185,14 @@ a:active {
   align: left;
   padding: 10px;
   border-radius: 15px;
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  z-index: 0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 0;
 }
 .bigBox:hover .packageIconHolder {
   padding: 55px;
@@ -256,16 +230,17 @@ a:active {
   color: white;
   width: 380px;
   font-family: "SF Pro Display";
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
   margin-left: 15px;
+  margin-bottom: 15px;
   min-height: 78px;
   max-height: 78px;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
 }
 
 .packageTitle {
@@ -341,7 +316,6 @@ a:active {
 }
 
 .subsection {
-  position: relative;
   background-color: rgba(255,255,255,0);
   padding-top: 10px;
 }
@@ -374,3 +348,9 @@ a:active {
   margin-right: auto;
   position: relative;
 }
+
+/*
+also stfu hardcoded html links are the best, go away
+atleast i fixed my depictions
+they used to all be hardcoded too
+*/
