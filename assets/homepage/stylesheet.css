@@ -1,5 +1,7 @@
-
-@font-face { font-family: "SF Pro Display"; src: url("../SF-Pro-Display-Regular.otf"); }
+@font-face {  
+  font-family: "SF Pro Display";
+  src: url("../SF-Pro-Display-Regular.otf");  
+}
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -21,6 +23,10 @@
 body {
   background-color: #292C30;
   margin: 0;
+}
+
+* {
+  font-family: "SF Pro Display";
 }
 
 /* unvisited link */
@@ -52,13 +58,12 @@ a:active {
   background: black;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   color: white;
-  font-family: "SF Pro Display";
   border-radius: 25px;
-  padding: 10px;
+  padding: 20px;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: calc(90% - 20px);
   max-width: 900px;
   margin-bottom: 25px;
   position: relative;
@@ -69,7 +74,6 @@ a:active {
   background: linear-gradient(to right, #55B49D , #2B7DCA);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
-  font-family: "SF Pro Display";
   border-radius: 25px;
   padding: 12px;
   color:white;
@@ -79,8 +83,8 @@ a:active {
   max-width: 170px;
   max-height: 25px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -124,7 +128,7 @@ a:active {
   vertical-align: middle;
   display: inline-block;
   color: white;
-  font-family: "SF Pro Display";
+  
   font-size: 26px;
   font-weight: bold;
 }
@@ -142,7 +146,6 @@ a:active {
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  font-family: "SF Pro Display";
   border-radius: 25px;
   font-size: 0px;
   padding-top: 5px;
@@ -159,6 +162,7 @@ a:active {
   right: 15px;
   top: 35px;
   transition: all 0.3s ease;
+  outline: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -174,6 +178,7 @@ a:active {
   max-width: 100%;
   transition-delay: 0s;
 }
+
 .buttonIcon {
   vertical-align: middle;
   width: 25px;
@@ -192,8 +197,7 @@ a:active {
 
 #subtitle {
     color: white;
-    font-family: "SF Pro Display";
-    font-size: 25px;
+    font-size: 17pt;
     font-weight: bold;
     text-align: left;
     margin-left: 15px;
@@ -201,8 +205,8 @@ a:active {
 }
 #subsubtitle {
     color: white;
-    font-family: "SF Pro Display";
-    font-size: 19px;
+    
+    font-size: 13pt;
     font-weight: normal;
     text-align: left;
     margin-left: 15px;
@@ -228,7 +232,6 @@ a:active {
 .packageIconHolder {
   width: 55px;
   height: 55px;
-  align: left;
   padding: 10px;
   border-radius: 15px;
   -webkit-transition: all 0.3s ease;
@@ -247,6 +250,12 @@ a:active {
   width: 500px;
   height: 300px;
 }
+@media screen and (max-width: 900px) {
+  .packageIconHolder {
+    top: 0 !important;
+    left: 5px !important;
+  }
+}
 
 .packageContentHolder {
   position: absolute;
@@ -254,7 +263,9 @@ a:active {
   top: 16px;
   max-width: 290px;
   overflow: hidden;
+  text-overflow: ellipsis;
   max-height: 90px;
+  transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -262,6 +273,15 @@ a:active {
 }
 .bigBox:hover .packageContentHolder {
   top: 9px;
+}
+@media screen and (max-width: 900px) {
+  .packageContentHolder {
+    min-width: 85px !important;
+    left: 0 !important;
+    top: 80px !important;
+    max-height: 180px !important;
+    text-align: center !important;
+  }
 }
 
 .bigBox {
@@ -276,7 +296,6 @@ a:active {
   border-color: rgba(255, 255, 255, 0.03);
   border-width: 2px;
   color: white;
-  font-family: "SF Pro Display";
   margin-left: 15px;
   margin-bottom: 15px;
   min-height: 78px;
@@ -292,11 +311,25 @@ a:active {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
+@media screen and (max-width: 900px) {
+  .bigBox {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    min-height: 130px !important;
+    max-height: 130px !important;
+    margin-left: 10px !important;
+    margin-bottom: 20px !important;
+  }
+}
 
 .packageTitle {
-  font-family: "SF Pro Display";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14pt;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -304,31 +337,37 @@ a:active {
   -ms-transition: all 0.3s ease;
 }
 .bigBox:hover .packageTitle {
-  font-size: 24px;
+  font-size: 16pt;
+}
+@media screen and (max-width: 900px) {
+  .packageTitle {
+    font-size: 12pt !important;
+    font-weight: normal !important;
+  }
 }
 
-.packageDescription {
-  font-family: "SF Pro Display";
+.packageDescription, .packageGreyDescription {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13pt;
 }
-
 .packageGreyDescription {
-  font-family: "SF Pro Display";
-  font-weight: normal;
-  font-size: 16px;
   color: rgba(255,255,255,.6)
+}
+@media screen and (max-width: 900px) {
+  .packageDescription, .packageGreyDescription {
+    display: none;
+  }
 }
 
 .scrollerContainer {
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  max-height: 150px;
+  max-height: 148px;
 }
 
 .scroller {
-  min-width: 1000%;
+  text-align: center;
 }
 
 .subsection {
@@ -339,6 +378,11 @@ a:active {
 }
 .subsection:hover {
   background-color: rgba(255,255,255,0.05)
+}
+@media screen and (max-width: 900px) {
+  .subsection {
+    padding-bottom: 0 !important;
+  }
 }
 .subsection:hover .scroller {
   animation-play-state: paused !important;

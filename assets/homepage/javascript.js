@@ -5,24 +5,42 @@ var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersPackages = document.getElementById("scrollerPackages").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML
 
+//Calculate bigBox size
+var bigBoxWidth = 436
+var bigBoxAnimationDuration = 3
+if (window.innerWidth < 900) {
+    bigBoxWidth = 99
+    bigBoxAnimationDuration = 1.1
+}
+
+//Touch Display Detection
+window.addEventListener('touchstart', function onFirstTouch() {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet'
+    link.type = 'text/css';
+    link.href = 'assets/homepage/touchscreenOnly.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    window.removeEventListener('touchstart', onFirstTouch, false);
+  }, false);
+
 //Function to create animations
 function calculateAnimationWidthOf(classID) {
     var style = document.createElement('style');
     style.type = 'text/css';
-    style.innerHTML = '@keyframes ' + classID + ' {100% {transform: translateX(-' + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) * 436 +  'px); }}';
+    style.innerHTML = '@keyframes ' + classID + ' {100% {transform: translateX(-' + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) * bigBoxWidth +  'px); }}';
     document.getElementsByTagName('head')[0].appendChild(style);
 }
 
 //Set width to width of BigBoxes function
 function setWidth(classID) {
-    document.getElementById(classID).style.minWidth = document.getElementById(classID).innerHTML.match(/bigBox/g).length * 436 + "px";
-    document.getElementById(classID).style.animation = classID + " " + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) *3 + "s linear infinite";
+    document.getElementById(classID).style.minWidth = document.getElementById(classID).innerHTML.match(/bigBox/g).length * bigBoxWidth + "px";
+    document.getElementById(classID).style.animation = classID + " " + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) * bigBoxAnimationDuration + "s linear infinite";
 }
 
 //Duplicating Function
 function duplicateContentOf(classID) {
-    document.getElementById(classID).innerHTML = document.getElementById(classID).innerHTML + 
-                                                                                         document.getElementById(classID).innerHTML + 
+    document.getElementById(classID).innerHTML = document.getElementById(classID).innerHTML +
+                                                                                         document.getElementById(classID).innerHTML +
                                                                                          document.getElementById(classID).innerHTML +
                                                                                          document.getElementById(classID).innerHTML
     setWidth(classID)
@@ -57,7 +75,7 @@ duplicateContentOf("scrollerRepo")
 duplicateContentOf("scrollerPackages")
 duplicateContentOf("scrollerProjects")
 
-//Apply animation to all scrollers
+//Apply animation to all scrollers 
 calculateAnimationWidthOf("scrollerPages")
 calculateAnimationWidthOf("scrollerRepo")
 calculateAnimationWidthOf("scrollerPackages")
