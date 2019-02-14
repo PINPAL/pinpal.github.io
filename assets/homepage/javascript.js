@@ -1,4 +1,5 @@
 
+//Backup content of original scrollers (for un-duplicating on expand)
 var originalScrollersPages = document.getElementById("scrollerPages").innerHTML
 var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersPackages = document.getElementById("scrollerPackages").innerHTML
@@ -23,11 +24,11 @@ function expand(classID) {
         document.getElementById(classID + 'Button').innerHTML = '<img class="buttonIcon" src="/assets/homepage/collapse.png">Show Less';
         if (classID == "scrollerPages") {
             document.getElementById(classID).innerHTML = originalScrollersPages
-        } else if (classID = "scrollerRepo") {
+        } else if (classID == "scrollerRepo") {
             document.getElementById(classID).innerHTML = originalScrollersRepo
-        } else if (classID = "scrollerPackages") {
+        } else if (classID == "scrollerPackages") {
             document.getElementById(classID).innerHTML = originalScrollersPackages
-        } else if (classID = "scrollerProjects") {
+        } else if (classID == "scrollerProjects") {
             document.getElementById(classID).innerHTML = originalScrollersProjects
         } 
     } else {
