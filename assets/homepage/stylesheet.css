@@ -361,7 +361,7 @@ a:active {
 
 .scrollerContainer {
   max-width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   max-height: 148px;
 }
