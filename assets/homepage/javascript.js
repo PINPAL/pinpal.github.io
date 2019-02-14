@@ -5,14 +5,26 @@ var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersPackages = document.getElementById("scrollerPackages").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML
 
+//Function to create animations
+function calculateAnimationWidthOf(classID) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = '@keyframes ' + classID + ' {100% {transform: translateX(-' + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) * 436 +  'px); }}';
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+
 //Set width to width of BigBoxes function
 function setWidth(classID) {
     document.getElementById(classID).style.minWidth = document.getElementById(classID).innerHTML.match(/bigBox/g).length * 436 + "px";
+    document.getElementById(classID).style.animation = classID + " " + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) *3 + "s linear infinite";
 }
 
 //Duplicating Function
-function duplicate(classID) {
-    document.getElementById(classID).innerHTML = document.getElementById(classID).innerHTML + document.getElementById(classID).innerHTML + document.getElementById(classID).innerHTML
+function duplicateContentOf(classID) {
+    document.getElementById(classID).innerHTML = document.getElementById(classID).innerHTML + 
+                                                                                         document.getElementById(classID).innerHTML + 
+                                                                                         document.getElementById(classID).innerHTML +
+                                                                                         document.getElementById(classID).innerHTML
     setWidth(classID)
 }
 
@@ -30,16 +42,23 @@ function expand(classID) {
             document.getElementById(classID).innerHTML = originalScrollersPackages
         } else if (classID == "scrollerProjects") {
             document.getElementById(classID).innerHTML = originalScrollersProjects
-        } 
+        }
+        document.getElementById(classID).style.animation = "none";
     } else {
         document.getElementById(classID + 'Container').style.maxHeight = "210px";
         document.getElementById(classID + 'Button').innerHTML = '<img class="buttonIcon" src="/assets/homepage/expand.png">Show More';
-        duplicate(classID)
+        duplicateContentOf(classID)
     }
 }
 
 //Duplicate and fit width of all scrollers
-duplicate("scrollerPages")
-duplicate("scrollerRepo")
-duplicate("scrollerPackages")
-duplicate("scrollerProjects")
+duplicateContentOf("scrollerPages")
+duplicateContentOf("scrollerRepo")
+duplicateContentOf("scrollerPackages")
+duplicateContentOf("scrollerProjects")
+
+//Apply animation to all scrollers
+calculateAnimationWidthOf("scrollerPages")
+calculateAnimationWidthOf("scrollerRepo")
+calculateAnimationWidthOf("scrollerPackages")
+calculateAnimationWidthOf("scrollerProjects")
