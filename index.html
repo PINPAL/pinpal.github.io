@@ -1,56 +1,378 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>PINPAL's Website</title>
-<link rel="icon" href="assets/favicon.ico" class="next-head" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="assets/homepage/style_main.css">
-<script src="assets/homepage/script.js"></script>
-</head>
-<body onload="LoadTxt()">
+<body>
 
-<div class="navbar">
-  <table style="width:100%">
-    <th><a href="https://pinpal.github.io/"><img width="35px" src="assets/pinpal.png"></a></th>
-    <th><a href="https://pinpal.github.io/"><h1 id="title">PINPAL's Homepage</h1></a></th>
+  <div class="navbar">
+    <table style="width:100%">
+        <th><a href="https://pinpal.github.io/"><img width="35px" src="assets/pinpal.png"></a></th>
+        <th><a href="https://pinpal.github.io/"><h1 id="title">PINPAL's Homepage</h1></a></th>
 
-    <th><a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
-    <div class="button" style="float:right">
-    <img src="assets/cydia.png" class="cydiaIcon" align="left">Add Repo
-    </div>
+      <a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
+      <div class="button" style="float:right">
+        <img src="assets/cydia.png" class="buttonIcon" align="left">Add Repo
+      </div>
     </a></th>
   </table>
-</div>
+  </div>
 
-<div class="wrapper">
+  <div class="wrapper">
 
   <div class="subsection">
-  <h2 id="subtitle">pages</h2>
+  <h2 id="subtitle">Pages</h2>
   <h2 id="subsubtitle">Webpages or Guides on this Site.</h2>
-  <input type="button" id value="Show More" onclick="changeDisplay(this)">
-  <div class="scroller" id="scroller-page"></div></div>
 
+  <button class="button" onclick="expand('scrollerPages')" id="scrollerPagesButton">
+    <img class="buttonIcon" src="/assets/homepage/expand.png">Show More
+  </button>
+
+  <div class="scrollerContainer" id="scrollerPagesContainer">
+      <div class="scroller" id="scrollerPages">
+      
+        <a href="stock-identifiers.html">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+            <img src="assets/page-icons/bundleID.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">iOS Bundle Identifiers</span>
+            <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+          </div>
+        </div></a>
+        
+        <a href="theme-guide.html">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
+            <img src="assets/page-icons/anemone.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">iOS Theme Guide</span>
+            <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
+          </div>
+        </div></a>
+      
+        <a href="shortcuts.html">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
+            <img src="assets/page-icons/home.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Shortcuts Homepage</span>
+            <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
+          </div>
+        </div></a>
+  
+</div></div></div>
+<div class="subsection">
+<h2 id="subtitle">Repository</h2>
+<h2 id="subsubtitle">Tweaks and Themes on this Repo.</h2>
+
+<button class="button" onclick="expand('scrollerRepo')" id="scrollerRepoButton">
+  <img class="buttonIcon" src="/assets/homepage/expand.png">Show More
+</button>
+
+<div class="scrollerContainer" id="scrollerRepoContainer">
+  <div class="scroller" id="scrollerRepo">
+
+      <a href="depiction.html?DarkMode">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #573866 , #413a77)">
+          <img src="assets/page-icons/dark-mode.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Dark Mode</span>
+          <br><span class="packageDescription"> Proof of Concept that Utilizies Anemones UIKit Support for Dark Mode!</span>
+        </div>
+      </div></a>
+    
+      <a href="depiction.html?Seven4Eleven">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #1790F0, #DE5F79)">
+          <img src="assets/page-icons/seven4eleven.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Seven4Eleven</span>
+          <br><span class="packageDescription">Bring back the classic iOS 7 Style for iOS 11 as per a /r/Jailbreak Reddit Request</span>
+        </div>
+      </div></a>
+    
+      <a href="depiction.html?NoFolder">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #ff650c , #ff380c)">
+          <img src="assets/page-icons/no-folder.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">No Folder Icons</span>
+          <br><span class="packageDescription">Remove the Background from Folder Icons for a Clean Homescreen Appearance.</span>
+        </div>
+      </div></a>
+    
+      <a href="depiction.html?ZeppelinLogo">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+          <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+          <br><span class="packageDescription">Star Wars Clones, Commanders and Ships for Zeppelin by iLewisCx</span>
+        </div>
+      </div></a>
+        
+      <a href="depiction.html?SentialPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #4595b7 , #7353FC)">
+          <img src="assets/page-icons/sentialPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Sential Patch</span>
+          <br><span class="packageDescription">A Small Collection of additional icons for the theme Sential by Aesign</span>
+        </div>
+      </div></a>
+        
+      <a href="depiction.html?LuxPatch">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #274049 , #2a4c4b)">
+          <img src="assets/page-icons/luxPatch.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Lux Patch</span>
+          <br><span class="packageDescription">A Large Collection of additional icons for the theme Lux by ColbyRoark</span>
+        </div>
+      </div></a>
+  
+</div></div></div>
+<div class="subsection">
+<h2 id="subtitle">Packages</h2>
+<h2 id="subsubtitle">Things I created that aren't on this Repo.</h2>
+
+<button class="button" onclick="expand('scrollerPackages')" id="scrollerPackagesButton">
+  <img class="buttonIcon" src="/assets/homepage/expand.png">Show More
+</button>
+
+<div class="scrollerContainer" id="scrollerPackagesContainer">
+  <div class="scroller" id="scrollerPackages">
+    
+      <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #3BB7B4 , #42E299)">
+          <img src="assets/page-icons/homegesture.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">HomeGesture</span>
+          <br><span class="packageDescription">iPhone X gestures on Older Devices</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Dynastic Repo</span>
+        </div>
+      </div></a>
+    
+      <a href="https://repo.packix.com/package/com.pinpal.bleed/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #b70900 , #a31d28)">
+          <img src="assets/page-icons/bleed.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">Bleed Theme</span>
+          <br><span class="packageDescription">Bold Titles with App Previews</span>
+          <br><span class="packageGreyDescription">Now Hosted on the Packix Repo</span>
+        </div>
+      </div></a>
+        
+      <a href="http://cydia.saurik.com/package/com.pinpal.trueart/">
+      <div class="bigBox">
+        <div class="packageIconHolder" style="background: linear-gradient(to right, #6C0AFA , #27BBFB)">
+          <img src="assets/page-icons/true-art.png" class="packageicon";>
+        </div>
+        <div class="packageContentHolder">
+          <span class="packageTitle">True Art Theme</span>
+          <br><span class="packageDescription">Joke Theme: Hand Crafted In MSPaint</span>
+          <br><span class="packageGreyDescription">Now Hosted on the BigBoss Repo</span>
+        </div>
+      </div></a>
+        
+  </div></div></div>
   <div class="subsection">
-    <h2 id="subtitle">repository</h2>
-    <h2 id="subsubtitle">Tweaks and Themes on this Repo.</h2>
-    <input type="button" value="Show More" onclick="changeDisplay(this)">
-    <div class="scroller" id="scroller-repo"></div>
-  </div>
+  <h2 id="subtitle">Projects</h2>
+  <h2 id="subsubtitle">Other Stuff I've helped with.</h2>
 
-  <div class="subsection">
-  <h2 id="subtitle">packages</h2>
-  <h2 id="subsubtitle">Things I created that aren't on this Repo.</h2>
-  <input type="button" value="Show More" onclick="changeDisplay(this)">
-  <div class="scroller" id="scroller-packages"></div>
-</div>
+  <button class="button" onclick="expand('scrollerProjects')" id="scrollerProjectsButton">
+    <img class="buttonIcon" src="/assets/homepage/expand.png">Show More
+  </button>
 
-  <div class="subsection">
-    <h2 id="subtitle">projects</h2>
-    <h2 id="subsubtitle">Other Stuff I've helped with.</h2>
-    <input type="button" value="Show More" onclick="changeDisplay(this)">
-    <div class="scroller" id="scroller-projects"></div>
-  </div>
-</div>
-
+  <div class="scrollerContainer" id="scrollerProjectsContainer">
+    <div class="scroller" id="scrollerProjects">
+     
+        <a href="depiction.html?ZeppelinLogo">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #008c2e , #07c144)">
+            <img src="assets/page-icons/zeppelin.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Star Wars: Zeppelin Logos</span>
+            <br><span class="packageDescription">Star Wars Clones, Commanders and Ships by iLewisCx - It's Hosted on this repo!</span>
+          </div>
+        </div></a>
+           
+        <a href="https://github.com/midnightchip/Asteroid">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #5749D4 , #5749D4)">
+            <img src="assets/page-icons/asteroid.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Asteroid</span>
+            <br><span class="packageDescription">System Wide Weather Tweak.</span>
+            <br><span class="packageGreyDescription">Currently Unreleased!</span>
+          </div>
+        </div></a>
+            
+        <a href="https://repo.dynastic.co/package/com.midnightchips.bettersettings">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #29AB4C , #47875C)">
+            <img src="assets/page-icons/bettersettings.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">BetterSettings</span>
+            <br><span class="packageDescription">Complete customization of the settings app: custom color, cells, text and more.</span>
+          </div>
+        </div></a>
+          
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #4C5EA6 , #3C5DE1)">
+            <img src="assets/page-icons/autoblue.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">AutoBlue</span>
+            <br><span class="packageDescription">Bluetooth and WiFi under your control. Disable them with ease!</span>
+          </div>
+        </div></a>
+            
+        <a href="https://repo.chariz.io/package/com.muirey03.zenith/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #E73F24 , #FF6704)">
+            <img src="assets/page-icons/Zenith.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Zenith</span>
+            <br><span class="packageDescription">Apex for iOS 11. Zenith lets your create "stacks" of icons on your homescreen.</span>
+          </div>
+        </div></a>
+           
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cabelloDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #3F93B8 , #595CC6)">
+            <img src="assets/page-icons/cabello.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Cabello</span>
+            <br><span class="packageDescription">Customise your buttons with Haptic Feedback and Custom Sounds.</span>
+          </div>
+        </div></a>
+            
+        <a href="http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=colormydockDp">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #18D2E5 , #70A8FF)">
+            <img src="assets/page-icons/colormydock.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">ColorMyDock</span>
+            <br><span class="packageDescription">ColorMyDock lets you change the color of your iOS 11 dock as you like!</span>
+          </div>
+        </div></a>
+      
+        <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.ezbatteries/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #00D66F , #038756)">
+            <img src="assets/page-icons/ezbatteries.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">EzBatteries</span>
+            <br><span class="packageDescription">Displays battery percentage of any device by double tapping the status bar.</span>
+          </div>
+        </div></a>
+            
+        <a href="https://repo.dynastic.co/package/com.wizage.gif2ani2">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #BC2D6D , #D82543)">
+            <img src="assets/page-icons/gif2ani.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Gif2Ani</span>
+            <br><span class="packageDescription">iOS Respring animations from any GIF you want!</span>
+          </div>
+        </div></a>
+            
+        <a href="">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #0DAEE4 , #1BC774)">
+            <img src="assets/page-icons/invicydia.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">InviCydia</span>
+            <br><span class="packageDescription">Complete Cydia Customisation.</span>
+            <br><span class="packageGreyDescription">Currently Unreleased!</span>
+          </div>
+        </div></a>
+          
+        <a href="https://repo.packix.com/package/com.midnightchips.localhostssh/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #59DE61 , #59DE61)">
+            <img src="assets/page-icons/localssh.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LocalSSH</span>
+            <br><span class="packageDescription">Allows local SSH access using localhost or 127.0.0.1</span>
+          </div>
+        </div></a>
+           
+        <a href="https://repo.packix.com/package/com.octodev.nebula/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #462C75 , #462C75)">
+            <img src="assets/page-icons/nebula.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">Nebula</span>
+            <br><span class="packageDescription">Dark Mode and Color Customisation for Webpages.</span>
+          </div>
+        </div></a>
+      
+        <a href="https://idevicehacked.com/depictions/?p=com.idevicehacked.lockpage/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #D1408F , #0E52C1)">
+            <img src="assets/page-icons/lockpage.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">LockPage</span>
+            <br><span class="packageDescription">Lock apps in the app switcher! Configure in settings, or use a long-hold gesture!</span>
+          </div>
+        </div></a>
+      
+        <a href="https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2F7FEC , #56CCF2)">
+            <img src="assets/page-icons/powerguard.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">PowerGuard</span>
+            <br><span class="packageDescription">Prevent someone from turning off the device with Touch ID.</span>
+          </div>
+        </div></a>
+           
+        <a href="https://repo.packix.com/package/com.muirey03.smallsiri/">
+        <div class="bigBox">
+          <div class="packageIconHolder" style="background: linear-gradient(to right, #2BC7EA , #1EBCC2)">
+            <img src="assets/page-icons/smallsiri.png" class="packageicon";>
+          </div>
+          <div class="packageContentHolder">
+            <span class="packageTitle">SmallSiri</span>
+            <br><span class="packageDescription">Compact Siri Interface. Allows for using Siri without hogging your whole screen!</span>
+          </div>
+        </div></a>
+           
+    </div></div></div>
 </body>
+<head>
+    <title>PINPAL's Website</title>
+    <link rel="icon" href="assets/favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/homepage/stylesheet.css">
+    <script src="assets/homepage/javascript.js"></script>
+  </head>
 </html>

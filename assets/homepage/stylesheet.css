@@ -1,38 +1,5 @@
-/*Collapse buttons*/
-input[type = "button"] {
-  float: right;
-  background: linear-gradient(to right, #55B49D, #2B7DCA);
-  text-align: center;
-  border-radius: 25px;
-  padding: 9px;
-  color: white !important;
-  font-size: 20px;
-  border: none;
-  margin-right: 5px;
-}
-input[type = "button"]:hover {
-  filter: hue-rotate(90deg);
-}
 
-/*Toggled css*/
-.animateNone{
-  animation: none!important;
-  overflow-x: visible!important;
-  height: auto!important;
-}
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
-  overflow: hidden;
-}
-li {
-  float: left;
-}
-
-/*Main site*/
-@font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
+@font-face { font-family: "SF Pro Display"; src: url("../SF-Pro-Display-Regular.otf"); }
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -54,7 +21,6 @@ li {
 body {
   background-color: #292C30;
   margin: 0;
-  margin-top: 10px;
 }
 
 /* unvisited link */
@@ -89,6 +55,7 @@ a:active {
   font-family: "SF Pro Display";
   border-radius: 25px;
   padding: 10px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
@@ -118,28 +85,58 @@ a:active {
 
 /* Button */
 .button {
+  display: none;
   background: linear-gradient(to right, #55B49D , #2B7DCA);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   text-align: center;
+  vertical-align: middle;
+  position: absolute;
   font-family: "SF Pro Display";
   border-radius: 25px;
-  padding: 12px;
-  color:white;
-  font-size: 20px;
-  max-width: 200px;
-  min-width: 200px;
-  max-height: 25px;
-  min-height: 25px;
+  font-size: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  color:rgba(255,255,255,0);
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  position: absolute;
+  border: none;
+  right: 15px;
+  top: 35px;
+  transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  transition-delay: 0.5s;
 }
 .button:hover {
-  padding-top: 9px;
-  padding-bottom: 15px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
   filter: hue-rotate(90deg);
-  font-size: 24px;
+  font-size: 20px;
+  max-width: 100%;
+  transition-delay: 0s;
+}
+.buttonIcon {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition-delay: 0.5s;
+}
+.button:hover .buttonIcon {
+  transition-delay: 0s;
+  margin-right: 10px;
 }
 
 #subtitle {
@@ -150,7 +147,6 @@ a:active {
     text-align: left;
     margin-left: 15px;
     line-height: 1.0;
-    text-transform: capitalize;
 }
 #subsubtitle {
     color: white;
@@ -162,7 +158,6 @@ a:active {
     line-height: 1.0;
     margin-top: -8px;
     opacity: .6;
-    display: inline-block;
 }
 
 .packageicon {
@@ -207,6 +202,8 @@ a:active {
   left: 110px;
   top: 16px;
   max-width: 290px;
+  overflow: hidden;
+  max-height: 90px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -228,25 +225,28 @@ a:active {
   border-color: rgba(255, 255, 255, 0.03);
   border-width: 2px;
   color: white;
-  width: 380px;
   font-family: "SF Pro Display";
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   margin-left: 15px;
   margin-bottom: 15px;
   min-height: 78px;
   max-height: 78px;
+  min-width: 382px;
+  max-width: 382px;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
 
 .packageTitle {
   font-family: "SF Pro Display";
   font-weight: bold;
   font-size: 18px;
+  transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -269,55 +269,22 @@ a:active {
   color: rgba(255,255,255,.6)
 }
 
+.scrollerContainer {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: 150px;
+}
+
 .scroller {
-  height: 140px;
-  width: 10000px;
-  overflow-x:hidden;
-}
-
-#scroller-page {
-  animation: animatePages 9s linear infinite; /*3 seconds per BigBox*/
-}
-
-@keyframes animatePages {
-  100% {
-    transform: translateX(-1295px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
-  }
-}
-
-#scroller-repo {
-  animation: animateRepo 18s linear infinite; /*3 seconds per BigBox*/
-}
-
-@keyframes animateRepo {
-  100% {
-    transform: translateX(-2570px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
-  }
-}
-
-#scroller-packages {
-  animation: animatePackages 9s linear infinite; /*3 seconds per BigBox*/
-}
-
-@keyframes animatePackages {
-  100% {
-    transform: translateX(-1295px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
-  }
-}
-
-#scroller-projects {
-  animation: animateProjects 45s linear infinite; /*3 seconds per BigBox*/
-}
-
-@keyframes animateProjects {
-  100% {
-    transform: translateX(-6395px); /*one BigBox is 425 pixels plus add 20px to fix animation bug*/
-  }
+  min-width: 1000%;
 }
 
 .subsection {
   background-color: rgba(255,255,255,0);
   padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
 }
 .subsection:hover {
   background-color: rgba(255,255,255,0.05)
@@ -325,19 +292,8 @@ a:active {
 .subsection:hover .scroller {
   animation-play-state: paused !important;
 }
-
-.cydiaIcon {
-  width:35px;
-  height:35px;
-  margin-top:-5px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-}
-.button:hover .cydiaIcon {
-  width: 40px;
-  height: 40px;
+.subsection:hover .button {
+  display: inline;
 }
 
 .wrapper {
@@ -348,9 +304,3 @@ a:active {
   margin-right: auto;
   position: relative;
 }
-
-/*
-also stfu hardcoded html links are the best, go away
-atleast i fixed my depictions
-they used to all be hardcoded too
-*/
