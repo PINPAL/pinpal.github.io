@@ -69,6 +69,11 @@ function expand(classID) {
     }
 }
 
+//Fix everything on window resize
+window.onresize = function(event) {
+    location.reload();
+}
+
 //Duplicate and fit width of all scrollers
 duplicateContentOf("scrollerPages")
 duplicateContentOf("scrollerRepo")
