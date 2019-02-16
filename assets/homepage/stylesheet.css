@@ -69,22 +69,30 @@ a:active {
   position: relative;
 }
 
+.navIconContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 /* Navbar Button */
 .navButton {
+  vertical-align: middle;
   background: linear-gradient(to right, #55B49D , #2B7DCA);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   border-radius: 25px;
-  padding: 12px;
-  color:white;
-  font-size: 20px;
-  min-width: 146px;
-  min-height: 1px;
-  max-width: 170px;
-  max-height: 25px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-left: 5px;
+  color:rgba(255,255,255,0);
+  font-size: 0;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  display: inline-block;
+  overflow: hidden;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -92,34 +100,36 @@ a:active {
   -ms-transition: all 0.3s ease;
 }
 .navButton:hover {
-  padding-top: 9px;
-  padding-bottom: 15px;
-  filter: hue-rotate(90deg);
-  font-size: 24px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 200px;
+  font-size: 16pt;
 }
-
-/*Navbar logo*/
-.logo {
+/*Navbar Button Icons*/
+.navButtonIcon {
+  margin-left: 4px;
+  margin-top: 2px;
   vertical-align: middle;
-  width: 35px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.cydiaIcon {
-  margin-top: -5px;
-  vertical-align: middle;
-  width:35px;
-  height:35px;
+  width:22px;
+  height:22px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
-.navButton:hover .cydiaIcon {
-  width: 40px;
-  height: 40px;
+.navButton:hover .navButtonIcon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+/*Navbar logo*/
+.logo {
+  vertical-align: middle;
+  width: 33px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*Navbar Text*/
@@ -366,8 +376,10 @@ a:active {
   max-height: 148px;
 }
 
-.scroller {
-  text-align: center;
+@media screen and (max-width: 900px) {
+  .scroller {
+    text-align: center;
+  }
 }
 
 .subsection {
