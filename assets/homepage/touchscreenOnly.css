@@ -25,3 +25,7 @@
   margin-left: 4px !important;
   margin-right: 0 !important;
 }
+
+.subsection:hover .scroller {
+  animation-play-state: running !important;
+}

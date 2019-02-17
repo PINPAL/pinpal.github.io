@@ -5,12 +5,15 @@ var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersPackages = document.getElementById("scrollerPackages").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML
 
-//Calculate bigBox size
-var bigBoxWidth = 436
-var bigBoxAnimationDuration = 3
-if (window.innerWidth < 900) {
-    bigBoxWidth = 99
-    bigBoxAnimationDuration = 1.1
+//Function to calculate bigBox size
+function calculateBoxSize() {
+    if (window.innerWidth < 900) {
+        bigBoxWidth = 99
+        bigBoxAnimationDuration = 1.1
+    } else {
+        bigBoxWidth = 436
+        bigBoxAnimationDuration = 3
+    }
 }
 
 //Touch Display Detection
@@ -33,8 +36,10 @@ function calculateAnimationWidthOf(classID) {
 
 //Set width to width of BigBoxes function
 function setWidth(classID) {
+    calculateBoxSize()
     document.getElementById(classID).style.minWidth = document.getElementById(classID).innerHTML.match(/bigBox/g).length * bigBoxWidth + "px";
     document.getElementById(classID).style.animation = classID + " " + (document.getElementById(classID).innerHTML.match(/bigBox/g).length/4) * bigBoxAnimationDuration + "s linear infinite";
+    calculateAnimationWidthOf(classID)
 }
 
 //Duplicating Function
@@ -69,9 +74,12 @@ function expand(classID) {
     }
 }
 
-//Reload page on window resize
+//Reload scrollers width on window resize
 window.onresize = function(event) {
-    location.reload();
+    setWidth("scrollerPages")
+    setWidth("scrollerRepo")
+    setWidth("scrollerPackages")
+    setWidth("scrollerProjects")
 }
 
 //Duplicate and fit width of all scrollers
@@ -79,9 +87,3 @@ duplicateContentOf("scrollerPages")
 duplicateContentOf("scrollerRepo")
 duplicateContentOf("scrollerPackages")
 duplicateContentOf("scrollerProjects")
-
-//Apply animation to all scrollers 
-calculateAnimationWidthOf("scrollerPages")
-calculateAnimationWidthOf("scrollerRepo")
-calculateAnimationWidthOf("scrollerPackages")
-calculateAnimationWidthOf("scrollerProjects")
