@@ -76,10 +76,18 @@ function expand(classID) {
 
 //Reload scrollers width on window resize
 window.onresize = function(event) {
-    setWidth("scrollerPages")
-    setWidth("scrollerRepo")
-    setWidth("scrollerPackages")
-    setWidth("scrollerProjects")
+    if (document.getElementById("scrollerPages").innerHTML != originalScrollersPages) {
+        setWidth("scrollerPages")
+    }
+    if (document.getElementById("scrollerRepo").innerHTML != originalScrollersRepo) {
+        setWidth("scrollerRepo")
+    }
+    if (document.getElementById("scrollerPackages").innerHTML != originalScrollersPackages) {
+        setWidth("scrollerPackages")
+    }
+    if (document.getElementById("scrollerProjects").innerHTML != originalScrollersProjects) {
+        setWidth("scrollerProjects")
+    }
 }
 
 //Duplicate and fit width of all scrollers
