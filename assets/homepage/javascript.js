@@ -9,12 +9,11 @@ var originalScrollersProjects = document.getElementById("scrollerProjects").inne
 function calculateBoxSize() {
     if (window.innerWidth < 900) {
         bigBoxWidth = 99
-        bigBoxAnimationDuration = 1.1
+        bigBoxAnimationDuration = 2.1
     } else {
         bigBoxWidth = 436
-        bigBoxAnimationDuration = 3
+        bigBoxAnimationDuration = 4
     }
-}
 
 //Touch Display Detection
 window.addEventListener('touchstart', function onFirstTouch() {
