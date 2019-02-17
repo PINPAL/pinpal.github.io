@@ -69,7 +69,7 @@ function expand(classID) {
     }
 }
 
-//Fix everything on window resize
+//Reload page on window resize
 window.onresize = function(event) {
     location.reload();
 }
