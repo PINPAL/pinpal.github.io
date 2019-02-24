@@ -1,0 +1,31 @@
+.button {
+  display: inline !important;
+  max-width: 35px !important;
+  font-size: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.buttonIcon {
+  margin-right: 0 !important;
+}
+
+.subsection { 
+    background-color: rgba(255,255,255,0) !important;
+}
+
+.navButton {
+  padding-top: 7px !important;
+  padding-left: 5px !important;
+  color:rgba(255,255,255,0) !important;
+  font-size: 0 !important;
+  max-width: 40px !important;
+}
+.navButtonIcon {
+  margin-left: 4px !important;
+  margin-right: 0 !important;
+}
+
+.subsection:hover .scroller {
+  animation-play-state: running !important;
+}

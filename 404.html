@@ -32,19 +32,11 @@ body {
 }
 
 /*Wrapper*/
-.wrapper {
-    width: 750px;
+#wrapper {
+    width: 100%;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 200px;
-}
-
-/*Disable Side Whitespace at lower resolutions*/
-@media screen and (max-width: 800px) {
-  .wrapper {
-  width: 100%;
-  margin-top: 0px;
-  }
 }
 
 /*Subtitles above boxes*/
@@ -156,7 +148,7 @@ a:active {
 
 </style> <body>
 
-  <div class="wrapper">
+  <div id="wrapper">
   <div class="column">
 
   <div class="subtitle">404!</div>
@@ -228,5 +220,11 @@ a:active {
     </table></a>
 
   </div></div></div>
+
+  <script>
+    if (window.innerWidth > 750) { //If display is not mobile width
+      document.getElementById("wrapper").style.marginTop = (window.innerHeight / 2) -  161 + "px"; //Centre the wrapper
+    }
+  </script>
 
 </body>

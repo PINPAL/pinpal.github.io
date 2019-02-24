@@ -1,0 +1,424 @@
+@font-face {  
+  font-family: "SF Pro Display";
+  src: url("../SF-Pro-Display-Regular.otf");  
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+   background: rgba(255,255,255,0.20);
+   border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+   background: rgba(255,255,255,0.25);;
+}
+
+/*Background Color*/
+body {
+  background-color: #292C30;
+  margin: 0;
+}
+
+* {
+  font-family: "SF Pro Display";
+}
+
+/* unvisited link */
+a:link {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #87a3ff;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/*Navbar*/
+.navbar {
+  background: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(90% - 20px);
+  max-width: 900px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.navIconContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Navbar Button */
+.navButton {
+  vertical-align: middle;
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-left: 5px;
+  color:rgba(255,255,255,0);
+  font-size: 0;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  display: inline-block;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.navButton:hover {
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 200px;
+  font-size: 16pt;
+}
+/*Navbar Button Icons*/
+.navButtonIcon {
+  margin-left: 4px;
+  margin-top: 2px;
+  vertical-align: middle;
+  width:22px;
+  height:22px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.navButton:hover .navButtonIcon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+/*Navbar logo*/
+.logo {
+  vertical-align: middle;
+  width: 33px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*Navbar Text*/
+#title {
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  color: white;
+  
+  font-size: 26px;
+  font-weight: bold;
+}
+@media screen and (max-width: 900px) {
+  #title {
+    font-size: 0px;
+  }
+}
+
+/* Button */
+.button {
+  display: none;
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  border-radius: 25px;
+  font-size: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  color:rgba(255,255,255,0);
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  position: absolute;
+  border: none;
+  right: 15px;
+  top: 35px;
+  transition: all 0.3s ease;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition-delay: 0.5s;
+}
+.button:hover {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  filter: hue-rotate(90deg);
+  font-size: 20px;
+  max-width: 100%;
+  transition-delay: 0s;
+}
+
+.buttonIcon {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition-delay: 0.5s;
+}
+.button:hover .buttonIcon {
+  transition-delay: 0s;
+  margin-right: 10px;
+}
+
+#subtitle {
+    color: white;
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1.0;
+}
+#subsubtitle {
+    color: white;
+    
+    font-size: 13pt;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1.0;
+    margin-top: -8px;
+    opacity: .6;
+}
+
+.packageicon {
+  width: 55px;
+  height: 55px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.bigBox:hover .packageicon {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (max-width: 900px) {
+  .packageicon {
+    width: 55px !important;
+    height: 55px !important;
+  }
+}
+
+.packageIconHolder {
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  border-radius: 15px;
+  left: 16px;
+  top: 16px;
+  z-index: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  position: absolute;
+}
+.bigBox:hover .packageIconHolder {
+  padding: 55px;
+  left: -40px;
+  top: -40px;
+  width: 500px;
+  height: 300px;
+}
+@media screen and (max-width: 900px) {
+  .packageIconHolder {
+    padding: 10px !important;
+    top: 0 !important;
+    left: 5px !important;
+    width: 55px !important;
+    height: 55px !important;
+  }
+}
+
+.packageContentHolder {
+  position: absolute;
+  left: 110px;
+  top: 16px;
+  max-width: 290px;
+  overflow: hidden;
+  max-height: 90px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.bigBox:hover .packageContentHolder {
+  top: 9px;
+}
+@media screen and (max-width: 900px) {
+  .packageContentHolder {
+    overflow: visible !important;
+    min-width: 85px !important;
+    left: 0 !important;
+    top: 80px !important;
+    max-height: 180px !important;
+    text-align: center !important;
+  }
+}
+
+.bigBox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  line-height: 1.6;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  min-height: 78px;
+  max-height: 78px;
+  min-width: 382px;
+  max-width: 382px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+@media screen and (max-width: 900px) {
+  .bigBox {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    min-height: 130px !important;
+    max-height: 130px !important;
+    margin-left: 10px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.packageTitle {
+  font-weight: bold;
+  font-size: 14pt;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.bigBox:hover .packageTitle {
+  font-size: 16pt;
+}
+@media screen and (max-width: 900px) {
+  .packageTitle {
+    font-size: 12pt !important;
+    font-weight: normal !important;
+  }
+}
+
+.packageDescription, .packageGreyDescription {
+  font-weight: normal;
+  font-size: 13pt;
+}
+.packageGreyDescription {
+  color: rgba(255,255,255,.6)
+}
+@media screen and (max-width: 900px) {
+  .packageDescription, .packageGreyDescription {
+    display: none;
+  }
+}
+
+.scrollerContainer {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 148px;
+}
+
+@media screen and (max-width: 900px) {
+  .scroller {
+    text-align: center;
+  }
+}
+
+.subsection {
+  background-color: rgba(255,255,255,0);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.subsection:hover {
+  background-color: rgba(255,255,255,0.05)
+}
+@media screen and (max-width: 900px) {
+  .subsection {
+    padding-bottom: 0 !important;
+  }
+}
+.subsection:hover .scroller {
+  animation-play-state: paused !important;
+}
+.subsection:hover .button {
+  display: inline;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 2160px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}

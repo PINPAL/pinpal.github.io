@@ -10,7 +10,7 @@ Description: Removes background from folder icons
 Author: PINPAL
 Name: No Folder Icons
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/package/NoFolder/index.html
+Depiction: https://pinpal.github.io/depiction.html?NoFolder
 
 Package: com.pinpal.darkmode
 Version: 0.0.3
@@ -24,7 +24,7 @@ Description: Dark Mode via Anemone
 Author: PINPAL
 Name: Dark Mode Theme
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/package/DarkMode/index.html
+Depiction: https://pinpal.github.io/depiction.html?DarkMode
 
 Package: com.ilewiscx.clones
 Name: Zeppelin: Star Wars: Clones
@@ -38,7 +38,7 @@ Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
-Depiction: https://pinpal.github.io/package/ZeppelinLogo/index.html
+Depiction: https://pinpal.github.io/depiction.html?ZeppelinLogo
 
 Package: com.pinpal.seven4eleven
 Version: 1.1
@@ -52,7 +52,7 @@ Description: iOS 7 Style for iOS 11
 Author: PINPAL
 Name: Seven4Eleven Theme
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/package/Seven4Eleven/index.html
+Depiction: https://pinpal.github.io/depiction.html?Seven4Eleven
 
 Package: com.pinpal.sentialpatch
 Name: Sential - Extra Icons
@@ -60,7 +60,7 @@ Version: 1.0
 Depends: me.aesign.sential
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction:https://pinpal.github.io/package/SentialPatch/index.html
+Depiction: https://pinpal.github.io/depiction.html?SentialPatch
 Section: Themes
 Description: Additional Icons for "Sential" Theme
 Maintainer: PINPAL
@@ -74,7 +74,7 @@ Version: 1.0
 Depends: com.colbyroark.lux
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction:https://pinpal.github.io/package/LuxPatch/index.html
+Depiction: https://pinpal.github.io/depiction.html?LuxPatch
 Section: Themes
 Description: Additional Icons for "Lux" Theme
 Maintainer: PINPAL

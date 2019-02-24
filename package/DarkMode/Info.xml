@@ -1,0 +1,58 @@
+<tweak>
+
+<tweakName>
+Dark Mode
+</tweakName>
+<tweakShortDescription>
+Dark Mode via Anemone
+</tweakShortDescription>
+<tweakDescription>
+Supports the majority of stock iOS apps.\n\n
+This is a proof of concept for Anemone!\n
+\n
+Includes 3 Themes: \n
+• True Dark Mode \n
+• Dark Blue Mode \n
+• Dark Grey Mode
+</tweakDescription>
+
+<tweakSize>
+1.16 MB
+</tweakSize>
+<tweakCategory>
+Themes
+</tweakCategory>
+<tweakCompatibility>
+iOS 7 to 11
+</tweakCompatibility>
+<tweakVersion>
+0.0.3
+</tweakVersion>
+<tweakUpdateDate>
+27/05/18
+</tweakUpdateDate>
+
+<tweakDeveloper>
+PINPAL
+</tweakDeveloper>
+<tweakDevTwitter>
+@TPINPAL
+</tweakDevTwitter>
+<tweakDevTwitterPic>
+https://pbs.twimg.com/profile_images/1015718760668426245/qIugpEtH_400x400.jpg
+</tweakDevTwitterPic>
+<tweakDevTwitterURL>
+https://twitter.com/TPinpal
+</tweakDevTwitterURL>
+
+<tweakChangelog>
+• New Dark Blue Mode 
+• New Dark Grey Mode 
+• New True Black (OLED) Mode
+</tweakChangelog>
+
+<numOfScreenshots>
+6
+</numOfScreenshots>
+
+</tweak>
