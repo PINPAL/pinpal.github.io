@@ -84,15 +84,14 @@ Filename: package/LuxPatch/LuxPatch.deb
 
 Package: com.sygem.gamma
 Name: Gamma
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Description: A theme modernizing Apple's design.
 Author: James (Sygem)
 Maintainer: James (Sygem)
 Section: Themes
-Depends: com.anemonetheming.anemone
 Depiction: https://pinpal.github.io/depiction.html?Gamma
 Maintainer: Sygem
-Size: 696418
-MD5sum: 65a37208ba80b75b0379867d5a974885
+Size: 770568
+MD5sum: 65093accdab55b325c3039a72d002518
 Filename: package/Gamma/Gamma.deb

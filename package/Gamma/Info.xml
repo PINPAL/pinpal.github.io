@@ -1,4 +1,4 @@
-<tweak>
+﻿<tweak>
 
 <tweakName>
 Gamma
@@ -8,24 +8,26 @@ A theme modernizing Apple's design.
 </tweakShortDescription>
 <tweakDescription>
 Exemplifies Apple's modern design language, bringing a touch of skeuomorphism back into the mix! 
-\n This is Gamma's temporary home and there will be updates later on my Twitter page. 
-\n Please DM me with any questions or concerns.
+\n
+\nThis is Gamma's temporary home and there will be updates later on my Twitter page. Please DM me with any questions or concerns.
+\n
+\nNOTE: Please install a theme manager like Anemone or SnowBoard before installing this!
 </tweakDescription>
 
 <tweakSize>
-680 KB
+771 KB
 </tweakSize>
 <tweakCategory>
 Themes
 </tweakCategory>
 <tweakCompatibility>
-iOS 11 - 12
+iOS 11 - 12.1.2
 </tweakCompatibility>
 <tweakVersion>
-1.0
+1.1
 </tweakVersion>
 <tweakUpdateDate>
-2/25/19
+2/26/19
 </tweakUpdateDate>
 
 <tweakDeveloper>
@@ -35,14 +37,15 @@ Sygem
 @sygemtweets
 </tweakDevTwitter>
 <tweakDevTwitterPic>
-https://pbs.twimg.com/profile_images/1097911571072905218/rf5j6_N__400x400.jpg
+https://pbs.twimg.com/profile_images/1100525202654539776/am5K9dt5_400x400.png
 </tweakDevTwitterPic>
 <tweakDevTwitterURL>
 https://twitter.com/sygemtweets
 </tweakDevTwitterURL>
 
 <tweakChangelog>
-• Initial Release
+• Fixed a bug where users had difficulty with Anemone and SnowBoard
+• Voice Memos, Compass, Measure, and Calculator icons have been added
 </tweakChangelog>
 
 <numOfScreenshots>
