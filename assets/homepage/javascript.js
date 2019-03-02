@@ -2,7 +2,6 @@
 //Backup content of original scrollers (for un-duplicating on expand)
 var originalScrollersPages = document.getElementById("scrollerPages").innerHTML
 var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
-var originalScrollersPackages = document.getElementById("scrollerPackages").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML
 
 //Function to calculate bigBox size
@@ -61,8 +60,6 @@ function expand(classID) {
             document.getElementById(classID).innerHTML = originalScrollersPages
         } else if (classID == "scrollerRepo") {
             document.getElementById(classID).innerHTML = originalScrollersRepo
-        } else if (classID == "scrollerPackages") {
-            document.getElementById(classID).innerHTML = originalScrollersPackages
         } else if (classID == "scrollerProjects") {
             document.getElementById(classID).innerHTML = originalScrollersProjects
         }
@@ -82,9 +79,6 @@ window.onresize = function(event) {
     if (document.getElementById("scrollerRepo").innerHTML != originalScrollersRepo) {
         setWidth("scrollerRepo")
     }
-    if (document.getElementById("scrollerPackages").innerHTML != originalScrollersPackages) {
-        setWidth("scrollerPackages")
-    }
     if (document.getElementById("scrollerProjects").innerHTML != originalScrollersProjects) {
         setWidth("scrollerProjects")
     }
@@ -93,5 +87,4 @@ window.onresize = function(event) {
 //Duplicate and fit width of all scrollers
 duplicateContentOf("scrollerPages")
 duplicateContentOf("scrollerRepo")
-duplicateContentOf("scrollerPackages")
 duplicateContentOf("scrollerProjects")
