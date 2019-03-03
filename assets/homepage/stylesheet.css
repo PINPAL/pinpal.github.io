@@ -1,8 +1,13 @@
-@font-face {  
-  font-family: "SF Pro Display";
-  src: url("../SF-Pro-Display-Regular.otf");  
+* {
+  font-family: 'Nunito', sans-serif;
 }
 
+body {
+  background-color: #292C30;
+  margin: 0;
+}
+
+/* Scrollbar*/
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -19,36 +24,13 @@
    background: rgba(255,255,255,0.25);;
 }
 
-/*Background Color*/
-body {
-  background-color: #292C30;
-  margin: 0;
-}
-
-* {
-  font-family: "SF Pro Display";
-}
-
-/* unvisited link */
-a:link {
+/* Unvisited Link */
+a:link, a:visited {
     color: #87a3ff;
     text-decoration: none;
 }
-
-/* visited link */
-a:visited {
-    color: #87a3ff;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
+/* Selected Link */
+a:active, a:hover {
     color: hotpink;
     text-decoration: none;
 }
@@ -282,7 +264,8 @@ a:active {
   top: 16px;
   max-width: 290px;
   overflow: hidden;
-  max-height: 90px;
+  max-height: 80px;
+  overflow: hidden;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -310,7 +293,7 @@ a:active {
   color: white;
   border-radius: 25px;
   padding: 15px;
-  line-height: 1.6;
+  line-height: 1.5;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.03);
   border-width: 2px;
@@ -368,7 +351,7 @@ a:active {
 
 .packageDescription, .packageGreyDescription {
   font-weight: normal;
-  font-size: 13pt;
+  font-size: 12.5pt;
 }
 .packageGreyDescription {
   color: rgba(255,255,255,.6)

@@ -1,201 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Anemone Theming Guide</title>
-    <link rel="icon" href="assets/favicon.ico" class="next-head" />
+    <title>iOS Theming Guide</title>
+    <link rel="icon" href="assets/favicon.ico" class="next-head"/>
+    <link rel="stylesheet" type="text/css" href="assets/theme-guide/stylesheet.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-body {
-  background-color: #292C30;
-}
-
-@font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
-
-/* Scrollbar Style */
-::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-}
-::-webkit-scrollbar-track {
-    background: #48484f;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: #646569;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255,255,255,0.25);;
-}
-
-/*Subtitles above boxes*/
-.subtitle {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 30px;
-  font-weight: bold;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 30px;
-  width: 35%;
-}
-
-/*Box*/
-.bigbox {
-  background: #2F3439;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: left;
-  color: white;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  width: 35%;
-  line-height: 1.6;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.03);
-  border-width: 2px;
-}
-
-/*Bold Title at top of boxes*/
-.boxheading {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/*Big Title at the top*/
-.bigtitle {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 50px;
-  font-weight: bold;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 40px;
-  padding-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35%;
-}
-
-/* Logo Columns*/
-.column {
-    float: left;
-    width: 50%;
-}
-
-/* Responsive layout*/
-@media screen and (max-width: 1083px) {
-  .bigtitle {
-    width: 75%
-  }
-  .bigbox {
-    width: 75%
-  }
-  .subtitle {
-    width: 75%
-  }
-}
-/* Responsive layout - reduce columns based on resolution */
-@media screen and (max-width: 900px) {
-    .column {
-        width: 100%;
-    }
-}
-
-/*Change Mark Color*/
-mark {
-    background-color: #a4aebc;
-    color: #black;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-/*Code Indent*/
-.codebox {
-  background: #a4aebc;
-  text-align: left;
-  color: black;
-  font-family: "SF Pro Display";
-  line-height: 1.6;
-  border-radius: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-/* unvisited link */
-a:link {
-    color: #87a3ff;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: #87a3ff;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* Button */
-.button {
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding: 10px;
-  color:white;
-  font-size: 20px;
-  -webkit-transition: padding 0.5s ease; /*For Safari*/
-  transition: padding 0.25s ease;
-  transition: 0.25s;
-}
-/* Button Hover Effetcs */
-.button:hover {
-  filter: hue-rotate(90deg);
-  font-size: 23px;
-  padding: 8px;
-}
-
-pre {
-  font-family: "SF Pro Display";
-}
-
-</style>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 </head>
 <body>
 
-<div class="bigtitle">Anemone Theming Guide</div>
+<div class="subtitle" id="bigtitle">iOS Theming Guide</div>
 
 <div class="subtitle">Introduction</div>
 
 <div class="bigbox">
   <div class="boxheading">Welcome to the guide!</div>
 
-  <p> In this tutorial I'm going to teach you how to create your very own Anemone theme!
+  <p> In this tutorial I'm going to teach you how to create your very own iOS theme!
   <br> Before we get started you will need the following prerequisites:</p>
 
 
@@ -230,7 +51,7 @@ pre {
 <div class="bigbox">
   <div class="boxheading">Themes have very specific folder structures.</div>
 
-  <p>Without following the correct structure your theme won't work or may not even show up in Anemone.
+  <p>Without following the correct structure your theme won't work or may not even show up!
   <br>So that's what I'm here to help you with.
   <br>First you will need to create a folder and name it <mark>ThemeName.theme</mark>.
   <br>It's essential to add <mark>.theme</mark> to the end or else it won't work!</p>
@@ -278,15 +99,14 @@ pre {
 &lt;plist version="1.0"&gt;
 &lt;dict&gt;
   &lt;key>PackageName&lt;/key&gt;
-  &lt;string><span style="background-color: #ff8300">ThemeName</span>&lt;/string&gt;
+  &lt;string><span id="importantText"">ThemeName</span>&lt;/string&gt;
   &lt;key>ThemeType&lt;/key&gt;
   &lt;string>Icons&lt;/string&gt;
 &lt;/dict&gt;
 &lt;/plist&gt;</pre></div>
 
   <p>In the future you can add more complex stuff to your <mark>Info.plist</mark> but for now this is enough.
-  <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.
-  At the end of this guide I will teach your how to theme these more advanced areas using Anemone.</p>
+  <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.</p>
 </div>
 
 <div class="subtitle">Stage 3: Creating Icons</div>
@@ -309,14 +129,14 @@ pre {
 
   <p>It is highly recommended to create your icons at a resolution of <mark>512x512</mark>.
   <br>This allows your icons to work on iPad and also on future devices with higher resolution displays!
-  Also thanks to Anemone you no-longer have to worry about making loads of different size icons for each device unlike what you used to have to do when using Winterboard! Awesome!
+  Also thanks to IconBundles you no-longer have to worry about making loads of different size icons for each device unlike what you used to have to do when using Winterboard! Awesome!
 
   <div class="boxheading">Custom Icon Shapes</div>
 
   <p>If you plan on making your icons a custom shape, for example circular. I highly recommend that you create the icons themselves square and add an icon mask.
     Just create a square icon like this:</p>
     <img src=assets/theme-guide/example-icon.png>
-    <p>Then later in this guide I will teach you how to apply a mask to all your icons. The main benefit to this method is that the mask can be enabled/disabled by the user in Anemone!</p>
+    <p>Then later in this guide I will teach you how to apply a mask to all your icons. The main benefit to this method is that the mask can be enabled/disabled by the user in their themeing engine!</p>
 
 </div>
 
@@ -367,7 +187,7 @@ pre {
 <div class="bigbox">
   <div class="boxheading">What Are Icon Masks?</div>
 
-  <p>An icon mask is a feature of Anemone that allows a mask to be applied to icons.
+  <p>An icon mask is a feature that allows a mask to be applied to icons.
   A mask allows you to create your icons themselves in a square then you could, for example, make them all circle.
   The main advantage to using icon masks is that the user can toggle them on or off or use any mask shape they want.</p>
 
@@ -385,7 +205,7 @@ pre {
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
 &lt;dict&gt;
-<span style="background-color: #ff8300">  &lt;key&gt;IB-MaskIcons&lt;/key&gt;
+<span id="importantText">  &lt;key&gt;IB-MaskIcons&lt;/key&gt;
   &lt;true/&gt;</span>
   &lt;key>PackageName&lt;/key&gt;
   &lt;string>ThemeName&lt;/string&gt;
@@ -463,7 +283,6 @@ Description: <span style="background-color: #ff8300">A theme with beautiful icon
 Author: <span style="background-color: #ff8300">Your Name</span>
 Maintainer: <span style="background-color: #ff8300">Your Name</span>
 Section: Themes
-Depends: com.anemonetheming.anemone
 </pre></div>
 
     <div class="boxheading"><p>Important notes about the control file:</div>
@@ -602,7 +421,7 @@ dpkg -b /var/mobile/Documents/ThemeNameForCydia</pre></div>
 
   <p>If you made it all the way through the guide and finished your theme I want to congratulate you! You made it!</p>
 
-  <p><br>If you would like to know more about the advanced features of Anemone such as theming the clock/badges/dock etc you can read the official Wiki available here:
+  <p><br>If you would like to know more about the advanced features of theming such as theming the clock/badges/dock etc you can read the official Anemone Wiki available here (most of which also work in Snowboard):
   <a href="https://github.com/AnemoneTeam/Anemone/wiki"> Anemone Wiki</a></p>
 
 </div>
@@ -611,7 +430,7 @@ dpkg -b /var/mobile/Documents/ThemeNameForCydia</pre></div>
 
 <div class="bigbox">
   <div class="boxheading">Information</div>
-  <p><br>This guide took 8+ hours to write along with collecting Bundle ID's.</p>
+  <p><br>This guide took many hours to write and I continue to update it along with collecting the latest stock Bundle ID's.</p>
   <p>As I said at the start of the guide you can always contact me on Discord or Twitter if you have any questions!
   <p>If you really enjoyed this guide and would like to buy me a drink you can use the link below:</p>
 
