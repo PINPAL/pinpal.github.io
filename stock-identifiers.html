@@ -1,403 +1,254 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>iOS 11 BundleID</title>
+    <title>iOS 12 Bundle ID's</title>
     <link rel="icon" href="assets/favicon.ico" class="next-head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+@font-face { 
+  font-family: "SF Pro Display"; 
+  src: url("assets/SF-Pro-Display-Regular.otf"); 
+}
+
+* {
+  font-family: "SF Pro Display";
+  color: white;
+}
 
 body {
   background-color: #292C30;
 }
 
-@font-face { font-family: "SF Pro Display"; src: url("assets/SF-Pro-Display-Regular.otf"); }
-
-
-/*Subtitles above boxes*/
-.subtitle {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 30px;
-  font-weight: bold;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 30px;
-  width: 35%;
-}
-
-/*Box*/
 .bigbox {
   background: #2F3439;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  color: white;
-  font-family: "SF Pro Display";
   border-radius: 25px;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 35%;
+  width: 95%;
+  max-width: 900px;
   line-height: 1.6;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.03);
   border-width: 2px;
 }
 
-/*Bold Title at top of boxes*/
-.boxheading {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/*Big Title at the top*/
-.bigtitle {
-  color: white;
-  font-family: "SF Pro Display";
-  font-size: 50px;
-  font-weight: bold;
-  text-align: left;
+.titleContainer {
+  width: 95%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 40px;
-  padding-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 35%;
 }
 
-/* Logo Columns*/
-.column {
-    float: left;
-    width: 50%;
+#subtitle {
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    line-height: 1.0;
+}
+#subsubtitle {
+    font-size: 13pt;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: -8px;
+    opacity: .6;
 }
 
-/* Responsive layout*/
-@media screen and (max-width: 1083px) {
-  .bigtitle {
-    width: 75%
-  }
-  .bigbox {
-    width: 75%
-  }
-  .subtitle {
-    width: 75%
-  }
-}
-
-
-/* unvisited link */
-a:link {
-    color: #87a3ff;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: #87a3ff;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* Button */
-.button {
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding: 10px;
-  color:white;
-  font-size: 20px;
-}
-.buttoninverted {
-  background: linear-gradient(to right, #2B7DCA , #55B49D);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-family: "SF Pro Display";
-  border-radius: 25px;
-  padding: 10px;
-  color:white;
-  font-size: 20px;
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  box-shadow: rgba(0,0,0,.25) 5px 5px 10px
 }
 
 th, td {
     padding: 15px;
     text-align: center;
+    font-weight: normal;
 }
 table {
-    color: white;
     width: 100%;
-    border-collapse: collapse;
-    cellpadding="10";
+    border-collapse:collapse;
 }
 table tr:nth-child(even) {
     background-color: #22262b;
-}
-table tr:nth-child(odd) {
-   background-color: #2e353d;
 }
 
 </style>
 </head>
 <body>
 
-<div class="bigtitle">Stock iOS identifers</div>
-
-<div class="subtitle">iOS 11 Bundle Identifiers</div>
+  <div class="titleContainer">
+      <p id="subtitle">iOS 12 Bundle Identifiers</p>
+      <p id="subsubtitle">Bundle Identifiers that are used in iOS 12. These are application identifers which can be used for many things, 
+        including creating iOS Themes. A tutorial on how to create an iOS Theme can be found on my website.</p>      
+  </div>
 
 <div class="bigbox">
-
-<table style="border-collapse:collapse">
-  <tr style="background-color: #65707c;">
-    <th style="font-weight: bold;">Icon<th style="font-weight: normal;">
-    <th style="font-weight: bold;">Name<th style="font-weight: normal;">
-    <th style="font-weight: bold;">BundleID<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/appstore.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">App Store<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.AppStore<th style="font-weight: normal;">
-  </tr>
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/applestore.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Apple Store<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.store.Jolly<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/support.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Apple Support<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.supportapp<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/watch.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Apple Watch<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Bridge<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/calc.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Calculator<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.calculator<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/calendar.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Calendar<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobilecal<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/camera.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Camera<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.camera<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/classroom.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Classroom<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.classroom<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/clips.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Clips<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.clips<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/clock.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Clock<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobiletimer<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/compass.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Compass<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.compass<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/contacts.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Contacts<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.MobileAddressBook<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/facetime.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">FaceTime<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.facetime<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/fmf.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Find Friends<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobileme.fmf1<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/fmyi.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Find iPhone<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobileme.fmip1<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/files.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Files<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.DocumentsApp<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/game.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Game Center<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.gamecenter<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/garage.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">GarageBand<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobilegarageband<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/health.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Health<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Health<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/heart.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Heart Study<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Antimony<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/home.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Home<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Home<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/ibooks.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iBooks<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.iBooks<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/drive.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iCloud Drive<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.iCloudDriveApp<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/imovie.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iMovie<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.iMovie<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/connect.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iTunes Connect<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.itunesconnect.mobile<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/tvremote.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iTunes Remote<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.TVRemote<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/itunes.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iTunes Store<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.MobileStore<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/itunesu.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">iTunes U<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.itunesu<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/keynote.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Keynote<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Keynote<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/logic_remote.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Logic Remote<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.musicapps.remote<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/mail.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Mail<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobilemail<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/maps.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Maps<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Maps<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/sms.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Messages<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.MobileSMS<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/music.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Music<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Music<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/news.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">News<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.news<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/notes.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Notes<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobilenotes<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/numbers.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Numbers<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Numbers<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/pages.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Pages<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Pages<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/phone.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Phone<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobilephone<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/photobooth.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Photo Booth<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Photo-Booth<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/photos.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Photos<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.mobileslideshow<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/playgrounds.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Playgrounds<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Playgrounds<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/podcasts.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Podcasts<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.podcasts<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/reminders.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Reminders<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.reminders<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/remote.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Remote<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Remote<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/safari.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Safari<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.mobilesafari<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/settings.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Settings<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.Preferences<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/stocks.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Stocks<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.stocks<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/tips.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Tips<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.tips<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/trailers.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Trailers<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.movietrailers<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/tv.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">TV<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.tv<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/videos.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Videos<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.videos<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/voicememos.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Voice Memos<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.VoiceMemos<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/wallet.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Wallet<th style="font-weight: normal;">
-    <th style="font-weight: normal;">	com.apple.Passbook<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/weather.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">Weather<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.weather<th style="font-weight: normal;">
-  </tr><tr>
-    <th style="font-weight: normal;"><img src=assets/iOS-icons/wwdc.png style=width:50px;><th style="font-weight: normal;">
-    <th style="font-weight: normal;">WWDC<th style="font-weight: normal;">
-    <th style="font-weight: normal;">com.apple.wwdc<th style="font-weight: normal;">
-  </tr>
-</table>
-
+  <table>
+    <tr>
+      <th style="font-weight: bold;">Icon<th>
+      <th style="font-weight: bold;">Name<th>
+      <th style="font-weight: bold;">Bundle ID<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/appstore.png><th>
+      <th>App Store<th>
+      <th>com.apple.AppStore<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/watch.png><th>
+      <th>Apple Watch<th>
+      <th>com.apple.Bridge<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/calc.png><th>
+      <th>Calculator<th>
+      <th>com.apple.calculator<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/calendar.png><th>
+      <th>Calendar<th>
+      <th>com.apple.mobilecal<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/camera.png><th>
+      <th>Camera<th>
+      <th>com.apple.camera<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/classroom.png><th>
+      <th>Classroom<th>
+      <th>com.apple.classroom<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/clock.png><th>
+      <th>Clock<th>
+      <th>com.apple.mobiletimer<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/compass.png><th>
+      <th>Compass<th>
+      <th>com.apple.compass<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/contacts.png><th>
+      <th>Contacts<th>
+      <th>com.apple.MobileAddressBook<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/facetime.png><th>
+      <th>FaceTime<th>
+      <th>com.apple.facetime<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/files.png><th>
+      <th>Files<th>
+      <th>com.apple.DocumentsApp<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/game.png><th>
+      <th>Game Center<th>
+      <th>com.apple.gamecenter<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/health.png><th>
+      <th>Health<th>
+      <th>com.apple.Health<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/home.png><th>
+      <th>Home<th>
+      <th>com.apple.Home<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/ibooks.png><th>
+      <th>iBooks<th>
+      <th>com.apple.iBooks<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/itunes.png><th>
+      <th>iTunes Store<th>
+      <th>com.apple.MobileStore<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/mail.png><th>
+      <th>Mail<th>
+      <th>com.apple.mobilemail<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/maps.png><th>
+      <th>Maps<th>
+      <th>com.apple.Maps<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/measure.png><th>
+      <th>Measure<th>
+      <th>com.apple.measure<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/sms.png><th>
+      <th>Messages<th>
+      <th>com.apple.MobileSMS<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/music.png><th>
+      <th>Music<th>
+      <th>com.apple.Music<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/news.png><th>
+      <th>News<th>
+      <th>com.apple.news<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/notes.png><th>
+      <th>Notes<th>
+      <th>com.apple.mobilenotes<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/phone.png><th>
+      <th>Phone<th>
+      <th>com.apple.mobilephone<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/photobooth.png><th>
+      <th>Photo Booth<th>
+      <th>com.apple.Photo-Booth<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/photos.png><th>
+      <th>Photos<th>
+      <th>com.apple.mobileslideshow<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/playgrounds.png><th>
+      <th>Playgrounds<th>
+      <th>com.apple.Playgrounds<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/podcasts.png><th>
+      <th>Podcasts<th>
+      <th>com.apple.podcasts<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/reminders.png><th>
+      <th>Reminders<th>
+      <th>com.apple.reminders<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/safari.png><th>
+      <th>Safari<th>
+      <th>	com.apple.mobilesafari<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/settings.png><th>
+      <th>Settings<th>
+      <th>com.apple.Preferences<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/stocks.png><th>
+      <th>Stocks<th>
+      <th>com.apple.stocks<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/tips.png><th>
+      <th>Tips<th>
+      <th>com.apple.tips<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/tv.png><th>
+      <th>TV<th>
+      <th>com.apple.tv<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/videos.png><th>
+      <th>Videos<th>
+      <th>com.apple.videos<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/voicememos.png><th>
+      <th>Voice Memos<th>
+      <th>com.apple.VoiceMemos<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/wallet.png><th>
+      <th>Wallet<th>
+      <th>	com.apple.Passbook<th>
+    </tr><tr>
+      <th><img class="icon" src=assets/iOS-icons/weather.png><th>
+      <th>Weather<th>
+      <th>com.apple.weather<th>
+    </tr>
+  </table>
 </div>
 </body>
 </html>
