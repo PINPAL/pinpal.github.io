@@ -4,13 +4,21 @@
     <title>404</title>
     <link rel="icon" href="assets/favicon.ico" class="next-head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <style>
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
 
 body {
   background-color: #292C30;
 }
 
-@font-face { font-family: "SF Pro Display"; src: url("../../assets/SF-Pro-Display-Regular.otf"); }
+a {
+  text-decoration: none;
+}
 
 /* Columns */
 .column {
@@ -24,13 +32,6 @@ body {
     }
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /*Wrapper*/
 #wrapper {
     width: 100%;
@@ -41,8 +42,6 @@ body {
 
 /*Subtitles above boxes*/
 .subtitle {
-  color: white;
-  font-family: "SF Pro Display";
   font-size: 25px;
   font-weight: bold;
   text-align: left;
@@ -54,27 +53,20 @@ body {
 }
 
 h1 {
-  color: white;
-  font-family: "SF Pro Display";
   font-size: 25px;
   font-weight: bold;
   line-height: 1.0;
 }
 h2 {
-  color: white;
-  font-family: "SF Pro Display";
   font-size: 20px;
   font-weight: normal;
   line-height: 1.0;
 }
 
-/*Box*/
 .bigbox {
   background: #2F3439;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
-  color: white;
-  font-family: "SF Pro Display";
   border-radius: 25px;
   padding-top: 5px;
   padding-left: 20px;
@@ -90,17 +82,11 @@ h2 {
   border-width: 2px;
 }
 
-hr {
-  opacity: 0.25
-}
-
-
 /* Button */
 .button {
   background: linear-gradient(to right, #55B49D , #2B7DCA);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
-  font-family: "SF Pro Display";
   border-radius: 25px;
   padding: 10px;
   color:white;
@@ -113,31 +99,6 @@ hr {
   filter: hue-rotate(90deg);
   font-size: 23px;
   padding: 9px;
-}
-
-
-/* unvisited link */
-a:link {
-    color: white;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: #white;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    color: white;
-    text-decoration: none;
 }
 
 .twitter {
@@ -195,7 +156,7 @@ a:active {
                 <th><span style="font-weight: normal; color: rgba(255,255,255,1)">Discord</span></th>
               </tr>
               <tr>
-                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)">PINPAL#8606</span><th>
+                <th><span style="font-weight: normal; color: rgba(200,200,255,0.75)">PINPAL#2591</span><th>
               </tr>
             </table>
           </th>
@@ -223,7 +184,7 @@ a:active {
 
   <script>
     if (window.innerWidth > 750) { //If display is not mobile width
-      document.getElementById("wrapper").style.marginTop = (window.innerHeight / 2) -  161 + "px"; //Centre the wrapper
+      document.getElementById("wrapper").style.marginTop = (window.innerHeight / 2) -  190 + "px"; //Centre the wrapper
     }
   </script>
 
