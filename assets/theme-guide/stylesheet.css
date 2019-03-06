@@ -49,7 +49,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 95%;
+  width: calc(100% - 20px);
   max-width: 900px;
   line-height: 1.6;
   border-style: solid;

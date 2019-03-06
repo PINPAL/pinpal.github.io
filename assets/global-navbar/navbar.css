@@ -1,0 +1,177 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*Hide Temporary Navbar Content*/
+#navbarContent {
+  display: none;
+}
+
+/*Navbar*/
+#navbar {
+  background: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(90% - 20px);
+  max-width: 900px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  position: relative;
+  transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -webkit-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -moz-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -o-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -ms-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+}
+
+.miniNav {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4) !important;
+  padding: 10px 20px 10px 20px !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  max-width: 100% !important;
+  width: calc(100% - 40px) !important;
+}
+
+#navbarContainer {
+  max-width: 100%;
+  min-width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navIconContainer {
+  border-radius: 30%;
+  background-color: black;
+  box-shadow: -20px 0 30px 10px black;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+}
+.miniNav .navIconContainer {
+  padding-top: 10px;
+}
+
+/*Navbar Lower Hyperlinks*/
+#lowerNavContent {
+  margin-top: 24px;
+  max-height: 80px;
+  text-align: center;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+}
+.miniNav #lowerNavContent {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+}
+#lowerNavContent a {
+  color: white;
+  font-size: 14pt;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-width: 2px;
+  border-color: rgba(255,255,255,.2);
+  border-right-style: solid;
+}
+#lowerNavContent a:first-child {
+  padding-left: 0;
+}
+#lowerNavContent a:last-child {
+  padding-right: 0;
+  border-right-style: none !important;
+}
+#lowerNavContent a:hover {
+  color: #2a90fc;
+  box-shadow: 0 2px 0 0 #2a90fc;
+}
+
+/* Navbar Button */
+.navButton {
+  border: none;
+  vertical-align: middle;
+  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding-top: 6px;
+  padding-left: 5px;
+  color:rgba(255,255,255,0);
+  font-size: 0;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  display: inline-block;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.navButton:hover {
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 200px;
+  font-size: 16pt;
+}
+/*Navbar Button Icons*/
+.navButtonIcon {
+  margin-left: 4px;
+  margin-top: 3px;
+  vertical-align: middle;
+  width:22px;
+  height:22px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.navButton:hover .navButtonIcon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+/*Navbar logo*/
+.logo {
+  vertical-align: middle;
+  width: 33px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*Navbar Text*/
+#title {
+  margin: 0 !important;
+  vertical-align: middle;
+  display: inline-block;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  float: none;
+}
+@media screen and (max-width: 600px) {
+  #title {
+    font-size: 0px;
+  }
+}

@@ -9,6 +9,50 @@
 </head>
 <body>
 
+<div id="navbarContainer">
+    <div id="navbar">
+          <a href="https://pinpal.github.io/"><img class="logo" src="assets/pinpal.png"></a>
+          <a href="https://pinpal.github.io/"><h1 id="title">PINPAL</h1></a>
+
+        <div class="navIconContainer">
+          <a href="https://twitter.com/TPINPAL">
+            <div class="navButton" style="background: linear-gradient(to right, #55ACEF , #0A76E7)">
+              <img src="assets/page-icons/twitter.png" class="navButtonIcon" align="left">Twitter
+            </div></a>
+      
+          <a href="https://github.com/PINPAL">
+            <div class="navButton" style="background: linear-gradient(to right, #AA4DB4 , #8A3699)">
+              <img src="assets/page-icons/github.png" class="navButtonIcon" align="left">Github
+            </div></a>
+    
+          <a href="https://discordapp.com/invite/jb">
+            <div class="navButton" style="background: linear-gradient(to right, #83A1DA , #6380B4)">
+              <img src="assets/page-icons/discord.png" class="navButtonIcon" align="left">Discord
+            </div></a>
+
+            <a href="https://www.reddit.com/user/THE_PINPAL614">
+              <div class="navButton" style="background: linear-gradient(to right, #FF4C02 , #ED0A21)">
+                <img src="assets/page-icons/reddit.png" class="navButtonIcon" align="left">Reddit
+              </div></a>
+
+          <a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://pinpal.github.io/">
+            <div class="navButton" style="background: linear-gradient(to right, #CB8A74 , #8D5A40)">
+              <img src="assets/page-icons/cydia.png" class="navButtonIcon" align="left">Add Repo
+            </div></a>
+        </div>
+
+        <div id="lowerNavContent">
+          <a onClick="goTo('link1')">Folder Structure</a>
+          <a onClick="goTo('link2')">Info.plist</a>
+          <a onClick="goTo('link3')">Creating Icons</a>
+          <a onClick="goTo('link4')">Saving Icons</a>
+          <a onClick="goTo('link5')">Icon Masks</a>
+          <a onClick="goTo('link6')">Compiling</a>
+          <a onClick="goTo('link7')">Rounding Up</a>
+        </div>
+      </div>
+  </div>
+
 <div class="subtitle" id="bigtitle">iOS Theming Guide</div>
 
 <div class="subtitle">Introduction</div>
@@ -46,7 +90,7 @@
 
 </div>
 
-<div class="subtitle">Stage 1: Folder Structure</div>
+<div class="subtitle" id="link1">Stage 1: Folder Structure</div>
 
 <div class="bigbox">
   <div class="boxheading">Themes have very specific folder structures.</div>
@@ -84,7 +128,7 @@
   </tr></table>
 </div>
 
-<div class="subtitle">Stage 2: Info.plist</div>
+<div class="subtitle" id="link2">Stage 2: Info.plist</div>
 
 <div class="bigbox">
   <div class="boxheading">So you've got an Info.plist, now let's give it some info!</div>
@@ -109,7 +153,7 @@
   <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.</p>
 </div>
 
-<div class="subtitle">Stage 3: Creating Icons</div>
+<div class="subtitle" id="link3">Stage 3: Creating Icons</div>
 
 <div class="bigbox">
   <div class="boxheading">Your Info.plist is done, Now let's make some icons!</div>
@@ -140,7 +184,7 @@
 
 </div>
 
-<div class="subtitle">Stage 4: Saving Your Icons</div>
+<div class="subtitle" id="link4">Stage 4: Saving Your Icons</div>
 
 <div class="bigbox">
   <div class="boxheading">Name and Format of Your Icons</div>
@@ -182,7 +226,7 @@
   <a href="http://offcornerdev.com/bundleid.html"><div class="button" style="background: linear-gradient(to right, #2B7DCA , #55B49D);">Third Party BundleID's</div></a>
 </div>
 
-<div class="subtitle">Stage 5: Icon Masks</div>
+<div class="subtitle" id="link5">Stage 5: Icon Masks</div>
 
 <div class="bigbox">
   <div class="boxheading">What Are Icon Masks?</div>
@@ -223,7 +267,7 @@
 
 </div>
 
-<div class="subtitle">Stage 6: Compiling for Cydia/Sileo</div>
+<div class="subtitle" id="link6">Stage 6: Compiling for Cydia/Sileo</div>
 
 <div class="bigbox">
   <div class="boxheading">Things are about to get complicated!</div>
@@ -414,7 +458,7 @@ dpkg -b /var/mobile/Documents/ThemeNameForCydia</pre></div>
     <br>That's it you are all done! Feel free to move the <mark>.deb</mark> to your computer and delete it and the <mark>ThemeNameForCydia</mark> folder from your iOS device!
 </div>
 
-<div class="subtitle">Rounding Up</div>
+<div class="subtitle" id="link7">Rounding Up</div>
 
 <div class="bigbox">
   <div class="boxheading">Congratulations!</div>
@@ -438,4 +482,7 @@ dpkg -b /var/mobile/Documents/ThemeNameForCydia</pre></div>
 
 </div>
 </body>
+<head>
+    <script src="assets/global-navbar/navbar.js"></script>
+</head>
 </html>
