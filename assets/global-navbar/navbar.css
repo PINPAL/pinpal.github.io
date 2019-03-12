@@ -128,7 +128,7 @@ html {
   -ms-transition: all 0.3s ease;
 }
 .navButton:hover {
-  cursor:pointer;
+  cursor: pointer;
   color: white;
   padding-left: 15px;
   padding-right: 15px;
