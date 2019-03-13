@@ -25,7 +25,7 @@ body {
 }
 
 /*Subtitles above boxes*/
-.subtitle {
+.h1 {
   font-size: 30px;
   font-weight: bold;
   text-align: left;
@@ -34,6 +34,13 @@ body {
   padding-bottom: 30px;
   width: 95%;
   max-width: 900px;
+}
+
+.wrapper {
+  width: calc(100% - 20px);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Box*/
@@ -49,16 +56,56 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: calc(100% - 20px);
-  max-width: 900px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   line-height: 1.6;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.03);
   border-width: 2px;
 }
 
+/*Directory Icon*/
+.directory, .miniDirectory {
+  background-position-y: center;
+  vertical-align: middle;
+  background-image: url("folder.png");
+  background-repeat: no-repeat;
+  min-height: 70px;
+  max-height: 70px;
+  line-height: 70px;
+  min-width: 1px;
+  padding-left: 80px;
+}
+.miniDirectory {
+  min-height: 30px;
+  max-height: 30px;
+  line-height: 30px;
+  padding-left: 50px;
+  background-size: 30px;
+}
+
+/*Directory Expander Seperator*/
+.folderExpander, .miniFolderExpander {
+  border-color: rgba(255,255,255,0.2);
+  border-width: 2.5px;
+  border-left-style: solid;
+  margin-left: 17px;
+  background-position-x: 15px;
+  padding-left: 95px;
+}
+.miniFolderExpander {
+  padding-left: 50px;
+  margin-left: 9px;
+  background-position-x: 8px;
+}
+.miniFolderExpander .miniFolderExpander {
+  padding-left: 20px;
+  margin: 0;
+}
+
 /*Bold Title at top of boxes*/
-.boxheading {
+.h2 {
   font-size: 20px;
   font-weight: bold;
 }
@@ -67,33 +114,6 @@ body {
 #bigtitle {
   font-size: 50px;
   font-weight: bold;
-  padding-bottom: 40px;
-  padding-top: 20px;
-}
-
-/* Logo Columns*/
-.column {
-    float: left;
-    width: 50%;
-}
-
-/* Responsive layout*/
-@media screen and (max-width: 1083px) {
-  .bigtitle {
-    width: 75%
-  }
-  .bigbox {
-    width: 75%
-  }
-  .subtitle {
-    width: 75%
-  }
-}
-/* Responsive layout - reduce columns based on resolution */
-@media screen and (max-width: 900px) {
-    .column {
-        width: 100%;
-    }
 }
 
 /*Change Mark Color*/
