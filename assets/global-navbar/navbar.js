@@ -1,10 +1,3 @@
-//Inject navbar CSS
-var link = document.createElement('link');
-link.rel = 'stylesheet'
-link.type = 'text/css';
-link.href = 'assets/global-navbar/navbar.css';
-document.getElementsByTagName('head')[0].appendChild(link);
-
 //Load Mini-Navbar on scroll
 window.onscroll = function(event) {
     if (window.scrollY > 65) {
