@@ -33,34 +33,34 @@ a {
 }
 
 /*Wrapper*/
-#wrapper {
-    width: 100%;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+.wrapper {
+  position: absolute;
+  width: 100%;
+  max-width: 850px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /*Subtitles above boxes*/
 .subtitle {
-  font-size: 25px;
+  font-size: 20pt;
   font-weight: bold;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 300px;
 }
 
 h1 {
   font-size: 25px;
   font-weight: bold;
-  line-height: 1.0;
+  margin-top: 0;
 }
 h2 {
   font-size: 20px;
   font-weight: normal;
-  line-height: 1.0;
+  margin: 0;
 }
 
 .bigbox {
@@ -68,14 +68,12 @@ h2 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: left;
   border-radius: 25px;
-  padding-top: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 15px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
   line-height: 1.5;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.03);
@@ -88,17 +86,21 @@ h2 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   border-radius: 25px;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   color:white;
-  font-size: 20px;
-  -webkit-transition: padding 0.5s ease; /*For Safari*/
-  transition: padding 0.25s ease;
-  transition: 0.25s;
+  font-size: 14pt;
+  max-height: 50px;
+  line-height: 50px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
 }
 .button:hover {
   filter: hue-rotate(90deg);
-  font-size: 23px;
-  padding: 9px;
+  font-size: 16pt;
 }
 
 .twitter {
@@ -106,52 +108,185 @@ h2 {
   margin-right: 20px;
 }
 
+.packageicon {
+  width: 37px;
+  height: 37px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.packageBox:hover .packageicon {
+  width: 57px;
+  height: 57px;
+}
 
-</style> <body>
+.packageIconHolder {
+  width: 37px;
+  height: 37px;
+  padding: 10px;
+  border-radius: 15px;
+  left: 16px;
+  top: 14px;
+  z-index: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  position: absolute;
+}
+.packageBox:hover .packageIconHolder {
+  padding: 55px;
+  left: -35px;
+  top: -41px;
+  width: 500px;
+  height: 300px;
+}
 
-  <div id="wrapper">
-  <div class="column">
+.packageContentHolder {
+  position: absolute;
+  left: 110px;
+  top: 16px;
+  max-width: 290px;
+  overflow: hidden;
+  max-height: 80px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.packageBox:hover .packageContentHolder {
+  top: 15px;
+}
 
-  <div class="subtitle">404!</div>
-  <div class="bigbox">
+.packageTitle {
+  font-weight: bold;
+  font-size: 14pt;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.packageBox:hover .packageTitle {
+  font-size: 16pt;
+}
 
-    <h1>Page not found!</h1>
-    <h2>The page you are looking for has been moved or deleted!</h2>
-    <p>You can return to my homepage and find the page there or contact me if you cannot find it.</p>
+.packageDescription, .packageGreyDescription {
+  font-weight: normal;
+  font-size: 12.5pt;
+}
+.packageGreyDescription {
+  color: rgba(255,255,255,.6)
+}
 
-    <a href=https://pinpal.github.io/><div class="button">Return to Homepage</div></a>
+.packageBox {
+  background: #2F3439;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  line-height: 1.5;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.03);
+  border-width: 2px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  min-height: 55px;
+  max-height: 55px;
+  min-width: 350px;
+  max-width: 350px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
 
-  </div>
+p {
+  font-size: 12.5pt;
+}
 
-</div><div class="column">
+</style><body>
 
-  <div class="subtitle">Contact Me</div>
+  <div class="wrapper">
 
-  <div class="bigbox">
+    <div class="column">
+      <div class="subtitle">404!</div>
 
-      <a href="https://discordapp.com/channels/@me" style="display:inline-block;min-width: 230px">
-        <img class="twitter" src="https://pinpal.github.io/assets/social-icons/Discord.png" style="float:left;padding: 10px">
-          <p>Discord<br><span style="color: rgba(255,255,255,.5)">PINPAL#2591</span></p>
-      </a>
-      <a href="https://twitter.com/TPinpal" style="display:inline-block;min-width: 230px">
-        <img class="twitter" src="https://pinpal.github.io/assets/social-icons/Twitter.png" style="float:left;padding: 10px">
-          <p>Twitter<br><span style="color: rgba(255,255,255,.5)">@TPINPAL</span></p>
-      </a>
-      <a href="https://github.com/PINPAL/" style="display:inline-block;min-width: 230px">
-        <img class="twitter" src="https://pinpal.github.io/assets/social-icons/Reddit.png" style="float:left;padding: 10px">
-          <p>Reddit<br><span style="color: rgba(255,255,255,.5)">THE_PINPAL614</span></p>
-      </a>
-      <a href="https://www.reddit.com/user/THE_PINPAL614" style="display:inline-block;min-width: 230px">
-        <img class="twitter" src="assets/social-icons/Github.png" style="float:left;padding: 10px">
-          <p>Github<br><span style="color: rgba(255,255,255,.5)">PINPAL</span></p>
-      </a>
+      <div class="bigbox">
+        <h1>Page not found!</h1>
+        <h2>The page you are looking for has been moved or deleted!</h2>
+        <p>You can return to my homepage and find the page there or contact me if you cannot find it.</p>
+        <a href=https://pinpal.github.io/><div class="button">Return to Homepage</div></a>
+      </div>
 
-  </div></div></div>
+    </div>
+    
+    <div class="column">
+      <div class="subtitle">Contact Me</div>
 
-  <script>
-    if (window.innerWidth > 750) { //If display is not mobile width
-      document.getElementById("wrapper").style.marginTop = (window.innerHeight / 2) -  190 + "px"; //Centre the wrapper
-    }
-  </script>
+      <a href="https://discordapp.com/channels/@me">
+          <div class="packageBox">
+            <div class="packageIconHolder" style="background: linear-gradient(to right, #83A1DA , #6380B4)">
+              <img src="https://pinpal.github.io/assets/page-icons/discord.png" class="packageicon";>
+            </div>
+            <div class="packageContentHolder">
+              <span class="packageTitle">Discord</span>
+              <br><span class="packageDescription">PINPAL#2591</span>
+            </div>
+          </div>
+        </a>
 
+        <a href="https://www.reddit.com/user/THE_PINPAL614">
+          <div class="packageBox">
+            <div class="packageIconHolder" style="background: linear-gradient(to right, #FF4C02 , #ED0A21)">
+              <img src="https://pinpal.github.io/assets/page-icons/reddit.png" class="packageicon";>
+            </div>
+            <div class="packageContentHolder">
+              <span class="packageTitle">Reddit</span>
+              <br><span class="packageDescription">THE_PINPAL614</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/TPinpal">
+          <div class="packageBox">
+            <div class="packageIconHolder" style="background: linear-gradient(to right, #55ACEF , #0A76E7)">
+              <img src="https://pinpal.github.io/assets/page-icons/twitter.png" class="packageicon";>
+            </div>
+            <div class="packageContentHolder">
+              <span class="packageTitle">Twitter</span>
+              <br><span class="packageDescription">@TPINPAL</span>
+            </div>
+          </div>
+        </a>
+      
+        <a href="https://github.com/PINPAL/">
+          <div class="packageBox">
+            <div class="packageIconHolder" style="background: linear-gradient(to right, #AA4DB4 , #8A3699)">
+              <img src="https://pinpal.github.io/assets/page-icons/github.png" class="packageicon";>
+            </div>
+            <div class="packageContentHolder">
+              <span class="packageTitle">Github</span>
+              <br><span class="packageDescription">PINPAL</span>
+            </div>
+          </div>
+        </a>
+    </div>
 </body>
+<script>
+  if (window.location.pathname == "/theme-guide/home.html") {
+    window.location.href == "https://pinpal.github.io/theme-guide.html"
+  }
+</script>
