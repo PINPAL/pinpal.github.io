@@ -65,6 +65,10 @@ body {
   border-width: 2px;
 }
 
+p {
+  font-size: 12pt;
+}
+
 /*Directory Icon*/
 .directory, .miniDirectory {
   background-position-y: center;
@@ -187,4 +191,59 @@ a:active {
   filter: hue-rotate(90deg);
   font-size: 23px;
   padding: 8px;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  border-collapse:collapse;
+  background-color: rgba(255,255,255,.05);
+  font-size: 12pt;
+  border-radius: 15px;
+}
+th {
+  color: black;
+  background-color: #a4aebc;
+  font-size: 14pt;
+}
+td, th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+th:last-child {
+  border-radius: 0 15px 0 0;
+}
+th:first-child {
+  border-radius: 15px 0 0 0;
+}
+tr:last-child td:last-child {
+  border-radius: 0 0 15px 0;
+}
+tr:last-child td:first-child {
+  border-radius: 0 0 0 15px;
+}
+td:first-child {
+  border-color: rgba(255,255,255,.03);
+  border-width: 2px;
+  border-right-style: solid;
+}
+tr:nth-child(even) {
+  background-color: #22262b;
+}
+
+.maskColumn {
+  float: left;
+  padding: 5px;
+}
+
+.maskRow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
 }

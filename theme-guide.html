@@ -204,7 +204,7 @@
   <div class="bigbox">
     <h2>What Are Icon Masks?</h2>
 
-    <p>An icon mask is a feature that allows a mask to be applied to icons.
+    <p>An icon mask is a optional theming feature that allows a mask to be applied to icons.
     A mask allows you to create your icons themselves in a square then you could, for example, make them all circle.
     The main advantage to using icon masks is that the user can toggle them on or off or use any mask shape they want.</p>
 
@@ -214,7 +214,7 @@
 
     <h2>Help! My Icons are all square!</h2>
 
-    <p>Icon masks are optional and if the <mark>Info.plist</mark> is left like the one above at the very start of the guide then Anemone <b>NOT</b> use a mask.
+    <p>Icon masks are optional and if the <mark>Info.plist</mark> is left like the one above at the very start of the guide then your theme will <b>NOT</b> use a mask.
     If you would like to enable the default iOS stock icon mask (the classic rounded rectangle) then simply add the orange section to your <mark>Info.plist</mark>:</p>
 
     <div class="codebox">
@@ -222,7 +222,7 @@
   &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
   &lt;plist version="1.0"&gt;
   &lt;dict&gt;
-  <span id="importantText">  &lt;key&gt;IB-MaskIcons&lt;/key&gt;
+<span id="importantText">    &lt;key&gt;IB-MaskIcons&lt;/key&gt;
     &lt;true/&gt;</span>
     &lt;key>PackageName&lt;/key&gt;
     &lt;string>ThemeName&lt;/string&gt;
@@ -232,11 +232,136 @@
   &lt;/plist&gt;</pre>
     </div>
 
-    <p>And that's all you need to do to enable Icon Masks. If you would like to use a custom icon mask shape then read below...
+    <p>And that's all you need to do to enable Icon Masks. If you would like to use a custom icon mask shape then continue reading below.
 
-    <h2>Making Custom Icon Masks</h2>
+    <h2>Creating Custom Masks</h2>
+    
+    <p>it should be noted that you don't have to use custom icon masks. This is an optional addition to your theme.</p>
+    <p>Before we save our custom icon masks, we are first going to need to create some. Your going to need to start by opening a transparent 512x512 document in
+      your image editor of choice. It is very important your background is transparent. Now you will need to create the shape of the mask, this can be any shape you
+      like.</p>
+    <p>Areas you want the mask to hide should be transparent and areas you want to keep should be pure black (#000000). 
+      <br>For example see the following circle mask below:</p>
 
-    <p>Icon mask tutorial coming soon...</p>
+    <div class="maskRow">
+      <div class="maskColumn" style="width: calc(76% - 10px)">
+        <h3>Mask</h3>
+        <img src="assets/theme-guide/mask-demo.png" alt="Snow" style="width:100%">
+      </div>
+      <div class="maskColumn" style="width: calc(24% - 10px)">
+        <h3>Result</h3>
+        <img src="assets/theme-guide/mask-result.png" alt="Forest" style="width:100%">
+      </div>
+    </div>
+
+    <h2>Saving Custom Masks</h2>
+
+    <p>In this section I am going to explain how you can save your icon masks. First we are going to need to create some new folders. 
+      In the root directory of your theme, create a folder named <mark>Bundles</mark> so that you have two folders like this:
+    </p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+    <div class="directory folderExpander">Bundles</div>
+
+    <p>Inside the Bundles folder you are going to need to add another folder named <mark>com.apple.mobileicons.framework</mark> just like this:</p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+    <div class="directory folderExpander">Bundles</div>
+    <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+        <div class="directory folderExpander" style="margin:0;">com.apple.mobileicons.framework</div>
+    </div>
+
+    <p>Within this directory we can place all of our masks. I'm going to warn you now though, masking doesn't support IconBundles so unlike making icons we have
+      to use the old fashion way of making the icons at all the different resolutions for different devices and areas of iOS - this means we end up with a lot of files.
+    </p>
+
+    <p>Below you can find a table of all the different filenames and resolutions you will need to save your mask in:</p>
+
+    <table>
+      <tr>
+        <th>Filename</th>
+        <th>Resolution</th>
+      </tr><tr>
+        <td>AppIconMask@2x~ipad.png</td>
+        <td>152x512</td>
+      </tr><tr>
+        <td>AppIconMask@2x~iphone.png</td>
+        <td>120x120</td>
+      </tr><tr>
+        <td>AppIconMask@3x~ipad.png</td>
+        <td>180x180</td>
+      </tr><tr>
+        <td>AppIconMask@3x~iphone.png</td>
+        <td>180x180</td>
+      </tr><tr>
+        <td>AppIconMask~ipad.png</td>
+        <td>76x76</td>
+      </tr><tr>
+        <td>DocumentBadgeMask-20@2x.png</td>
+        <td>40x40</td>
+      </tr><tr>
+        <td>DocumentBadgeMask-145@2x.png</td>
+        <td>145x145</td>
+      </tr><tr>
+        <td>GameAppIconMask@2x.png</td>
+        <td>84x84</td>
+      </tr><tr>
+        <td>NotificationAppIconMask@2x.png</td>
+        <td>40x40</td>
+      </tr><tr>
+        <td>NotificationAppIconMask@3x.png</td>
+        <td>60x60</td>
+      </tr><tr>
+        <td>SpotlightAppIconMask@2x.png</td>
+        <td>80x80</td>
+      </tr><tr>
+        <td>SpotlightAppIconMask@3x.png</td>
+        <td>120x120</td>
+      </tr><tr>
+        <td>TableIconMask@2x.png</td>
+        <td>58x58</td>
+      </tr><tr>
+        <td>TableIconOutline@2x.png</td>
+        <td>58x58</td>
+      </tr>
+    </table>
+
+    <p>This means you end up with a folder looking something like this (but with more icons in it):</p>
+
+    <div class="miniDirectory"">ThemeName.theme</div>
+    <div class="miniDirectory miniFolderExpander">Bundles</div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.mobileicons.framework</div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(assets/theme-guide/imageIcon.png)">AppIconMask@2x~ipad.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(assets/theme-guide/imageIcon.png)">AppIconMask@2x~iphone.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(assets/theme-guide/imageIcon.png)">AppIconMask@3x~ipad.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(assets/theme-guide/imageIcon.png)">AppIconMask@3x~iphone.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;background: none;">etc...</div>
+        </div>
+    </div>
+
+    <p>But that's it, you have now created and setup custom icon masks!</p>
 
   </div>
 
