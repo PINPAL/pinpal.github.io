@@ -20,28 +20,37 @@ a {
   text-decoration: none;
 }
 
-/* Columns */
-.column {
-    float: left;
-    width: 50%;
-}
-/* Responsive layout - Single Column on Mobile */
-@media screen and (max-width: 800px) {
-    .column {
-        width: 100%;
-    }
-}
-
 /*Wrapper*/
 .wrapper {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 10px);
+  text-align: center;
   max-width: 850px;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+/* Columns */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Responsive layout - Single Column on Mobile */
+@media screen and (max-width: 850px) {
+    .column {
+        width: 100%;
+    }
+    .wrapper {
+      top: 0;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+}
+
+
 
 /*Subtitles above boxes*/
 .subtitle {
@@ -72,7 +81,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  width: 100%;
+  width: calc(100% - 60px);
   max-width: 350px;
   line-height: 1.5;
   border-style: solid;
@@ -201,7 +210,7 @@ h2 {
   margin-bottom: 15px;
   min-height: 55px;
   max-height: 55px;
-  min-width: 350px;
+  width: calc(100% - 60px);
   max-width: 350px;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -288,5 +297,8 @@ p {
 <script>
   if (window.location.pathname == "/theme-guide/home.html") {
     window.location.href = "https://pinpal.github.io/theme-guide.html"
+  }
+  if (window.location.pathname == "/package/Bleed/index.html") {
+    window.location.href = "https://repo.packix.com/package/com.pinpal.bleed/"
   }
 </script>
