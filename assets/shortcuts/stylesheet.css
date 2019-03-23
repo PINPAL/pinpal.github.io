@@ -128,7 +128,6 @@ input[type=text]:focus {
 
 /*Subtitles above boxes*/
 .subtitle {
-    margin-left: -15%;
     font-size: 150%;
     font-weight: 600;
     text-align: center;
