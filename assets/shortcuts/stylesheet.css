@@ -146,6 +146,8 @@ input[type=text]:focus {
   padding-right: 8%;
   margin-top: 2%;
   margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.05);
   border-width: 2px;
@@ -198,6 +200,7 @@ input[type=text]:focus {
 /*Wrapper*/
 .wrapper {
     width: calc(100%-20px);
+    box-sizing: border-box;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
@@ -270,4 +273,31 @@ a {
     .column {
         width: 100%;
     }
+}
+
+.betaAvailableMessasge {
+	background-image: url(info.png);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+	background-color: #2a90fc;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 25px;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
 }
