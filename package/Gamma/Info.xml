@@ -15,7 +15,7 @@ Exemplifies Apple's modern design language, bringing a touch of skeuomorphism ba
 </tweakDescription>
 
 <tweakSize>
-771 KB
+1 MB
 </tweakSize>
 <tweakCategory>
 Themes
@@ -24,10 +24,10 @@ Themes
 iOS 11 - 12.1.2
 </tweakCompatibility>
 <tweakVersion>
-1.1
+1.2
 </tweakVersion>
 <tweakUpdateDate>
-2/26/19
+3/29/19
 </tweakUpdateDate>
 
 <tweakDeveloper>
@@ -44,8 +44,9 @@ https://twitter.com/sygemtweets
 </tweakDevTwitterURL>
 
 <tweakChangelog>
-• Fixed a bug where users had difficulty with Anemone and SnowBoard
-• Voice Memos, Compass, Measure, and Calculator icons have been added
+• Added a bunch of new first-party icons
+• Adjusted some previously added icons
+• Added an optional new red Music icon
 </tweakChangelog>
 
 <numOfScreenshots>
