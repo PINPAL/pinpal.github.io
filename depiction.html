@@ -130,10 +130,10 @@
   document.getElementById("screenshotButton").href =
   "assets/depiction/screenshots.html?" + window.location.search.substring(1);
 
-    //Allow new line in tweak description
-    tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
-    tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to "\n"
-    document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply description to webpage
+  //Allow new line in tweak description
+  tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
+  tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to "\n"
+  document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply description to webpage
 
   //Make each bullet point of changelog on new line
   changeLog = xmlDoc.getElementsByTagName("tweakChangelog")[0].childNodes[0].nodeValue;
@@ -141,13 +141,19 @@
   changeLog = changeLog.replace("<br>", "") //Remove first line break
   document.getElementById("tweakChangelog").innerHTML = changeLog //Apply changelog to webpage
 
-  //Only display specified number of screenshots
-  var numOfScreenshots = xmlDoc.getElementsByTagName("numOfScreenshots")[0].childNodes[0].nodeValue;
-  var screenshotList = "";
-  for (i = 0; i < numOfScreenshots; i++) {
-      screenshotList = screenshotList.concat('<img class="screenshot" src="/package/'
-      + window.location.search.substring(1) + "/"+ (i + 1) + '.png">')
+  //Check number of screenshots
+  var numOfScreenshots = 1
+  while (loadXMLDoc("/package/" + window.location.search.substring(1) + "/" + numOfScreenshots + ".png").includes("Cannot GET") == false) {
+      numOfScreenshots++
   }
-  document.getElementById("tweakScreenshots").innerHTML = screenshotList;
+  numOfScreenshots--
+
+  //Add screenshots to scroller
+  for (i=1; i<numOfScreenshots + 1; i++) {
+      var screenshot = document.createElement("img")
+      screenshot.className = "screenshot"
+      screenshot.setAttribute("src", "/package/" + window.location.search.substring(1) + "/" + i + ".png")
+      document.getElementById("tweakScreenshots").appendChild(screenshot)
+  }
 
 </script>

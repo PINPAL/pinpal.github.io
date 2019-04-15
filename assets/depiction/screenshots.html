@@ -49,19 +49,31 @@
   var parser = new DOMParser();
   var xmlDoc = parser.parseFromString(text,"text/xml"); //Load the XML config
 
-  //Only display specified number of screenshots
-  var numOfScreenshots = xmlDoc.getElementsByTagName("numOfScreenshots")[0].childNodes[0].nodeValue;
-  var screenshotList = "";
-  for (i = 0; i < numOfScreenshots; i++) {
-      if (i % 3 == 0) {
-        screenshotList = screenshotList.concat("</div></div><div class=column>")
-      }
-      if (i ==0) {
-        screenshotList = screenshotList.concat('<div class="subtitle">Screenshots</div>')
-      }
-      screenshotList = screenshotList.concat('<div class="bigbox"><img class="screenshot" src="/package/'
-      + window.location.search.substring(1) + "/"+ (i + 1) + '.png"></div>')
-  }
-  document.getElementById("screenshotHolder").innerHTML = screenshotList;
+    //Check number of screenshots
+    
+    var numOfScreenshots = 1
+    while (loadXMLDoc("/package/" + window.location.search.substring(1) + "/" + numOfScreenshots + ".png").includes("Cannot GET") == false) {
+        numOfScreenshots++
+    }
 
+    var column = document.createElement("div")
+    column.className = "column"
+    //Add screenshots
+    for (i=1; i<numOfScreenshots; i++) {
+        //Create Screenshot
+        var screenshot = document.createElement("img")
+        screenshot.className = "screenshot"
+        screenshot.setAttribute("src", "/package/" + window.location.search.substring(1) + "/" + i + ".png")
+        //Create BigBox
+        var bigBox = document.createElement("div")
+        bigBox.className = "bigbox"
+        bigBox.appendChild(screenshot)
+        if (i > numOfScreenshots / 2) {
+          document.getElementById("screenshotHolder").appendChild(column)
+          var column = document.createElement("div")
+          column.className = "column"
+        }
+        column.appendChild(bigBox)
+    }
+    document.getElementById("screenshotHolder").appendChild(column)
 </script>
