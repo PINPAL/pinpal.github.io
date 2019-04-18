@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screenshots</title>
+    <link rel="icon" href="../favicon.ico" class="next-head" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../assets/depiction/stylesheet.css">
+<style>
+
+/*Box*/
+.bigbox {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 9px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 5px;
+}
+
+</style>
+<body>
+
+<div class="wrapper" id="screenshotHolder"></div>
+
+</body>
+<head>
+  <script src="../../assets/global.js"></script>
+</head>
+<script>
+
+  var text = loadXMLDoc("../../package/" + window.location.search.substring(1) + "/Info.xml"); //Specify the name of the XML config to load
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(text,"text/xml"); //Load the XML config
+
+  //Only display specified number of screenshots 
+  /*
+  var numOfScreenshots = xmlDoc.getElementsByTagName("numOfScreenshots")[0].childNodes[0].nodeValue;
+  var screenshotList = "";
+  for (i = 0; i < numOfScreenshots; i++) {
+      if (i % 3 == 0) {
+        screenshotList = screenshotList.concat("</div></div><div class=column>")
+      }
+      if (i ==0) {
+        screenshotList = screenshotList.concat('<div class="subtitle">Screenshots</div>')
+      }
+      screenshotList = screenshotList.concat('<div class="bigbox"><img class="screenshot" src="/package/'
+      + window.location.search.substring(1) + "/"+ (i + 1) + '.png"></div>')
+  }
+  document.getElementById("screenshotHolder").innerHTML = screenshotList; */
+
+  //Function that is called when a screenshot loads
+  function loadAnotherScreenshot(element) {
+    var n = parseInt(element.id.slice(-1),10)
+    addScreenshot(n + 1)
+    document.getElementById('screenshotHolder').style.height = "300px"
+  }
+
+  //Function that is called when a screenshot fails to load
+  function deleteScreenshot(element) {
+    element.parentElement.parentElement.removeChild(element.parentElement)
+  }
+
+  //Function to add a new screenshot
+  function addScreenshot(n) {
+    if (document.getElementById("screenshot" + n) == null) {
+        bigBox = createElement("bigbox","div")
+        screenshot = createElement("screenshot","img")
+        screenshot.setAttribute("src", window.location.origin + "/package/" + window.location.search.substring(1) + "/" + n + ".png")
+        screenshot.setAttribute("onerror","deleteScreenshot(this)")
+        screenshot.setAttribute("onload","loadAnotherScreenshot(this)")
+        screenshot.id = "screenshot" + n
+        bigBox.appendChild(screenshot)
+        document.getElementById('screenshotHolder').appendChild(bigBox)
+    }
+  }
+
+  //Load initital wrapper
+  addScreenshot(1)
+
+</script>

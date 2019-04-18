@@ -295,8 +295,17 @@ p {
     </div>
 </body>
 <script>
+  if (window.location.pathname == "/theme-guide.html") {
+    window.location.href = "https://pinpal.github.io/theme-guide/"
+  }
   if (window.location.pathname == "/theme-guide/home.html") {
-    window.location.href = "https://pinpal.github.io/theme-guide.html"
+    window.location.href = "https://pinpal.github.io/theme-guide/"
+  }
+  if (window.location.pathname == "/shortcuts.html") {
+    window.location.href = "https://pinpal.github.io/shortcuts/"
+  }
+  if (window.location.pathname == "/stock-identifiers.html") {
+    window.location.href = "https://pinpal.github.io/stock-identifiers/"
   }
   if (window.location.pathname == "/package/Bleed/index.html") {
     window.location.href = "https://repo.packix.com/package/com.pinpal.bleed/"

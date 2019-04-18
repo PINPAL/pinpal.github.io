@@ -17,7 +17,12 @@ function calculateBoxSize() {
 
 //Touch Display Detection
 window.addEventListener('touchstart', function onFirstTouch() {
-    document.getElementById('touchScreenStylesheet').disabled = false
+    console.log("tapped")
+    var touchScreenStylesheet = document.createElement("link")
+    touchScreenStylesheet.type = "text/css"
+    touchScreenStylesheet.rel = "stylesheet"
+    touchScreenStylesheet.href = "assets/homepage/touchscreenOnly.css"
+    document.head.appendChild(touchScreenStylesheet)
     window.removeEventListener('touchstart', onFirstTouch, false);
   }, false);
 

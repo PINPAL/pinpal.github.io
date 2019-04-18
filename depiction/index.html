@@ -2,9 +2,9 @@
 <html>
 <head>
     <title id="tweakName"></title>
-    <link rel="icon" href="assets/favicon.ico" class="next-head" />
+    <link rel="icon" class="next-head" id="pageIcon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/depiction/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/depiction/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <head>
 <body>
@@ -21,7 +21,7 @@
 
     <div class="screenshots" id="tweakScreenshots"></div>
 
-    <a href="assets/depiction/screenshots.html" id="screenshotButton"><div class="button">View all Screenshots</div></a>
+    <a id="screenshotButton"><div class="button">View all Screenshots</div></a>
 
   </div></div><div class=column>
   <div class="subtitle">What's New</div>
@@ -77,28 +77,15 @@
             </tr>
     </table>
   </div></div>
+  <head>
+    <script src="../assets/global.js"></script>
+  </head>
 </body>
 
 <script>
 
-  //Function to read XML Files
-  function loadXMLDoc(filename) {
-   if (window.XMLHttpRequest)
-     {
-     xhttp=new XMLHttpRequest();
-     }
-   else
-     {
-     xhttp=new ActiveXObject("Microsoft.XMLHTTP");
-     }
-   xhttp.open("GET",filename,false);
-   xhttp.send();
-   return xhttp.responseText;
-  }
-
   //Redirect to 404 page if package not specified in URL
-    if (window.location.search.substring(1)) {
-  } else {
+  if (window.location.search.substring(1)) {} else {
     location.replace("https://pinpal.github.io/404")
   }
 
@@ -127,13 +114,12 @@
   xmlDoc.getElementsByTagName("tweakDevTwitterURL")[0].childNodes[0].nodeValue;
 
   //Replace Screenshot button URL based off package name
-  document.getElementById("screenshotButton").href =
-  "assets/depiction/screenshots.html?" + window.location.search.substring(1);
+  document.getElementById("screenshotButton").setAttribute("href",window.location.origin + "/depiction/screenshots/?" + window.location.search.substring(1))
 
-    //Allow new line in tweak description
-    tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
-    tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to "\n"
-    document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply description to webpage
+  //Allow new line in tweak description
+  tweakDescription = xmlDoc.getElementsByTagName("tweakDescription")[0].childNodes[0].nodeValue;
+  tweakDescription = tweakDescription.replace(/\\n/g, "<br>") //Add line break to "\n"
+  document.getElementById("tweakDescription").innerHTML = tweakDescription //Apply description to webpage
 
   //Make each bullet point of changelog on new line
   changeLog = xmlDoc.getElementsByTagName("tweakChangelog")[0].childNodes[0].nodeValue;
@@ -141,13 +127,35 @@
   changeLog = changeLog.replace("<br>", "") //Remove first line break
   document.getElementById("tweakChangelog").innerHTML = changeLog //Apply changelog to webpage
 
-  //Only display specified number of screenshots
-  var numOfScreenshots = xmlDoc.getElementsByTagName("numOfScreenshots")[0].childNodes[0].nodeValue;
-  var screenshotList = "";
-  for (i = 0; i < numOfScreenshots; i++) {
-      screenshotList = screenshotList.concat('<img class="screenshot" src="/package/'
-      + window.location.search.substring(1) + "/"+ (i + 1) + '.png">')
+  //Function that is called when a screenshot loads
+  function loadAnotherScreenshot(element) {
+      var n = parseInt(element.id.slice(-1),10)
+      addScreenshot(n + 1)
+      document.getElementById('tweakScreenshots').style.height = "300px"
   }
-  document.getElementById("tweakScreenshots").innerHTML = screenshotList;
+
+  //Function that is called when a screenshot fails to load
+  function deleteScreenshot(element) {
+      console.log("failed " + element.id)
+      element.parentElement.removeChild(element)
+  }
+
+  //Function to add a new screenshot
+  function addScreenshot(n) {
+      if (document.getElementById("screenshot" + n) == null) {
+          screenshot = createElement("screenshot","img")
+          screenshot.setAttribute("src", window.location.origin + "/package/" + window.location.search.substring(1) + "/" + n + ".png")
+          screenshot.setAttribute("onerror","deleteScreenshot(this)")
+          screenshot.setAttribute("onload","loadAnotherScreenshot(this)")
+          screenshot.id = "screenshot" + n
+          document.getElementById('tweakScreenshots').appendChild(screenshot)
+      }
+  }
+
+  //Load initital wrapper
+  addScreenshot(1)
+
+  //Set page icon to package icon
+  document.getElementById('pageIcon').setAttribute("href", window.location.origin + "/assets/page-icons/" + window.location.search.substring(1) + ".png")
 
 </script>
