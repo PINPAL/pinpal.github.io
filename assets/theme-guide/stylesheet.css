@@ -138,9 +138,60 @@ mark {
   padding-right: 15px;
   overflow: auto;
   width: calc(100% - 30px);
+  position: relative;
 }
 pre {
     color:black;
+}
+.codeboxDownload {
+  border-top-style: solid;
+  border-color: rgba(255, 255, 255, 0.23);
+  border-width: 4px;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position-x: 20px;
+  background-position-y: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #292C30;
+  min-height: 70px;
+  min-width: calc(100% - 120px);
+  padding: 10px;
+  padding-left: 110px;
+  transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.codeboxDownload:hover {
+  background-color: #2a90fc;
+}
+.codeboxDownload:hover .downloadFileDescription{
+  color: rgba(255,255,255,.75);
+}
+.codeboxDownload:hover .downloadFileIcon{
+  opacity: 1;
+}
+.fileName {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.downloadFileDescription {
+  color: #2a90fc;
+  margin-top: 0;
+}
+.downloadFileIcon {
+  opacity: .15;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
 }
 
 #importantText {

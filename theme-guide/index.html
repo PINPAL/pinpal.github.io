@@ -120,9 +120,9 @@
     I highly recommend <a href="https://atom.io/">Atom Editor by Github</a> or <a href="https://code.visualstudio.com/download">Microsoft VS Code</a> however most text editors will work. You can even use XCode!
     <br>Your going to need to change the <mark>ThemeName</mark> to the name of your theme.
 
-    <div class="codebox">
+    <div class="codebox" style="padding-bottom: 110px">
   <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
   &lt;plist version="1.0"&gt;
   &lt;dict&gt;
     &lt;key>PackageName&lt;/key&gt;
@@ -130,7 +130,17 @@
     &lt;key>ThemeType&lt;/key&gt;
     &lt;string>Icons&lt;/string&gt;
   &lt;/dict&gt;
-  &lt;/plist&gt;</pre></div>
+&lt;/plist&gt;</pre>
+
+<a href="../assets/theme-guide/Info.plist" download>
+  <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/plist.png)">
+    <p class="fileName">Info.plist</p>
+    <p class="downloadFileDescription">Download Example File</p>
+    <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+  </div>
+</a>
+
+</div>
 
     <p>In the future you can add more complex stuff to your <mark>Info.plist</mark> but for now this is enough.
     <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.</p>
@@ -217,20 +227,30 @@
     <p>Icon masks are optional and if the <mark>Info.plist</mark> is left like the one above at the very start of the guide then your theme will <b>NOT</b> use a mask.
     If you would like to enable the default iOS stock icon mask (the classic rounded rectangle) then simply add the orange section to your <mark>Info.plist</mark>:</p>
 
-    <div class="codebox">
-  <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-  &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-  &lt;plist version="1.0"&gt;
+    <div class="codebox" style="padding-bottom: 110px">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
   &lt;dict&gt;
-<span id="importantText">    &lt;key&gt;IB-MaskIcons&lt;/key&gt;
+<span id="importantText">       &lt;key&gt;IB-MaskIcons&lt;/key&gt;
     &lt;true/&gt;</span>
     &lt;key>PackageName&lt;/key&gt;
     &lt;string>ThemeName&lt;/string&gt;
     &lt;key>ThemeType&lt;/key&gt;
     &lt;string>Icons&lt;/string&gt;
-  &lt;/dict&gt;
+    &lt;/dict&gt;
   &lt;/plist&gt;</pre>
-    </div>
+
+      <a href="../assets/theme-guide/Info.plist" download>
+        <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/plist.png)">
+          <p class="fileName">Info.plist</p>
+          <p class="downloadFileDescription">Download Example File</p>
+          <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+        </div>
+      </a>
+
+</div>
+
 
     <p>And that's all you need to do to enable Icon Masks. If you would like to use a custom icon mask shape then continue reading below.
 
@@ -396,16 +416,24 @@
       Using a text-editor that supports UNIX line endings is extremely important at this step! The ones I recommended earlier for <mark>Info.plist</mark> should work if you are unsure.
       <br>Inside the <mark>control</mark> you will need to add the following code and fill out all the orange text.</p>
 
-      <div class="codebox">
-  <pre>Package: com.<span id="importantText">yourname</span>.<span id="importantText">themename</span>
-  Name: <span id="importantText">Theme Name</span>
-  Version: <span id="importantText">1.0</span>
-  Architecture: iphoneos-arm
-  Description: <span id="importantText">A theme with beautiful icons!</span>
-  Author: <span id="importantText">Your Name</span>
-  Maintainer: <span id="importantText">Your Name</span>
-  Section: Themes
-  </pre></div>
+      <div class="codebox" style="padding-bottom: 110px">
+<pre>Package: com.<span id="importantText">yourname</span>.<span id="importantText">themename</span>
+Name: <span id="importantText">Theme Name</span>
+Version: <span id="importantText">1.0</span>
+Architecture: iphoneos-arm
+Description: <span id="importantText">A theme with beautiful icons!</span>
+Author: <span id="importantText">Your Name</span>
+Maintainer: <span id="importantText">Your Name</span>
+Section: Themes
+</pre>
+      <a href="../assets/theme-guide/control" download>
+        <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/control.png)">
+          <p class="fileName">control</p>
+          <p class="downloadFileDescription">Download Example File</p>
+          <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+        </div>
+      </a>
+  </div>
 
       <h2>Important notes about the control file:</h2>
 
@@ -508,5 +536,6 @@
 </body>
 <head>
     <script src="../assets/global-navbar/navbar.js"></script>
+    <script src="../assets/theme-guide/javascript.js"></script>
 </head>
 </html>
