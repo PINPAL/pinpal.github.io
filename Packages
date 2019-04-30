@@ -5,12 +5,13 @@ Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/NoFolder/NoFolder.deb
 Size: 9326
 MD5sum: da4ae0fc2786565aed362138537841bc
+SHA256: 
 Section: Themes
 Description: Removes background from folder icons
 Author: PINPAL
 Name: No Folder Icons
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/depiction.html?NoFolder
+Depiction: https://pinpal.github.io/depiction/?NoFolder
 
 Package: com.pinpal.darkmode
 Version: 0.0.3
@@ -24,7 +25,7 @@ Description: Dark Mode via Anemone
 Author: PINPAL
 Name: Dark Mode Theme
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/depiction.html?DarkMode
+Depiction: https://pinpal.github.io/depiction/?DarkMode
 
 Package: com.ilewiscx.clones
 Name: Zeppelin: Star Wars: Clones
@@ -38,7 +39,7 @@ Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
-Depiction: https://pinpal.github.io/depiction.html?ZeppelinLogo
+Depiction: https://pinpal.github.io/depiction/?ZeppelinLogo
 
 Package: com.pinpal.seven4eleven
 Version: 1.1
@@ -52,7 +53,7 @@ Description: iOS 7 Style for iOS 11
 Author: PINPAL
 Name: Seven4Eleven Theme
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/depiction.html?Seven4Eleven
+Depiction: https://pinpal.github.io/depiction/?Seven4Eleven
 
 Package: com.pinpal.sentialpatch
 Name: Sential - Extra Icons
@@ -60,7 +61,7 @@ Version: 1.0
 Depends: me.aesign.sential
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction: https://pinpal.github.io/depiction.html?SentialPatch
+Depiction: https://pinpal.github.io/depiction/?SentialPatch
 Section: Themes
 Description: Additional Icons for "Sential" Theme
 Maintainer: PINPAL
@@ -74,7 +75,7 @@ Version: 1.0
 Depends: com.colbyroark.lux
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction: https://pinpal.github.io/depiction.html?LuxPatch
+Depiction: https://pinpal.github.io/depiction/?LuxPatch
 Section: Themes
 Description: Additional Icons for "Lux" Theme
 Maintainer: PINPAL
@@ -90,7 +91,7 @@ Description: A theme modernizing Apple's design.
 Author: James (Sygem)
 Maintainer: James (Sygem)
 Section: Themes
-Depiction: https://pinpal.github.io/depiction.html?Gamma
+Depiction: https://pinpal.github.io/depiction/?Gamma
 Maintainer: Sygem
 Size: 1062374
 MD5sum: c09f87d5175b88482c1e0cb68be451e9
