@@ -5,7 +5,6 @@ Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/NoFolder/NoFolder.deb
 Size: 9326
 MD5sum: da4ae0fc2786565aed362138537841bc
-SHA256: 
 Section: Themes
 Description: Removes background from folder icons
 Author: PINPAL
@@ -20,6 +19,7 @@ Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/DarkMode/DarkMode.deb
 Size: 1340
 MD5sum: cac04ba7185eaad241527702db1dbbc8
+SHA256: 9fa5a09d51d7f835699413f3505508e41149f809e6762c9e92f9abd0919c072b
 Section: Themes
 Description: Dark Mode via Anemone
 Author: PINPAL
@@ -34,6 +34,7 @@ Architecture: iphoneos-arm
 Filename: package/ZeppelinLogo/ZeppelinLogo.deb
 Size: 71018
 MD5sum: 39724ac926fc0d58676a6a6728ac2773
+SHA256: bebdaa4b4fb6cf16e4b60de47acea06b1a776e38c484895dfbbb18b6aad6d425
 Description: Star Wars Clones for Zeppelin
 Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
@@ -48,6 +49,7 @@ Maintainer: PINPAL <pinpal.official@gmail.com>
 Filename: package/Seven4Eleven/Seven4Eleven.deb
 Size: 1824120
 MD5sum: 77f54dbc311a6a65ab1f655d5184a390
+SHA256: 5f8cdd5673a02d951dc78df9750336b0cb7084249a6d8b5d968ca94f09765c30
 Section: Themes
 Description: iOS 7 Style for iOS 11
 Author: PINPAL
@@ -67,6 +69,7 @@ Description: Additional Icons for "Sential" Theme
 Maintainer: PINPAL
 Size: 84758 
 MD5sum: b60cb26a5c15141dfe9e5f8eb505ed13
+SHA256: b4f9cf299e11821b9c52e13170eb114663f363180a97975c67498eafea593e05
 Filename: package/SentialPatch/SentialPatch.deb
 
 Package: com.pinpal.luxpatch
@@ -81,6 +84,7 @@ Description: Additional Icons for "Lux" Theme
 Maintainer: PINPAL
 Size: 273026
 MD5sum: be40f03da92e4defa7df447352bf4da4
+SHA256: 5f0ee73f6c5510ac1da5d6842fbb6d3d829bef6f49731971a230526f24162231
 Filename: package/LuxPatch/LuxPatch.deb
 
 Package: com.sygem.gamma
@@ -95,4 +99,5 @@ Depiction: https://pinpal.github.io/depiction/?Gamma
 Maintainer: Sygem
 Size: 1062374
 MD5sum: c09f87d5175b88482c1e0cb68be451e9
+SHA256: c0aac5623346f6d16b3299be43e44a20e56339123a9cda1cc81b2741539f93cc
 Filename: package/Gamma/Gamma.deb
