@@ -9,6 +9,17 @@
 <head>
 <body>
 
+  <div class="popupWrapper">
+    <div class="bigbox" id="sileod">
+      <div class="warningIcon">
+        <img src="error.png">
+      </div>
+      <h1>Uh oh!</h1>
+      <h2>Your browser is outdated!</h2>
+      <p>Your browser is old or lacking basic web support. It does not support Javascript which is required by my site. </br>Sorry about that!</p>
+    </div>
+  </div>
+
   <div class="wrapper">
 
   <div class=column>
@@ -83,6 +94,10 @@
 </body>
 
 <script>
+
+  //Remove Javascript Detector
+  document.getElementsByClassName('popupWrapper')[0].parentElement.removeChild(document.getElementsByClassName('popupWrapper')[0])
+  document.getElementsByClassName('wrapper')[0].style.filter = "none"
 
   //Redirect to 404 page if package not specified in URL
   if (window.location.search.substring(1)) {} else {
