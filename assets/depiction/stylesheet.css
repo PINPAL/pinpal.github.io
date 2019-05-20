@@ -193,6 +193,16 @@ a:active, a:hover {
   width: calc(100% - 40px);
   max-width: 800px;
 }
+#sileod h1 {
+  font-size: 21pt;
+}
+#sileod h2 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+#sileod p {
+  font-size: 12.5pt;
+}
 
 .popupWrapper {
 	background-color: rgba(0,0,0,.4);
