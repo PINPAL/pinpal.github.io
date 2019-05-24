@@ -6,3 +6,4 @@ Description: A theme with beautiful icons!
 Author: Your Name
 Maintainer: Your Name
 Section: Themes
+Depends: com.anemonetheming.anemone | com.spark.snowboard
