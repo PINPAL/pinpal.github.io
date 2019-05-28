@@ -1,10 +1,10 @@
 Package: com.ilewiscx.clones
 Name: Zeppelin: Star Wars: Clones
-Version: 1.2
+Version: 1.3
 Architecture: iphoneos-arm
 Description: Star Wars Clones for Zeppelin
 Author: iLewisCx
-Maintainer: PINPAL (josh.hayes614@gmail.com)
+Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
-Depiction: https://pinpal.github.io/package/ZeppelinLogo/index.html
+Depiction: https://pinpal.github.io/depiction/?ZeppelinLogo
