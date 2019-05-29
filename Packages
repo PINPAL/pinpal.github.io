@@ -116,3 +116,18 @@ Size: 34176
 MD5sum: 909aeef5e470e558f1e0b2631b7b8d0f
 SHA256: bb4665a0a689c93e3abae26136f47d6885bb9338a08f78921edd2749457ffe8b
 Filename: package/JoolPatch/JoolPatch.deb
+
+Package: com.ilewiscx.cloneshelmets
+Name: Zeppelin: SWBFII: Clone Helmets (Orthohex)
+Version: 1.0
+Architecture: iphoneos-arm
+Description: SWBFII: Clone Helmets (Orthohex) for Zeppelin
+Author: iLewisCx
+Maintainer: PINPAL (pinpal.official@gmail.com)
+Section: Addons - Zeppelin
+Depends: com.alexzielenski.zeppelin
+Depiction: https://pinpal.github.io/depiction/?CloneHelmets
+Size: 52816
+MD5sum: 59ffad8336895fcc1d8ba4856b2fb25c
+SHA256: 0852ff4030d09c69b0d9179d09e3d1142c8733dd3e1011ba4cc12b3737ffd8f2
+Filename: package/CloneHelmets/CloneHelmets.deb

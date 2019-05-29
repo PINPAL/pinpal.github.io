@@ -1,0 +1,10 @@
+Package: com.ilewiscx.cloneshelmets
+Name: Zeppelin: SWBFII: Clone Helmets (Orthohex)
+Version: 1.0
+Architecture: iphoneos-arm
+Description: SWBFII: Clone Helmets (Orthohex) for Zeppelin
+Author: iLewisCx
+Maintainer: PINPAL (pinpal.official@gmail.com)
+Section: Addons - Zeppelin
+Depends: com.alexzielenski.zeppelin
+Depiction: https://pinpal.github.io/depiction/?CloneHelmets
