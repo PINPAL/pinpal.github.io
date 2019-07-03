@@ -1,13 +1,12 @@
 {
     "class": "DepictionTabView",
-    "headerImage": "",
     "tabs": [
         {
             "tabname": "Details",
             "views": [
                 {
                     "class": "DepictionSubheaderView",
-                    "title": "StarWarsMovieandTCWClones",
+                    "title": "Star Wars Movie and TCW Clones",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
@@ -15,28 +14,6 @@
                     "class": "DepictionMarkdownView",
                     "markdown": "Iconic Clones from the Star Wars Movies and Star Wars The Clone Wars TV series.",
                     "useSpacing": true
-                },
-                {
-                    "spacing": 8,
-                    "class": "DepictionSpacerView"
-                },
-                {
-                    "class": "DepictionScreenshotsView",
-                    "screenshots": [
-                        {
-                            "accessibilityText": "Screenshot0",
-                            "url": ""
-                        }
-                    ],
-                    "itemSize": "{160, 275.41333333333336}",
-                    "itemCornerRadius": 6
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "title": "markdown-description",
-                    "useBoldText": true,
-                    "useBottomMargin": false,
-                    "markdown": "Iconic Clones from the Star Wars Movies and Star Wars The Clone Wars TV series."
                 },
                 {
                     "class": "DepictionSeparatorView"
