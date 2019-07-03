@@ -1,0 +1,13 @@
+{
+    "class": "FeaturedBannersView",
+    "itemSize": "{296, 148}",
+    "itemCornerRadius": 12,
+    "banners": [
+      {
+        "url": "https://cdn.discordapp.com/attachments/366628660939194378/596010124112560129/SileoBanner.png",
+        "title": "Jool Patch",
+        "package": "com.pinpal.joolpatch",
+        "hideShadow": false
+      }
+    ]
+  }
