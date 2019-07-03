@@ -1,8 +1,8 @@
 Package: com.ilewiscx.cloneshelmets
-Name: Zeppelin: SWBFII: Clone Helmets (Orthohex)
-Version: 1.0
+Name: Zeppelin: Star Wars and TCW Clones
+Version: 1.1
 Architecture: iphoneos-arm
-Description: SWBFII: Clone Helmets (Orthohex) for Zeppelin
+Description: Iconic Clones from the Star Wars for Zeppelin
 Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin

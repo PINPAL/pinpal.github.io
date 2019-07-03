@@ -117,16 +117,16 @@ SHA256: bb4665a0a689c93e3abae26136f47d6885bb9338a08f78921edd2749457ffe8b
 Filename: package/JoolPatch/JoolPatch.deb
 
 Package: com.ilewiscx.cloneshelmets
-Name: Zeppelin: SWBFII: Clone Helmets (Orthohex)
-Version: 1.0
+Name: Zeppelin: Star Wars and TCW Clones
+Version: 1.1
 Architecture: iphoneos-arm
-Description: SWBFII: Clone Helmets (Orthohex) for Zeppelin
+Description: Iconic Clones from the Star Wars for Zeppelin
 Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
 Depiction: https://pinpal.github.io/depiction/?CloneHelmets
-Size: 52816
-MD5sum: 59ffad8336895fcc1d8ba4856b2fb25c
-SHA256: 0852ff4030d09c69b0d9179d09e3d1142c8733dd3e1011ba4cc12b3737ffd8f2
+Size: 155648
+MD5sum: 37fa4653765c62abbd2ddf31cb87d2d8
+SHA256: 6a689700d97adae6e1124ede54e88625d7091a9bc2fb1595ba9c60395a94b02a
 Filename: package/CloneHelmets/CloneHelmets.deb
