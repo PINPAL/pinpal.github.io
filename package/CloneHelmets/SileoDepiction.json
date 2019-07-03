@@ -50,6 +50,6 @@
             "class": "DepictionStackView"
         }
     ],
-    "tintColor": "#0657bb",
+    "tintColor": "#00FF00",
     "minVersion": "0.1"
 }
