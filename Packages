@@ -126,7 +126,8 @@ Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
 Depiction: https://pinpal.github.io/depiction/?CloneHelmets
-Size: 155648
+SileoDepiction: https://pinpal.github.io/package/CloneHelmets/SileoDepiction.json
+Size: 155502
 MD5sum: 37fa4653765c62abbd2ddf31cb87d2d8
 SHA256: 6a689700d97adae6e1124ede54e88625d7091a9bc2fb1595ba9c60395a94b02a
 Filename: package/CloneHelmets/CloneHelmets.deb
