@@ -1,5 +1,6 @@
 {
     "class": "DepictionTabView",
+    "headerImage": "https://ton.twitter.com/i/ton/data/dm/1146463947668635658/1146463938604937219/GuFSFPOY.jpg",
     "tabs": [
         {
             "tabname": "Details",
