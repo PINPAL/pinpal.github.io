@@ -78,13 +78,13 @@
             "class": "DepictionStackView",
             "views": [
                 {
-                    "title": "Version 1.0",
+                    "title": "Version 1.2",
                     "useBoldText": true,
                     "useBottomMargin": true,
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Initial Release.",
+                    "markdown": "Update Changes:\r\n\r\n* Added Option to Toggle Apps:\r\n* Added RAM Free Indicator\r\n* Fixed Some Margins\r\n* Performance Improvments",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },
@@ -103,7 +103,26 @@
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Minor Update:\r\n\r\n* Fixed Sun Icon\r\n* Fixed Temperature Margin\r\n* Fixed Numbers Font Margins",
+                    "markdown": "Update Changes:\r\n\r\n* Fixed Sun Icon\r\n* Fixed Temperature Margin\r\n* Fixed Numbers Font Margins",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 06-07-2019</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "title": "Version 1.0",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Initial Release.",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },
