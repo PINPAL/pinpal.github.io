@@ -1,6 +1,6 @@
 {
     "class": "DepictionTabView",
-    "headerImage": "https://pinpal.github.io/packages/Phertela/SileoBanner.jpg",
+    "headerImage": "https://pinpal.github.io/package/Phertela/SileoBanner.jpg",
     "tabs": [
         {
             "tabname": "Details",
