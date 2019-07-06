@@ -4,6 +4,7 @@
     "tabs": [
         {
             "tabname": "Details",
+            "class": "DepictionStackView",
             "views": [
                 {
                     "class": "DepictionSubheaderView",
@@ -47,11 +48,11 @@
                     "spacing": 8,
                     "class": "DepictionSpacerView"
                 }
-            ],
-            "class": "DepictionStackView"
+            ]
         },
         {
             "tabname": "Changes",
+            "class": "DepictionStackView",
             "views": [
                 {
                     "title": "Version 1.0",
@@ -90,9 +91,8 @@
                 },
                 {
                     "class": "DepictionSeparatorView"
-                },
-            ],
-            "class": "DepictionStackView"
+                }
+            ]
         }
     ],
     "tintColor": "#ff325b",
