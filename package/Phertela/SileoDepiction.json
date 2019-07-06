@@ -49,6 +49,50 @@
                 }
             ],
             "class": "DepictionStackView"
+        },
+        {
+            "tabname": "Changes",
+            "views": [
+                {
+                    "title": "Version 1.0",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Initial Release.",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 06-07-2019</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "title": "Version 1.1",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Minor Update:\r\n\r\n* Fixed Sun Icon\r\n* Fixed Temperature Margin\r\n* Fixed Numbers Font Margins",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 06-07-2019</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+            ],
+            "class": "DepictionStackView"
         }
     ],
     "tintColor": "#ff325b",

@@ -143,7 +143,7 @@ Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpa
 Section: Widgets
 Description: Phertela - Customizable Widget - Clock/Weather/Battery/Wifi
 Maintainer: PINPAL
-Size: 476098 
-MD5sum: f0da6f451415a04cd7ecd7669bd1328f
-SHA256: 0aa83895e54af816acbbcb4f9287f1c7312e9d3de678181db2777b6e1b5858db
+Size: 480158
+MD5sum: a150b925b53da3bb8ab21d5e526a6a6a
+SHA256: 818af8851de43edce59ce6ed8cb60166b6145c929fe770ce7ae15b802e9a2dc8
 Filename: package/Phertela/Phertela.deb
