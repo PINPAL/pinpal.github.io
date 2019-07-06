@@ -131,3 +131,19 @@ Size: 155502
 MD5sum: 37fa4653765c62abbd2ddf31cb87d2d8
 SHA256: 6a689700d97adae6e1124ede54e88625d7091a9bc2fb1595ba9c60395a94b02a
 Filename: package/CloneHelmets/CloneHelmets.deb
+
+Package: com.pinpal.phertela
+Name: Phertela Widget
+Version: 1.0
+Depends: com.junesiphone.xeninfo, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Author: PINPAL
+SileoDepiction: https://pinpal.github.io/package/Phertela/SileoDepiction.json
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/Phertela/SileoDepiction.json&name=Phertela%20Widget&dev=PINPAL&section=Widgets
+Section: Widgets
+Description: Phertela - Customizable Widget - Clock/Weather/Battery/Wifi
+Maintainer: PINPAL
+Size: 476098 
+MD5sum: f0da6f451415a04cd7ecd7669bd1328f
+SHA256: 0aa83895e54af816acbbcb4f9287f1c7312e9d3de678181db2777b6e1b5858db
+Filename: package/Phertela/Phertela.deb
