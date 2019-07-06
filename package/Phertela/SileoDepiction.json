@@ -13,6 +13,29 @@
                     "useBottomMargin": false
                 },
                 {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                },
+                {
+                    "itemCornerRadius": 12,
+                    "itemSize": "{160, 275.41333333333336}",
+                    "screenshots": [
+                        {
+                            "url": "https://pinpal.github.io/package/Phertela/1.png",
+                            "accessibilityText": "Screenshot0"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/Phertela/2.png",
+                            "accessibilityText": "Screenshot1"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/Phertela/3.png",
+                            "accessibilityText": "Screenshot2"
+                        }
+                    ],
+                    "class": "DepictionScreenshotsView"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "# Phertela\r\n### Customizable Widget for your Homescreen.\r\n\r\nThis widget was made as per request of:\r\n<small style='color:#ff325b;'>A-N-O-N-Y-M [iOS 12.1.0]#0344</small> who you can find on Discord.\r\n\r\n</br>\r\nFeatures include:\r\n\r\n* Temperature\r\n* Weather Overview\r\n* Chance of Rain\r\n* Weather Icons\r\n* Battery Percentage\r\n* WiFi Indicator\r\n* Cellular Indicator\r\n* Apps Title\r\n\r\n</br>\r\n\r\nCustomize it to your needs including:\r\n</br>\r\n* German & English Language\r\n* Customize Padding Values:\r\n* Top Inset\r\n* Side Inset\r\n* Primary Colour\r\n* Secondary Colour",
                     "useSpacing": true
