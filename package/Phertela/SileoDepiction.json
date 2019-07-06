@@ -1,0 +1,56 @@
+{
+    "class": "DepictionTabView",
+    "headerImage": "https://pinpal.github.io/packages/Phertela/SileoBanner.jpg",
+    "tabs": [
+        {
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "Phertela | Customizable Widget",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "# Phertela### Customizable Widget for your Homescreen.This widget was made as per request of:<small>`A-N-O-N-Y-M [iOS 12.1.0]#0344`</small></br>Features include:* Temperature* Weather Overview* Chance of Rain* Weather Icons* Battery Percentage* WiFi Indicator* Cellular Indicator* Apps Title</br>Customize it to your needs including:</br>* German & English Language* Customize Padding Values:* Top Inset* Side Inset* Primary Colour* Secondary Colour",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "text": "1.0",
+                    "title": "Version",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "text": "06-07-2019",
+                    "title": "Released",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "text": "Free",
+                    "title": "Price",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                },
+                {
+                    "text": "PINPAL",
+                    "title": "Developer",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                }
+            ],
+            "class": "DepictionStackView"
+        }
+    ],
+    "tintColor": "#00FF00",
+    "minVersion": "0.1"
+}
