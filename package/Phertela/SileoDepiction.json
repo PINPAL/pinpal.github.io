@@ -13,7 +13,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "# Phertela### Customizable Widget for your Homescreen.This widget was made as per request of:<small>`A-N-O-N-Y-M [iOS 12.1.0]#0344`</small></br>Features include:* Temperature* Weather Overview* Chance of Rain* Weather Icons* Battery Percentage* WiFi Indicator* Cellular Indicator* Apps Title</br>Customize it to your needs including:</br>* German & English Language* Customize Padding Values:* Top Inset* Side Inset* Primary Colour* Secondary Colour",
+                    "markdown": "# Phertela\r\n### Customizable Widget for your Homescreen.\r\n\r\nThis widget was made as per request of:<small>`A-N-O-N-Y-M [iOS 12.1.0]#0344`</small>\r\n</br>\r\nFeatures include:\r\n\r\n* Temperature\r\n* Weather Overview\r\n* Chance of Rain\r\n* Weather Icons\r\n* Battery Percentage\r\n* WiFi Indicator\r\n* Cellular Indicator\r\n* Apps Title\r\n\r\n</br>\r\n\r\nCustomize it to your needs including:\r\n</br>\r\n* German & English Language\r\n* Customize Padding Values:\r\n* Top Inset* Side Inset\r\n* Primary Colour\r\n* Secondary Colour",
                     "useSpacing": true
                 },
                 {
@@ -51,6 +51,6 @@
             "class": "DepictionStackView"
         }
     ],
-    "tintColor": "#00FF00",
+    "tintColor": "#ff325b",
     "minVersion": "0.1"
 }
