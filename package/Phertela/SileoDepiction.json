@@ -37,7 +37,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "# Phertela\r\n### Customizable Widget for your Homescreen.\r\n\r\nThis widget was made as per request of:\r\n<small style='color:#ff325b;'>A-N-O-N-Y-M [iOS 12.1.0]#0344</small> who you can find on Discord.\r\n\r\n</br>\r\nFeatures include:\r\n\r\n* Temperature\r\n* Weather Overview\r\n* Chance of Rain\r\n* Weather Icons\r\n* Battery Percentage\r\n* WiFi Indicator\r\n* Cellular Indicator\r\n* Apps Title\r\n\r\n</br>\r\n\r\nCustomize it to your needs including:\r\n</br>\r\n* German & English Language\r\n* Customize Padding Values:\r\n* Top Inset\r\n* Side Inset\r\n* Primary Colour\r\n* Secondary Colour",
+                    "markdown": "# Phertela\r\n### Customizable Widget for your Homescreen.\r\n\r\n</br>\r\nFeatures include:\r\n\r\n* Temperature\r\n* Weather Overview\r\n* Chance of Rain\r\n* Weather Icons\r\n* Battery Percentage\r\n* WiFi Indicator\r\n* Cellular Indicator\r\n* Apps Title\r\n\r\n</br>\r\n\r\nCustomize it to your needs including:\r\n</br>\r\n* German & English Language\r\n* Customize Padding Values:\r\n* Top Inset\r\n* Side Inset\r\n* Primary Colour\r\n* Secondary Colour\r\n\r\nThis widget was designed by:\r\n<small style='color:#ff325b;'>A-N-O-N-Y-M [iOS 12.1.0]#0344</small> who you can find on Discord.",
                     "useSpacing": true
                 },
                 {
@@ -65,6 +65,15 @@
                 {
                     "text": "PINPAL",
                     "title": "Developer",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                },
+                {
+                    "text": "A-N-O-N-Y-M",
+                    "title": "Designer",
                     "class": "DepictionTableTextView"
                 },
                 {
