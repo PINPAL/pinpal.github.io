@@ -44,16 +44,6 @@
                     "class": "DepictionSeparatorView"
                 },
                 {
-                    "text": "1.0",
-                    "title": "Version",
-                    "class": "DepictionTableTextView"
-                },
-                {
-                    "text": "06-07-2019",
-                    "title": "Released",
-                    "class": "DepictionTableTextView"
-                },
-                {
                     "text": "Free",
                     "title": "Price",
                     "class": "DepictionTableTextView"
@@ -86,6 +76,22 @@
             "tabname": "Changes",
             "class": "DepictionStackView",
             "views": [
+                {
+                    "title": "Version 1.3",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Update Changes:\r\n\r\n* Removed RAM Free Feature:\r\n* Added Cellular Network Type Indicator\r\n* Added Carrer Name",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 06-07-2019</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
                 {
                     "title": "Version 1.2",
                     "useBoldText": true,
