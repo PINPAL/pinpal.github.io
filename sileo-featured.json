@@ -8,6 +8,12 @@
         "title": "Jool Patch",
         "package": "com.pinpal.joolpatch",
         "hideShadow": false
+      },
+      {
+        "url": "https://pinpal.github.io/package/Phertela/SileoBanner.jpg",
+        "title": "Phertela Widget",
+        "package": "com.pinpal.phertela",
+        "hideShadow": false
       }
     ]
   }

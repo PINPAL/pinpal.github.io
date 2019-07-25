@@ -5,14 +5,12 @@
         <link rel="icon" href="assets/favicon.ico" class="next-head" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/homepage/stylesheet.css">
-        <link rel="stylesheet" type="text/css" href="assets/global-navbar/navbar.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
       </head>
 <body>
 
 <div id="navbarContainer">
     <div id="navbar">
-          <a href="https://pinpal.github.io/"><img class="logo" src="assets/pinpal.png"></a>
           <a href="https://pinpal.github.io/"><h1 id="title">PINPAL</h1></a>
 
         <div class="navIconContainer">
@@ -44,53 +42,58 @@
       </div>
   </div>
 
+  <div id="topBanner">
+    <img src="assets/pinpal.png">
+    <h1>PINPAL</h1>
+    <h2>iOS and Web Developer</h2>
+  </div>
+
   <div class="wrapper">
 
-  <div class="subsection">
-  <h2 id="subtitle">Pages</h2>
-  <h2 id="subsubtitle">Webpages or Guides on this Site.</h2>
+    <div id="featuredPages">
 
-  <button class="button" onclick="expand('scrollerPages')" id="scrollerPagesButton">
-    <img class="buttonIcon" src="/assets/homepage/expand.png">Show More
-  </button>
+      <a href="/stock-identifiers/">
+        <div class="largeBox" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
+          <div class="largeBoxInner">
+              <img src="assets/page-icons/bundleID.png">
+              <h1>iOS Bundle Identifiers</h1>
+              <h2>A complete list of the stock Applications BundleIDs in iOS 12.</br></br>Long table list designed to assist with the creation of iOS themes.</h2>
+          </div>
+        </div>
+      </a>
 
-  <div class="scrollerContainer" id="scrollerPagesContainer">
-      <div class="scroller" id="scrollerPages">
-      
-        <a href="/stock-identifiers/">
-        <div class="bigBox">
-          <div class="packageIconHolder" style="background: linear-gradient(to right, #3B8CB7 , #0A76E7)">
-            <img src="assets/page-icons/bundleID.png" class="packageicon";>
+      <a href="/theme-guide/">
+        <div class="largeBox" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
+          <div class="largeBoxInner">
+              <img src="assets/page-icons/anemone.png">
+              <h1>iOS Theme Guide</h1>
+              <h2>A beginners guide to creating a theme for SnowBoard or Anemone.</br></br>In-depth guide for beginners in getting started with iOS theming.</h2>
           </div>
-          <div class="packageContentHolder">
-            <span class="packageTitle">iOS Bundle Identifiers</span>
-            <br><span class="packageDescription">A complete list of the stock Applications BundleIDs in iOS 11.</span>
+        </div>
+      </a>
+
+      <a href="/shortcuts/">
+        <div class="largeBox" style="background: linear-gradient(to right, #510491 , #5f027a)">
+          <div class="largeBoxInner">
+              <img src="assets/page-icons/home.png">
+              <h1>Shortcuts Homepage</h1>
+              <h2>A clean and minimal browser homepage full of shortcuts.</br></br>Customisable page for adding shortcuts to your favourite sites.</h2>
           </div>
-        </div></a>
-        
-        <a href="/theme-guide/">
-        <div class="bigBox">
-          <div class="packageIconHolder" style="background: linear-gradient(to right, #d3325f , #FA3D72)">
-            <img src="assets/page-icons/anemone.png" class="packageicon";>
+        </div>
+      </a>
+
+      <a href="https://pinpal.github.io/Sileo-Depiction-WebViews/repo/?repo=https://pinpal.github.io">
+        <div class="largeBox" style="background: linear-gradient(to right, #2EE3CE, #09A7A8)">
+          <div class="largeBoxInner">
+              <img src="assets/page-icons/repoViewer.png">
+              <h1>Repo Viewer</h1>
+              <h2>View Sileo/Cydia Repos in a fancy webpage.</br></br>Also supports viewing Sileo Depictions - which allows Sileo Depictions in Cydia!</h2>
           </div>
-          <div class="packageContentHolder">
-            <span class="packageTitle">iOS Theme Guide</span>
-            <br><span class="packageDescription">A beginners guide to creating a theme for SnowBoard or Anemone.</span>
-          </div>
-        </div></a>
-      
-        <a href="/shortcuts/">
-        <div class="bigBox">
-          <div class="packageIconHolder" style="background: linear-gradient(to right, #510491 , #5f027a)">
-            <img src="assets/page-icons/home.png" class="packageicon";>
-          </div>
-          <div class="packageContentHolder">
-            <span class="packageTitle">Shortcuts Homepage</span>
-            <br><span class="packageDescription">A dark, clean and minimal browser homepage full of shortcuts.</span>
-          </div>
-        </div></a>
-  
-</div></div></div>
+        </div>
+      </a>
+
+    </div>
+
 <div class="subsection">
 <h2 id="subtitle">Repository</h2>
 <h2 id="subsubtitle">Tweaks and Themes on this Repo.</h2>
@@ -100,6 +103,8 @@
 </button>
 
 <div class="scrollerContainer" id="scrollerRepoContainer">
+  <div class="scrollerGradientLeft"></div>
+  <div class="scrollerGradientRight"></div>
   <div class="scroller" id="scrollerRepo">
 
       <a href="/depiction/?DarkMode">
@@ -201,6 +206,8 @@
   </button>
 
   <div class="scrollerContainer" id="scrollerProjectsContainer">
+    <div class="scrollerGradientLeft"></div>
+    <div class="scrollerGradientRight"></div>
     <div class="scroller" id="scrollerProjects">
 
         <a href="https://repo.dynastic.co/depiction/94936559895183360/?udid=1afeff9feffafeffafef0afeffafeffaf0ffaf09&model=iPhone9,4">
@@ -408,8 +415,5 @@
     </div></div></div>
 
 </body>
-<head>
-    <script src="assets/homepage/javascript.js"></script>
-    <script src="assets/global-navbar/navbar.js"></script>
-</head>
+<script src="assets/homepage/javascript.js"></script>
 </html>

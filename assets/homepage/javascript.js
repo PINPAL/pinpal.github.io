@@ -1,6 +1,5 @@
 
 //Backup content of original scrollers (for un-duplicating on expand)
-var originalScrollersPages = document.getElementById("scrollerPages").innerHTML
 var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML
 
@@ -57,9 +56,7 @@ function expand(classID) {
         document.getElementById(classID + 'Container').style.maxHeight = "100%";
         document.getElementById(classID).style.minWidth = "100%";
         document.getElementById(classID + 'Button').innerHTML = '<img class="buttonIcon" src="/assets/homepage/collapse.png">Show Less';
-        if (classID == "scrollerPages") {
-            document.getElementById(classID).innerHTML = originalScrollersPages
-        } else if (classID == "scrollerRepo") {
+        if (classID == "scrollerRepo") {
             document.getElementById(classID).innerHTML = originalScrollersRepo
         } else if (classID == "scrollerProjects") {
             document.getElementById(classID).innerHTML = originalScrollersProjects
@@ -74,9 +71,6 @@ function expand(classID) {
 
 //Reload scrollers width on window resize
 window.onresize = function(event) {
-    if (document.getElementById("scrollerPages").innerHTML != originalScrollersPages) {
-        setWidth("scrollerPages")
-    }
     if (document.getElementById("scrollerRepo").innerHTML != originalScrollersRepo) {
         setWidth("scrollerRepo")
     }
@@ -86,6 +80,5 @@ window.onresize = function(event) {
 }
 
 //Duplicate and fit width of all scrollers
-duplicateContentOf("scrollerPages")
 duplicateContentOf("scrollerRepo")
 duplicateContentOf("scrollerProjects")
