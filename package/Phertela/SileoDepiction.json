@@ -93,6 +93,9 @@
                     "class": "DepictionMarkdownView"
                 },
                 {
+                    "class": "DepictionSeparatorView"
+                },
+                {
                     "title": "Version 1.2",
                     "useBoldText": true,
                     "useBottomMargin": true,
