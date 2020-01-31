@@ -41,6 +41,7 @@ Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
 Depiction: https://pinpal.github.io/depiction/?ZeppelinLogo
+SileoDepiction: https://pinpal.github.io/package/ZeppelinLogo/SileoDepiction.json
 
 Package: com.pinpal.seven4eleven
 Version: 1.1
@@ -79,6 +80,7 @@ Depends: com.colbyroark.lux
 Architecture: iphoneos-arm
 Author: PINPAL
 Depiction: https://pinpal.github.io/depiction/?LuxPatch
+SileoDepiction: https://pinpal.github.io/package/LuxPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Lux" Theme
 Maintainer: PINPAL
