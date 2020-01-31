@@ -9,10 +9,11 @@ for (i = 0; i < packages.length; i++) {
     var a = document.createElement("a")
     if (packages[i].hasOwnProperty("SileoDepiction")) {
         a.href = "https://pinpal.github.io/Sileo-Depiction-WebViews/"
-                    + "?json="       + packages[i].SileoDepiction
+                    + "?json="      + packages[i].SileoDepiction
                     + "&name="      + packages[i].Name
                     + "&section="   + packages[i].Section
                     + "&dev="       + packages[i].Author
+                    + "&icon="      + "https://pinpal.github.io/assets/page-icons/" + (packages[i].Name).replace(/ |-|:|;/g, "").toLowerCase() + ".png"  
         color = JSON.parse(loadXMLDoc(packages[i].SileoDepiction)).tintColor
     } else {
         a.href = packages[i].Depiction
