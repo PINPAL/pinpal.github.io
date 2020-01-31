@@ -1,0 +1,90 @@
+{
+    "class": "DepictionTabView",
+    "headerImage": "https://pinpal.github.io/package/JoolPatch/SileoBanner.jpg",
+    "tabs": [
+        {
+            "tabname": "Details",
+            "class": "DepictionStackView",
+            "views": [
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "Jool Patch",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                },
+                {
+                    "itemCornerRadius": 12,
+                    "itemSize": "{160, 275.41333333333336}",
+                    "screenshots": [
+                        {
+                            "url": "https://pinpal.github.io/package/JoolPatch/1.png",
+                            "accessibilityText": "Screenshot0"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/JoolPatch/2.png",
+                            "accessibilityText": "Screenshot1"
+                        }
+                    ],
+                    "class": "DepictionScreenshotsView"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "This patch includes 15+ Additional Icons for the theme 'Jool' by ColbyRoark",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "text": "Free",
+                    "title": "Price",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                },
+                {
+                    "text": "PINPAL",
+                    "title": "Developer",
+                    "class": "DepictionTableTextView"
+                },
+                {
+                    "spacing": 8,
+                    "class": "DepictionSpacerView"
+                }
+            ]
+        },
+        {
+            "tabname": "Changes",
+            "class": "DepictionStackView",
+            "views": [
+                {
+                    "title": "What's New:",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Update Changes:\r\n\r\n* • Added 15+ Icons",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 05/06/19</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                }
+            ]
+        }
+    ],
+    "tintColor": "#18DF9D",
+    "minVersion": "0.1"
+}

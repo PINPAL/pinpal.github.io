@@ -108,6 +108,7 @@ Depends: com.colbyroark.jool
 Architecture: iphoneos-arm
 Author: PINPAL
 Depiction: https://pinpal.github.io/depiction/?JoolPatch
+SileoDepiction: https://pinpal.github.io/package/JoolPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Jool" Theme
 Maintainer: PINPAL
