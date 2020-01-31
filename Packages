@@ -40,7 +40,7 @@ Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
-Depiction: https://pinpal.github.io/depiction/?ZeppelinLogo
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/ZeppelinLogo/SileoDepiction.json&name=Zeppelin:%20Star%20Wars:%20Clones&section=Addons%20-%20Zeppelin&dev=iLewisCx
 SileoDepiction: https://pinpal.github.io/package/ZeppelinLogo/SileoDepiction.json
 
 Package: com.pinpal.seven4eleven
@@ -79,7 +79,7 @@ Version: 1.0
 Depends: com.colbyroark.lux
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction: https://pinpal.github.io/depiction/?LuxPatch
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/LuxPatch/SileoDepiction.json&name=Lux%20-%20Extra%20Icons&section=Themes&dev=PINPAL
 SileoDepiction: https://pinpal.github.io/package/LuxPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Lux" Theme
@@ -109,7 +109,7 @@ Version: 1.0
 Depends: com.colbyroark.jool
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction: https://pinpal.github.io/depiction/?JoolPatch
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/JoolPatch/SileoDepiction.json&name=Jool%20-%20Extra%20Icons&section=Themes&dev=PINPAL
 SileoDepiction: https://pinpal.github.io/package/JoolPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Jool" Theme
@@ -128,7 +128,7 @@ Author: iLewisCx
 Maintainer: PINPAL (pinpal.official@gmail.com)
 Section: Addons - Zeppelin
 Depends: com.alexzielenski.zeppelin
-Depiction: https://pinpal.github.io/depiction/?CloneHelmets
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/CloneHelmets/SileoDepiction.json&name=Zeppelin:%20Star%20Wars%20and%20TCW%20Clones&section=Addons%20-%20Zeppelin&dev=iLewisCx
 SileoDepiction: https://pinpal.github.io/package/CloneHelmets/SileoDepiction.json
 Size: 155502
 MD5sum: 37fa4653765c62abbd2ddf31cb87d2d8
