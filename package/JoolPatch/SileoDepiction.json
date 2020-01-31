@@ -7,8 +7,14 @@
             "class": "DepictionStackView",
             "views": [
                 {
-                    "class": "DepictionSubheaderView",
+                    "class": "DepictionHeaderView",
                     "title": "Jool Patch",
+                    "useBoldText": true,
+                    "useBottomMargin": false
+                },
+                {
+                    "class": "DepictionSubheaderView",
+                    "title": "Additional Icons for Jool",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
@@ -33,7 +39,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This patch includes 15+ Additional Icons for the theme 'Jool' by ColbyRoark",
+                    "markdown": "This patch includes 15+ Additional Icons for the theme Jool by ColbyRoark [(Get it on Packix)](https://repo.packix.com/package/com.colbyroark.jool/)\n\nThese icons were created in order to mimic the original design style.",
                     "useSpacing": true
                 },
                 {
@@ -70,7 +76,7 @@
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Update Changes:\r\n\r\n* • Added 15+ Icons",
+                    "markdown": "Update Changes:\r\n\r\n* Added 15+ Icons",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },
