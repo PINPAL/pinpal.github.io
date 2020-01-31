@@ -1,6 +1,6 @@
 {
     "class": "DepictionTabView",
-    "headerImage": "https://pinpal.github.io/package/JoolPatch/SileoBanner.jpg",
+    "headerImage": "https://pinpal.github.io/package/LuxPatch/SileoBanner.jpg",
     "tabs": [
         {
             "tabname": "Details",
@@ -8,13 +8,13 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
-                    "title": "Jool Patch",
+                    "title": "Lux Patch",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
                 {
                     "class": "DepictionSubheaderView",
-                    "title": "Additional Icons for Jool",
+                    "title": "Additional Icons for Lux",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
@@ -27,11 +27,15 @@
                     "itemSize": "{160, 275.41333333333336}",
                     "screenshots": [
                         {
-                            "url": "https://pinpal.github.io/package/JoolPatch/1.png",
+                            "url": "https://pinpal.github.io/package/LuxPatch/1.png",
                             "accessibilityText": "Screenshot0"
                         },
                         {
-                            "url": "https://pinpal.github.io/package/JoolPatch/2.png",
+                            "url": "https://pinpal.github.io/package/LuxPatch/2.png",
+                            "accessibilityText": "Screenshot1"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/LuxPatch/3.png",
                             "accessibilityText": "Screenshot1"
                         }
                     ],
@@ -39,7 +43,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This patch includes 15+ Additional Icons for the theme Jool by ColbyRoark [(Get it on Packix)](https://repo.packix.com/package/com.colbyroark.jool/)\n\nThese icons were created in order to mimic the original design style.",
+                    "markdown": "This patch includes 40+ Additional Icons for the theme Lux by ColbyRoark [(Get it on Packix)](https://repo.packix.com/package/com.colbyroark.Lux/)\n\nThese icons were created in order to mimic the original design style.",
                     "useSpacing": true
                 },
                 {
@@ -76,7 +80,7 @@
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Update Changes:\r\n\r\n* Added 15+ Icons",
+                    "markdown": "Update Changes:\r\n\r\n* Added 40+ Icons",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },
@@ -91,6 +95,6 @@
             ]
         }
     ],
-    "tintColor": "#5e9e95",
+    "tintColor": "#0d8b71",
     "minVersion": "0.1"
 }

@@ -1,4 +1,58 @@
 
+// Decode Packages File into Object Array
+packages = decodePackagesFile(loadXMLDoc("https://pinpal.github.io/Packages"))
+console.log(packages)
+// Render Packages File
+for (i = 0; i < packages.length; i++) {
+    var color = ""
+    // Create Wrapper Link
+    var a = document.createElement("a")
+    if (packages[i].hasOwnProperty("SileoDepiction")) {
+        a.href = "https://pinpal.github.io/Sileo-Depiction-WebViews/"
+                    + "?json="       + packages[i].SileoDepiction
+                    + "&name="      + packages[i].Name
+                    + "&section="   + packages[i].Section
+                    + "&dev="       + packages[i].Author
+        color = JSON.parse(loadXMLDoc(packages[i].SileoDepiction)).tintColor
+    } else {
+        a.href = packages[i].Depiction
+    }
+    // Create Bigbox
+    var bigBox = document.createElement("div")
+    bigBox.className = "bigBox"
+    // Create Package Content Holder
+    var packageContentHolder = document.createElement("div")
+    packageContentHolder.className = "packageContentHolder"
+    // Create Tweak Name
+    var packageTitle = document.createElement("span")
+    packageTitle.className = "packageTitle"
+    packageTitle.innerText = packages[i].Name
+    // Create Tweak Description
+    var packageDescription = document.createElement("span")
+    packageDescription.className = "packageDescription"
+    packageDescription.innerText = packages[i].Description
+    // Append Name and Description to Content Holder
+    packageContentHolder.appendChild(packageTitle)
+    packageContentHolder.innerHTML += "</br>"
+    packageContentHolder.appendChild(packageDescription)
+    // Create Package Icon
+    var packageIconHolder = document.createElement("div")
+    packageIconHolder.className = "packageIconHolder"
+    if (color != "") {
+        packageIconHolder.style.background = color
+    }
+    var img = document.createElement("img")
+    img.className = "packageicon"
+    img.src = "assets/page-icons/" + (packages[i].Name).replace(/ |-|:|;/g, "").toLowerCase() + ".png"
+    packageIconHolder.appendChild(img)
+    // Append bigBox to a
+    bigBox.appendChild(packageIconHolder)
+    bigBox.appendChild(packageContentHolder)
+    a.appendChild(bigBox)
+    // Add to Scroller
+    document.getElementById("scrollerRepo").appendChild(a)
+}
+
 //Backup content of original scrollers (for un-duplicating on expand)
 var originalScrollersRepo = document.getElementById("scrollerRepo").innerHTML
 var originalScrollersProjects = document.getElementById("scrollerProjects").innerHTML

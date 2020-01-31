@@ -1,6 +1,6 @@
 {
     "class": "DepictionTabView",
-    "headerImage": "https://pinpal.github.io/package/JoolPatch/SileoBanner.jpg",
+    "headerImage": "https://pinpal.github.io/package/CloneHelmets/SileoBanner.jpg",
     "tabs": [
         {
             "tabname": "Details",
@@ -8,13 +8,13 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
-                    "title": "Jool Patch",
+                    "title": "Star Wars: Clones/Ships",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
                 {
                     "class": "DepictionSubheaderView",
-                    "title": "Additional Icons for Jool",
+                    "title": "Zeppelin Logos",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
@@ -27,19 +27,15 @@
                     "itemSize": "{160, 275.41333333333336}",
                     "screenshots": [
                         {
-                            "url": "https://pinpal.github.io/package/JoolPatch/1.png",
+                            "url": "https://pinpal.github.io/package/ZeppelinLogo/1.png",
                             "accessibilityText": "Screenshot0"
-                        },
-                        {
-                            "url": "https://pinpal.github.io/package/JoolPatch/2.png",
-                            "accessibilityText": "Screenshot1"
                         }
                     ],
                     "class": "DepictionScreenshotsView"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This patch includes 15+ Additional Icons for the theme Jool by ColbyRoark [(Get it on Packix)](https://repo.packix.com/package/com.colbyroark.jool/)\n\nThese icons were created in order to mimic the original design style.",
+                    "markdown": "Star Wars Clones, Ships and Clone Commanders for Zeppelin.\n\nThese icons were created in order to mimic the original design style.",
                     "useSpacing": true
                 },
                 {
@@ -55,7 +51,7 @@
                     "class": "DepictionSpacerView"
                 },
                 {
-                    "text": "PINPAL",
+                    "text": "iLewisCx01",
                     "title": "Developer",
                     "class": "DepictionTableTextView"
                 },
@@ -76,12 +72,12 @@
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Update Changes:\r\n\r\n* Added 15+ Icons",
+                    "markdown": "Update Changes:\r\n\r\n* Name changed from Green Commander to Clone Commander (Green) \n* Name changed from Red Commander to Clone Commander (Red) \n* Name changed from Stealth Trooper to 212th Shadow Trooper \n* Fixed Clone Command (Green) Size",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },
                 {
-                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 05/06/19</small>",
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 13/06/18</small>",
                     "useRawFormat": true,
                     "class": "DepictionMarkdownView"
                 },
@@ -91,6 +87,6 @@
             ]
         }
     ],
-    "tintColor": "#5e9e95",
+    "tintColor": "#66806f",
     "minVersion": "0.1"
 }
