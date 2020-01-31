@@ -545,6 +545,11 @@ body {
   box-sizing: border-box;
   display: inline-block;
 }
+@media only screen and (max-width: 800px) {
+  #topBanner #hiddenInfo {
+    display: block;
+  }
+}
 #topBanner h1 {
   font-size: 24pt;
   font-weight: bold;
