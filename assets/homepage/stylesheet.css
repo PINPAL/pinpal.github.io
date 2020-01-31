@@ -1,5 +1,21 @@
+/* Font */
+@font-face {
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2);
+}
+@font-face {
+  font-family: Google Sans;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwY.woff2);
+}
+
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Google Sans', Roboto, sans-serif !important;
+  font-weight: 400;
+  outline: none !important;
 }
 
 html {
@@ -19,34 +35,31 @@ body {
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-   background: rgba(255,255,255,0.20);
+   background: rgba(0,0,0,0.25);
    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-   background: rgba(255,255,255,0.25);;
+   background: rgba(0,0,0,0.5);;
 }
 
 /* Button */
 .button {
   display: none;
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  background: rgb(130, 130, 140);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   text-align: center;
   vertical-align: middle;
   position: absolute;
-  border-radius: 25px;
+  border-radius: 100px;
   font-size: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 0;
   padding-right: 0;
-  color:rgba(255,255,255,0);
+  color:rgba(0,0,0,0);
   min-width: 35px;
   min-height: 35px;
   max-width: 35px;
@@ -64,10 +77,10 @@ body {
   transition-delay: 0.5s;
 }
 .button:hover {
+  background: rgb(120, 120, 130);
   color: white;
   padding-left: 20px;
   padding-right: 20px;
-  filter: hue-rotate(90deg);
   font-size: 20px;
   max-width: 100%;
   transition-delay: 0s;
@@ -102,7 +115,7 @@ body {
   color: rgba(0,0,0,.6); /* fallback for IE */
   color: var(--light-text-color);
   font-size: 13pt;
-  font-weight: normal;
+  font-weight: 500;
   text-align: left;
   margin-left: 15px;
   line-height: 1.0;
@@ -235,7 +248,7 @@ body {
 .packageTitle {
   color: black; /* fallback for IE */
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14pt;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -366,21 +379,25 @@ body {
   right: 0;
   transform: translateY(-50%);
 }
+.navIconContainer a {
+  text-decoration: none;
+}
 /* Navbar Button */
 .navButton {
+  font-weight: bold;
+  position: relative;
+  white-space: nowrap;
   border: none;
   vertical-align: middle;
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
-  text-align: center;
-  border-radius: 25px;
+  border: 2px solid rgba(255,255,255,.075);
+  border-radius: 100px;
   box-sizing: border-box;
-  padding-top: 6px;
-  padding-left: 5px;
   color:rgba(255,255,255,0);
   min-width: 40px;
   max-width: 40px;
   min-height: 40px;
   max-height: 40px;
+  line-height: 37px;
   display: inline-block;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -390,18 +407,21 @@ body {
   -ms-transition: all 0.3s ease;
 }
 .navButton:hover {
+  background: white;
   cursor: pointer;
-  color: white;
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 200px;
-  font-size: 16pt;
+  color: black;
+  padding-left: 40px;
+  padding-right: 10px;
+  max-width: 900px;
+  font-size: 12pt;
 }
 /*Navbar Button Icons*/
 .navButtonIcon {
-  margin-left: 4px;
-  margin-top: 3px;
-  vertical-align: middle;
+  opacity: .4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7px;
   width:22px;
   height:22px;
   transition: all 0.3s ease;
@@ -411,16 +431,8 @@ body {
   -ms-transition: all 0.3s ease;
 }
 .navButton:hover .navButtonIcon {
-  margin-left: 0;
-  margin-right: 10px;
-}
-
-/*Navbar logo*/
-.logo {
-  vertical-align: middle;
-  width: 33px;
-  margin-left: 10px;
-  margin-right: 10px;
+  opacity: 1;
+  filter: invert(1);
 }
 
 /*Navbar Text*/
@@ -428,9 +440,9 @@ body {
   margin: 0 !important;
   vertical-align: middle;
   display: inline-block;
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.6);
   font-size: 15pt;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /* Top Banner */
@@ -447,11 +459,11 @@ body {
   -webkit-animation-fill-mode: forwards;
   animation-name: crossfade-image;
   -webkit-animation-name: crossfade-image;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+  animation-duration: .6s;
+  -webkit-animation-duration: .6s;
 }
 #topBanner button {
-  font-weight: 600;
+  font-weight: normal;
   margin-top: 20px;
   position: relative;
   border: 2px solid rgba(255,255,255,.6);
@@ -469,6 +481,7 @@ body {
   -ms-transition: background 0.3s ease, margin 0.3s ease max-height 0.3s ease;
 }
 #topBanner button:hover {
+  font-weight: bold;
   border: 2px solid rgba(255,255,255,.6);
   background: white;
   color: black;
@@ -478,7 +491,7 @@ body {
   opacity: 0;
   top: calc(100% + 20px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(.5);
   position: absolute;
   background-image: url(/assets/homepage/expand.png);
   background-size: cover;
@@ -487,22 +500,26 @@ body {
   color: rgba(0,0,0,0);
   width: 25px;
   height: 25px;
-  transition: opacity 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
+  -moz-transition: opacity 0.3s ease, transform 0.3s ease;
+  -o-transition: opacity 0.3s ease, transform 0.3s ease;
+  -ms-transition: opacity 0.3s ease, transform 0.3s ease;
 }
 #topBanner button:hover::after {
+  transform: translateX(-50%) scale(1);
   opacity: 1;
 }
 #topBanner button:hover {
   margin-bottom: 25px;
 }
 #topBanner #hiddenInfo {
-  margin: 0 auto;
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
+  margin: 0 auto;
   max-height: 0;
   transition: max-height 2.5s ease;
   -webkit-transition: max-height 2.5s ease;
@@ -516,33 +533,45 @@ body {
   font-size: 16pt;
   font-weight: bold;
   padding: 5px;
-  border-bottom: solid 2px rgba(255,255,255,0.25);
+  border-bottom: solid 2px rgba(255,255,255,0.2);
+}
+#topBanner #hiddenInfo h3:nth-child(n+2) {
+  margin-top: 50px;
+}
+#topBanner #hiddenInfo div {
+  max-width: 600px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 #topBanner h1 {
   font-size: 24pt;
   font-weight: bold;
 }
 #topBanner h2 {
+  overflow: hidden;
   font-size: 16pt;
   font-weight: normal;
 }
 #topBanner p {
+  color: rgba(255,255,255,0.7);
   text-align: justify;
   text-align-last: center;
   box-sizing: border-box;
   font-size: 13pt;
   font-weight: normal;
 }
-#hiddenInfo.animate *:nth-child(1){ animation-delay: .1s; }
-#hiddenInfo.animate *:nth-child(2){ animation-delay: .15s; }
-#hiddenInfo.animate *:nth-child(3){ animation-delay: .2s; }
-#hiddenInfo.animate *:nth-child(4){ animation-delay: .25s; }
-#hiddenInfo.animate *:nth-child(5){ animation-delay: .3s; }
-#hiddenInfo.animate *:nth-child(6){ animation-delay: .35s; }
-#hiddenInfo.animate *:nth-child(7){ animation-delay: .4s; }
-#hiddenInfo.animate *:nth-child(8){ animation-delay: .45s; }
-#hiddenInfo.animate *:nth-child(9){ animation-delay: .5s; }
-#hiddenInfo.animate * {
+#hiddenInfo.animate div *:nth-child(1){ animation-delay: .1s; }
+#hiddenInfo.animate div *:nth-child(2){ animation-delay: .15s; }
+#hiddenInfo.animate div *:nth-child(3){ animation-delay: .2s; }
+#hiddenInfo.animate div *:nth-child(4){ animation-delay: .25s; }
+#hiddenInfo.animate div *:nth-child(5){ animation-delay: .3s; }
+#hiddenInfo.animate div *:nth-child(6){ animation-delay: .35s; }
+#hiddenInfo.animate div *:nth-child(7){ animation-delay: .4s; }
+#hiddenInfo.animate div *:nth-child(8){ animation-delay: .45s; }
+#hiddenInfo.animate div *:nth-child(9){ animation-delay: .5s; }
+#hiddenInfo.animate div * {
   opacity: 0;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -631,7 +660,7 @@ body {
 }
 .largeBoxInner h1 {
   font-size: 16pt;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0;
   margin-bottom: 15px;
 }

@@ -21,13 +21,13 @@ function expandAbout() {
     topBanner.getElementsByTagName("button")[0].style.opacity = "0"
     topBanner.getElementsByTagName("button")[0].style.margin = "0"
     topBanner.getElementsByTagName("h1")[0].innerText = "Josh"
-    topBanner.getElementsByTagName("h2")[0].innerText = 'Also known as "PINPAL"'
+    topBanner.getElementsByTagName("h2")[0].style.height = "0"
     document.getElementById("hiddenInfo").style.maxHeight = "5000px"
     document.getElementById("hiddenInfo").classList.add("animate")
     topBanner.getElementsByTagName("img")[0].classList.add("animate")
     setTimeout(function(){
         topBanner.getElementsByTagName("img")[0].src = "assets/homepage/animoji.png"
-    }, 500);
+    }, 300);
 }
 
 //Touch Display Detection

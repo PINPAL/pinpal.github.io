@@ -107,7 +107,7 @@ html {
 .navButton {
   border: none;
   vertical-align: middle;
-  background: linear-gradient(to right, #55B49D , #2B7DCA);
+  background: none;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   border-radius: 25px;
