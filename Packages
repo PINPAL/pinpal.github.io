@@ -64,7 +64,8 @@ Version: 1.0
 Depends: me.aesign.sential
 Architecture: iphoneos-arm
 Author: PINPAL
-Depiction: https://pinpal.github.io/depiction/?SentialPatch
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/SentialPatch/SileoDepiction.json&name=Sential%20-%20Extra%20Icons&section=Themes&dev=PINPAL
+SileoDepiction: https://pinpal.github.io/package/SentialPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Sential" Theme
 Maintainer: PINPAL

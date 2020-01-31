@@ -7,13 +7,13 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
-                    "title": "Lux Patch",
+                    "title": "Sential Patch",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
                 {
                     "class": "DepictionSubheaderView",
-                    "title": "Additional Icons for Lux",
+                    "title": "Additional Icons for Sential",
                     "useBoldText": true,
                     "useBottomMargin": false
                 },
@@ -26,15 +26,15 @@
                     "itemSize": "{160, 275.41333333333336}",
                     "screenshots": [
                         {
-                            "url": "https://pinpal.github.io/package/LuxPatch/1.png",
+                            "url": "https://pinpal.github.io/package/SentialPatch/1.png",
                             "accessibilityText": "Screenshot0"
                         },
                         {
-                            "url": "https://pinpal.github.io/package/LuxPatch/2.png",
+                            "url": "https://pinpal.github.io/package/SentialPatch/2.png",
                             "accessibilityText": "Screenshot1"
                         },
                         {
-                            "url": "https://pinpal.github.io/package/LuxPatch/3.png",
+                            "url": "https://pinpal.github.io/package/SentialPatch/3.png",
                             "accessibilityText": "Screenshot1"
                         }
                     ],
@@ -42,7 +42,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "This patch includes 40+ Additional Icons for the theme Lux by ColbyRoark [(Get it on Packix)](https://repo.packix.com/package/com.colbyroark.Lux/)\n\nThese icons were created in order to mimic the original design style.",
+                    "markdown": "This patch includes 40+ Additional Icons for the theme 'Sential' by Aesign [(Get it on Dynastic)](https://repo.dynastic.co/package/sential)\n\nThese icons were created in order to mimic the original design style.",
                     "useSpacing": true
                 },
                 {
@@ -84,7 +84,7 @@
                     "class": "DepictionMarkdownView"
                 },
                 {
-                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 05/06/19</small>",
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 06/10/18</small>",
                     "useRawFormat": true,
                     "class": "DepictionMarkdownView"
                 },
@@ -94,6 +94,6 @@
             ]
         }
     ],
-    "tintColor": "#0d8b71",
+    "tintColor": "#5e9e95",
     "minVersion": "0.1"
 }
