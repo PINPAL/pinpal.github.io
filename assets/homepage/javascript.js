@@ -14,6 +14,22 @@ function calculateBoxSize() {
     }
 }
 
+//About Me Button
+var topBanner = document.getElementById("topBanner")
+function expandAbout() {
+    topBanner.getElementsByTagName("button")[0].style.maxHeight = "0"
+    topBanner.getElementsByTagName("button")[0].style.opacity = "0"
+    topBanner.getElementsByTagName("button")[0].style.margin = "0"
+    topBanner.getElementsByTagName("h1")[0].innerText = "Josh"
+    topBanner.getElementsByTagName("h2")[0].innerText = 'Also known as "PINPAL"'
+    document.getElementById("hiddenInfo").style.maxHeight = "5000px"
+    document.getElementById("hiddenInfo").classList.add("animate")
+    topBanner.getElementsByTagName("img")[0].classList.add("animate")
+    setTimeout(function(){
+        topBanner.getElementsByTagName("img")[0].src = "assets/homepage/animoji.png"
+    }, 500);
+}
+
 //Touch Display Detection
 window.addEventListener('touchstart', function onFirstTouch() {
     console.log("tapped")

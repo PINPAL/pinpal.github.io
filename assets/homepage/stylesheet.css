@@ -442,6 +442,82 @@ body {
   color: white;
   text-align: center;
 }
+#topBanner img.animate {
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: crossfade-image;
+  -webkit-animation-name: crossfade-image;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+}
+#topBanner button {
+  font-weight: 600;
+  margin-top: 20px;
+  position: relative;
+  border: 2px solid rgba(255,255,255,.6);
+  border-radius: 100px;
+  font-size: 11pt;
+  padding: 5px 25px;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(255,255,255,.6);
+  transition: background 0.3s ease, margin 0.3s ease, max-height 0.3s ease;
+  -webkit-transition: background 0.3s ease, margin 0.3s ease max-height 0.3s ease;
+  -moz-transition: background 0.3s ease, margin 0.3s ease max-height 0.3s ease;
+  -o-transition: background 0.3s ease, margin 0.3s ease max-height 0.3s ease;
+  -ms-transition: background 0.3s ease, margin 0.3s ease max-height 0.3s ease;
+}
+#topBanner button:hover {
+  border: 2px solid rgba(255,255,255,.6);
+  background: white;
+  color: black;
+}
+#topBanner button::after {
+  overflow: hidden;
+  opacity: 0;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-image: url(/assets/homepage/expand.png);
+  background-size: cover;
+  display: block;
+  content: "i";
+  color: rgba(0,0,0,0);
+  width: 25px;
+  height: 25px;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+}
+#topBanner button:hover::after {
+  opacity: 1;
+}
+#topBanner button:hover {
+  margin-bottom: 25px;
+}
+#topBanner #hiddenInfo {
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 2.5s ease;
+  -webkit-transition: max-height 2.5s ease;
+  -moz-transition: max-height 2.5s ease;
+  -o-transition: max-height 2.5s ease;
+  -ms-transition: max-height 2.5 ease;
+}
+#topBanner #hiddenInfo h3 {
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 16pt;
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: solid 2px rgba(255,255,255,0.25);
+}
 #topBanner h1 {
   font-size: 24pt;
   font-weight: bold;
@@ -449,6 +525,55 @@ body {
 #topBanner h2 {
   font-size: 16pt;
   font-weight: normal;
+}
+#topBanner p {
+  text-align: justify;
+  text-align-last: center;
+  box-sizing: border-box;
+  font-size: 13pt;
+  font-weight: normal;
+}
+#hiddenInfo.animate *:nth-child(1){ animation-delay: .1s; }
+#hiddenInfo.animate *:nth-child(2){ animation-delay: .15s; }
+#hiddenInfo.animate *:nth-child(3){ animation-delay: .2s; }
+#hiddenInfo.animate *:nth-child(4){ animation-delay: .25s; }
+#hiddenInfo.animate *:nth-child(5){ animation-delay: .3s; }
+#hiddenInfo.animate *:nth-child(6){ animation-delay: .35s; }
+#hiddenInfo.animate *:nth-child(7){ animation-delay: .4s; }
+#hiddenInfo.animate *:nth-child(8){ animation-delay: .45s; }
+#hiddenInfo.animate *:nth-child(9){ animation-delay: .5s; }
+#hiddenInfo.animate * {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: slide-up-p;
+  -webkit-animation-name: slide-up-p;
+  animation-duration: .6s;
+  -webkit-animation-duration: .6s;
+}
+
+@keyframes crossfade-image {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40%, 60% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-up-p {
+  from {
+    transform: scale(0.75) translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+  }
 }
 
 #featuredPages {
