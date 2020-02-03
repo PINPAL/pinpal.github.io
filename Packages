@@ -56,7 +56,8 @@ Description: iOS 7 Style for iOS 11
 Author: PINPAL
 Name: Seven4Eleven Theme
 Depends: com.anemonetheming.anemone
-Depiction: https://pinpal.github.io/depiction/?Seven4Eleven
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/Seven4Eleven/SileoDepiction.json&name=Seven4Eleven&section=Themes&dev=PINPAL
+SileoDepiction: https://pinpal.github.io/package/Seven4Eleven/SileoDepiction.json
 
 Package: com.pinpal.sentialpatch
 Name: Sential - Extra Icons
