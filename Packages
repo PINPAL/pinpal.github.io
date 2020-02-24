@@ -86,9 +86,9 @@ SileoDepiction: https://pinpal.github.io/package/LuxPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Lux" Theme
 Maintainer: PINPAL
-Size: 273026
-MD5sum: be40f03da92e4defa7df447352bf4da4
-SHA256: 5f0ee73f6c5510ac1da5d6842fbb6d3d829bef6f49731971a230526f24162231
+Size: 315752
+MD5sum: 7EC7964A50DCDED51108A3399C6A0F31
+SHA256: 55B702C9E047A76FE07C91962309961BC37B3E705B78479E1798635D01593515
 Filename: package/LuxPatch/LuxPatch.deb
 
 Package: com.sygem.gamma
