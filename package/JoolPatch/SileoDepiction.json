@@ -76,7 +76,26 @@
                     "class": "DepictionSubheaderView"
                 },
                 {
-                    "markdown": "Update Changes:\r\n\r\n* Added 15+ Icons",
+                    "markdown": "Update Changes:\r\n\r\n* Added 15+ New Icons\r\n* Add Unc0ver Support\r\n* Add iOS 13 Icons",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Updated 02/03/20</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "title": "1.0:",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Release:\r\n\r\n* Added 25 Icons.",
                     "useSpacing": false,
                     "class": "DepictionMarkdownView"
                 },

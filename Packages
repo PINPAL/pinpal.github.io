@@ -107,7 +107,7 @@ Filename: package/Gamma/Gamma.deb
 
 Package: com.pinpal.joolpatch
 Name: Jool - Extra Icons
-Version: 1.0
+Version: 1.1
 Depends: com.colbyroark.jool
 Architecture: iphoneos-arm
 Author: PINPAL
@@ -116,9 +116,9 @@ SileoDepiction: https://pinpal.github.io/package/JoolPatch/SileoDepiction.json
 Section: Themes
 Description: Additional Icons for "Jool" Theme
 Maintainer: PINPAL
-Size: 34176
-MD5sum: 909aeef5e470e558f1e0b2631b7b8d0f
-SHA256: bb4665a0a689c93e3abae26136f47d6885bb9338a08f78921edd2749457ffe8b
+Size: 58328
+MD5sum: f427ea516055332336671f72bd5b9edc
+SHA256: b95c7a3340acc17246fd2dedafa3ba4b08214471bbeefdf1b1205b867b5b7894
 Filename: package/JoolPatch/JoolPatch.deb
 
 Package: com.ilewiscx.cloneshelmets
