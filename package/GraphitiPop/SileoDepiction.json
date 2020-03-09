@@ -37,7 +37,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "# GraphitiPop\r\n### Customizable Widget for your Homescreen.\r\n\r\n</br>\r\nOptions:\r\n\r\n* Change Image\r\n* Change Font Color\r\n* Configure Language",
+                    "markdown": "# GraphitiPop\r\n### Customizable Widget for your Homescreen.\r\n\r\n</br>\r\nOptions:\r\n\r\n* Change Image\r\n* Change Font Color\r\n* Configure Language\r\n* Change Top Space Size",
                     "useSpacing": true
                 },
                 {
