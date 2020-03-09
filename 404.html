@@ -232,10 +232,12 @@ p {
 
     <div class="column">
       <div class="subtitle">404!</div>
+      
 
       <div class="bigbox">
         <h1>Page not found!</h1>
         <h2>The page you are looking for has been moved or deleted!</h2>
+        <p id="location"></p>
         <p>You can return to my homepage and find the page there or contact me if you cannot find it.</p>
         <a href=https://pinpal.github.io/><div class="button">Return to Homepage</div></a>
       </div>
@@ -295,6 +297,7 @@ p {
     </div>
 </body>
 <script>
+  document.getElementById("location").innerText = window.location.href
   if (window.location.pathname == "/theme-guide.html") {
     window.location.href = "https://pinpal.github.io/theme-guide/"
   }
