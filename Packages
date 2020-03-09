@@ -152,3 +152,19 @@ Size: 480276
 MD5sum: ed408d3b8da1e89ce52e494d01f93964
 SHA256: e3e0769b174f43532d9172d572945499d45d31916c0df5aad73bdd15c87fa9fc
 Filename: package/Phertela/Phertela.deb
+
+Package: com.pinpal.graphitiPop
+Name: Graphiti Pop Widget
+Version: 1.0
+Depends: com.junesiphone.xeninfo, com.matchstic.xenhtml
+Architecture: iphoneos-arm
+Author: PINPAL
+SileoDepiction: https://pinpal.github.io/package/GraphitiPop/SileoDepiction.json
+Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpal.github.io/package/GraphitiPop/SileoDepiction.json&name=Graphiti%20Pop%20Widget&dev=PINPAL&section=Widgets
+Section: Widgets
+Description: GraphitiPop - Customizable Widget
+Maintainer: PINPAL
+Size: 381556
+MD5sum: 3bf3dc86bf1c702339a7a3d76fee8a12
+SHA256: e681766718608797c81966ab4960ceca20dadaea40170b10514195d0ac100eaa
+Filename: package/GraphitiPop/GraphitiPop.deb
