@@ -31,13 +31,25 @@
                         {
                             "url": "https://pinpal.github.io/package/GraphitiPop/3.png",
                             "accessibilityText": "Screenshot2"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/4.png",
+                            "accessibilityText": "Screenshot2"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/5.png",
+                            "accessibilityText": "Screenshot2"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/6.png",
+                            "accessibilityText": "Screenshot2"
                         }
                     ],
                     "class": "DepictionScreenshotsView"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "# GraphitiPop\r\n### Customizable Widget for your Homescreen.\r\n\r\n</br>\r\nOptions:\r\n\r\n* Change Image\r\n* Change Font Color\r\n* Configure Language\r\n* Change Top Space Size",
+                    "markdown": "# GraphitiPop\r\n### Customizable Widgets\r\nThis pack includes 2 widgets.\r\nOne for your lockscreen and one for your homescreen.\r\n\r\n\r\n**Homescreen Options:**\r\n*  Change Image\r\n*  Change Font Color\r\n*  Configure Language\r\n*  Change Top Space Size\r\n\r\n\r\n**Lockscreen Options:**\r\n*  Change Background Color\r\n*  Configure  the Stripe Colors\r\n*  Change Top Space Size\r\n\r\n\r\nBoth widgets use your wallpaper so you can add your own style.\r\n(See Screenshots for examples).",
                     "useSpacing": true
                 },
                 {
@@ -67,6 +79,25 @@
             "tabname": "Changes",
             "class": "DepictionStackView",
             "views": [
+                {
+                    "title": "Version 1.1",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Update Changes:\r\n\r\n* Added Lockscreen Widget\r\n* Renamed Widgets\r\n* Optimised Javascript",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 12-05-2019</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "title": "Version 1.0",
                     "useBoldText": true,
