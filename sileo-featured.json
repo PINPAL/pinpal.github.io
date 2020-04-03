@@ -14,6 +14,12 @@
         "title": "Phertela Widget",
         "package": "com.pinpal.phertela",
         "hideShadow": false
+      },
+      {
+        "url": "https://pinpal.github.io/package/GraphitiPop/SileoBanner.jpg",
+        "title": "Graphiti Pop Widget",
+        "package": "com.pinpal.graphitiPop",
+        "hideShadow": false
       }
     ]
   }
