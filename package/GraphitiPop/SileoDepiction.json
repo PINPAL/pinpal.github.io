@@ -34,15 +34,23 @@
                         },
                         {
                             "url": "https://pinpal.github.io/package/GraphitiPop/4.png",
-                            "accessibilityText": "Screenshot2"
+                            "accessibilityText": "Screenshot3"
                         },
                         {
                             "url": "https://pinpal.github.io/package/GraphitiPop/5.png",
-                            "accessibilityText": "Screenshot2"
+                            "accessibilityText": "Screenshot4"
                         },
                         {
                             "url": "https://pinpal.github.io/package/GraphitiPop/6.png",
-                            "accessibilityText": "Screenshot2"
+                            "accessibilityText": "Screenshot5"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/7.png",
+                            "accessibilityText": "Screenshot6"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/8.png",
+                            "accessibilityText": "Screenshot7"
                         }
                     ],
                     "class": "DepictionScreenshotsView"
@@ -80,6 +88,22 @@
             "class": "DepictionStackView",
             "views": [
                 {
+                    "title": "Version 1.2",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Update Changes:\r\n\r\n* Add Option to Change Top Box Color on Home Screen\r\n* Add Option to Change Bottom Box Color on Home Screen\r\n* Add Option to Change Circle Outline Color on Home Screen",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
+                {
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 10-04-2020</small>",
+                    "useRawFormat": true,
+                    "class": "DepictionMarkdownView"
+                },
+                {
                     "title": "Version 1.1",
                     "useBoldText": true,
                     "useBottomMargin": true,
@@ -91,7 +115,7 @@
                     "class": "DepictionMarkdownView"
                 },
                 {
-                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 12-05-2019</small>",
+                    "markdown": "<small style=\"color: #999; margin-top: -8px;\">Released 12-03-2020</small>",
                     "useRawFormat": true,
                     "class": "DepictionMarkdownView"
                 },
