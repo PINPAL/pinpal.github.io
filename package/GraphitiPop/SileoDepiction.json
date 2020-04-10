@@ -17,7 +17,7 @@
                     "class": "DepictionSpacerView"
                 },
                 {
-                    "itemCornerRadius": 12,
+                    "itemCornerRadius": 5,
                     "itemSize": "{160, 275.41333333333336}",
                     "screenshots": [
                         {
