@@ -71,6 +71,10 @@
                         {
                             "url": "https://pinpal.github.io/package/GraphitiPop/13.png",
                             "accessibilityText": "Screenshot12"
+                        },
+                        {
+                            "url": "https://pinpal.github.io/package/GraphitiPop/14.png",
+                            "accessibilityText": "Screenshot13"
                         }
                     ],
                     "class": "DepictionScreenshotsView"
