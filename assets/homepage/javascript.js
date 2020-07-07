@@ -13,7 +13,6 @@ for (i = 0; i < packages.length; i++) {
                     + "&name="      + packages[i].Name
                     + "&section="   + packages[i].Section
                     + "&dev="       + packages[i].Author
-                    + "&icon="      + "https://pinpal.github.io/assets/page-icons/" + (packages[i].Name).replace(/ |-|:|;/g, "").toLowerCase() + ".png"  
         color = JSON.parse(loadXMLDoc(packages[i].SileoDepiction)).tintColor
     } else {
         a.href = packages[i].Depiction
