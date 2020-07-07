@@ -81,7 +81,7 @@
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "# GraphitiPop\r\n### Customizable Widgets\r\nThis pack includes 2 widgets.\r\nOne for your lockscreen and one for your homescreen.\r\n\r\n\r\n\r\n\n\n**Homescreen Options:**\r\n*  Change Image with any URL\r\n*  Change Font Color\r\n*  Change Top Box Color\r\n*  Change Bottom Box Color\r\n*  Change Circle Outline Color\r\n*  Configure Language\r\n*  Change Top Space Size\r\n\r\n\r\n**Lockscreen Options:**\r\n*  Change Background Color\r\n*  Configure  the Stripe Colors\r\n*  Change Top Space Size\r\n\r\n\r\nBoth widgets use your wallpaper so you can add your own style.\r\n(See Screenshots for examples).",
+                    "markdown": "# GraphitiPop\r\n### Customizable Widgets\r\nThis pack includes 2 widgets.\r\nOne for your lockscreen and one for your homescreen.\r\n\r\n\r\n\r\n\n\n**Homescreen Options:**\r\n*  Change Image with any URL\r\n*  Hide All Text\r\n*  Change Font Color\r\n*  Change Top Box Color\r\n*  Change Bottom Box Color\r\n*  Change Circle Outline Color\r\n*  Configure Language\r\n*  Change Top Space Size\r\n\r\n\r\n**Lockscreen Options:**\r\n*  Change Background Color\r\n*  Configure  the Stripe Colors\r\n*  Change Top Space Size\r\n\r\n\r\nBoth widgets use your wallpaper so you can add your own style.\r\n(See Screenshots for examples).",
                     "useSpacing": true
                 },
                 {
@@ -111,6 +111,17 @@
             "tabname": "Changes",
             "class": "DepictionStackView",
             "views": [
+                {
+                    "title": "Version 1.3",
+                    "useBoldText": true,
+                    "useBottomMargin": true,
+                    "class": "DepictionSubheaderView"
+                },
+                {
+                    "markdown": "Update Changes:\r\n\r\n* Add Option to hide all text on Home Screen",
+                    "useSpacing": false,
+                    "class": "DepictionMarkdownView"
+                },
                 {
                     "title": "Version 1.2",
                     "useBoldText": true,
