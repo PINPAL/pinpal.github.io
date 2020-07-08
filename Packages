@@ -155,7 +155,7 @@ Filename: package/Phertela/Phertela.deb
 
 Package: com.pinpal.graphitiPop
 Name: Graphiti Pop Widget
-Version: 1.3.1
+Version: 1.4
 Depends: com.junesiphone.xeninfo, com.matchstic.xenhtml
 Architecture: iphoneos-arm
 Author: PINPAL
@@ -164,7 +164,7 @@ Depiction: https://pinpal.github.io/Sileo-Depiction-WebViews/?json=https://pinpa
 Section: Widgets
 Description: GraphitiPop - Customizable Widget
 Maintainer: PINPAL
-Size: 801552
-MD5sum: 2668df696ff4967129d775edb1f9dc52
-SHA256: a873f9fc0121b4c60021c02555511fbc744d34d12f1e5dd797d6caed160c5283
+Size: 1100736
+MD5sum: ea5e85697d5ce86ab0a094dbe103c973
+SHA256: 80aba440bac37b4d74ec879b61d8fa9b8a9fdaaff11f2395013b70e81cc8bd9e
 Filename: package/GraphitiPop/GraphitiPop.deb
