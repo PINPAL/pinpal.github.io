@@ -26,6 +26,6 @@ console.log(
 
 function superSecretCode() {
   console.log(
-    "It appears you have found the super secret!\n\nWell Unfortunetly I am here to tell you it's really not that interesting.\nThis is just a note from my future self to inform you that you absolutely SHOULD NOT look at the source code for this website. It's an absolute mess and needs to be rewritten. I apologise for any brain injuries that may occur if you dare read the source code.\n \nYours sincerely,\nPINPAL"
+    "Hi Stranger, \n\nIt appears you have found the super secret!\n\nWell Unfortunetly I am here to tell you it's really not that interesting.\nThis is just a note from my future self to inform you that you absolutely SHOULD NOT look at the source code for this website. It's an absolute mess of my first dabbles into web development and  needs to be rewritten. I apologise for any brain injuries that may occur if you dare read the source code.\n \nYours sincerely,\nPINPAL"
   );
 }
