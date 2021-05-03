@@ -1,301 +1,420 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>iOS 12 Bundle ID's</title>
     <link rel="icon" href="../assets/favicon.ico" class="next-head" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../assets/global-navbar/navbar.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/global-navbar/navbar.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Nunito";
+        color: white;
+      }
 
-* {
-  font-family: "Nunito";
-  color: white;
-}
+      /* Scrollbar*/
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
 
-/* Scrollbar*/
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-   background: rgba(255,255,255,0.20);
-   border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-   background: rgba(255,255,255,0.25);;
-}
+      body {
+        background-color: #292c30;
+      }
 
-body {
-  background-color: #292C30;
-}
+      .bigbox {
+        background: #2f3439;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        border-radius: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        width: 95%;
+        max-width: 700px;
+        padding: 12px;
+        line-height: 1.6;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.03);
+        border-width: 2px;
+      }
 
-.bigbox {
-  background: #2F3439;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: left;
-  border-radius: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  width: 95%;
-  max-width: 900px;
-  line-height: 1.6;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.03);
-  border-width: 2px;
-}
+      .titleContainer {
+        width: 95%;
+        max-width: 900px;
+        padding-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-.titleContainer {
-  width: 95%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
+      #subtitle {
+        font-size: 17pt;
+        font-weight: bold;
+        text-align: left;
+        margin-left: 15px;
+        line-height: 1;
+      }
+      #subsubtitle {
+        font-size: 13pt;
+        font-weight: normal;
+        text-align: left;
+        margin-left: 15px;
+        margin-top: -8px;
+        opacity: 0.6;
+      }
 
-#subtitle {
-    font-size: 17pt;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 15px;
-    line-height: 1.0;
-}
-#subsubtitle {
-    font-size: 13pt;
-    font-weight: normal;
-    text-align: left;
-    margin-left: 15px;
-    margin-top: -8px;
-    opacity: .6;
-}
+      .icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 11px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+          0 0 0 1px rgba(0, 0, 0, 0.3);
+      }
 
-.icon {
-  width: 55px;
-  height: 55px;
-  border-radius: 15px;
-  box-shadow: rgba(0,0,0,.25) 5px 5px 10px
-}
-
-th, td {
-    padding: 15px;
-    text-align: center;
-    font-weight: normal;
-}
-table {
-    width: 100%;
-    border-collapse:collapse;
-}
-table tr:nth-child(even) {
-    background-color: #22262b;
-}
-
-</style>
-</head>
-<body>
-
-  <div id="navbarContainer">
+      th,
+      td {
+        padding-top: 7px;
+        text-align: center;
+        font-weight: normal;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      table tr:nth-child(even) {
+        background-color: #22262b;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbarContainer">
       <div id="navbar">
-            <a href="https://pinpal.github.io/"><img class="logo" src="../assets/pinpal.png"></a>
-            <a href="https://pinpal.github.io/"><h1 id="title">PINPAL</h1></a>
-  
-          <div class="navIconContainer">
-            <a href="https://twitter.com/TPINPAL">
-              <div class="navButton" style="background: linear-gradient(to right, #55ACEF , #0A76E7)">
-                <img src="../assets/page-icons/twitter.png" class="navButtonIcon" align="left">Twitter
-              </div></a>
-        
-            <a href="https://github.com/PINPAL">
-              <div class="navButton" style="background: linear-gradient(to right, #AA4DB4 , #8A3699)">
-                <img src="../assets/page-icons/github.png" class="navButtonIcon" align="left">Github
-              </div></a>
-      
-            <a href="https://discordapp.com/invite/jb">
-              <div class="navButton" style="background: linear-gradient(to right, #83A1DA , #6380B4)">
-                <img src="../assets/page-icons/discord.png" class="navButtonIcon" align="left">Discord
-              </div></a>
-  
-              <a href="https://www.reddit.com/user/THE_PINPAL614">
-                <div class="navButton" style="background: linear-gradient(to right, #FF4C02 , #ED0A21)">
-                  <img src="../assets/page-icons/reddit.png" class="navButtonIcon" align="left">Reddit
-                </div></a>
-  
-          </div>
+        <a href="https://pinpal.github.io/"
+          ><img class="logo" src="../assets/pinpal.png"
+        /></a>
+        <a href="https://pinpal.github.io/"><h1 id="title">PINPAL</h1></a>
+
+        <div class="navIconContainer">
+          <a href="https://twitter.com/TPINPAL">
+            <div
+              class="navButton"
+              style="background: linear-gradient(to right, #55acef, #0a76e7)"
+            >
+              <img
+                src="../assets/page-icons/twitter.png"
+                class="navButtonIcon"
+                align="left"
+              />Twitter
+            </div></a
+          >
+          <a href="https://github.com/PINPAL">
+            <div
+              class="navButton"
+              style="background: linear-gradient(to right, #aa4db4, #8a3699)"
+            >
+              <img
+                src="../assets/page-icons/github.png"
+                class="navButtonIcon"
+                align="left"
+              />Github
+            </div></a
+          >
+          <a href="https://discordapp.com/invite/jb">
+            <div
+              class="navButton"
+              style="background: linear-gradient(to right, #83a1da, #6380b4)"
+            >
+              <img
+                src="../assets/page-icons/discord.png"
+                class="navButtonIcon"
+                align="left"
+              />Discord
+            </div></a
+          >
+          <a href="https://www.reddit.com/user/THE_PINPAL614">
+            <div
+              class="navButton"
+              style="background: linear-gradient(to right, #ff4c02, #ed0a21)"
+            >
+              <img
+                src="../assets/page-icons/reddit.png"
+                class="navButtonIcon"
+                align="left"
+              />Reddit
+            </div></a
+          >
         </div>
+      </div>
     </div>
 
-  <div class="titleContainer">
-      <p id="subtitle">iOS 12 Bundle Identifiers</p>
-      <p id="subsubtitle">Bundle Identifiers that are used in iOS 12. These are application identifers which can be used for many things, 
-        including creating iOS Themes. A tutorial on how to create an iOS Theme can be found on my website.</p>      
-  </div>
+    <div class="titleContainer">
+      <p id="subtitle">iOS 14 Bundle Identifiers</p>
+      <p id="subsubtitle">
+        Bundle Identifiers that are used in iOS. These are application
+        identifers which can be used for many things, including creating iOS
+        Themes. A tutorial on how to create an iOS Theme can be found on my
+        website.
+      </p>
+    </div>
 
-<div class="bigbox">
-  <table>
-    <tr>
-      <th style="font-weight: bold;">Icon<th>
-      <th style="font-weight: bold;">Name<th>
-      <th style="font-weight: bold;">Bundle ID<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/appstore.png><th>
-      <th>App Store<th>
-      <th>com.apple.AppStore<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/watch.png><th>
-      <th>Apple Watch<th>
-      <th>com.apple.Bridge<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/calc.png><th>
-      <th>Calculator<th>
-      <th>com.apple.calculator<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/calendar.png><th>
-      <th>Calendar<th>
-      <th>com.apple.mobilecal<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/camera.png><th>
-      <th>Camera<th>
-      <th>com.apple.camera<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/classroom.png><th>
-      <th>Classroom<th>
-      <th>com.apple.classroom<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/clock.png><th>
-      <th>Clock<th>
-      <th>com.apple.mobiletimer<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/compass.png><th>
-      <th>Compass<th>
-      <th>com.apple.compass<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/contacts.png><th>
-      <th>Contacts<th>
-      <th>com.apple.MobileAddressBook<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/facetime.png><th>
-      <th>FaceTime<th>
-      <th>com.apple.facetime<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/files.png><th>
-      <th>Files<th>
-      <th>com.apple.DocumentsApp<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/game.png><th>
-      <th>Game Center<th>
-      <th>com.apple.gamecenter<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/health.png><th>
-      <th>Health<th>
-      <th>com.apple.Health<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/home.png><th>
-      <th>Home<th>
-      <th>com.apple.Home<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/ibooks.png><th>
-      <th>iBooks<th>
-      <th>com.apple.iBooks<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/itunes.png><th>
-      <th>iTunes Store<th>
-      <th>com.apple.MobileStore<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/mail.png><th>
-      <th>Mail<th>
-      <th>com.apple.mobilemail<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/maps.png><th>
-      <th>Maps<th>
-      <th>com.apple.Maps<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/measure.png><th>
-      <th>Measure<th>
-      <th>com.apple.measure<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/sms.png><th>
-      <th>Messages<th>
-      <th>com.apple.MobileSMS<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/music.png><th>
-      <th>Music<th>
-      <th>com.apple.Music<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/news.png><th>
-      <th>News<th>
-      <th>com.apple.news<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/notes.png><th>
-      <th>Notes<th>
-      <th>com.apple.mobilenotes<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/phone.png><th>
-      <th>Phone<th>
-      <th>com.apple.mobilephone<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/photobooth.png><th>
-      <th>Photo Booth<th>
-      <th>com.apple.Photo-Booth<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/photos.png><th>
-      <th>Photos<th>
-      <th>com.apple.mobileslideshow<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/playgrounds.png><th>
-      <th>Playgrounds<th>
-      <th>com.apple.Playgrounds<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/podcasts.png><th>
-      <th>Podcasts<th>
-      <th>com.apple.podcasts<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/reminders.png><th>
-      <th>Reminders<th>
-      <th>com.apple.reminders<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/safari.png><th>
-      <th>Safari<th>
-      <th>	com.apple.mobilesafari<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/settings.png><th>
-      <th>Settings<th>
-      <th>com.apple.Preferences<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/stocks.png><th>
-      <th>Stocks<th>
-      <th>com.apple.stocks<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/tips.png><th>
-      <th>Tips<th>
-      <th>com.apple.tips<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/tv.png><th>
-      <th>TV<th>
-      <th>com.apple.tv<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/videos.png><th>
-      <th>Videos<th>
-      <th>com.apple.videos<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/voicememos.png><th>
-      <th>Voice Memos<th>
-      <th>com.apple.VoiceMemos<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/wallet.png><th>
-      <th>Wallet<th>
-      <th>	com.apple.Passbook<th>
-    </tr><tr>
-      <th><img class="icon" src=iOS-icons/weather.png><th>
-      <th>Weather<th>
-      <th>com.apple.weather<th>
-    </tr>
-  </table>
-</div>
-</body>
-<head>
-  <script src="../assets/global-navbar/navbar.js"></script>
-</head>
+    <div class="bigbox">
+      <table>
+        <tr>
+          <th style="font-weight: bold">Icon</th>
+          <th style="font-weight: bold">Name</th>
+          <th style="font-weight: bold">Bundle ID</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/appstore.png></th>
+          <th>App Store</th>
+          <th>com.apple.AppStore</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/watch.png></th>
+          <th>Apple Watch</th>
+          <th>com.apple.Bridge</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/calc.png></th>
+          <th>Calculator</th>
+          <th>com.apple.calculator</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/calendar.png></th>
+          <th>Calendar</th>
+          <th>com.apple.mobilecal</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/camera.png></th>
+          <th>Camera</th>
+          <th>com.apple.camera</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/classroom.png></th>
+          <th>Classroom</th>
+          <th>com.apple.classroom</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/clock.png></th>
+          <th>Clock</th>
+          <th>com.apple.mobiletimer</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/compass.png></th>
+          <th>Compass</th>
+          <th>com.apple.compass</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/contacts.png></th>
+          <th>Contacts</th>
+          <th>com.apple.MobileAddressBook</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/facetime.png></th>
+          <th>FaceTime</th>
+          <th>com.apple.facetime</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/files.png></th>
+          <th>Files</th>
+          <th>com.apple.DocumentsApp</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/game.png></th>
+          <th>Game Center</th>
+          <th>com.apple.gamecenter</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/health.png></th>
+          <th>Health</th>
+          <th>com.apple.Health</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/home.png></th>
+          <th>Home</th>
+          <th>com.apple.Home</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/ibooks.png></th>
+          <th>iBooks</th>
+          <th>com.apple.iBooks</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/itunes.png></th>
+          <th>iTunes Store</th>
+          <th>com.apple.MobileStore</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/mail.png></th>
+          <th>Mail</th>
+          <th>com.apple.mobilemail</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/maps.png></th>
+          <th>Maps</th>
+          <th>com.apple.Maps</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/measure.png></th>
+          <th>Measure</th>
+          <th>com.apple.measure</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/sms.png></th>
+          <th>Messages</th>
+          <th>com.apple.MobileSMS</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/music.png></th>
+          <th>Music</th>
+          <th>com.apple.Music</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/news.png></th>
+          <th>News</th>
+          <th>com.apple.news</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/notes.png></th>
+          <th>Notes</th>
+          <th>com.apple.mobilenotes</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/phone.png></th>
+          <th>Phone</th>
+          <th>com.apple.mobilephone</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/photobooth.png></th>
+          <th>Photo Booth</th>
+          <th>com.apple.Photo-Booth</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/photos.png></th>
+          <th>Photos</th>
+          <th>com.apple.mobileslideshow</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/playgrounds.png></th>
+          <th>Playgrounds</th>
+          <th>com.apple.Playgrounds</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/podcasts.png></th>
+          <th>Podcasts</th>
+          <th>com.apple.podcasts</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/reminders.png></th>
+          <th>Reminders</th>
+          <th>com.apple.reminders</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/safari.png></th>
+          <th>Safari</th>
+          <th>com.apple.mobilesafari</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/settings.png></th>
+          <th>Settings</th>
+          <th>com.apple.Preferences</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/stocks.png></th>
+          <th>Stocks</th>
+          <th>com.apple.stocks</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/tips.png></th>
+          <th>Tips</th>
+          <th>com.apple.tips</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/tv.png></th>
+          <th>TV</th>
+          <th>com.apple.tv</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/videos.png></th>
+          <th>Videos</th>
+          <th>com.apple.videos</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/voicememos.png></th>
+          <th>Voice Memos</th>
+          <th>com.apple.VoiceMemos</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/wallet.png></th>
+          <th>Wallet</th>
+          <th>com.apple.Passbook</th>
+        </tr>
+
+        <tr>
+          <th><img class="icon" src=iOS-icons/weather.png></th>
+          <th>Weather</th>
+          <th>com.apple.weather</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <head>
+    <script src="../assets/global-navbar/navbar.js"></script>
+  </head>
 </html>
