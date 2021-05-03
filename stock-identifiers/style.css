@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11.5pt;
+}
+
+/* Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+
+  --accent: #3385ff;
+
+  --background: #f3f7fb;
+  --background-dark: #0e1726;
+  --background-light: #ffffff;
+  --background-intermediary: #dadde2;
+
+  --text-color-primary: #152033;
+  --text-color-secondary: #7b7f86;
+
+  --text-color-button: 134, 148, 172;
+
+  --border-color: #f3f3f3;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--background);
+  text-align: center;
+  margin: 0;
+  margin-top: 40px;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+#contentContainer {
+  overflow: hidden;
+  background-color: var(--background);
+  width: calc(100vw - 16px);
+  max-width: calc(100vw - 16px);
+  padding: 0 8px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+h1 {
+  font-size: 16pt;
+  font-weight: 600;
+  text-align: left;
+  color: var(--text-color-primary);
+}
+p {
+  text-align: left;
+}
+mark {
+  background-color: var(--background-intermediary);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#modeSwitcher {
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  left: 50vw;
+  transform: translateX(-50%);
+  background: var(--background-dark);
+  border-radius: 24px;
+  padding: 0 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.33),
+    0 22px 50px 4px rgba(0, 0, 0, 0.2), 0 -22px 50px 4px rgba(0, 0, 0, 0.2),
+    0 2px 5px 2px rgba(0, 0, 0, 0.15), 0 -2px 5px 2px rgba(0, 0, 0, 0.15);
+}
+#modeSwitcher button {
+  width: 70px;
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(var(--text-color-button), 0.8);
+  padding: 12px 8px;
+  margin: 0 8px;
+  font-size: 9.5pt;
+  cursor: pointer;
+}
+#modeSwitcher button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto 4px auto;
+  stroke-width: 8px;
+}
+#modeSwitcher button svg * {
+  fill: none;
+  stroke-width: 24px;
+  stroke: rgb(var(--text-color-button));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* hover */
+#modeSwitcher button:hover {
+  color: rgb(var(--text-color-button));
+}
+#modeSwitcher button:hover svg .fill {
+  fill: rgb(var(--text-color-button), 0.45);
+}
+/* selected */
+#modeSwitcher button.selected {
+  color: var(--background-light);
+}
+#modeSwitcher button.selected svg .fill {
+  fill: var(--background-light);
+}
+#modeSwitcher button.selected svg * {
+  stroke: var(--background-light);
+}
+
+/* handles flicking between pages */
+.content {
+  max-width: calc(100vw - 16px);
+  overflow-x: hidden;
+  max-height: 99999px;
+  padding-bottom: 120px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.65s ease, max-height 1s linear;
+}
+.content.hidden {
+  max-height: 0;
+}
+#homescreenContent.hidden {
+  transform: translateX(calc(-100vw - 300px));
+}
+#preferencesContent.hidden {
+  transform: translateX(calc(100vw + 300px));
+}
+
+.tableList {
+  user-select: none;
+  background: var(--background-light);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 22px 50px 4px rgba(0, 0, 0, 0.05);
+  z-index: 99;
+  position: relative;
+  padding: 6px 0;
+  overflow: hidden;
+  width: calc(100vw - 16px);
+  max-width: 900px;
+}
+.tableList .letterIndicator {
+  height: fit-content;
+  text-align: left;
+  background: var(--background-intermediary);
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  padding: 6px 24px;
+  margin: -6px 0 0 0;
+  border: none;
+}
+.tableList > div {
+  position: relative;
+  height: 45px;
+  padding: 0 24px 6px 24px;
+  border-bottom: solid var(--border-color) 2px;
+  display: inline-block;
+  width: calc(100vw - 16px);
+  margin-top: 6px;
+}
+.tableList > div:last-of-type {
+  border-bottom: none;
+}
+/* grid view */
+.tableList.isGridView > div {
+  min-width: 250px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 6px;
+  padding: 6px 6px;
+}
+.tableList.isGridView h1,
+.tableList.isGridView input {
+  left: 66px;
+}
+.tableList.isGridView .letterIndicator {
+  display: none;
+}
+.tableList.isGridView {
+  padding: 12px 0;
+}
+/* cell styling */
+.tableList img {
+  float: left;
+  border-radius: 12px;
+  width: 45px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.tableList h1,
+.tableList input {
+  color: var(--text-color-primary);
+  position: absolute;
+  left: 84px;
+  font-weight: normal;
+  font-size: 11pt;
+  text-align: left;
+  margin: 0;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+.tableList h1 {
+  top: 10px;
+}
+.tableList input {
+  bottom: 10px;
+  color: var(--text-color-secondary);
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+/* rounded button */
+.roundedButton {
+  font-size: 12pt;
+  margin: 12px 2px;
+  outline: none;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: var(--background-light);
+  box-shadow: inset 0 1px 0 rgba(200, 200, 200, 0.35),
+    0 6px 10px 4px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  line-height: 24px;
+}
+.roundedButton svg {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.roundedButton svg * {
+  fill: var(--text-color-primary);
+}
+/* hover */
+.roundedButton:hover {
+  background: var(--accent);
+  color: white;
+}
+.roundedButton:hover svg * {
+  fill: white;
+}
+
+/* mobile settings */
+@media only screen and (max-width: 600px) {
+  #modeSwitcher {
+    bottom: 0;
+    width: 100vw;
+    border-radius: 0;
+  }
+  .roundedButton {
+    display: none;
+  }
+}
