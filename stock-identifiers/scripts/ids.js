@@ -1,7 +1,8 @@
-ids = [
+var stockApps = [
   { name: "Weather", id: "com.apple.weather" },
   { name: "App Store", id: "com.apple.AppStore" },
   { name: "Apple Watch", id: "com.apple.Bridge" },
+  { name: "Apple TV", id: "com.apple.tv" },
   { name: "Calculator", id: "com.apple.calculator" },
   { name: "Calendar", id: "com.apple.mobilecal" },
   { name: "Camera", id: "com.apple.camera" },
@@ -20,6 +21,7 @@ ids = [
   { name: "Maps", id: "com.apple.Maps" },
   { name: "Measure", id: "com.apple.measure" },
   { name: "Messages", id: "com.apple.MobileSMS" },
+  { name: "Music Memos", id: "com.apple.musicmemos" },
   { name: "Music", id: "com.apple.Music" },
   { name: "News", id: "com.apple.news" },
   { name: "Notes", id: "com.apple.mobilenotes" },
@@ -33,19 +35,50 @@ ids = [
   { name: "Settings", id: "com.apple.Preferences" },
   { name: "Stocks", id: "com.apple.stocks" },
   { name: "Tips", id: "com.apple.tips" },
+  { name: "Trailers", id: "com.apple.movietrailers" },
   { name: "TV", id: "com.apple.tv" },
   { name: "Videos", id: "com.apple.videos" },
   { name: "Voice Memos", id: "com.apple.VoiceMemos" },
   { name: "Wallet", id: "com.apple.Passbook" },
+  { name: "Find My", id: "com.apple.findmy" },
+  { name: "Find Friends", id: "com.apple.mobileme.fmf1" },
+  { name: "Feedback Assistant", id: "com.apple.appleseed.FeedbackAssistant" },
+  { name: "Find My iPhone", id: "com.apple.mobileme.fmip1" },
+  { name: "Translate", id: "com.apple.Translate" },
 ];
 
-prefs = [
+var jailbreakApps = [
+  { name: "Cydia", id: "com.saurik.Cydia" },
+  { name: "Filza", id: "com.tigisoftware.Filza" },
+  { name: "Substitute", id: "com.ex.substiture.settings" },
+  { name: "Unc0ver", id: "science.xnu.undecimus" },
+  { name: "AltStore", id: "com.rileytestut.AltStore" },
+  { name: "NewTerm", id: "ws.hbang.Terminal" },
+  { name: "Electra", id: "org.coolstar.electra" },
+  { name: "Taurine", id: "com.odysseyteam.taurine" },
+  { name: "Sileo", id: "org.coolstar.sileo" },
+  { name: "Dra1n", id: "com.amywhile.dra1n-fix" },
+  { name: "Cr4shed", id: "com.muirey03.cr4shedgui" },
+  { name: "iCleaner", id: "com.ivanobilenchi.icleaner" },
+  { name: "BundleIDsXII", id: "de.mass1veerr0r.bundleidsxii" },
+  { name: "ReProvision", id: "jp.soh.reprovision.ios" },
+  { name: "Snowboard", id: "com.spark.snowboardapplication" },
+  { name: "LibHooker", id: "org.coolstar.libhooker" },
+  { name: "Zebra", id: "xyz.willy.Zebra" },
+  { name: "Chimera", id: "com.electrateam.chimera" },
+  { name: "iSecureOS", id: "com.geosn0w.iSecureOS" },
+  { name: "TSS Saver", id: "co.dynastic.tsssaver" },
+  { name: "Bundley", id: "com.spark.bundley" },
+  { name: "Flex 3", id: "com.johncoates.Flex" },
+];
+
+var prefs = [
   { name: "Airplane Mode", id: "AirplaneMode" },
   { name: "Wi-Fi", id: "WiFi" },
   { name: "Bluetooth", id: "Bluetooth" },
   { name: "Mobile Data", id: "CellularData" },
   { name: "Personal Hotspot", id: "PersonalHotspot" },
-  { name: "Cellular", id: "CarrierSettings" },
+  { name: "Carrier", id: "CarrierSettings" },
   { name: "Cellular", id: "Carrier" },
   { name: "VPN", id: "VPN" },
   {},
@@ -74,14 +107,14 @@ prefs = [
   {},
   { name: "App Store", id: "AppStore" },
   { name: "Wallet & Apple Pay", id: "Wallet" },
-  { name: "Passbook", id: "" },
+  { name: "Passbook", id: "Passbook" },
   {},
   { name: "Passwords", id: "Passwords" },
   { name: "Accounts & Passwords", id: "KeychainSync" },
   { name: "Accounts & Passwords", id: "PasswordAutoFill" },
   { name: "Mail", id: "Mail" },
   { name: "Contacts", id: "Contacts" },
-  { name: "Campass", id: "Compass" },
+  { name: "Compass", id: "Compass" },
   { name: "Calendar", id: "Calendar" },
   { name: "Notes", id: "Notes" },
   { name: "Reminders", id: "Reminders" },
@@ -92,7 +125,7 @@ prefs = [
   { name: "Safari", id: "Safari" },
   { name: "Stocks", id: "Stocks" },
   { name: "News", id: "News" },
-  { name: "Translate", id: "" },
+  { name: "Translate", id: "Translate" },
   { name: "TV", id: "TVApp" },
   { name: "Shortcuts", id: "Shortcuts" },
   { name: "Health", id: "Health" },
@@ -120,97 +153,9 @@ prefs = [
   { name: "Game Center", id: "GameCenter" },
 ];
 
-ids.sort((a, b) => a.name.localeCompare(b.name));
-
-var homescreenIconsList = document.getElementById("homescreenIconsList");
-
-// iterate through list of homescreen app id's and render
-let firstLetter = -1;
-for (i = 0; i < ids.length; i++) {
-  // check to see if new alphabetical tag is required
-  if (ids[i].name.charCodeAt(0) > firstLetter) {
-    firstLetter = ids[i].name.toUpperCase().charCodeAt(0);
-    let div = document.createElement("div");
-    div.className = "letterIndicator";
-    div.innerText = ids[i].name[0].toUpperCase();
-    div.id = "letter-" + ids[i].name[0].toLowerCase();
-    homescreenIconsList.appendChild(div);
-  }
-  // create each element of the list
-  let div = document.createElement("div");
-  div.setAttribute("onClick", "triggerCopy(this)");
-  let img = document.createElement("img");
-  img.src = "iOS-icons/" + ids[i].name.toLowerCase().replace(" ", "") + ".png";
-  let h1 = document.createElement("h1");
-  h1.innerText = ids[i].name;
-  let input = document.createElement("input");
-  input.value = ids[i].id;
-  input.type = "text";
-  input.readOnly = true;
-  div.append(img, h1, input);
-  homescreenIconsList.appendChild(div);
-}
-
-// iterate through list of preferences icons and render
-for (i = 0; i < prefs.length; i++) {
-  // create each element of the list
-  let div = document.createElement("div");
-  // check to see if blank seperator is needed
-  if (prefs[i].hasOwnProperty("name")) {
-    div.setAttribute("onClick", "triggerCopy(this)");
-    let img = document.createElement("img");
-    img.src =
-      "iOS-icons/prefs/" +
-      prefs[i].name.toLowerCase().replace(" ", "") +
-      ".png";
-    let h1 = document.createElement("h1");
-    h1.innerText = prefs[i].name;
-    let input = document.createElement("input");
-    input.value = prefs[i].id;
-    input.type = "text";
-    input.readOnly = true;
-    div.append(img, h1, input);
-  }
-  preferencesIconsList.appendChild(div);
-}
-
-var appsContent = document.getElementById("homescreenContent");
-var prefsContent = document.getElementById("preferencesContent");
-
-function switchMode(newTarget) {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  // remove selected tag from all buttons
-  let buttons = document
-    .getElementById("modeSwitcher")
-    .getElementsByTagName("button");
-  for (i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove("selected");
-  }
-  // add selected tag to new button
-  newTarget.classList.add("selected");
-  // handle changing of content
-  if (newTarget.innerText == "Apps") {
-    appsContent.classList.remove("hidden");
-    prefsContent.classList.add("hidden");
-  } else {
-    appsContent.classList.add("hidden");
-    prefsContent.classList.remove("hidden");
-  }
-}
-
-function triggerCopy(element) {
-  let toCopy = element.getElementsByTagName("input")[0];
-  toCopy.select();
-  toCopy.setSelectionRange(0, 1000);
-  document.execCommand("copy");
-}
-
-function changeView(isGrid) {
-  console.log("called");
-  if (isGrid) {
-    homescreenIconsList.classList.add("isGridView");
-  } else {
-    homescreenIconsList.classList.remove("isGridView");
-  }
-}
+// sorts lists alphabetically
+// required in order to label correctly
+// probably more efficient to just order them manually in this file as they are static
+// but I'm lazy. so if you fancy doing a pull request go ahead :D
+stockApps.sort((a, b) => a.name.localeCompare(b.name));
+jailbreakApps.sort((a, b) => a.name.localeCompare(b.name));

@@ -38,6 +38,14 @@
         </svg>
         Settings
       </button>
+      <button onClick="switchMode(this)">
+        <svg viewBox="0 0 512 512">
+          <path d="M172.1,226.1V117.9c0-45.1,36.7-81.8,81.8-81.8s81.8,36.7,81.8,81.8v37.8"/>
+	        <path class="fill" d="M365.8,250.9c24.6,0,44.5,19.9,44.5,44.5v118.6c0,24.6-19.9,44.5-44.5,44.5H146.2c-24.6,0-44.5-19.9-44.5-44.5V295.4
+		c0-24.6,19.9-44.5,44.5-44.5H365.8 M365.8"/>
+        </svg>
+        Jailbreak
+      </button>
     </div>
 
     <div id="contentContainer">
@@ -104,17 +112,12 @@
             List
           </button>
         </div>
-        <div class="tableList" id="homescreenIconsList"></div>
+        <div class="tableList supportsGridView" id="homescreenIconsList"></div>
       </div>
       <div id="preferencesContent" class="content hidden">
         <h1>Preferences Icons</h1>
         <p>
-          <br><br>
-          NOTE: At the time of writing this list is still incomplete. I am still obtaining the stock icons and some additional names for certain preference bundles such as "Exposure Notifications".
-          <br><br>
-          Below is a list of the all of the preferences icons. In your theme, preference icons must go into <mark>ThemeName.theme/Bundles/com.apple.apple.preferences-framework/</mark> and/or <mark>ThemeName.theme/Bundles/com.apple.apple.preferences-ui-framework/</mark> depending on which iOS versions and theming engines you wish to support.
-          <br><br>
-          Preferences icons must be supplied in both @2x and @3x variants to ensure device compatability. All files must be suffixed with <mark>@2x.png</mark> for a 59x59 pixel size iamge and <mark>@3x.png</mark> for a 89x89 resolution respectively.
+          Preferences icons must be supplied in both @2x and @3x variants to ensure device compatability. All files must be suffixed with <mark>@2x.png</mark> for a 59x59 pixel size image and <mark>@3x.png</mark> for a 89x89 resolution respectively.
           <br><br>
           For example, if you wanted to replace the Airplane icon in your theme you would need the following two files in the afformentioned folders:
           <br><mark>AirplaneMode@2x.png</mark> 
@@ -123,8 +126,78 @@
         </p>
         <div class="tableList" id="preferencesIconsList"></div>
       </div>
+      <div id="jailbreakContent" class="content hidden">
+        <h1>Jailbreak App Icons</h1>
+        <p>
+          Below is a list of common jailbroken apps. It is recommended to theme these are common among many jailbroken users.
+          <br><br>
+          Please note that theming <mark>AltStore</mark> and any of it's sideloaded applications may be troublesome due to it appending random characters to the bundle ID.
+          <br><br>
+          These are themed exactly the same as stock and App Store applications. 
+        </p>
+        <div class="leftAlign">
+          <button onClick="changeView(true)" class="roundedButton">
+            <svg viewBox="0 0 512 512">
+              <>
+                <path
+                  d="M67.2 434.9 c-12.6 -2.1 -20.9 -8.5 -25.3 -19.5 l-2.4 -5.9 0 -54.5 c0 -49.2 0.2 -55.1 1.8 -60.2 2.6 -8.4 7.1 -13.7 15.1 -17.8 l6.9 -3.5 73.6 -0.3 c72.6 -0.3 73.6 -0.2 80.6 1.9 5.7 1.7 7.9 3 12.1 7.3 4.3 4.2 5.6 6.4 7.3 12.2 2.1 6.9 2.2 8.2 1.9 62.1 l-0.3 55 -3.5 6.9 c-4 7.8 -9.2 12.4 -17.3 15.1 -4.7 1.6 -11.6 1.7 -75.2 1.9 -38.5 0.1 -72.4 -0.2 -75.3 -0.7z m140.8 -27.4 c5 -2.6 5.1 -4.8 4.8 -55.8 l-0.3 -46.9 -2.7 -2.3 c-1.8 -1.5 -4.6 -2.6 -8 -3 -7.9 -0.9 -129 -0.1 -131.1 0.9 -4.6 2.2 -4.7 3.6 -4.7 54.3 0 51.8 -0.1 51.1 5.4 53.3 1.1 0.5 31.7 0.9 67.9 0.9 56.7 0.1 66.2 -0.1 68.7 -1.4z"
+                />
+                <path
+                  d="M300.7 434.9 c-12 -1.7 -19.7 -7.2 -24.3 -17.1 l-2.9 -6.3 -0.3 -54 c-0.4 -56.1 -0.1 -60.8 3.8 -68.5 3.2 -6.2 10.1 -11.7 17.7 -14 6.7 -2 8.3 -2.1 80.4 -1.8 l73.4 0.3 6.8 3.3 c7.9 3.9 12.9 9.7 15.5 18.1 1.5 5 1.7 11.3 1.7 60.1 l0 54.5 -2.4 5.9 c-4.5 11.3 -12.6 17.3 -26.2 19.5 -7.7 1.3 -134.5 1.3 -143.2 0z m142.9 -29.2 l2.4 -2.8 0 -48 c0 -52.5 -0.1 -53 -5.8 -54.6 -1.5 -0.5 -32.5 -0.8 -68.9 -0.8 l-66.3 0 -2.7 2.8 -2.8 2.7 -0.3 46.8 c-0.2 31.8 0 47.9 0.8 50.4 2 7.1 -1.2 6.8 73.8 6.5 l67.4 -0.2 2.4 -2.8z"
+                />
+                <path
+                  d="M66.2 238.9 c-11.4 -1.9 -20 -8.8 -24.3 -19.5 l-2.4 -5.9 0 -54.5 c0 -48.8 0.2 -55.1 1.7 -60.1 3.5 -11.2 12 -18.5 24.3 -20.9 4.3 -0.8 26.8 -1 77.5 -0.8 81.9 0.4 77.2 -0.1 86.7 9.3 4.2 4.3 5.5 6.5 7.3 12.2 2 6.7 2.1 8.4 1.8 61.9 l-0.3 54.9 -3.3 6.7 c-3.8 7.7 -8.2 11.8 -16.2 15.1 -5.5 2.2 -5.5 2.2 -76.5 2.4 -39 0 -73.4 -0.3 -76.3 -0.8z m141.3 -26.9 c5.3 -2 5.5 -3.8 5.5 -53.5 0 -48.5 -0.2 -50.9 -4.8 -53.4 -2.2 -1.2 -134.7 -1.6 -137.7 -0.5 -4.3 1.7 -4.5 3.7 -4.5 54.4 l0 48.2 2.9 2.9 2.9 2.9 66.6 0 c41.6 0 67.4 -0.4 69.1 -1z"
+                />
+                <path
+                  d="M299.7 239 c-6.6 -1.2 -15 -5.4 -18.3 -9.3 -1.5 -1.8 -3.9 -5.7 -5.3 -8.7 l-2.6 -5.5 -0.3 -54 c-0.4 -56.2 -0.1 -60.8 3.9 -68.6 2.4 -4.9 9.9 -11.3 15.7 -13.6 4.4 -1.6 10 -1.8 76.2 -2.1 50.7 -0.2 73.2 0 77.5 0.8 12.1 2.3 19.6 8.5 23.8 19.7 2.1 5.6 2.2 7.3 2.5 55.7 0.3 52.1 -0.1 60 -3.9 68.5 -4 9.2 -12.5 15.2 -24 17.1 -7.6 1.2 -137.9 1.2 -145.2 0z m143.4 -28.9 l2.9 -2.9 0 -48.2 c0 -50.7 -0.2 -52.7 -4.5 -54.4 -0.9 -0.3 -32 -0.6 -69 -0.6 l-67.4 0 -2.8 2.4 -2.8 2.4 -0.3 47.6 c-0.3 51.4 -0.1 53.5 5 55.6 1.3 0.5 30.9 0.9 69.1 0.9 l66.9 0.1 2.9 -2.9z"
+                />
+              </g>
+            </svg>
+            Grid
+          </button>
+          <button onClick="changeView(false)" class="roundedButton">
+            <svg viewBox="0 0 512.000000 512.000000">
+              <g
+                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              >
+                <path
+                  d="M732 3954 c-121 -60 -167 -202 -104 -325 110 -217 434 -157 459 84
+20 194 -179 329 -355 241z"
+                />
+                <path
+                  d="M1657 3886 c-48 -18 -76 -42 -93 -83 -31 -72 -8 -147 59 -197 l28
+-21 1378 -3 1377 -2 44 23 c105 55 108 196 7 271 l-28 21 -1367 2 c-1135 2
+-1373 0 -1405 -11z"
+                />
+                <path
+                  d="M732 2774 c-140 -70 -177 -255 -74 -374 64 -76 159 -104 254 -76 100
+29 164 107 175 211 20 192 -180 326 -355 239z"
+                />
+                <path
+                  d="M1677 2710 c-76 -14 -127 -77 -127 -156 0 -46 28 -94 73 -128 l28
+-21 1382 -2 1382 -3 39 23 c104 59 102 209 -4 271 -35 21 -42 21 -1385 22
+-742 1 -1367 -1 -1388 -6z"
+                />
+                <path
+                  d="M732 1594 c-177 -88 -176 -343 2 -437 57 -30 165 -30 221 0 144 76
+178 258 72 380 -52 59 -105 82 -183 83 -45 0 -73 -6 -112 -26z"
+                />
+                <path
+                  d="M1671 1530 c-140 -33 -165 -228 -36 -290 41 -20 62 -20 1409 -20
+1340 0 1368 0 1405 20 109 55 109 211 1 274 -35 21 -43 21 -1390 23 -745 0
+-1370 -2 -1389 -7z"
+                />
+              </g>
+            </svg>
+            List
+          </button>
+        </div>
+        <div class="tableList supportsGridView" id="jailbreakIconsList"></div>
+      </div>
     </div>
   </body>
 
-  <script src="script.js"></script>
+  <script src="scripts/ids.js"></script>
+  <script src="scripts/handlers.js"></script>
+  <script src="scripts/script.js"></script>
 </html>

@@ -44,8 +44,8 @@
             <a onClick="goTo('link3')">Creating Icons</a>
             <a onClick="goTo('link4')">Saving Icons</a>
             <a onClick="goTo('link5')">Icon Masks</a>
-            <a onClick="goTo('link6')">Compiling</a>
-            <a onClick="goTo('link7')">Rounding Up</a>
+            <a onClick="goTo('link6')">Prefs Icons</a>
+            <a onClick="goTo('link7')">Compile</a>
         </div>
       </div>
   </div>
@@ -200,9 +200,9 @@
 
     <h2>How do I find out a BundleID?</h2>
 
-    <p>I wrote a page here where you find out the BundleID's for the stock apps:</p>
+    <p>I wrote a page here where you find out the BundleID's for the stock apps aswell as popular Jailbreak apps:</p>
 
-    <a href="../stock-identifiers/"><div class="button">Stock iOS BundleID's</div></a>
+    <a href="../stock-identifiers/"><div class="button">Stock iOS & Common Jailbreak BundleID's</div></a>
 
     <p>As for finding those for third party/app store apps you can use this site:</p>
 
@@ -385,7 +385,62 @@
 
   </div>
 
-  <h1 id="link6">Stage 6: Compiling for Cydia/Sileo</h1>
+  <h1 id="link6">Stage 6: Settings Icons</h1>
+
+  <div class="bigbox">
+    <h2>Optional: Creating Icons to theme the Settings app!</h2>
+
+    <p>If you are looking to make a truly complete theme then you should definetly consider theming the icons inside the Settings app.</p>
+
+    In your theme, preference icons must go into the following directory:
+     
+    <div class="miniDirectory"">ThemeName.theme</div>
+    <div class="miniDirectory miniFolderExpander">Bundles</div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.preferences-ui-framework</div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AirplaneMode@2x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AirplaneMode@3x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">NotificationCenter@2x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">NotificationCenter@3x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;background: none;">etc...</div>
+        </div>
+    </div>
+
+    <br><br>
+    Preferences icons must be supplied in both @2x and @3x variants to ensure device compatability. All files must be suffixed with <mark>@2x.png</mark> for a 59x59 pixel size iamge and <mark>@3x.png</mark> for a 89x89 resolution respectively.
+    <br><br>
+
+    For example, if you wanted to replace the Airplane icon in your theme you would need the following two files in the afformentioned folders:
+    <br><mark>AirplaneMode@2x.png</mark> 
+    <br><mark>AirplaneMode@3x.png</mark>
+
+    <h2>How do I find out a Settings filename?</h2>
+
+    <p>I wrote a page here where you find out the filename for each cell in the settings menu. Just head over to the "Settings" tab of the site linked below:</p>
+
+    <a href="../stock-identifiers/"><div class="button">Preferences Filenames</div></a>
+  </div>
+
+  <h1 id="link7">Stage 7: Compiling for Cydia/Sileo</h1>
 
   <div class="bigbox">
     <h2>Things are about to get complicated!</h2>
@@ -512,7 +567,7 @@ Depends: com.anemonetheming.anemone | com.spark.snowboard
       <br>That's it you are all done! Feel free to move the <mark>.deb</mark> to your computer and delete it and the <mark>ThemeNameForCydia</mark> folder from your iOS device!
   </div>
 
-  <h1 id="link7">Rounding Up</h1>
+  <h1 id="link8">Rounding Up</h1>
 
   <div class="bigbox">
     <h2>Congratulations!</h2>

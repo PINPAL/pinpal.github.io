@@ -23,6 +23,11 @@
 }
 
 html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
 
   --accent: #3385ff;
@@ -51,6 +56,7 @@ body {
 }
 
 #contentContainer {
+  box-sizing: border-box;
   overflow: hidden;
   background-color: var(--background);
   width: calc(100vw - 16px);
@@ -108,7 +114,7 @@ mark {
 }
 #modeSwitcher button svg * {
   fill: none;
-  stroke-width: 24px;
+  stroke-width: 36px;
   stroke: rgb(var(--text-color-button));
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -141,16 +147,16 @@ mark {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform 0.65s ease, max-height 1s linear;
+  transition: opacity 0.325s ease, transform 0.325s ease,
+    max-height 0s step-start 0s, max-width 0s step-start 0s;
 }
 .content.hidden {
+  opacity: 0;
   max-height: 0;
-}
-#homescreenContent.hidden {
-  transform: translateX(calc(-100vw - 300px));
-}
-#preferencesContent.hidden {
-  transform: translateX(calc(100vw + 300px));
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.325s ease, transform 0.325s ease,
+    max-height 0s step-end 0.65s, max-width 0s step-end 0.65s;
 }
 
 .tableList {
@@ -167,7 +173,9 @@ mark {
   max-width: 900px;
 }
 .tableList .letterIndicator {
-  height: fit-content;
+  height: 1em;
+  min-height: 1em;
+  max-height: 1em;
   text-align: left;
   background: var(--background-intermediary);
   font-weight: 600;
@@ -176,20 +184,23 @@ mark {
   margin: -6px 0 0 0;
   border: none;
 }
-.tableList > div {
+.tableList > div > div {
   position: relative;
-  height: 45px;
+  height: 2em;
+  min-height: 45px;
   padding: 0 24px 6px 24px;
   border-bottom: solid var(--border-color) 2px;
   display: inline-block;
   width: calc(100vw - 16px);
+  max-width: 900px;
   margin-top: 6px;
 }
-.tableList > div:last-of-type {
+.tableList > div > div:last-of-type {
   border-bottom: none;
 }
+
 /* grid view */
-.tableList.isGridView > div {
+.tableList.isGridView > div > div {
   min-width: 250px;
   width: 100%;
   max-width: 250px;
@@ -199,6 +210,7 @@ mark {
 .tableList.isGridView h1,
 .tableList.isGridView input {
   left: 66px;
+  width: calc(100% - 108px);
 }
 .tableList.isGridView .letterIndicator {
   display: none;
@@ -206,15 +218,26 @@ mark {
 .tableList.isGridView {
   padding: 12px 0;
 }
+.tableList.isGridView > div > div:last-of-type {
+  border-bottom: solid var(--border-color) 2px;
+}
+
 /* cell styling */
 .tableList img {
   float: left;
-  border-radius: 12px;
-  width: 45px;
+  border-radius: 11px;
+  width: 42px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.tableList#preferencesIconsList img {
+  width: 36px;
+  border-radius: 9px;
 }
 .tableList h1,
 .tableList input {
+  width: calc(100% - 132px);
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: var(--text-color-primary);
   position: absolute;
   left: 84px;
@@ -228,10 +251,10 @@ mark {
   padding: 0;
 }
 .tableList h1 {
-  top: 10px;
+  top: 8px;
 }
 .tableList input {
-  bottom: 10px;
+  bottom: 8px;
   color: var(--text-color-secondary);
 }
 
@@ -277,6 +300,7 @@ mark {
   #modeSwitcher {
     bottom: 0;
     width: 100vw;
+    box-sizing: border-box;
     border-radius: 0;
   }
   .roundedButton {

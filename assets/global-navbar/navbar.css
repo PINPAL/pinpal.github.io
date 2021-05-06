@@ -22,11 +22,16 @@ html {
   overflow: hidden;
   margin-bottom: 25px;
   position: relative;
-  transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
-  -webkit-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
-  -moz-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
-  -o-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
-  -ms-transition: box-shadow 0.35s ease, padding 0.35s ease, border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  transition: box-shadow 0.35s ease, padding 0.35s ease,
+    border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -webkit-transition: box-shadow 0.35s ease, padding 0.35s ease,
+    border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -moz-transition: box-shadow 0.35s ease, padding 0.35s ease,
+    border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -o-transition: box-shadow 0.35s ease, padding 0.35s ease,
+    border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
+  -ms-transition: box-shadow 0.35s ease, padding 0.35s ease,
+    border-radius 0.35s ease, max-width 0.35s ease, margin 0.1s ease;
 }
 
 .miniNav {
@@ -83,12 +88,13 @@ html {
   opacity: 0;
 }
 #lowerNavContent a {
+  cursor: pointer;
   color: white;
   font-size: 14pt;
   padding-right: 10px;
   padding-left: 10px;
   border-width: 2px;
-  border-color: rgba(255,255,255,.2);
+  border-color: rgba(255, 255, 255, 0.2);
   border-right-style: solid;
 }
 #lowerNavContent a:first-child {
@@ -114,7 +120,7 @@ html {
   box-sizing: border-box;
   padding-top: 6px;
   padding-left: 5px;
-  color:rgba(255,255,255,0);
+  color: rgba(255, 255, 255, 0);
   font-size: 0;
   min-width: 40px;
   max-width: 40px;
@@ -141,8 +147,8 @@ html {
   margin-left: 4px;
   margin-top: 3px;
   vertical-align: middle;
-  width:22px;
-  height:22px;
+  width: 22px;
+  height: 22px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
