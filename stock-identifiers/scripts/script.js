@@ -2,6 +2,13 @@ const homescreenIconsList = document.getElementById("homescreenIconsList");
 const jailbreakIconsList = document.getElementById("jailbreakIconsList");
 const preferencesIconsList = document.getElementById("preferencesIconsList");
 
+// sorts lists alphabetically
+// required in order to label correctly
+// probably more efficient to just order them manually in this file as they are static
+// but I'm lazy. so if you fancy doing a pull request go ahead :D
+stockApps.sort((a, b) => a.name.localeCompare(b.name));
+jailbreakApps.sort((a, b) => a.name.localeCompare(b.name));
+
 // function to iterate through list of apps and render with letter seperators
 function renderLetterBasedApps(listOfApps) {
   let firstLetter = -1;

@@ -5,8 +5,6 @@ const targets = [
   { name: "Jailbreak", id: "jailbreakContent" },
 ];
 function switchMode(newTarget) {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
   // remove selected tag from all buttons
   let buttons = document
     .getElementById("modeSwitcher")
