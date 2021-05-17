@@ -16,7 +16,7 @@ var prefs = [
   { name: "General", id: "General" },
   { name: "Control Centre", id: "ControlCenter" },
   { name: "Display & Brightness", id: "Display" },
-  { name: "Home Screen", id: "" },
+  { name: "Home Screen", id: "HomeScreen" },
   { name: "Accessibility", id: "Accessibility" },
   { name: "Wallpaper", id: "Wallpaper" },
   { name: "Siri & Search", id: "Siri" },
