@@ -21,6 +21,7 @@ var prefs = [
   { name: "Wallpaper", id: "Wallpaper" },
   { name: "Siri & Search", id: "Siri" },
   { name: "Face ID & Passcode", id: "PearlID-D22" },
+  { name: "Face ID & Passcode", id: "FaceID" },
   { name: "Touch ID & Passcode", id: "TouchID" },
   { name: "Passcode", id: "Passcode" },
   { name: "Emergency SOS", id: "SOS" },
