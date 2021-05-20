@@ -25,7 +25,7 @@ var prefs = [
   { name: "Touch ID & Passcode", id: "TouchID" },
   { name: "Passcode", id: "Passcode" },
   { name: "Emergency SOS", id: "SOS" },
-  { name: "Exposure Notifications", id: "" },
+  { name: "Exposure Notifications", id: "ExposureNotification" },
   { name: "Battery", id: "BatteryUsage" },
   { name: "Privacy", id: "Privacy" },
   { name: "Microphone", id: "Microphone" },
