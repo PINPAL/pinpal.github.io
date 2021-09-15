@@ -392,12 +392,24 @@
 
     <p>If you are looking to make a truly complete theme then you should definetly consider theming the icons inside the Settings app.</p>
 
+    <p>
+      Depending on your themes targeted iOS versions, the name of the <mark>com.apple.preferences-framework</mark> folder can change.
+      <br> You can include multiple folders if you wish to support multiple iOS versions.
+      <br><br> The folder names for the versions are as follows:
+      <br><b>For iOS 10 and Older</b>
+      <br><mark>com.apple.preferences</mark>
+      <br><b>For iOS 11</b>
+      <br><mark>com.apple.preferences-ui-framework</mark>
+      <br><b>For iOS 12 and Newer</b>
+      <br><mark>com.apple.preferences-framework</mark>
+    </p>
+
     In your theme, preference icons must go into the following directory:
      
     <div class="miniDirectory"">ThemeName.theme</div>
     <div class="miniDirectory miniFolderExpander">Bundles</div>
     <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
-        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.preferences-ui-framework</div>
+        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.preferences-framework</div>
     </div>
     <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
         <div class="miniDirectory miniFolderExpander" style="background:none;">

@@ -7,7 +7,7 @@ var jailbreakApps = [
   { name: "NewTerm", id: "ws.hbang.Terminal" },
   { name: "Electra", id: "org.coolstar.electra" },
   { name: "Taurine", id: "com.odysseyteam.taurine" },
-  { name: "Sileo", id: "org.coolstar.sileo" },
+  { name: "Sileo", id: "org.coolstar.SileoStore" },
   { name: "Dra1n", id: "com.amywhile.dra1n-fix" },
   { name: "Cr4shed", id: "com.muirey03.cr4shedgui" },
   { name: "iCleaner", id: "com.ivanobilenchi.icleaner" },
