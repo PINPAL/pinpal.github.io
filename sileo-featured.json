@@ -1,25 +1,25 @@
 {
-    "class": "FeaturedBannersView",
-    "itemSize": "{296, 148}",
-    "itemCornerRadius": 12,
-    "banners": [
-      {
-        "url": "https://cdn.discordapp.com/attachments/366628660939194378/596010124112560129/SileoBanner.png",
-        "title": "Jool Patch",
-        "package": "com.pinpal.joolpatch",
-        "hideShadow": false
-      },
-      {
-        "url": "https://pinpal.github.io/package/Phertela/SileoBanner.jpg",
-        "title": "Phertela Widget",
-        "package": "com.pinpal.phertela",
-        "hideShadow": false
-      },
-      {
-        "url": "https://pinpal.github.io/package/GraphitiPop/SileoBanner.jpg",
-        "title": "Graphiti Pop Widget",
-        "package": "com.pinpal.graphitiPop",
-        "hideShadow": false
-      }
-    ]
-  }
+  "class": "FeaturedBannersView",
+  "itemSize": "{296, 148}",
+  "itemCornerRadius": 12,
+  "banners": [
+    {
+      "url": "https://pinpal.github.io/package/JoolPatch/SileoBanner.jpg",
+      "title": "Jool Patch",
+      "package": "com.pinpal.joolpatch",
+      "hideShadow": false
+    },
+    {
+      "url": "https://pinpal.github.io/package/Phertela/SileoBanner.jpg",
+      "title": "Phertela Widget",
+      "package": "com.pinpal.phertela",
+      "hideShadow": false
+    },
+    {
+      "url": "https://pinpal.github.io/package/GraphitiPop/SileoBanner.jpg",
+      "title": "Graphiti Pop Widget",
+      "package": "com.pinpal.graphitiPop",
+      "hideShadow": false
+    }
+  ]
+}
